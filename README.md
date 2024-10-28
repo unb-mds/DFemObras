@@ -9,7 +9,7 @@ Este repositório será utilizado pelo Grupo 7 para o desenvolvimento de um proj
 | Cayo Felipe Alencar Câmara   | [Perfil GitHub](Url) |
 | João Pedro Rodrigues Gomes da Silva   | [Perfil GitHub](Url) |
 | Julia dos Reis Teixeira Massuda  | [Perfil GitHub](Url) |
-| Caio Melo Borges  | [Perfil GitHub](Url) |
+| Caio Melo Borges  | [JuliaReis18](https://github.com/JuliaReis18) |
 | Marcos Vinícius Lima Bezerra  | [marcoslbz](https://github.com/marcoslbz) |
 | Nathan Batista Santos  | [Perfil GitHub](Url) |
 
