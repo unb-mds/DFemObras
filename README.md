@@ -4,7 +4,7 @@ Este repositório será utilizado pelo Grupo 7 para o desenvolvimento de um proj
 
 ## 👥 Grupo 07 
 
-| Nome Completo       | GitHub             |
+| Nome        | GitHub             |
 |---------------------|--------------------|
 | Cayo Felipe Alencar Câmara   | [Perfil GitHub](Url) |
 | João Pedro Rodrigues Gomes da Silva   | [Perfil GitHub](Url) |
