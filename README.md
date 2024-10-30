@@ -11,5 +11,5 @@ Este repositório será utilizado pelo Grupo 7 para o desenvolvimento de um proj
 | Julia dos Reis Teixeira Massuda  | [JuliaReis18](https://github.com/JuliaReis18) |
 | Caio Melo Borges  | [CaioMelo25](https://github.com/CaioMelo25) |
 | Marcos Vinícius Lima Bezerra  | [marcoslbz](https://github.com/marcoslbz) |
-| Nathan Batista Santos  | [Nathan-bs]((https://github.com/Nathan-bs)) |
+| Nathan Batista Santos  | [Nathan-bs](https://github.com/Nathan-bs) |
 
