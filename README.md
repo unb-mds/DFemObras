@@ -6,7 +6,7 @@ Este repositório será utilizado pelo Grupo 7 para o desenvolvimento de um proj
 
 | Nome        | GitHub             |
 |---------------------|--------------------|
-| Cayo Felipe Alencar Câmara   | [Perfil GitHub](Url) |
+| Cayo Felipe Alencar Câmara   | [Cayoalencar](https://github.com/Cayoalencar) |
 | João Pedro Rodrigues Gomes da Silva   | [Perfil GitHub](Url) |
 | Julia dos Reis Teixeira Massuda  | [JuliaReis18](https://github.com/JuliaReis18) |
 | Caio Melo Borges  | [CaioMelo25](https://github.com/CaioMelo25) |
