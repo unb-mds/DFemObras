@@ -1,7 +1,7 @@
-**ATA DE REUNIÃO - SPRINT 1**
+**ATA DE REUNIÃO - SPRINT 2**
 
-**Data**: 11/11/2024 
-**Horário**: 14:07 - ??
+**Data**: 12/11/2024 
+**Horário**: 14:07 - 15:40
 **Local**: Conferência via Discord 
 **Participantes**: Todos os membros do grupo estavam presentes.
 
@@ -22,8 +22,8 @@ Delegar as tarefas entre os membros da equipe com base nas habilidades de cada u
 - Finalização da Escolha das Linguagens e Frameworks: Após análise das necessidades do projeto e das habilidades da equipe, as linguagens de programação e frameworks foram definidos.
 
 ### 4. **Encaminhamentos e Ações Pendentes**
-- **Todos os membros** devem iniciar a elaboração e classificação dos requisitos no Figma.
+- **Todos os membros** devem entrar em contato com as tecnologias definidas para execução do projeto, e mostrar um exemplo de seu funcionamento de cada tecnologia ou ferramenta.
 
 ---
 
-**Encerramento**: A reunião foi encerrada às ??.
+**Encerramento**: A reunião foi encerrada às 15:50.
