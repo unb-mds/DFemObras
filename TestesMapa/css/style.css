@@ -1,0 +1,56 @@
+/* Estilos do header */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    overflow: hidden; 
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #133E79; 
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+header .logo {
+    height: 40px; 
+    width: auto;
+}
+
+
+
+header nav a {
+    margin: 0 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos do mapa */
+#map {
+    height: 100%;  
+    width: 100%;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    z-index: 1;
+}
+
+/* Estilo para as imagens nos popups */
+.popup-img {
+    max-width: 500px;
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
