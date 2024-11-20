@@ -8,7 +8,7 @@ body, html {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
     background-color: #133E79; 
@@ -20,22 +20,32 @@ header {
 }
 
 header .logo {
-    height: 40px; 
+    height: 70px; 
     width: auto;
 }
 
+header .title {
+    flex-grow: 1; 
+    text-align: center; 
+}
 
+header nav {
+    display: flex; 
+    gap: 10px; 
+}
 
 header nav a {
-    margin: 0 15px;
     color: white;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 20px;
+    padding: 5px 10px; 
 }
 
 header nav a:hover {
     text-decoration: underline;
 }
+
+
 
 /* Estilos do mapa */
 #map {
@@ -79,12 +89,22 @@ header nav a:hover {
   }
   
   .close {
-    color: red;
+    color: black;
     font-size: 24px;
     font-weight: bold;
     cursor: pointer;
     position: absolute;
     top: 10px;
     right: 20px;
-  }
+    background-color: white; 
+    border: 2px solid black; 
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+  
   
