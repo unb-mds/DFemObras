@@ -3,16 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Teste mapa</title>
+    <title>Mapa Interativo</title>
 
     <!-- Estilo do Leaflet -->
     <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
 
-    <!-- Estilos do Header -->
-    <link rel="stylesheet" href="css/map-header.css"> 
-
-
-    <!-- Estilo personalizado -->
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="css/map-header.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -27,11 +24,17 @@
 
     <div id="map"></div>
 
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span id="close-popup" class="close">&times;</span>
+            <p id="popup-message"><h1>Bem-vindo(a)!</h1> <h3>Explore as obras do Governo do DF e acompanhe o progresso do desenvolvimento em nossa região. Este projeto, desenvolvido como parte da disciplina de Métodos de Desenvolvimento de Software, tem como objetivo fornecer um mapeamento detalhado e acessível de todas as iniciativas públicas em andamento.</h3></p>
+        </div>
+    </div>
+
     <!-- Leaflet JS -->
     <script src="node_modules/leaflet/dist/leaflet.js"></script>
 
-    <!-- Arquivo de script -->
+    <!-- Script personalizado -->
     <script src="js/map.js"></script>
-
 </body>
 </html>
