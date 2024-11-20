@@ -1,5 +1,27 @@
 // Inicializar o mapa
+
+  
 const map = L.map('map').setView([-15.802825, -47.798767], 10.4);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('popup');
+    const closePopup = document.getElementById('close-popup');
+  
+    // Mostra o popup quando a página é carregada
+    popup.style.display = 'flex';
+  
+    // Fecha o popup ao clicar no botão "X"
+    closePopup.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+  
+    // Fecha o popup ao clicar fora do conteúdo
+    popup.addEventListener('click', (event) => {
+      if (event.target === popup) {
+        popup.style.display = 'none';
+      }
+    });
+  });
 
 
 L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
