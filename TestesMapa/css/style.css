@@ -5,6 +5,8 @@ body, html {
     height: 100%; 
     box-sizing: border-box;
     overflow: hidden; 
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -66,6 +68,7 @@ header nav a:hover {
 main {
     padding: 150px;
     background-color: #fff;
+    flex: 1;
 }
 
 main .content {
@@ -82,8 +85,11 @@ footer {
     background-color:#133E79;
     color: #fff;
     text-align: center;
-    padding: 6px;
+    min-height:6px;
 }
+
+
+
 
 
 /* Estilos do mapa */
