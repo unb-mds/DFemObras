@@ -1,0 +1,249 @@
+[
+    {
+        "nome": "Reforma da Ponte JK",
+        "valor": 1500000,
+        "lat": -15.793889,
+        "long": -47.899722
+    },
+    {
+        "nome": "Construção da Escola Estadual Gama",
+        "valor": 5000000,
+        "lat": -15.814722,
+        "long": -48.027778
+    },
+    {
+        "nome": "Reforma da Rodoviária do Plano Piloto",
+        "valor": 20000000,
+        "lat": -15.780833,
+        "long": -47.929722
+    },
+    {
+        "nome": "Construção da Unidade Básica de Saúde do Guará",
+        "valor": 7500000,
+        "lat": -15.815,
+        "long": -48.049167
+    },
+    {
+        "nome": "Ampliação do Parque da Cidade",
+        "valor": 30000000,
+        "lat": -15.802222,
+        "long": -48.056111
+    },
+    {
+        "nome": "Reforma da Estrutural Sul",
+        "valor": 4000000,
+        "lat": -15.848889,
+        "long": -47.925833
+    },
+    {
+        "nome": "Construção do Centro de Convenções Brasília",
+        "valor": 80000000,
+        "lat": -15.791667,
+        "long": -47.885556
+    },
+    {
+        "nome": "Reforma da Ceilândia Norte",
+        "valor": 5500000,
+        "lat": -15.794722,
+        "long": -48.128056
+    },
+    {
+        "nome": "Construção da Biblioteca Nacional",
+        "valor": 25000000,
+        "lat": -15.779167,
+        "long": -47.929722
+    },
+    {
+        "nome": "Reforma do Estádio Mané Garrincha",
+        "valor": 15000000,
+        "lat": -15.7825,
+        "long": -47.929167
+    },
+    {
+        "nome": "Ampliação da Escola Técnica de Brasília",
+        "valor": 7000000,
+        "lat": -15.7875,
+        "long": -47.915278
+    },
+    {
+        "nome": "Construção do Parque Aquático de Águas Claras",
+        "valor": 12000000,
+        "lat": -15.906111,
+        "long": -48.067222
+    },
+    {
+        "nome": "Reforma da Rodoviária de Sobradinho",
+        "valor": 18000000,
+        "lat": -15.608056,
+        "long": -47.835
+    },
+    {
+        "nome": "Construção da Unidade de Pronto Atendimento (UPA) de Samambaia",
+        "valor": 9000000,
+        "lat": -15.854722,
+        "long": -48.074167
+    },
+    {
+        "nome": "Reforma do Hospital Regional de Taguatinga",
+        "valor": 25000000,
+        "lat": -15.811667,
+        "long": -48.087222
+    },
+    {
+        "nome": "Construção da Ponte do Lago Sul",
+        "valor": 4500000,
+        "lat": -15.770278,
+        "long": -47.865
+    },
+    {
+        "nome": "Reforma do Mercado Central de Brasília",
+        "valor": 3500000,
+        "lat": -15.786389,
+        "long": -47.912222
+    },
+    {
+        "nome": "Ampliação do Hospital de Base",
+        "valor": 10000000,
+        "lat": -15.813611,
+        "long": -47.929722
+    },
+    {
+        "nome": "Construção da Praça da Liberdade",
+        "valor": 2000000,
+        "lat": -15.784722,
+        "long": -47.925833
+    },
+    {
+        "nome": "Reforma do Centro de Saúde de Taguatinga",
+        "valor": 4000000,
+        "lat": -15.810833,
+        "long": -48.099722
+    },
+    {
+        "nome": "Construção do Ginásio Poliesportivo de Ceilândia",
+        "valor": 15000000,
+        "lat": -15.855833,
+        "long": -48.1075
+    },
+    {
+        "nome": "Reforma do Parque Nacional de Brasília",
+        "valor": 5000000,
+        "lat": -15.783889,
+        "long": -47.887222
+    },
+    {
+        "nome": "Construção do Complexo Cultural de Samambaia",
+        "valor": 18000000,
+        "lat": -15.855556,
+        "long": -48.079167
+    },
+    {
+        "nome": "Reforma da Praça dos Três Poderes",
+        "valor": 3000000,
+        "lat": -15.7825,
+        "long": -47.912222
+    },
+    {
+        "nome": "Ampliação do Centro Educacional do Recanto das Emas",
+        "valor": 6000000,
+        "lat": -15.830833,
+        "long": -48.056111
+    },
+    {
+        "nome": "Construção do Museu Nacional da República",
+        "valor": 35000000,
+        "lat": -15.792222,
+        "long": -47.914167
+    },
+    {
+        "nome": "Reforma da Escola de Artes do Gama",
+        "valor": 4500000,
+        "lat": -15.820278,
+        "long": -48.064167
+    },
+    {
+        "nome": "Construção do Parque Ecológico de Sobradinho",
+        "valor": 8000000,
+        "lat": -15.624722,
+        "long": -47.860278
+    },
+    {
+        "nome": "Reforma do Centro de Artesanato de Brasília",
+        "valor": 2500000,
+        "lat": -15.792222,
+        "long": -47.920556
+    },
+    {
+        "nome": "Construção da Unidade de Conservação Ambiental do Lago Paranoá",
+        "valor": 12000000,
+        "lat": -15.8025,
+        "long": -48.040278
+    },
+    {
+        "nome": "Reforma do Teatro Nacional Cláudio Santoro",
+        "valor": 35000000,
+        "lat": -15.793611,
+        "long": -47.922222
+    },
+    {
+        "nome": "Ampliação da Estação de Tratamento de Água do Paranoá",
+        "valor": 45000000,
+        "lat": -15.754722,
+        "long": -47.907222
+    },
+    {
+        "nome": "Construção da Feira Permanente de Taguatinga",
+        "valor": 5000000,
+        "lat": -15.819722,
+        "long": -48.071389
+    },
+    {
+        "nome": "Reforma do Aeroporto de Brasília",
+        "valor": 60000000,
+        "lat": -15.837222,
+        "long": -47.920833
+    },
+    {
+        "nome": "Ampliação da Universidade de Brasília (UnB)",
+        "valor": 150000000,
+        "lat": -15.797222,
+        "long": -47.912222
+    },
+    {
+        "nome": "Construção da Praça dos Orixás",
+        "valor": 7000000,
+        "lat": -15.794722,
+        "long": -48.120556
+    },
+    {
+        "nome": "Reforma da Galeria dos Estados",
+        "valor": 25000000,
+        "lat": -15.788611,
+        "long": -47.920833
+    },
+    {
+        "nome": "Ampliação da Rodoviária Interestadual de Brasília",
+        "valor": 40000000,
+        "lat": -15.799444,
+        "long": -47.901111
+    },
+    {
+        "nome": "Construção da Via Norte do Plano Piloto",
+        "valor": 30000000,
+        "lat": -15.800833,
+        "long": -47.893611
+    },
+    {
+        "nome": "Reforma do Hospital do Paranoá",
+        "valor": 15000000,
+        "lat": -15.754722,
+        "long": -47.913333
+    },
+    {
+        "nome": "Ampliação da Biblioteca Parque do Recanto das Emas",
+        "valor": 6000000,
+        "lat": -15.818056,
+        "long": -48.051667
+    }
+]
+

@@ -1,0 +1,155 @@
+/* Estilos do header */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%; 
+    box-sizing: border-box;
+    overflow: hidden; 
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #133E79; 
+    color: white;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+}
+
+header .logo {
+    height: 70px; 
+    width: auto;
+    margin-right: 30px;
+}
+
+header .title {
+    flex-grow: 1; 
+    text-align: center; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+header .subtitle {
+    text-align: center;
+    font-family: cursive;
+}
+
+header nav {
+    display: flex; 
+    gap: 10px; 
+    flex-wrap: wrap;
+}
+
+header nav a {
+    margin: 5 10px;
+    color: green;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 10px 20px; 
+    background-color:white; 
+    border-radius: 25px; 
+    transition: background-color 0.3s ease; 
+    white-space: nowrap;
+    font-family:fantasy;
+}
+
+header nav a:hover {
+    background-color: #133E79; 
+    text-decoration: underline;
+}
+
+main {
+    padding: 150px;
+    background-color: #fff;
+    flex: 1;
+}
+
+main .content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+main h2 {
+    color: #003366;
+    font-family: cursive;
+}
+
+footer {
+    background-color:#133E79;
+    color: #fff;
+    text-align: center;
+    min-height:6px;
+}
+
+
+
+
+
+/* Estilos do mapa */
+#map {
+    height: 100%;  
+    width: 100%;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    z-index: 1;
+}
+
+/* Estilo para as imagens nos popups */
+.popup-img {
+    max-width: 500px;
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Estilo do popup */
+.popup {
+    display: none; /* Escondido por padrão */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 300px;
+  }
+  
+  .close {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background-color: white; 
+    border: 2px solid black; 
+    border-radius: 50%; 
+    width: 40px;
+    height: 40px; 
+    display: flex; 
+    justify-content: center;
+    align-items: center; 
+}
+
+  
+  
