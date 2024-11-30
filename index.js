@@ -20,5 +20,4 @@ async function sendTweet() {
   }
 }
 
-// Chama a função para enviar o tweet
 sendTweet();
