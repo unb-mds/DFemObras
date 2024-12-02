@@ -1,7 +1,7 @@
 import cohere
 import tweepy
 
-co = cohere.ClientV2("<<api.cohere>>")
+co = cohere.ClientV2("")
 
 api = tweepy.Client(
     consumer_key='<<consumer_key>>',
