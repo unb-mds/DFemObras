@@ -1,29 +1,34 @@
+import os
 import cohere
 import tweepy
+from dotenv import load_dotenv
 
-co = cohere.ClientV2("")
+load_dotenv()
+API_COHERE_KEY = os.getenv("API_COHERE_KEY")
+API_CONSUMER_KEY_X = os.getenv("API_CONSUMER_KEY_X")
+API_CONSUMER_SECRET_X = os.getenv("API_CONSUMER_SECRET_X")
+API_ACCESS_TOKEN_X = os.getenv("API_ACCESS_TOKEN_X")
+API_ACCESS_TOKEN_SECRET_X = os.getenv("API_ACCESS_TOKEN_SECRET_X")
+
+co = cohere.ClientV2(API_COHERE_KEY)
 
 api = tweepy.Client(
-    consumer_key='<<consumer_key>>',
-    consumer_secret='<<consumer_secret>>',
-    access_token='<<access_token>>',
-    access_token_secret='<<access_token_secret>>'
+    consumer_key=API_CONSUMER_KEY_X,
+    consumer_secret=API_CONSUMER_SECRET_X,
+    access_token=API_ACCESS_TOKEN_X,
+    access_token_secret=API_ACCESS_TOKEN_SECRET_X
 )
 
 try:
+    message = "Me explique a ligação entre linguagens de programação e seus frameworks."
     response = co.chat(
         model="command-r-plus", 
-        messages=[{"role": "user", "content": "Fale um pouco sobre como são feitas as obras com verba pública em até 20 linhas."}]
+        messages=[{"role": "user", "content": message}]
     )
-    
     print("Resposta do Cohere:", response)
-
-    #Essas maneiras não dão certo
-    tweet_text = response["response"]["text"] 
-    tweet_text = response.messages[0]['text']
     
-    tweet = api.create_tweet(text=tweet_text)
-    print("Tweet enviado com sucesso:", tweet.data['text']) 
-
+    tweet = api.create_tweet(text='Testagem de código.')
+    print("Tweet enviado com sucesso:", tweet) 
+    
 except Exception as e:
     print("Algo deu erro:", e)
