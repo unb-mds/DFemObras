@@ -1,0 +1,10 @@
+{
+    "name": "Jo\u00e3o",
+    "age": 25,
+    "skills": [
+        "Python",
+        "Git",
+        "SQL"
+    ],
+    "is_student": true
+}
