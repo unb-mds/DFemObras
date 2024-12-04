@@ -34,7 +34,7 @@ function formatarBRL(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
-fetch('obras/obras.json') // Caminho do JSON
+fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do JSON
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao carregar o JSON');
@@ -44,8 +44,14 @@ fetch('obras/obras.json') // Caminho do JSON
     })
     .then(data => {
         // Varrer as obras e criar marcadores
-        data.forEach(obra => {
+        data.forEach((obra, index) => {
             const { nome, fontesDeRecurso, latitude, longitude } = obra;
+            
+            //Verifica se tem latitude e longitude no JSON
+            if(!latitude || !longitude){
+                console.warn(`Obra "${nome}" index ${index} ignorada por falta de coordenadas.`);
+                return;
+            }
 
             // Cria o marcador
             const marker = L.marker([latitude, longitude]).addTo(map);
@@ -63,6 +69,9 @@ fetch('obras/obras.json') // Caminho do JSON
 
             // Adicionar popup ao marcador
             marker.bindPopup(popupContent);
+
+            console.log(`Obra ${index + 1} foi carregada: "${nome}" `);
+
         });
     })
     .catch(error => {
