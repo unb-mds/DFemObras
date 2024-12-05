@@ -1,4 +1,3 @@
-
 import os
 import cohere
 import tweepy
@@ -21,14 +20,16 @@ api = tweepy.Client(
 )
 
 try:
-    message = "Me explique a ligação entre linguagens de programação e seus frameworks."
+    message = "Explique em 4 linhas, até 50 caracteres por linha e em tópicos de onde vêm as verbas para obras públicas."
     response = co.chat(
         model="command-r-plus", 
         messages=[{"role": "user", "content": message}]
     )
-    print("Resposta do Cohere:", response)
-    
-    tweet = api.create_tweet(text='Testagem de código.')
+
+    mensagem_principal = response.message.content[0].text
+    print(mensagem_principal)
+
+    tweet = api.create_tweet(text=mensagem_principal)
     print("Tweet enviado com sucesso:", tweet) 
     
 except Exception as e:
