@@ -1,0 +1,110 @@
+/* Corpo e Estilo Geral */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to bottom, #ffffff, #e3f2fd);
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: #0d47a1;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+header nav ul li a:hover {
+    color: #ffcc80;
+}
+
+/* Seções */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 80%;
+}
+
+h2 {
+    color: #0d47a1;
+    border-bottom: 2px solid #0d47a1;
+    padding-bottom: 5px;
+}
+
+/* Estilo para seções de como subir o ambiente */
+pre {
+    background: #f9f9f9;
+    padding: 10px;
+    border-left: 4px solid #0d47a1;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    overflow-x: auto;
+}
+
+pre code {
+    color: #333;
+}
+
+ol li {
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #0d47a1;
+    font-weight: bold;
+}
+
+ul {
+    margin-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+/* Rodapé */
+footer {
+    background: #0d47a1;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Interatividade */
+a {
+    text-decoration: none;
+    color: #0d47a1;
+    font-weight: bold;
+}
