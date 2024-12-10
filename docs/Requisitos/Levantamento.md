@@ -62,7 +62,8 @@ Os requisitos foram organizados em épicos e suas respectivas features:
 
 ### 3.3 Épico: Bot para Reportar Anomalias
 - **Feature:** Detectar automaticamente anomalias (atrasos ou inconsistências) nas obras.  
-- **Feature:** Postar atualizações no Twitter com informações da anomalia identificada na respectiva obra.  
+- **Feature:** Postar atualizações no Twitter com informações da anomalia identificada na respectiva obra.
+- **Feature:** Gerar textos humanizados para os posts no Twitter, utilizando IA para se assemelhar à escrita natural.
 
 ---
 
