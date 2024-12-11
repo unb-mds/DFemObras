@@ -108,6 +108,19 @@ Certifique-se de ter as seguintes ferramentas instaladas:
      git push origin minha-nova-feature
      ```
    - Abra um Pull Request descrevendo suas contribuições.
+   Segue a atualização com os tópicos solicitados:  
+
+---
+
+### 🏛️ Arquitetura  
+A descrição completa da arquitetura do projeto pode ser encontrada [neste link](https://unb-mds.github.io/2024-2-Squad07/#arquitetura).  
+
+---
+
+### 📜 Requisitos  
+Os requisitos detalhados do projeto estão disponíveis no Figma [neste link](https://www.figma.com/board/xAOzOYBkiF8Bqr9fmzCSi6/Projeto-MDS?node-id=150-579&t=cFXj9RyRCuIni7XX-1).  
+
+
 
 ### 📞 Suporte
 Se encontrar problemas durante a configuração, abra uma issue no repositório ou entre em contato com o mantenedor do projeto.
