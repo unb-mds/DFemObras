@@ -1,14 +1,17 @@
 # 2024-2-Squad07
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
-[![GitHub issues](https://img.shields.io/github/issues/unb-mds/2024-2-Squad07)](https://img.shields.io/github/issues/unb-mds/2024-2-Squad07)
-[![GitHub contributors](https://img.shields.io/github/contributors/unb-mds/2024-2-Squad07)](https://img.shields.io/github/contributors/unb-mds/2024-2-Squad07)
-[![GitHub stars](https://img.shields.io/github/stars/unb-mds/2024-2-Squad07)](https://img.shields.io/github/stars/unb-mds/2024-2-Squad07)
-[![Hit Counter](https://views.whatilearened.today/views/github/unb-mds/2024-2-Squad07.svg)](https://views.whatilearened.today/views/github/unb-mds/2024-2-Squad07)
-
 Este repositório será utilizado pelo Grupo 7 para o desenvolvimento de um projeto da disciplina de *Métodos de Desenvolvimento de Software*. O projeto se trata da construção de um software de Mapeamento de Obras e Serviços Públicos.
 
-## 👥 Grupo 07 
+## 📋 Sumário
+- [👥 Grupo 07](#-grupo-07)
+- [📌 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [🚀 Como Contribuir](#-como-contribuir)
+- [🛠️ Arquitetura](#-arquitetura)
+- [📄 Requisitos](#-requisitos)
+- [📂 Documentação](#-documentação)
+- [💡 Suporte](#-suporte)
+
+## 👥 Grupo 07
 
 | Nome        | GitHub             |
 |---------------------|--------------------|
@@ -19,8 +22,7 @@ Este repositório será utilizado pelo Grupo 7 para o desenvolvimento de um proj
 | Marcos Vinícius Lima Bezerra  | [marcoslbz](https://github.com/marcoslbz) |
 | Nathan Batista Santos  | [Nathan-bs](https://github.com/Nathan-bs) |
 
-
-## Tecnologias Utilizadas
+## 📌 Tecnologias Utilizadas
 - Node.js
 - Axios
 - Leaflet.js
@@ -28,11 +30,11 @@ Este repositório será utilizado pelo Grupo 7 para o desenvolvimento de um proj
 - Tweepy
 - Cohere API
 
-## Como Contribuir
+## 🚀 Como Contribuir
 
 Se você deseja contribuir com este projeto, siga os passos abaixo para configurar o ambiente e começar a colaborar:
 
-### ⚙️ Pré-requisitos
+### Pré-requisitos
 Certifique-se de ter as seguintes ferramentas instaladas:
 - [Node.js](https://nodejs.org/) e npm (Node Package Manager)
 - [Python 3.8+](https://www.python.org/)
@@ -40,7 +42,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 - [Git](https://git-scm.com/) para versionamento de código
 - [dotenv](https://pypi.org/project/python-dotenv/) para gerenciar variáveis de ambiente
 
-### 🛠️ Passo a Passo
+### Passo a Passo
 
 1. **Clone o Repositório**
    ```bash
@@ -58,7 +60,6 @@ Certifique-se de ter as seguintes ferramentas instaladas:
    npm install
    ```
  
-
 3. **Configuração do Mapa**
    - Navegue até o diretório do mapa.
    ```bash
@@ -108,20 +109,16 @@ Certifique-se de ter as seguintes ferramentas instaladas:
      git push origin minha-nova-feature
      ```
    - Abra um Pull Request descrevendo suas contribuições.
-   Segue a atualização com os tópicos solicitados:  
 
----
+## 🛠️ Arquitetura
+A arquitetura do projeto pode ser encontrada [neste link](https://unb-mds.github.io/2024-2-Squad07/arquitetura).
 
-### 🏛️ Arquitetura  
-A descrição completa da arquitetura do projeto pode ser encontrada [neste link](https://unb-mds.github.io/2024-2-Squad07/#arquitetura).  
+## 📄 Requisitos
+Os requisitos do projeto estão disponíveis [neste link](https://unb-mds.github.io/2024-2-Squad07/requisitos).
 
----
+## 📂 Documentação
+A documentação do projeto pode ser encontrada [neste link](https://unb-mds.github.io/2024-2-Squad07/).
 
-### 📜 Requisitos  
-Os requisitos detalhados do projeto estão disponíveis no Figma [neste link](https://www.figma.com/board/xAOzOYBkiF8Bqr9fmzCSi6/Projeto-MDS?node-id=150-579&t=cFXj9RyRCuIni7XX-1).  
-
-
-
-### 📞 Suporte
-Se encontrar problemas durante a configuração, abra uma issue no repositório ou entre em contato com o mantenedor do projeto.
+## 💡 Suporte
+Se encontrar problemas durante a configuração, abra uma issue no repositório ou entre em contato.
 
