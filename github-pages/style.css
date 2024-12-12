@@ -260,3 +260,12 @@ a {
 #prototipos h1{
     margin: 20px;
 }
+
+#arquitetura object{
+    margin-bottom: 0px;
+    text-align: center;
+    margin-left: 300px;
+    border:solid 1px;
+    border: #000;
+    border-radius: 20px;
+}
