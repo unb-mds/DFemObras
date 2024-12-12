@@ -18,6 +18,7 @@
                     <li><a href="#ambiente">Subir o Ambiente</a></li>
                     <li><a href="#arquitetura">Arquitetura</a></li>
                     <li><a href="#requisitos">Requisitos</a></li>
+                    <li><a href="#prototipos">Protótipos</a></li>
                     <li><a href="#atas">Atas</a></li>
                 </ul>
             </nav>
@@ -44,7 +45,7 @@
                         <div class="foto">
                             <img src="fotos/marcos.jpg" alt="Foto do Colaborador 3">
                         </div>
-                        <p>Marcos Viniciius</p>
+                        <p>Marcos Vinicius</p>
                     </div>
                     <div class="colaborador">
                         <div class="foto">
@@ -175,12 +176,59 @@
                 </ol>
             </section>
 
-            <section>
-                <h2>Arquitetura</h2>
+            <section id="arquitetura">
+                <h1>Arquitetura</h1>
                 <p>
-                    ADICIONE AQUI AS COISAS DE Arquitetura
+                    O sistema de mapeamento de obras públicas no DF foi desenvolvido para permitir que qualquer cidadão interessado tenha acesso a dados relevantes referentes ao andamento das obras públicas através de uma aplicação web. A aplicação apresenta um mapa interativo contendo as informações sobre as obras e conta com um robô (Bot) responsável por denunciar anomalias nas obras na rede social X. 
+                </p>
+                <p>
+                    O modelo arquitetural adotado no projeto foi o modelo em camadas, devido à facilidade de manutenção, escalabilidade e reutilização de componentes. Isso permite maior flexibilidade e controle das operações, utilizando a modularização do código.
+                </p>
+            
+                <h2>Objetivos com a Escolha da Arquitetura</h2>
+                <ul>
+                    <li><strong>Modularidade:</strong> Separação de responsabilidades em camadas distintas.</li>
+                    <li><strong>Escalabilidade:</strong> Facilidade de expansão do sistema.</li>
+                    <li><strong>Manutenibilidade:</strong> Facilidade de atualização e correção de erros.</li>
+                    <li><strong>Desempenho:</strong> Otimização da performance sem sacrificar a qualidade do código.</li>
+                </ul>
+            
+                <h2>Descrição das Camadas</h2>
+            
+                <h3>Camada de Apresentação</h3>
+                <p>
+                    Esta é a camada responsável pela interação com o usuário, apresentando a interface web como um mapa interativo com pins clicáveis relacionados diretamente com a localização da obra referenciada. Ao clicar no pin, o usuário visualiza as informações da obra. Foi construída com HTML, CSS e JavaScript.
+                </p>
+            
+                <h3>Camada de Aplicação (Lógica de Negócios)</h3>
+                <p>
+                    Esta camada é responsável pelas regras de negócios, interação com outras camadas e APIs externas, e processamento de dados. Atua como a lógica do projeto, dividida em dois componentes:
+                </p>
+                <ul>
+                    <li><strong>Backend:</strong> Responsável por gerar o mapa e requisitar as informações das obras através das APIs externas.</li>
+                    <li><strong>Robô:</strong> Detecta anomalias e as reporta através da rede social X.</li>
+                </ul>
+                <p>
+                    <strong>APIs requisitadas pelo Backend:</strong>
+                    <ul>
+                        <li><strong>Obras Gov:</strong> API que fornece dados necessários sobre as obras públicas.</li>
+                        <li><strong>Leaflet:</strong> API que gera o mapa.</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>APIs requisitadas pelo Robô (Bot):</strong>
+                    <ul>
+                        <li><strong>X API:</strong> API responsável por enviar as anomalias em formato de tweet à rede social X.</li>
+                        <li><strong>Cohere:</strong> IA generativa que produz mensagens humanizadas para o reporte de anomalias no X.</li>
+                    </ul>
+                </p>
+            
+                <h3>Camada de Dados</h3>
+                <p>
+                    A camada de dados do sistema utiliza arquivos JSON para armazenar as informações. Cada conjunto de dados é representado como um objeto JSON ou uma lista de objetos JSON, que podem ser facilmente manipulados usando bibliotecas e frameworks de parsing JSON. Esses arquivos são armazenados no sistema de arquivos local ou em um repositório de objetos, como um serviço de armazenamento em nuvem.
                 </p>
             </section>
+            
 
             <section id="requisitos">
                 <h2>Documentação do Projeto</h2>
@@ -301,6 +349,15 @@
                     <h1>Figma Frame Embed</h1>
                     <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/xAOzOYBkiF8Bqr9fmzCSi6/Projeto-MDS?node-id=101-1149&embed-host=share" allowfullscreen></iframe>
                 </article>
+            </section>
+
+            <section id="prototipos">
+                <h1>Protótipo de baixa fidelidade</h1>
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/xAOzOYBkiF8Bqr9fmzCSi6/Projeto-MDS?node-id=227-228&embed-host=share" allowfullscreen></iframe>
+
+                <h1>Protótipo de alta fidelidade</h1>
+                <p>Navegue pelo protótipo de alta fidelidade do sistema de mapeamento de obras públicas no DF. Interaja com o mapa, explore as informações das obras e visualize a integração com APIs externas e funcionalidades, como a denúncia de anomalias. Avalie o design intuitivo e a usabilidade do sistema em um ambiente próximo ao produto final</p>
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/AbgW9h67P0M7QiBFy44tH4/Prot%C3%B3tipo?node-id=3-2&node-type=canvas&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A2&embed-host=share" allowfullscreen></iframe>
             </section>
             
 
