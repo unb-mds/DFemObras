@@ -79,7 +79,8 @@ Certifique-se de ter as seguintes ferramentas instaladas:
    - Instale as dependências do Python.
    ```bash
    pip install tweepy
-   pip instal cohere
+   pip install cohere
+   pip install python-dotenv
    ```
    - Crie um arquivo `.env` no diretório principal do projeto e adicione as variáveis de ambiente necessárias, como chaves de API para o Cohere e Tweepy.
 
