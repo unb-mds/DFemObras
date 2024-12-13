@@ -117,7 +117,7 @@ A arquitetura do projeto pode ser encontrada [neste link](https://unb-mds.github
 Os requisitos do projeto estão disponíveis [neste link](https://unb-mds.github.io/2024-2-Squad07/requisitos).
 
 ## 📂 Documentação
-A documentação do projeto pode ser encontrada [neste link]([https://unb-mds.github.io/2024-2-Squad07/](https://unb-mds.github.io/2024-2-Squad07/)).
+A documentação do projeto pode ser encontrada [neste link](https://unb-mds.github.io/2024-2-Squad07/).
 
 ## 💡 Suporte
 Se encontrar problemas durante a configuração, abra uma issue no repositório ou entre em contato.
