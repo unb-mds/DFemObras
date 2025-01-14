@@ -1,0 +1,35 @@
+name: Gerar JSON de obras
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Executa todos os dias à meia-noite (horário UTC)
+  workflow_dispatch:      # Permite execução manual pelo GitHub Actions
+
+jobs:
+  gerar-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22.x'  # Use a versão do Node que você está utilizando
+
+      - name: Instalar dependências
+        run: npm install
+
+      - name: Executar o script para gerar o JSON
+        run: node obras_map.js
+
+      - name: Commit e push do arquivo JSON
+        run: |
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git add obras_com_lat_long.json
+          git commit -m "Atualização diária do arquivo JSON"
+          git push
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
