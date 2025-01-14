@@ -1,9 +1,11 @@
 name: Gerar JSON de obras
 
 on:
-  schedule:
-    - cron: '0 0 * * *'  # Executa todos os dias à meia-noite (horário UTC)
-  workflow_dispatch:      # Permite execução manual pelo GitHub Actions
+    push:    # Adiciona este gatilho temporário
+      branches:
+        - adicionando-workflow  # Substitua pelo nome da sua branch
+    workflow_dispatch:  # Permite disparo manual
+  
 
 jobs:
   gerar-json:
