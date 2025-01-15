@@ -1,0 +1,14 @@
+{
+  "name": "2024-2-squad07",
+  "version": "1.0.0",
+  "description": "Projeto de mapeamento das obras do DF",
+  "main": "obras_map.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Caio",
+  "license": "ISC"
+}
