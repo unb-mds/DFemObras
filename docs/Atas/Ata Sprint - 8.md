@@ -1,4 +1,4 @@
-# 📝 Ata da Reunião – Sprint 7
+# 📝 Ata da Reunião – Sprint 8
 
 **Data:** 15/01/2025  
 **Horário:** 19:30 – 20:48  
