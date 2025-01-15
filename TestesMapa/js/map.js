@@ -34,6 +34,26 @@ function formatarBRL(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
+//---------------------------------------------------------------------
+
+// Função para exibir os detalhes da obra
+function showDetails(obra) {
+    document.getElementById("obra-nome").textContent = obra.nome;
+    document.getElementById("obra-localizacao").textContent = obra.localizacao || 'Desconhecida';
+    document.getElementById("obra-status").textContent = obra.status || 'Desconhecido';
+    document.getElementById("obra-data-inicio").textContent = obra.dataInicio || 'Desconhecida';
+    document.getElementById("obra-prazo").textContent = obra.prazo || 'Desconhecido';
+  
+    // Exibir o painel de detalhes
+    document.getElementById("details-panel").classList.add("visible");
+  }
+  
+  // Fechar o painel de detalhes
+  document.getElementById("close-details").addEventListener("click", () => {
+    document.getElementById("details-panel").classList.remove("visible");
+  });
+
+//-----------------------------------------------------------------
 fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do JSON
     .then(response => {
         if (!response.ok) {
