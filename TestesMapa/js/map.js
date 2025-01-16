@@ -29,31 +29,49 @@ L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
 }).addTo(map);
 
-fetch('obras/obras.json') // Caminho do JSON
+
+function formatarBRL(valor) {
+    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+}
+
+fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do JSON
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao carregar o JSON');
         }
+        console.log("JSON carregado!")
         return response.json();
     })
     .then(data => {
         // Varrer as obras e criar marcadores
-        data.forEach(obra => {
-            const { nome, valor, lat, long } = obra;
+        data.forEach((obra, index) => {
+            const { nome, fontesDeRecurso, latitude, longitude } = obra;
+            
+            //Verifica se tem latitude e longitude no JSON
+            if(!latitude || !longitude){
+                console.warn(`Obra "${nome}" index ${index} ignorada por falta de coordenadas.`);
+                return;
+            }
 
             // Cria o marcador
-            const marker = L.marker([lat, long]).addTo(map);
+            const marker = L.marker([latitude, longitude]).addTo(map);
+
+            const valor = fontesDeRecurso?.[0]?.valorInvestimentoPrevisto;
+            const valorBRL = formatarBRL(valor)
 
             // Conteúdo do popup
             const popupContent = `
                 <div>
                     <h3>${nome}</h3>
-                    <p><strong>Valor:</strong> R$ ${valor.toLocaleString()}</p>
+                    <p><strong>Valor Previsto:</strong> ${valorBRL}</p>
                 </div>
             `;
 
             // Adicionar popup ao marcador
             marker.bindPopup(popupContent);
+
+            console.log(`Obra ${index + 1} foi carregada: "${nome}" `);
+
         });
     })
     .catch(error => {
