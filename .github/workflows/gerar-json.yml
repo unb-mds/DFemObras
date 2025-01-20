@@ -29,8 +29,10 @@ jobs:
 
       - name: Commit e push do arquivo JSON
         run: |
-          git config --global user.name "GitHub Action"
+         git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
+          git fetch --all # Atualiza o repositório remoto
+          git pull --rebase # Aplica as alterações locais sobre as alterações remotas
           git add obras_com_lat_long.json
           git commit -m "Atualização diária do arquivo JSON"
           git push
