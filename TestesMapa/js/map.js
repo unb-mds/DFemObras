@@ -1,105 +1,61 @@
-// Inicializar o mapa
+// Inicializa o mapa na posição e zoom padrão
+const map = L.map('map').setView([-14.235, -51.9253], 4); // Coordenadas aproximadas do Brasil
 
-  
-const map = L.map('map').setView([-15.802825, -47.798767], 10.4);
-
-document.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('popup');
-    const closePopup = document.getElementById('close-popup');
-  
-    // Mostra o popup quando a página é carregada
-    popup.style.display = 'flex';
-  
-    // Fecha o popup ao clicar no botão "X"
-    closePopup.addEventListener('click', () => {
-      popup.style.display = 'none';
-    });
-  
-    // Fecha o popup ao clicar fora do conteúdo
-    popup.addEventListener('click', (event) => {
-      if (event.target === popup) {
-        popup.style.display = 'none';
-      }
-    });
-  });
-
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+// Adiciona o tile layer do mapa (OpenStreetMap)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-
+// Função para formatar valores em BRL
 function formatarBRL(valor) {
-    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+    return new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL'
+    }).format(valor);
 }
 
-//---------------------------------------------------------------------
-
-// Função para exibir os detalhes da obra
-function showDetails(obra) {
-    document.getElementById("obra-nome").textContent = obra.nome;
-    document.getElementById("obra-localizacao").textContent = obra.localizacao || 'Desconhecida';
-    document.getElementById("obra-status").textContent = obra.status || 'Desconhecido';
-    document.getElementById("obra-data-inicio").textContent = obra.dataInicio || 'Desconhecida';
-    document.getElementById("obra-prazo").textContent = obra.prazo || 'Desconhecido';
-  
-    // Exibir o painel de detalhes
-    document.getElementById("details-panel").classList.add("visible");
-  }
-  
-  // Fechar o painel de detalhes
-  document.getElementById("close-details").addEventListener("click", () => {
-    document.getElementById("details-panel").classList.remove("visible");
-  });
-
-//-----------------------------------------------------------------
-fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do JSON
+// Carrega os dados do arquivo JSON com as obras
+fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do arquivo JSON
     .then(response => {
         if (!response.ok) {
-            throw new Error('Erro ao carregar o JSON');
+            throw new Error('Erro ao carregar o arquivo JSON.');
         }
-        console.log("JSON carregado!")
         return response.json();
     })
     .then(data => {
-        // Varrer as obras e criar marcadores
+        // Itera sobre as obras e cria marcadores no mapa
         data.forEach((obra, index) => {
-            const { nome, fontesDeRecurso, latitude, longitude } = obra;
-            
-            //Verifica se tem latitude e longitude no JSON
-            if(!latitude || !longitude){
+            const { nome, fontesDeRecurso, latitude, longitude, localizacao } = obra;
+
+            // Verifica se a obra possui coordenadas
+            if (!latitude || !longitude) {
                 console.warn(`Obra "${nome}" index ${index} ignorada por falta de coordenadas.`);
                 return;
             }
 
-            // Cria o marcador
+            // Cria o marcador no mapa
             const marker = L.marker([latitude, longitude]).addTo(map);
 
-            const valor = fontesDeRecurso?.[0]?.valorInvestimentoPrevisto;
-            const valorBRL = formatarBRL(valor)
+            // Valor investido formatado
+            const valor = fontesDeRecurso?.[0]?.valorInvestimentoPrevisto || 0;
+            const valorBRL = formatarBRL(valor);
 
-            // Conteúdo do popup
+            // Conteúdo do popup com link para detalhamento
             const popupContent = `
                 <div>
                     <h3>${nome}</h3>
                     <p><strong>Valor Previsto:</strong> ${valorBRL}</p>
+                    <p><strong>Localização:</strong> ${localizacao || 'Não informada'}</p>
+                    <a href="detalhamento.html?obra=${index}" target="_blank" style="color: blue; text-decoration: underline;">
+                        Ver detalhes
+                    </a>
                 </div>
             `;
 
-            // Adicionar popup ao marcador
+            // Associa o popup ao marcador
             marker.bindPopup(popupContent);
-
-            console.log(`Obra ${index + 1} foi carregada: "${nome}" `);
-
         });
     })
     .catch(error => {
         console.error('Erro ao carregar as obras:', error);
     });
-
-
-// Exibir coordenadas no console ao clicar no mapa
-map.on('click', (e) => {
-    console.log(`Coordenadas: ${e.latlng}`);
-});
