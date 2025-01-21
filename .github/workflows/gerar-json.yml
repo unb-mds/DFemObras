@@ -1,40 +1,49 @@
-name: Gerar JSON de obras
+name: Gerar JSON diariamente
 
 on:
-    push:    # Adiciona este gatilho temporário
-      branches:
-        - adicionando-workflow  # Substitua pelo nome da sua branch
-    workflow_dispatch:  # Permite disparo manual
-  
+  schedule:
+    - cron: '0 0 * * *' # Executa o workflow diariamente à meia-noite UTC
+  workflow_dispatch: # Permite execução manual do workflow
 
 jobs:
   gerar-json:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 120 # Timeout de 120 minutos para garantir que o processo tenha tempo suficiente
 
     steps:
+      # Passo 1: Fazer checkout do repositório
       - name: Checkout do repositório
         uses: actions/checkout@v3
 
+      # Passo 2: Instalar o Node.js
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '22.x'  # Use a versão do Node que você está utilizando
+          node-version: '22'
 
+      # Passo 3: Instalar dependências
       - name: Instalar dependências
-        run: npm install
+        run: |
+          cd obrasgov # Entrar na pasta 'obrasgov'
+          npm install
 
-      - name: Executar o script para gerar o JSON
-        run: node obras_map.js
+      # Passo 4: Executar o script para gerar o JSON
+      - name: Rodar script para gerar JSON
+        run: |
+          cd obrasgov # Entrar na pasta 'obrasgov'
+          node obras_map.js
 
+      # Passo 5: Atualizar o repositório remoto antes de fazer o commit
+      - name: Atualizar repositório remoto
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git pull --rebase origin main # Atualizar a branch principal para evitar conflitos
+
+      # Passo 6: Commit e push do arquivo JSON gerado
       - name: Commit e push do arquivo JSON
         run: |
-         git config --global user.name "GitHub Action"
-          git config --global user.email "action@github.com"
-          git fetch --all # Atualiza o repositório remoto
-          git pull --rebase # Aplica as alterações locais sobre as alterações remotas
-          git add obras_com_lat_long.json
-          git commit -m "Atualização diária do arquivo JSON"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          cd obrasgov # Entrar na pasta 'obrasgov'
+          git add resultado.json
+          git commit -m "Atualizando resultado.json gerado automaticamente"
+          git push origin main
