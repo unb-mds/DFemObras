@@ -20,12 +20,23 @@ def get_cohere_client(api_key):
     return cohere.ClientV2(api_key)
 
 def get_twitter_client(config):
-    return tweepy.Client(
+    client_v2 = tweepy.Client(
         consumer_key=config["twitter_consumer_key"],
         consumer_secret=config["twitter_consumer_secret"],
         access_token=config["twitter_access_token"],
         access_token_secret=config["twitter_access_token_secret"]
     )
+
+    client_v1 = tweepy.API(
+        tweepy.OAuth1UserHandler(
+            consumer_key=config["twitter_consumer_key"],
+            consumer_secret=config["twitter_consumer_secret"],
+            access_token=config["twitter_access_token"],
+            access_token_secret=config["twitter_access_token_secret"]
+        )
+    )
+
+    return client_v2, client_v1
 
 def generate_message(cohere_client, prompt):
     try:
@@ -38,7 +49,7 @@ def generate_message(cohere_client, prompt):
         print("Erro ao gerar mensagem:", e)
         return None
 
-def post_tweet(twitter_client, message):
+def post_message(twitter_client, message):
     try:
         tweet = twitter_client.create_tweet(text=message)
         print("Tweet enviado com sucesso:", tweet)
@@ -107,25 +118,54 @@ def save_image(data, file_path):
     except Exception as e:
         print(f"Erro ao gerar a imagem: {e}")
 
-def run_bot():
+def post_image(twitter_client_v2, twitter_client_v1, image):
+    try:
+        if image:
+            if not os.path.exists(image):
+                print(f"Erro: Arquivo de imagem não encontrado - {image}")
+                return None
+            
+            media = twitter_client_v1.media_upload(image)
+
+            tweet = twitter_client_v2.create_tweet(media_ids=[media.media_id])
+
+            print("Tweet enviado com sucesso:", tweet)
+            return tweet
+    except Exception as e:
+        print("Erro ao enviar o tweet:", e)
+        return None
+
+    
+def run_bot(out_image_path):
+    # try:
+    #     config = load_config()
+    #     cohere_client = get_cohere_client(config["cohere_api_key"])
+    #     twitter_client = get_twitter_client(config)
+
+    #     prompt = (
+    #         "Explique em até extritamente 280 caracteres, qual foi a última obra feita no DF, Brasil. "
+    #     )
+    #     message = generate_message(cohere_client, prompt)
+        
+    #     if message:
+    #         print("Mensagem gerada:", message)
+    #         response = post_message(twitter_client, message)
+    #         print("Resposta da API do Twitter:", response)
+    #     else:
+    #         print("Nenhuma mensagem foi gerada.")
+    # except Exception as e:
+    #     print("Erro durante a execução:", e)
+
     try:
         config = load_config()
-        cohere_client = get_cohere_client(config["cohere_api_key"])
-        twitter_client = get_twitter_client(config)
+        twitter_client_v2, twitter_client_v1 = get_twitter_client(config)
 
-        prompt = (
-            "Explique em até extritamente 280 caracteres, qual foi a última obra feita no DF, Brasil. "
-        )
-        message = generate_message(cohere_client, prompt)
-        
-        if message:
-            print("Mensagem gerada:", message)
-            response = post_tweet(twitter_client, message)
-            print("Resposta da API do Twitter:", response)
+        if os.path.exists(out_image_path):
+            post_image(twitter_client_v2, twitter_client_v1, out_image_path)
         else:
-            print("Nenhuma mensagem foi gerada.")
+            print(f"Imagem não encontrada no caminho: {out_image_path}")
     except Exception as e:
-        print("Erro durante a execução:", e)
+        print("Erro durante a execução do bot:", e)
 
 def html_generate(obra):
     
@@ -157,7 +197,7 @@ def html_generate(obra):
 
 def main():
     json_file_path = "C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\TesteObrasgov\\obras_com_lat_long.json"
-    output_image_path = "C:\\Users\\lunat\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\Bots\imagens\\obras_atrasadas.png"
+    output_image_path = "C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\Bots\imagens\\obras_atrasadas.png"
 
     data = load_json(json_file_path)
 
@@ -168,9 +208,7 @@ def main():
         ]
         save_image(obras_atrasadas, output_image_path)
         html_generate(obras_atrasadas)
-
-    run_bot()
-    
+        run_bot(output_image_path)
 
 if __name__ == "__main__":
     main()
