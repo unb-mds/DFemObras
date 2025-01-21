@@ -127,9 +127,37 @@ def run_bot():
     except Exception as e:
         print("Erro durante a execução:", e)
 
+def html_generate(obra):
+    
+    html_content = """
+    <!DOCTYPE html>
+    <html>
+        <head>
+    <title>Anomalias</title>
+    </head>
+    <body>
+    """
+    for obras in obra:
+        nome_obra = obras.get('nome', 'Nome não disponível')
+        meta_global = obras.get('metaGlobal', 'Meta global não disponível')
+        latitude = obras.get('latitude', 'Latitude não disponível')
+        longitude = obras.get('longitude', 'Longitude não disponível')
+
+        tomadores = obras.get('tomadores', [])
+        tomadores_nomes = ', '.join([tomador.get('nome', 'Nome não disponível') for tomador in tomadores])
+
+        html_content += f"   <p>Nome: {nome_obra}<p>\n   <p>Meta: {meta_global}<p>\n   <p>Latitude: {latitude}<p>\n   <p>Longitude: {longitude}<p>\n   <p>Tomadores: {tomadores_nomes}<p>\n   <p>Status: {obras.get('status', 'Não especificado')}<p>\n   <p>Data Final Prevista: {obras['dataFinalPrevista']}<p>\n   <p>Descrição: {obras['descricao']}<p>\n   <p>&nbsp;</p>"
+        
+    html_content += """    
+    </body>
+    </html>
+    """
+    with open("arquivo.html", "w", encoding="utf-8") as file:
+        file.write(html_content)
+
 def main():
-    json_file_path = "C:2024-2-Squad07\\TesteObrasgov\\obras_com_lat_long.json"
-    output_image_path = "C:2024-2-Squad07\\Bots\imagens\\obras_atrasadas.png"
+    json_file_path = "C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\TesteObrasgov\\obras_com_lat_long.json"
+    output_image_path = "C:\\Users\\lunat\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\Bots\imagens\\obras_atrasadas.png"
 
     data = load_json(json_file_path)
 
@@ -139,10 +167,10 @@ def main():
             if obra['dataFinalPrevista'] and obra['dataFinalPrevista'] < "2024-01-01" and obra['dataFinalEfetiva'] is None
         ]
         save_image(obras_atrasadas, output_image_path)
+        html_generate(obras_atrasadas)
 
     run_bot()
+    
 
 if __name__ == "__main__":
     main()
-
-
