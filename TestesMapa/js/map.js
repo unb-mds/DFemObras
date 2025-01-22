@@ -34,7 +34,7 @@ function formatarBRL(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
-fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do JSON
+fetch('../obrasgov/obras_com_lat_long.json') // Caminho do JSON
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao carregar o JSON');
@@ -80,10 +80,10 @@ fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do JSON
             }
             
             /*Ignorando as obras "Cadastradas" para melhor visualização dos pins*/
-            if(situacao == 'Cadastrada'){
+            /*if(situacao == 'Cadastrada'){
                 console.log(`Obra ${index} ignorada por ser "Cadastrada" Nome da obra:"${nome}"`)
                 return;
-            }
+            }*/
 
             // Escolhe o ícone com base na situação
             let markerIcon;
