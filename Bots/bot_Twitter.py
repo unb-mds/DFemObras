@@ -168,7 +168,13 @@ def run_bot(out_image_path):
         print("Erro durante a execução do bot:", e)
 
 def html_generate(obra):
-    
+
+    directory = "TestesMapa"
+    if not os.path.exists(directory):
+        os.makedirs(directory) 
+
+    file_path = os.path.join(directory, "anomalias.html")
+
     html_content = """
     <!DOCTYPE html>
     <html>
@@ -192,8 +198,9 @@ def html_generate(obra):
     </body>
     </html>
     """
-    with open("arquivo.html", "w", encoding="utf-8") as file:
+    with open(file_path, "w", encoding="utf-8") as file:
         file.write(html_content)
+    print(f"Arquivo HTML gerado em: {file_path}")
 
 def main():
     json_file_path = "C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\TesteObrasgov\\obras_com_lat_long.json"
