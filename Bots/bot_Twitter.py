@@ -73,7 +73,6 @@ def load_json(file_path):
 
 def save_image(data, output_dir):
     try:
-        # Certificando-se de que o diretório de saída existe
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
@@ -125,7 +124,6 @@ def save_image(data, output_dir):
                 if y_offset > height - 50:
                     break
 
-            # Corrigir a construção do caminho de saída
             output_path = os.path.join(output_dir, f"obras_atrasadas_{i + 1}.png")
             image.save(output_path)
             print(f"Imagem {i + 1} salva em {output_path}")
@@ -146,35 +144,30 @@ def post_images(twitter_client_v2, twitter_client_v1, image_paths):
             continue
 
         try:
-            # Verifica o status do limite antes de fazer o upload
-            remaining, reset_timestamp, limit = get_rate_limit_status(twitter_client_v1)
+            # remaining, reset_timestamp, limit = get_rate_limit_status(twitter_client_v1)
             
-            while remaining == 0:  # Enquanto não houver requisições restantes, aguarde
-                current_time = int(time.time())
-                wait_time = reset_timestamp - current_time + 5  # 5 segundos de folga
-                print(f"Limite de requisições atingido. Aguardando {wait_time} segundos antes de tentar novamente.")
-                time.sleep(wait_time)  # Espera até o reset do limite
-                remaining, reset_timestamp, limit = get_rate_limit_status(twitter_client_v1)  # Verifica novamente
+            # while remaining == 0:  
+            #     current_time = int(time.time())
+            #     wait_time = reset_timestamp - current_time + 5  
+            #     print(f"Limite de requisições atingido. Aguardando {wait_time} segundos antes de tentar novamente.")
+            #     time.sleep(wait_time)
+            #     remaining, reset_timestamp, limit = get_rate_limit_status(twitter_client_v1) 
 
-            # Upload da mídia
             media = twitter_client_v1.media_upload(image)
             media_ids.append(media.media_id)
             print(f"Imagem {image} carregada com sucesso.")
-            time.sleep(3)  # Pausa entre uploads
+            time.sleep(3)  
 
         except tweepy.TweepError as e:
-            if e.api_code == 429:  # Se o erro for relacionado ao limite
+            if e.api_code == 429: 
                 print("Limite de requisições atingido. Aguardando...")
-                # Pegando o tempo de reset do limite a partir dos headers
                 reset_time = int(e.response.headers.get('x-rate-limit-reset'))
                 current_time = int(time.time())
-                wait_time = reset_time - current_time + 5  # 5 segundos de folga
+                wait_time = reset_time - current_time + 5  
                 print(f"Aguardando {wait_time} segundos antes de tentar novamente.")
                 time.sleep(wait_time)
-                # Reavalia o status após aguardar
-                return post_images(twitter_client_v2, twitter_client_v1, image_paths)  # Tentativa novamente após o reset
+                return post_images(twitter_client_v2, twitter_client_v1, image_paths)
 
-    # Se todas as imagens foram carregadas, envia o tweet
     if media_ids:
         try:
             tweet = twitter_client_v2.create_tweet(media_ids=media_ids)
@@ -191,31 +184,25 @@ def run_bot(out_image_dir):
         config = load_config()
         twitter_client_v2, twitter_client_v1 = get_twitter_client(config)
 
-        # Verificar se o diretório de imagens existe
         if not os.path.exists(out_image_dir):
             print(f"Erro: Diretório de imagens não encontrado - {out_image_dir}")
             return
 
-        # Listar todas as imagens geradas no diretório
         image_files = [f for f in os.listdir(out_image_dir) if f.endswith('.png')]
 
-        # Verificar se existem imagens para enviar
         if not image_files:
             print("Nenhuma imagem encontrada para enviar.")
             return
 
-        # Enviar uma imagem por vez
         for image_file in image_files:
             image_path = os.path.join(out_image_dir, image_file)
 
             if os.path.exists(image_path):
-                # Fazer o upload da imagem
                 media = twitter_client_v1.media_upload(image_path)
 
-                # Enviar o tweet com a imagem
                 tweet = twitter_client_v2.create_tweet(media_ids=[media.media_id])
                 print(f"Tweet enviado com sucesso: {tweet}")
-                time.sleep(3)  # Adicionar uma pausa de 3 segundos entre uploads
+                time.sleep(3) 
 
             else:
                 print(f"Imagem não encontrada: {image_path}")
@@ -225,7 +212,6 @@ def run_bot(out_image_dir):
 
 
 def html_generate(obra):
-<<<<<<< HEAD
 
     directory = "TestesMapa"
     if not os.path.exists(directory):
@@ -233,8 +219,6 @@ def html_generate(obra):
 
     file_path = os.path.join(directory, "anomalias.html")
 
-=======
->>>>>>> 1df63e60348a746d2f014c746168d619aee0678a
     html_content = """
     <!DOCTYPE html>
     <html>
@@ -263,10 +247,8 @@ def html_generate(obra):
     print(f"Arquivo HTML gerado em: {file_path}")
 
 def main():
-    json_file_path = r"C:\projetos\2024-2-Squad07\TesteObrasgov\obras_com_lat_long.json"
-
-    # Caminho do diretório onde as imagens serão salvas (sem o nome do arquivo)
-    output_dir = r"C:\projetos\2024-2-Squad07\Bots\imagens"
+    json_file_path = r"C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\TesteObrasgov\\obras_com_lat_long.json"
+    output_dir = r"C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\Bots\imagens\\obras_atrasadas.png"
 
     data = load_json(json_file_path)
 
@@ -276,8 +258,8 @@ def main():
             if obra['dataFinalPrevista'] and obra['dataFinalPrevista'] < "2024-01-01" and obra['dataFinalEfetiva'] is None
         ]
         save_image(obras_atrasadas, output_dir)
+        html_generate(obras_atrasadas)
         run_bot(output_dir)
 
-# Executando o bot
 if __name__ == "__main__":
     main()
