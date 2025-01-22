@@ -1,0 +1,51 @@
+name: Gerar JSON diariamente
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Executa o workflow diariamente à meia-noite UTC
+  workflow_dispatch: # Permite execução manual do workflow
+
+jobs:
+  gerar-json:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120 # Timeout de 120 minutos para garantir que o processo tenha tempo suficiente
+
+    steps:
+      # Passo 1: Fazer checkout do repositório
+      - name: Checkout do repositório
+        uses: actions/checkout@v3
+
+      # Passo 2: Instalar o Node.js
+      - name: Configurar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '22'
+
+      # Passo 3: Instalar dependências
+      - name: Instalar dependências
+        run: |
+          cd obrasgov 
+          npm install
+
+      # Passo 4: Executar o script para gerar o JSON
+      - name: Rodar script para gerar JSON
+        run: |
+          cd obrasgov 
+          node obras_map.js
+
+      # Passo 5: Atualizar o repositório remoto antes de fazer o commit
+      - name: Atualizar repositório remoto
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "GitHub Actions Bot"
+          git stash # Armazenar alterações locais temporariamente
+          git pull --rebase origin main # Atualizar a branch principal para evitar conflitos
+          git stash pop # Restaurar alterações locais após a atualização
+
+      # Passo 6: Commit e push do arquivo JSON gerado
+      - name: Commit e push do arquivo JSON
+        run: |
+          cd obrasgov 
+          git add obras_com_lat_long.json
+          git commit -m "Atualizando resultado.json gerado automaticamente"
+          git push origin main
