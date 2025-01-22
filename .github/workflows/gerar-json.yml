@@ -24,13 +24,13 @@ jobs:
       # Passo 3: Instalar dependências
       - name: Instalar dependências
         run: |
-          cd obrasgov # Entrar na pasta 'obrasgov'
+          cd obrasgov 
           npm install
 
       # Passo 4: Executar o script para gerar o JSON
       - name: Rodar script para gerar JSON
         run: |
-          cd obrasgov # Entrar na pasta 'obrasgov'
+          cd obrasgov 
           node obras_map.js
 
       # Passo 5: Atualizar o repositório remoto antes de fazer o commit
@@ -38,12 +38,14 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "GitHub Actions Bot"
+          git stash # Armazenar alterações locais temporariamente
           git pull --rebase origin main # Atualizar a branch principal para evitar conflitos
+          git stash pop # Restaurar alterações locais após a atualização
 
       # Passo 6: Commit e push do arquivo JSON gerado
       - name: Commit e push do arquivo JSON
         run: |
-          cd obrasgov # Entrar na pasta 'obrasgov'
-          git add resultado.json
+          cd obrasgov 
+          git add obras_com_lat_long.json
           git commit -m "Atualizando resultado.json gerado automaticamente"
           git push origin main
