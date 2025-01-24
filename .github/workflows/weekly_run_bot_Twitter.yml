@@ -2,8 +2,9 @@ name: Weekly Run Bot
 
 on:
   schedule:
-    # Rodar toda segunda-feira às 11h UTC (8h em Brasília no horário padrão)
-    - cron: '0 11 * * 1'
+    # Rodar toda quarta-feira às 11h UTC (8h em Brasília no horário padrão)
+    - cron: '0 11 * * 3'
+  workflow_dispatch:
 
 jobs:
   weekly_run:
@@ -32,3 +33,11 @@ jobs:
       run: |
         cd Bots
         python bot_Twitter.py
+
+    - name: Commit and push anomalias.html
+      run: |
+        git config user.name "GitHub Actions Bot"
+        git config user.email "actions@github.com"
+        git add TestesMapa/anomalias.html
+        git commit -m "Adicionando arquivo anomalias.html gerado automaticamente"
+        git push origin desenvolvimento
