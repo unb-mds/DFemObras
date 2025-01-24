@@ -1,0 +1,44 @@
+name: Test Bot_Twitter
+
+on:
+  push:
+    branches:
+      - bot_anomalias
+      - desenvolvimento
+      - main
+  pull_request:
+    branches:
+      - desenvolvimento
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: [3.11]
+
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Using Python ${{ matrix.python-version }}
+      uses: actions/setup-python@v4
+      with:
+        python-version: ${{ matrix.python-version }}
+
+    - name: Install system dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y libdbus-1-dev libdbus-glib-1-dev build-essential python3-dev
+
+    - name: Install Python dependencies
+      run: |
+        python -m pip install --upgrade pip setuptools wheel
+        pip install -r Bots/requirements.txt
+        pip install pytest
+
+    - name: Run test_bot
+      run: |
+        cd Bots
+        pytest test_bot_Twitter.py --maxfail=5 --disable-warnings

@@ -1,0 +1,34 @@
+name: Weekly Run Bot
+
+on:
+  schedule:
+    # Rodar toda segunda-feira às 11h UTC (8h em Brasília no horário padrão)
+    - cron: '0 11 * * 1'
+
+jobs:
+  weekly_run:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt
+
+    - name: Run bot_Twitter.py
+      env:  
+        API_COHERE_KEY: ${{ secrets.API_COHERE_KEY }}
+        API_CONSUMER_KEY_X: ${{ secrets.API_CONSUMER_KEY_X }}
+        API_CONSUMER_SECRET_X: ${{ secrets.API_CONSUMER_SECRET_X }}
+        API_ACCESS_TOKEN_X: ${{ secrets.API_ACCESS_TOKEN_X }}
+        API_ACCESS_TOKEN_SECRET_X: ${{ secrets.API_ACCESS_TOKEN_SECRET_X }}
+      run: |
+        cd Bots
+        python bot_Twitter.py
