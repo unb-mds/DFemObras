@@ -40,4 +40,5 @@ jobs:
         git config user.email "actions@github.com"
         git add TestesMapa/anomalias.html
         git commit -m "Adicionando arquivo anomalias.html gerado automaticamente"
-        git push origin desenvolvimento
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:desenvolvimento
+
