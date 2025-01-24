@@ -144,14 +144,6 @@ def post_images(twitter_client_v2, twitter_client_v1, image_paths):
             continue
 
         try:
-            # remaining, reset_timestamp, limit = get_rate_limit_status(twitter_client_v1)
-            
-            # while remaining == 0:  
-            #     current_time = int(time.time())
-            #     wait_time = reset_timestamp - current_time + 5  
-            #     print(f"Limite de requisições atingido. Aguardando {wait_time} segundos antes de tentar novamente.")
-            #     time.sleep(wait_time)
-            #     remaining, reset_timestamp, limit = get_rate_limit_status(twitter_client_v1) 
 
             media = twitter_client_v1.media_upload(image)
             media_ids.append(media.media_id)
@@ -247,8 +239,8 @@ def html_generate(obra):
     print(f"Arquivo HTML gerado em: {file_path}")
 
 def main():
-    json_file_path = r"C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\TesteObrasgov\\obras_com_lat_long.json"
-    output_dir = r"C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\Bots\imagens\\obras_atrasadas.png"
+    json_file_path = r"obrasgov/obras_com_lat_long.json"
+    output_dir = r"Bots/imagens/obras_atrasadas.png"
 
     data = load_json(json_file_path)
 
