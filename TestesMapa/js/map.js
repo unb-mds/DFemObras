@@ -15,7 +15,7 @@ function formatarBRL(valor) {
 }
 
 // Carrega os dados do arquivo JSON com as obras
-fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do arquivo JSON
+fetch('../TesteObrasgov/obras_com_lat_long.json') // Ajustar o caminho do JSON conforme necessário
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao carregar o arquivo JSON.');
@@ -23,9 +23,36 @@ fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do arquivo JSON
         return response.json();
     })
     .then(data => {
+        const pinIcons = {
+            concluida: L.icon({
+                iconUrl: '/TestesMapa/js/pins/concluida.png',
+                iconSize: [32, 32], // Tamanho do ícone
+                iconAnchor: [16, 32], // Ponto de ancoragem
+                popupAnchor: [0, -32], // Ponto de ancoragem do popup
+            }),
+            emExecucao: L.icon({
+                iconUrl: '/TestesMapa/js/pins/em_execucao.png',
+                iconSize: [35, 35],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+            }),
+            cadastrada: L.icon({
+                iconUrl: '/TestesMapa/js/pins/cadastrada.png',
+                iconSize: [35, 35],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+            }),
+            inativada: L.icon({
+                iconUrl: '/TestesMapa/js/pins/inativada.png',
+                iconSize: [32, 32],
+                iconAnchor: [16, 32],
+                popupAnchor: [0, -32],
+            }),
+        };
+
         // Itera sobre as obras e cria marcadores no mapa
         data.forEach((obra, index) => {
-            const { nome, fontesDeRecurso, latitude, longitude, localizacao } = obra;
+            const { nome, fontesDeRecurso, latitude, longitude, situacao, localizacao } = obra;
 
             // Verifica se a obra possui coordenadas
             if (!latitude || !longitude) {
@@ -33,8 +60,23 @@ fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do arquivo JSON
                 return;
             }
 
-            // Cria o marcador no mapa
-            const marker = L.marker([latitude, longitude]).addTo(map);
+            // Escolhe o ícone com base na situação
+            let markerIcon;
+            if (situacao === 'Concluída') {
+                markerIcon = pinIcons.concluida;
+            } else if (situacao === 'Em execução') {
+                markerIcon = pinIcons.emExecucao;
+            } else if (situacao === 'Cadastrada') {
+                markerIcon = pinIcons.cadastrada;
+            } else if (situacao === 'Inativada') {
+                markerIcon = pinIcons.inativada;
+            } else {
+                console.warn(`Obra ${index} situação "${situacao}" desconhecida. Nome da obra: "${nome}"`);
+                return;
+            }
+
+            // Cria o marcador com o ícone personalizado
+            const marker = L.marker([latitude, longitude], { icon: markerIcon }).addTo(map);
 
             // Valor investido formatado
             const valor = fontesDeRecurso?.[0]?.valorInvestimentoPrevisto || 0;
@@ -44,6 +86,7 @@ fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do arquivo JSON
             const popupContent = `
                 <div>
                     <h3>${nome}</h3>
+                    <p><strong>Situação:</strong> ${situacao}</p>
                     <p><strong>Valor Previsto:</strong> ${valorBRL}</p>
                     <p><strong>Localização:</strong> ${localizacao || 'Não informada'}</p>
                     <a href="detalhamento.html?obra=${index}" target="_blank" style="color: blue; text-decoration: underline;">
@@ -54,6 +97,8 @@ fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do arquivo JSON
 
             // Associa o popup ao marcador
             marker.bindPopup(popupContent);
+
+            console.log(`Obra ${index + 1} foi carregada: "${nome}"`);
         });
     })
     .catch(error => {
