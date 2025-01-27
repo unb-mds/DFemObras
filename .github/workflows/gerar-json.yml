@@ -1,9 +1,14 @@
-name: Gerar JSON diariamente
+name: "ci: gerar-json-obras"
 
 on:
   schedule:
     - cron: '0 0 * * *' # Executa o workflow diariamente à meia-noite UTC
   workflow_dispatch: # Permite execução manual do workflow
+
+permissions:
+  id-token: write
+  contents: write
+  pages: write
 
 jobs:
   gerar-json:
@@ -24,12 +29,14 @@ jobs:
       # Passo 3: Instalar dependências
       - name: Instalar dependências
         run: |
+          cd TestesMapa
           cd obrasgov 
           npm install
 
       # Passo 4: Executar o script para gerar o JSON
       - name: Rodar script para gerar JSON
         run: |
+          cd TestesMapa
           cd obrasgov 
           node obras_map.js
 
@@ -45,7 +52,23 @@ jobs:
       # Passo 6: Commit e push do arquivo JSON gerado
       - name: Commit e push do arquivo JSON
         run: |
+          cd TestesMapa
           cd obrasgov 
           git add obras_com_lat_long.json
-          git commit -m "Atualizando resultado.json gerado automaticamente"
+          git commit -m "ci: Atualizando obras_com_lat_long.json gerado automaticamente"
           git push origin main
+
+      # Passo 7: Configurar GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # Passo 8: Fazer upload da pasta TestesMapa como artefato para as Pages
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './TestesMapa' # Caminho para a pasta com o index.html
+
+      # Deploy para o GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
