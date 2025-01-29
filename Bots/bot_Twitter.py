@@ -77,8 +77,12 @@ def save_image(data, output_dir):
             os.makedirs(output_dir)
 
         width, height = 800, 1200
-        font_path = "C:/Windows/Fonts/arial.ttf"
-        font = ImageFont.truetype(font_path, size=10)
+
+        try:
+            font = ImageFont.load_default() 
+        except Exception as e:
+            print(f"Erro ao carregar a fonte: {e}. Usando fonte padrão.")
+            font = ImageFont.load_default()  
 
         images_created = 0
         items_per_image = len(data) // 4 + (1 if len(data) % 4 != 0 else 0)
