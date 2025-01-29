@@ -144,7 +144,6 @@ def post_images(twitter_client_v2, twitter_client_v1, image_paths):
             continue
 
         try:
-
             media = twitter_client_v1.media_upload(image)
             media_ids.append(media.media_id)
             print(f"Imagem {image} carregada com sucesso.")
@@ -174,6 +173,7 @@ def post_images(twitter_client_v2, twitter_client_v1, image_paths):
 def run_bot(out_image_dir):
     try:
         config = load_config()
+        cohere_client = get_cohere_client(config["cohere_api_key"])
         twitter_client_v2, twitter_client_v1 = get_twitter_client(config)
 
         if not os.path.exists(out_image_dir):
@@ -192,10 +192,17 @@ def run_bot(out_image_dir):
             if os.path.exists(image_path):
                 media = twitter_client_v1.media_upload(image_path)
 
-                tweet = twitter_client_v2.create_tweet(media_ids=[media.media_id])
-                print(f"Tweet enviado com sucesso: {tweet}")
-                time.sleep(3) 
+                prompt = "Crie uma mensagem criativa para acompanhar esta imagem."
+                message = generate_message(cohere_client, prompt)
 
+                if message:
+                    tweet = twitter_client_v2.create_tweet(text=message, media_ids=[media.media_id])
+                    print(f"Tweet enviado com sucesso: {tweet}")
+                else:
+                    tweet = twitter_client_v2.create_tweet(media_ids=[media.media_id])
+                    print(f"Tweet enviado com sucesso (sem mensagem): {tweet}")
+
+                time.sleep(3)
             else:
                 print(f"Imagem não encontrada: {image_path}")
 
@@ -213,7 +220,7 @@ def html_generate(obra):
 
     html_content = """
     <!DOCTYPE html>
-    <html>
+    <html lang="pt-br">
         <head>
     <title>Anomalias</title>
     </head>
@@ -239,8 +246,8 @@ def html_generate(obra):
     print(f"Arquivo HTML gerado em: {file_path}")
 
 def main():
-    json_file_path = r"obrasgov/obras_com_lat_long.json"
-    output_dir = r"Bots/imagens/obras_atrasadas.png"
+    json_file_path = r"./TesteObrasgov/obrasgov/obras_com_lat_long.json"
+    output_dir = r"./Bots/imagens/obras_atrasadas.png"
 
     data = load_json(json_file_path)
 
