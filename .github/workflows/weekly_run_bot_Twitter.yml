@@ -1,14 +1,17 @@
 name: Weekly Run Bot
 
 on:
+  workflow_dispatch:
   schedule:
     # Rodar toda quarta-feira às 11h UTC (8h em Brasília no horário padrão)
     - cron: '0 11 * * 3'
-  workflow_dispatch:
 
 jobs:
   weekly_run:
     runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
 
     steps:
     - uses: actions/checkout@v3
@@ -34,11 +37,18 @@ jobs:
         cd Bots
         python bot_Twitter.py
 
+    - name: List files (debug)
+      run: ls -R
+
+    - name: Pull latest changes from main
+      run: |
+        git fetch origin main
+        git merge origin/main
+
     - name: Commit and push anomalias.html
       run: |
         git config user.name "GitHub Actions Bot"
         git config user.email "actions@github.com"
         git add TestesMapa/anomalias.html
         git commit -m "Adicionando arquivo anomalias.html gerado automaticamente"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:desenvolvimento
-
+        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
