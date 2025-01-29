@@ -15,7 +15,7 @@ function formatarBRL(valor) {
 }
 
 // Carrega os dados do arquivo JSON com as obras
-fetch('../TesteObrasgov/obras_com_lat_long.json') // Ajustar o caminho do JSON conforme necessário
+fetch('./obrasgov/obras_com_lat_long.json') // Ajustar o caminho do JSON conforme necessário
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao carregar o arquivo JSON.');
