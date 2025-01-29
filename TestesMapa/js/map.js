@@ -34,7 +34,7 @@ function formatarBRL(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
 }
 
-fetch('../obrasgov/obras_com_lat_long.json') // Caminho do JSON
+fetch('./obrasgov/obras_com_lat_long.json') // Caminho do JSON
     .then(response => {
         if (!response.ok) {
             throw new Error('Erro ao carregar o JSON');
