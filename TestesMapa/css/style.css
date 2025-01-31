@@ -11,68 +11,58 @@ body, html {
 
 header {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
     padding: 10px 20px;
-    background-color: #1E3A8A; /* Cor de fundo moderna */
+    background-color: #133E79; 
     color: white;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 10;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
     box-sizing: border-box;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    border-bottom: 2px solid #A7C7E7; /* Linha fina para um acabamento moderno */
 }
 
 header .logo {
-    height: 50px; /* Ajustei a altura da logo para ficar mais equilibrado */
+    height: 70px; 
     width: auto;
-    margin-right: 20px; /* Ajuste do espaçamento para não ficar muito grande */
+    margin-right: 30px;
 }
 
 header .title {
-    flex-grow: 1;
-    text-align: center;
-    font-family: 'Roboto', sans-serif; /* Fonte moderna */
-    font-weight: 600;
-    font-size: 1.2em; /* Tamanho da fonte ajustado para manter a proporção */
+    flex-grow: 1; 
+    text-align: center; 
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 header .subtitle {
     text-align: center;
-    font-family: 'Cursive', sans-serif;
-    font-size: 1em; /* Ajustei o tamanho da fonte para combinar com o título */
-    color: #A7C7E7;
+    font-family: cursive;
 }
 
 header nav {
-    display: flex;
-    gap: 10px;
+    display: flex; 
+    gap: 10px; 
     flex-wrap: wrap;
 }
 
 header nav a {
-    margin: 5px 10px;
-    color: #1E3A8A;
+    margin: 5 10px;
+    color: green;
     text-decoration: none;
-    font-size: 16px; /* Tamanho do texto dos links ajustado */
-    padding: 8px 15px; /* Ajustei o padding para manter a proporção */
-    background-color: white;
-    border-radius: 25px;
-    transition: all 0.3s ease;
+    font-size: 20px;
+    padding: 10px 20px; 
+    background-color:white; 
+    border-radius: 25px; 
+    transition: background-color 0.3s ease; 
     white-space: nowrap;
-    font-family: 'Arial', sans-serif;
-    font-weight: 500;
-    text-transform: uppercase;
+    font-family:fantasy;
 }
 
 header nav a:hover {
-    background-color: #A7C7E7;
-    color: white;
-    text-decoration: none;
-    transform: translateY(-2px); /* Efeito de elevação */
+    background-color: #133E79; 
+    text-decoration: underline;
 }
 
 header nav a:active {
