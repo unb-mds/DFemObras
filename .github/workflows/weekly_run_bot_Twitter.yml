@@ -3,8 +3,8 @@ name: Weekly Run Bot
 on:
   workflow_dispatch:
   schedule:
-    # Rodar toda quarta-feira às 11h UTC (8h em Brasília no horário padrão)
     - cron: '0 11 * * 3'
+
 
 jobs:
   weekly_run:
@@ -15,6 +15,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -24,8 +26,14 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip install -r Bots/requirements.txt
+        pip install --upgrade cohere
 
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        
     - name: Run bot_Twitter.py
       env:  
         API_COHERE_KEY: ${{ secrets.API_COHERE_KEY }}
@@ -34,21 +42,13 @@ jobs:
         API_ACCESS_TOKEN_X: ${{ secrets.API_ACCESS_TOKEN_X }}
         API_ACCESS_TOKEN_SECRET_X: ${{ secrets.API_ACCESS_TOKEN_SECRET_X }}
       run: |
-        cd Bots
-        python bot_Twitter.py
-
-    - name: List files (debug)
-      run: ls -R
-
-    - name: Pull latest changes from main
-      run: |
-        git fetch origin main
-        git merge origin/main
+        python3 Bots/bot_Twitter.py
 
     - name: Commit and push anomalias.html
       run: |
-        git config user.name "GitHub Actions Bot"
-        git config user.email "actions@github.com"
+        git config --global user.name "Github Actions"
+        git config --global user.email "actions@users.noreply.github.com"
+        git pull origin main --rebase --autostash
         git add TestesMapa/anomalias.html
-        git commit -m "Adicionando arquivo anomalias.html gerado automaticamente"
-        git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:main
+        git commit -m "ci: Adicionando arquivo anomalias.html gerado automaticamente"
+        git push origin main --force
