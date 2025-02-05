@@ -1,7 +1,7 @@
 import os
 import json
 from unittest.mock import MagicMock
-from bot_Twitter import load_json, post_message, generate_message
+from bot_Twitter import load_json, post_message, generate_message, save_image, html_generate
 
 def test_load_json_success():
     test_file = "test.json"
@@ -55,3 +55,97 @@ def test_post_message_failure():
     tweet = post_message(mock_twitter_client, message)
 
     assert tweet is None
+
+def test_save_image_success(tmpdir):
+    obras = [
+        {
+            "nome": "Obra 1",
+            "metaGlobal": "Meta 1",
+            "latitude": "-23.5505",
+            "longitude": "-46.6333",
+            "tomadores": [{"nome": "Tomador 1"}],
+            "status": "Em andamento",
+            "dataFinalPrevista": "2023-12-31",
+            "descricao": "Descrição da obra 1"
+        },
+        {
+            "nome": "Obra 2",
+            "metaGlobal": "Meta 2",
+            "latitude": "-22.9068",
+            "longitude": "-43.1729",
+            "tomadores": [{"nome": "Tomador 2"}],
+            "status": "Concluída",
+            "dataFinalPrevista": "2023-11-30",
+            "descricao": "Descrição da obra 2"
+        }
+    ]
+
+    output_dir = tmpdir.mkdir("image_test")
+    save_image(obras, str(output_dir))
+
+    image_files = [f for f in os.listdir(output_dir) if f.endswith('.png')]
+    assert len(image_files) > 0 
+
+    for image_file in image_files:
+        image_path = os.path.join(output_dir, image_file)
+        assert os.path.exists(image_path)
+
+def test_save_image_failure(tmpdir):
+    obras = []
+    output_dir = tmpdir.mkdir("image_test_empty")
+    save_image(obras, str(output_dir))
+
+    image_files = [f for f in os.listdir(output_dir) if f.endswith('.png')]
+    assert len(image_files) == 0 
+
+def test_html_generate_success(tmpdir):
+    obras = [
+        {
+            "nome": "Obra 1",
+            "metaGlobal": "Meta 1",
+            "latitude": "-23.5505",
+            "longitude": "-46.6333",
+            "tomadores": [{"nome": "Tomador 1"}],
+            "status": "Em andamento",
+            "dataFinalPrevista": "2023-12-31",
+            "descricao": "Descrição da obra 1"
+        },
+        {
+            "nome": "Obra 2",
+            "metaGlobal": "Meta 2",
+            "latitude": "-22.9068",
+            "longitude": "-43.1729",
+            "tomadores": [{"nome": "Tomador 2"}],
+            "status": "Concluída",
+            "dataFinalPrevista": "2023-11-30",
+            "descricao": "Descrição da obra 2"
+        }
+    ]
+
+    output_dir = tmpdir.mkdir("html_test")
+    html_generate(obras)
+
+    file_path = os.path.join("TestesMapa", "anomalias.html")
+    assert os.path.exists(file_path)
+
+    with open(file_path, "r", encoding="utf-8") as file:
+        content = file.read()
+        assert "Obra 1" in content
+        assert "Obra 2" in content
+        assert "Tomador 1" in content
+        assert "Tomador 2" in content
+
+    os.remove(file_path)
+
+def test_html_generate_failure(tmpdir):
+    obras = []
+    html_generate(obras)
+
+    file_path = os.path.join("TestesMapa", "anomalias.html")
+    assert os.path.exists(file_path)
+
+    with open(file_path, "r", encoding="utf-8") as file:
+        content = file.read()
+        assert "<p>Nome: Nome não disponível<p>" not in content  
+
+    os.remove(file_path)
