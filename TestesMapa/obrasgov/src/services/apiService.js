@@ -1,5 +1,5 @@
 const axios = require('axios');
-const retryUtils = require('../utils/retryUtils');
+const { fetchWithRetry } = require('../utils/retryUtils');
 
 async function fetchObrasPorUF(uf, pagina = 0, tamanhoDaPagina = 5) {
     const url = `https://api.obrasgov.gestao.gov.br/obrasgov/api/projeto-investimento?uf=${uf}&pagina=${pagina}&tamanhoDaPagina=${tamanhoDaPagina}`;
@@ -23,14 +23,15 @@ async function fetchObrasPorUF(uf, pagina = 0, tamanhoDaPagina = 5) {
 async function fetchGeometria(idUnico) {
     const url = `https://api.obrasgov.gestao.gov.br/obrasgov/api/geometria?idUnico=${idUnico}`;
     try {
-        const geometria = await retryUtils.fetchWithRetry(url);
+        const geometria = await fetchWithRetry(url);
         return geometria;
     } catch (error) {
-        throw new Error(`Erro ao buscar geometria para ID ${idUnico}: ${error.message}`);
+        throw new Error(`Erro ao buscar geometria para ID ${idUnico}: ${error.cause || error.message}`);
     }
 }
 
+
 module.exports = {
     fetchObrasPorUF,
-    fetchGeometria
+    fetchGeometria,
 };
