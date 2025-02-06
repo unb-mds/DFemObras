@@ -10,7 +10,7 @@
             const params = new URLSearchParams(window.location.search);
             const obraIndex = params.get('obra');
             
-            fetch('../TesteObrasgov/obras_com_lat_long.json')
+            fetch('./obrasgov/obras_com_lat_long.json')
                 .then(response => response.json())
                 .then(data => {
                     const obra = data[obraIndex];
