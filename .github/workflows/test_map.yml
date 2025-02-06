@@ -28,5 +28,5 @@ jobs:
 
       # 4. Executar os testes
       - name: Run tests
-        run: npx jest
+        run: npx jest --coverage
         working-directory: TesteMapa/js

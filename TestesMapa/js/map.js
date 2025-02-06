@@ -71,13 +71,11 @@ function verificarResposta(resposta) {
     if (!resposta.ok) {
         throw new Error('Erro ao carregar o JSON');
     }
-    console.log("JSON carregado!");
     return resposta;
 }
 
 // Função para obter os dados das obras
 function obterDadosDasObras() {
-    console.log("chamou FETCH");
     return fetch('./obrasgov/obras_com_lat_long.json')
         .then(verificarResposta)
         .then(resposta => resposta.json());
@@ -154,10 +152,12 @@ function buscarObras() {
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         formatarBRL,
+        inicializaMapa,
         criarIconesDosPins,
         verificarResposta,
         obterDadosDasObras,
         criarMarcador,
+        buscarObras,
         gerarConteudoDoPopup,
         obterIconeDoMarcador,
         processarDadosDasObras
