@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "leaflet": "^1.9.4"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }
