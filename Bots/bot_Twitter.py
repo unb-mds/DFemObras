@@ -76,9 +76,14 @@ def save_image(data, output_dir):
         if not os.path.exists(output_dir):
             os.makedirs(output_dir)
 
-        width, height = 800, 1200
-        font_path = "C:/Windows/Fonts/arial.ttf"
-        font = ImageFont.truetype(font_path, size=10)
+        width, height = 1800, 1200
+
+        try:
+            font_path = "arial.ttf"  
+            font = ImageFont.truetype(font_path, size=20)  
+        except Exception as e:
+            print(f"Erro ao carregar a fonte: {e}. Usando fonte padrão.")
+            font = ImageFont.load_default()  
 
         images_created = 0
         items_per_image = len(data) // 4 + (1 if len(data) % 4 != 0 else 0)
@@ -104,23 +109,34 @@ def save_image(data, output_dir):
                 tomadores = obra.get('tomadores', [])
                 tomadores_nomes = ', '.join([tomador.get('nome', 'Nome não disponível') for tomador in tomadores])
 
-                draw.text((10, y_offset), f"Nome: {nome_obra}", fill="black", font=font)
-                y_offset += 20
-                draw.text((10, y_offset), f"Meta Global: {meta_global}", fill="black", font=font)
-                y_offset += 20
-                draw.text((10, y_offset), f"Latitude: {latitude}", fill="black", font=font)
-                y_offset += 20
-                draw.text((10, y_offset), f"Longitude: {longitude}", fill="black", font=font)
-                y_offset += 20
-                draw.text((10, y_offset), f"Tomadores: {tomadores_nomes}", fill="black", font=font)
-                y_offset += 20
-                draw.text((10, y_offset), f"Status: {obra.get('status', 'Não especificado')}", fill="black", font=font)
-                y_offset += 20
-                draw.text((10, y_offset), f"Data Final Prevista: {obra['dataFinalPrevista']}", fill="black", font=font)
-                y_offset += 20
-                draw.text((10, y_offset), f"Descrição: {obra['descricao']}", fill="black", font=font)
-                y_offset += 40
+                lines = [
+                    f"Nome: {nome_obra}",
+                    f"Meta Global: {meta_global}",
+                    f"Latitude: {latitude}",
+                    f"Longitude: {longitude}",
+                    f"Tomadores: {tomadores_nomes}",
+                    f"Status: {obra.get('status', 'Não especificado')}",
+                    f"Data Final Prevista: {obra['dataFinalPrevista']}",
+                    f"Descrição: {obra['descricao']}"
+                ]
 
+                for line in lines:
+                   
+                    text_bbox = draw.textbbox((10, y_offset), line, font=font)
+                    text_height = text_bbox[3] - text_bbox[1]
+
+                   
+                    if y_offset + text_height > height - 50:
+                        break
+
+                   
+                    draw.text((10, y_offset), line, fill="black", font=font)
+                    y_offset += text_height + 10  
+
+                
+                y_offset += 30
+
+               
                 if y_offset > height - 50:
                     break
 
@@ -134,7 +150,6 @@ def save_image(data, output_dir):
     except Exception as e:
         print(f"Erro ao gerar as imagens: {e}")
 
-
 def post_images(twitter_client_v2, twitter_client_v1, image_paths):
     media_ids = []
 
@@ -144,15 +159,6 @@ def post_images(twitter_client_v2, twitter_client_v1, image_paths):
             continue
 
         try:
-            # remaining, reset_timestamp, limit = get_rate_limit_status(twitter_client_v1)
-            
-            # while remaining == 0:  
-            #     current_time = int(time.time())
-            #     wait_time = reset_timestamp - current_time + 5  
-            #     print(f"Limite de requisições atingido. Aguardando {wait_time} segundos antes de tentar novamente.")
-            #     time.sleep(wait_time)
-            #     remaining, reset_timestamp, limit = get_rate_limit_status(twitter_client_v1) 
-
             media = twitter_client_v1.media_upload(image)
             media_ids.append(media.media_id)
             print(f"Imagem {image} carregada com sucesso.")
@@ -182,6 +188,7 @@ def post_images(twitter_client_v2, twitter_client_v1, image_paths):
 def run_bot(out_image_dir):
     try:
         config = load_config()
+        cohere_client = get_cohere_client(config["cohere_api_key"])
         twitter_client_v2, twitter_client_v1 = get_twitter_client(config)
 
         if not os.path.exists(out_image_dir):
@@ -200,10 +207,17 @@ def run_bot(out_image_dir):
             if os.path.exists(image_path):
                 media = twitter_client_v1.media_upload(image_path)
 
-                tweet = twitter_client_v2.create_tweet(media_ids=[media.media_id])
-                print(f"Tweet enviado com sucesso: {tweet}")
-                time.sleep(3) 
+                prompt = "Crie uma mensagem criativa para acompanhar essa imagem como um boletim semanal de reporte de obras atrasadas em no máximo 100 caracteres e adicione este link https://unb-mds.github.io/2024-2-Squad07/ ao texto indicando que lá existem mais informações e marque o perfil do gdf e inclua este perfil https://x.com/Gov_DF com o padrão de marcar no tweet."
+                message = generate_message(cohere_client, prompt)
 
+                if message:
+                    tweet = twitter_client_v2.create_tweet(text=message, media_ids=[media.media_id])
+                    print(f"Tweet enviado com sucesso: {tweet}")
+                else:
+                    tweet = twitter_client_v2.create_tweet(media_ids=[media.media_id])
+                    print(f"Tweet enviado com sucesso (sem mensagem): {tweet}")
+
+                time.sleep(3)
             else:
                 print(f"Imagem não encontrada: {image_path}")
 
@@ -221,7 +235,7 @@ def html_generate(obra):
 
     html_content = """
     <!DOCTYPE html>
-    <html>
+    <html lang="pt-br">
         <head>
     <title>Anomalias</title>
     </head>
@@ -247,8 +261,8 @@ def html_generate(obra):
     print(f"Arquivo HTML gerado em: {file_path}")
 
 def main():
-    json_file_path = r"C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\TesteObrasgov\\obras_com_lat_long.json"
-    output_dir = r"C:\\Users\\lunat\\OneDrive\\Área de Trabalho\\Projeto\\2024-2-Squad07\\Bots\imagens\\obras_atrasadas.png"
+    json_file_path = r"./TestesMapa/obrasgov/src/obras_com_lat_long.json"
+    output_dir = r"./Bots/imagens"
 
     data = load_json(json_file_path)
 
