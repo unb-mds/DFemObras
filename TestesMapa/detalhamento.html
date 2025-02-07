@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhamento da Obra</title>
+    <link rel="stylesheet" href="css/detalhamento.css">
+    <script>
+        window.addEventListener('DOMContentLoaded', () => {
+            const params = new URLSearchParams(window.location.search);
+            const obraIndex = params.get('obra');
+            
+            fetch('./obrasgov/obras_com_lat_long.json')
+                .then(response => response.json())
+                .then(data => {
+                    const obra = data[obraIndex];
+                    if (obra) {
+                        document.getElementById('nome').textContent = obra.nome || 'Não informado';
+                        document.getElementById('localizacao').textContent = obra.endereco || 'Não informada';
+                        document.getElementById('status').textContent = obra.situacao || 'Não informado';
+                        document.getElementById('dataInicio').textContent = obra.dataInicialPrevista || 'Não informado';
+                        document.getElementById('prazoConclusao').textContent = obra.dataFinalPrevista  || 'Não informado';
+                    } else {
+                        document.getElementById('detalhes').innerHTML = '<p>Obra não encontrada.</p>';
+                    }
+                })
+                .catch(error => console.error('Erro ao carregar os detalhes:', error));
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Detalhamento da Obra</h1>
+            <button onclick="window.location.href = 'index.html';" class="back-button">Voltar</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="detalhes" class="detalhe-card">
+            <div class="detalhe-info">
+                <p><strong>Nome:</strong> <span id="nome"></span></p>
+                <p><strong>Localização:</strong> <span id="localizacao"></span></p>
+                <p><strong>Status:</strong> <span id="status"></span></p>
+                <p><strong>Data de Início:</strong> <span id="dataInicio"></span></p>
+                <p><strong>Prazo de Conclusão:</strong> <span id="prazoConclusao"></span></p>
+            </div>
+        </section>
+    </main>
+
+    <!-- Adicionando efeitos de animação -->
+    <script>
+        document.querySelector('.detalhe-card').addEventListener('mouseenter', function() {
+            this.classList.add('animate-card');
+        });
+        document.querySelector('.detalhe-card').addEventListener('mouseleave', function() {
+            this.classList.remove('animate-card');
+        });
+    </script>
+</body>
+</html>

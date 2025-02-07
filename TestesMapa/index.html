@@ -6,10 +6,9 @@
     <title>Mapa Interativo</title>
 <html lang="pt-br">
     <!-- Estilo do Leaflet -->
-    <link rel="stylesheet" href="node_modules/leaflet/dist/leaflet.css">
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/map-header.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -26,6 +25,7 @@
             <a href="index.html">Home</a>
             <a href="sobre_o_projeto.html">Sobre o Projeto</a>
             <a href="contato.html">Contato</a>
+            <a href="anomalias.html">Anomalias</a>
         </nav>
     </header>
 
@@ -37,9 +37,6 @@
             <p id="popup-message"><h1>Bem-vindo(a)!</h1> <h3>Explore as obras do Governo do DF e acompanhe o progresso do desenvolvimento em nossa região. Este projeto, desenvolvido como parte da disciplina de Métodos de Desenvolvimento de Software, tem como objetivo fornecer um mapeamento detalhado e acessível de todas as iniciativas públicas em andamento.</h3></p>
         </div>
     </div>
-
-    <!-- Leaflet JS -->
-    <script src="node_modules/leaflet/dist/leaflet.js"></script>
 
     <!-- Script personalizado -->
     <script src="js/map.js"></script>
