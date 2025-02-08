@@ -24,9 +24,9 @@ jobs:
       # 3. Instalar o Jest
       - name: Install Jest
         run: npm install --save-dev jest
-        working-directory: TesteMapa/js
+        working-directory: TestesMapa/js
 
       # 4. Executar os testes
       - name: Run tests
         run: npx jest --coverage
-        working-directory: TesteMapa/js
+        working-directory: TestesMapa/js
