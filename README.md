@@ -1,4 +1,6 @@
-# 2024-2-Squad07
+# DFemObras
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Cayoalencar_2024-2-Squad07&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Cayoalencar_2024-2-Squad07)
+[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Cayoalencar_2024-2-Squad07&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Cayoalencar_2024-2-Squad07)
 
 Este repositório será utilizado pelo Grupo 7 para o desenvolvimento de um projeto da disciplina de *Métodos de Desenvolvimento de Software*. O projeto se trata da construção de um software de Mapeamento de Obras e Serviços Públicos.
 
