@@ -41,25 +41,25 @@ function criarIconesDosPins() {
     return {
         concluida: L.icon({
             iconUrl: './js/pins/concluida.png',
-            iconSize: [32, 32],
+            iconSize: [30, 30],
             iconAnchor: [16, 32],
             popupAnchor: [0, -32],
         }),
         emExecucao: L.icon({
             iconUrl: './js/pins/em_execucao.png',
-            iconSize: [35, 35],
+            iconSize: [30, 30],
             iconAnchor: [16, 32],
             popupAnchor: [0, -32],
         }),
         cadastrada: L.icon({
             iconUrl: './js/pins/cadastrada.png',
-            iconSize: [35, 35],
+            iconSize: [30, 30],
             iconAnchor: [16, 32],
             popupAnchor: [0, -32],
         }),
         inativada: L.icon({
             iconUrl: './js/pins/inativada.png',
-            iconSize: [32, 32],
+            iconSize: [30, 30],
             iconAnchor: [16, 32],
             popupAnchor: [0, -32],
         }),
@@ -89,13 +89,13 @@ function criarMarcador(lat, lng, icone, mapa) {
 // Função para gerar conteúdo do popup
 function gerarConteudoDoPopup(nome, situacao, valorBRL, indice) {
     return `
-        <div>
-            <h3>${nome}</h3>
-            <p><strong>Situação:</strong> ${situacao}</p>
-            <p><strong>Valor Previsto:</strong> ${valorBRL}</p>
-            <a href="detalhamento.html?obra=${indice}" target="_blank" style="color: blue; text-decoration: underline;">
-                        Ver detalhes
-                    </a>
+        <div style="font-family: Arial, sans-serif; padding: 10px; width: 250px; background-color:rgb(255, 255, 255);">
+            <h3 style="font-size: 18px; margin-bottom: 10px; color: #333;">${nome}</h3>
+
+            <p style="margin: 5px 0; font-size: 14px; color: #666;"><strong style="color: #333;">Valor Previsto:</strong> ${valorBRL}</p>
+            <a href="detalhamento.html?obra=${indice}" target="_blank" style="display: block; margin-top: 10px; text-align: center; padding: 8px; background-color: #133e79; color: white; text-decoration: none; border-radius: 4px; font-size: 14px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+                Ver detalhes
+            </a>
         </div>
     `;
 }
