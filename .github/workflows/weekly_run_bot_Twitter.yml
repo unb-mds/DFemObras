@@ -1,0 +1,56 @@
+name: Weekly Run Bot
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 11 * * 3'
+
+jobs:
+  weekly_run:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write
+
+    steps:
+    - uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.11
+
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r Bots/requirements.txt
+        pip install --upgrade cohere
+
+    - name: Install fonts
+      run: sudo apt-get install -y fonts-dejavu
+          
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        
+    - name: Run bot_Twitter.py
+      env:  
+        API_COHERE_KEY: ${{ secrets.API_COHERE_KEY }}
+        API_CONSUMER_KEY_X: ${{ secrets.API_CONSUMER_KEY_X }}
+        API_CONSUMER_SECRET_X: ${{ secrets.API_CONSUMER_SECRET_X }}
+        API_ACCESS_TOKEN_X: ${{ secrets.API_ACCESS_TOKEN_X }}
+        API_ACCESS_TOKEN_SECRET_X: ${{ secrets.API_ACCESS_TOKEN_SECRET_X }}
+      run: |
+        python3 Bots/bot_Twitter.py
+
+    - name: Commit and push anomalias.html
+      run: |
+        git config --global user.name "Github Actions"
+        git config --global user.email "actions@users.noreply.github.com"
+        git pull origin main --rebase --autostash
+        git add TestesMapa/anomalias.html
+        git commit -m "ci: Adicionando arquivo anomalias.html gerado automaticamente"
+        git push origin main --force

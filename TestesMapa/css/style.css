@@ -1,155 +1,377 @@
-/* Estilos do header */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%; 
-    box-sizing: border-box;
-    overflow: hidden; 
-    display: flex;
-    flex-direction: column;
+/* Importando a fonte Poppins para um visual moderno */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Definição da variável de altura do header */
+:root {
+  --header-height: 80px;
 }
 
+/* Reset e estilos globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+  /* Removido o overflow: hidden para permitir rolagem */
+}
+
+/* HEADER */
 header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #133E79; 
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    flex-wrap: wrap; 
-    box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: #133E79;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  gap: 15px;
 }
 
+/* Logos */
 header .logo {
-    height: 70px; 
-    width: auto;
-    margin-right: 30px;
+  height: calc(var(--header-height) - 10px);
+  width: auto;
+  margin-right: 10px;
 }
 
+/* Título central */
 header .title {
-    flex-grow: 1; 
-    text-align: center; 
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex: 1;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+header .title h1 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 header .subtitle {
-    text-align: center;
-    font-family: cursive;
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.9;
 }
 
+/* Menu de navegação */
 header nav {
-    display: flex; 
-    gap: 10px; 
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
 }
 
 header nav a {
-    margin: 5 10px;
-    color: green;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px 20px; 
-    background-color:white; 
-    border-radius: 25px; 
-    transition: background-color 0.3s ease; 
-    white-space: nowrap;
-    font-family:fantasy;
+  color: #133E79;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-weight: 600;
 }
 
 header nav a:hover {
-    background-color: #133E79; 
-    text-decoration: underline;
+  background-color: #e6e9ed;
+  transform: scale(1.03);
 }
 
+/* Hamburger: oculto em telas grandes */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
+
+/* Escondendo o checkbox real */
+#menu-toggle {
+  display: none;
+}
+
+/* MAPA */
+#map {
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--header-height));
+  z-index: 1;
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 90%;
+  width: 320px;
+}
+
+.popup-content h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.popup-content h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+}
+
+/* Botão de fechar do popup */
+.close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #fff;
+  border: 2px solid #133E79;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #133E79;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.close:hover {
+  background-color: #133E79;
+  color: #fff;
+}
+
+/* Outros elementos (main, footer, etc.) */
 main {
-    padding: 150px;
-    background-color: #fff;
-    flex: 1;
+  padding: calc(var(--header-height) + 20px) 20px 20px;
+  flex: 1;
+  overflow-y: auto; /* Mantém a rolagem do conteúdo */
+  height: calc(100% - var(--header-height)); /* Ajusta a altura do main */
 }
 
 main .content {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 main h2 {
-    color: #003366;
-    font-family: cursive;
+  color: #133E79;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 footer {
-    background-color:#133E79;
-    color: #fff;
-    text-align: center;
-    min-height:6px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #133E79;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  z-index: 20; /* Garantir que o footer esteja acima de outros conteúdos */
 }
 
 
-
-
-
-/* Estilos do mapa */
-#map {
-    height: 100%;  
-    width: 100%;
-    position: absolute;
-    top: 60px; 
-    left: 0;
-    z-index: 1;
+/* RESPONSIVIDADE */
+@media (max-width: 1100px) {
+  header .title {
+    display: none;
+  }
 }
 
-/* Estilo para as imagens nos popups */
-.popup-img {
-    max-width: 500px;
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Estilo do popup */
-.popup {
-    display: none; /* Escondido por padrão */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+@media (max-width: 900px) {
+  header img.df-logo {
+    display: none;
   }
   
-  .popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 300px;
+  header .logo:not(.df-logo) {
+    height: calc(var(--header-height) - 20px);
   }
-  
-  .close {
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    background-color: white; 
-    border: 2px solid black; 
-    border-radius: 50%; 
-    width: 40px;
-    height: 40px; 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
 }
 
+@media (max-width: 768px) {
+  header {
+    padding: 0 15px;
+  }
   
-  
+  .hamburger {
+    display: flex;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: transparent; /* Alterado para transparente */
+    flex-direction: column;
+    width: 100%;
+    /*max-width: 250px;*/
+    padding: 10px;
+    display: none;
+  }
+
+  header nav a {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255,255,255,0.9); /* Fundo branco levemente transparente */
+    color: #133E79;
+    margin: 2px 0;
+    border-radius: 5px;
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+  }
+
+  #menu-toggle:checked ~ nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  header .logo:not(.df-logo) {
+    height: calc(var(--header-height) - 25px);
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 20px;
+  }
+}
+
+#colaboradores {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#colaboradores h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Três colunas */
+  gap: 30px; /* Espaçamento entre fotos */
+  justify-items: center;
+}
+
+.colaborador {
+  text-align: center;
+}
+
+.foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Forma circular */
+  overflow: hidden; /* Garante que a imagem fique dentro do círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd; /* Fundo de fallback para fotos ausentes */
+  border: 4px solid #333; /* Borda ao redor do círculo */
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o círculo sem distorções */
+}
+
+.colaborador p {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.legend {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  z-index: 999; /* Maior que o do mapa */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.legend-item span {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.pin {
+  width: 25px !important;   /* Ajuste conforme o tamanho do pin */
+  height: 25px !important;
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.andamento {
+  background-image: url('../js/pins/cadastrada.png');
+}
+
+.concluida {
+  background-image: url('../js/pins/concluida.png');
+}
+
+.planejada {
+  background-image: url('../js/pins/inativada.png');
+}
