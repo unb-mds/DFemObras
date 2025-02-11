@@ -211,7 +211,7 @@ def run_bot(out_image_dir):
             if os.path.exists(image_path):
                 media = twitter_client_v1.media_upload(image_path)
 
-                prompt = "Crie uma mensagem criativa para acompanhar essa imagem como um boletim semanal de reporte de obras atrasadas em no máximo 100 caracteres e adicione este link https://unb-mds.github.io/2024-2-Squad07/ ao texto indicando que lá existem mais informações e marque o perfil do gdf e inclua este perfil https://x.com/Gov_DF com o padrão de marcar no tweet."
+                prompt = "Crie uma mensagem criativa para acompanhar essa imagem como um boletim semanal de reporte de obras atrasadas em no máximo 100 caracteres e adicione este link https://unb-mds.github.io/DFemObras/anomalias.html ao texto indicando que lá existem mais informações e marque o perfil do gdf e inclua este perfil https://x.com/Gov_DF com o padrão de marcar no tweet."
                 message = generate_message(cohere_client, prompt)
 
                 if message:
