@@ -1,194 +1,279 @@
-/* Estilos do header */
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%; 
-    box-sizing: border-box;
-    overflow-y: auto;  /* Permite rolar verticalmente */
-    display: flex;
-    flex-direction: column;
+/* Importando a fonte Poppins para um visual moderno */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Definição da variável de altura do header */
+:root {
+  --header-height: 80px;
 }
 
+/* Reset e estilos globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* HEADER */
 header {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #133E79; 
-    color: white;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 10;
-    flex-wrap: wrap; 
-    box-sizing: border-box;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  background-color: #133E79;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  gap: 15px;
 }
 
+/* Logos */
 header .logo {
-    height: 70px; 
-    width: auto;
-    margin-right: 30px;
+  height: calc(var(--header-height) - 10px);
+  width: auto;
+  margin-right: 10px;
 }
 
+/* Título central */
 header .title {
-    flex-grow: 1; 
-    text-align: center; 
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  flex: 1;
+  text-align: center;
+  transition: opacity 0.3s ease;
+}
+
+header .title h1 {
+  font-size: 24px;
+  font-weight: 600;
 }
 
 header .subtitle {
-    text-align: center;
-    font-family: cursive;
+  font-size: 14px;
+  font-style: italic;
+  opacity: 0.9;
 }
 
+/* Menu de navegação */
 header nav {
-    display: flex; 
-    gap: 10px; 
-    flex-wrap: wrap;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  transition: all 0.3s ease;
 }
 
 header nav a {
-    margin: 5 10px;
-    color: green;
-    text-decoration: none;
-    font-size: 20px;
-    padding: 10px 20px; 
-    background-color:white; 
-    border-radius: 25px; 
-    transition: background-color 0.3s ease; 
-    white-space: nowrap;
-    font-family:fantasy;
+  color: #133E79;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 16px;
+  background-color: #fff;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+  font-weight: 600;
 }
 
 header nav a:hover {
-    background-color: #133E79; 
-    text-decoration: underline;
+  background-color: #e6e9ed;
+  transform: scale(1.03);
 }
 
-header nav a:active {
-    transform: translateY(0); /* Efeito de clique */
+/* Hamburger: oculto em telas grandes */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
 }
 
+.hamburger span {
+  display: block;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+}
 
+/* Escondendo o checkbox real */
+#menu-toggle {
+  display: none;
+}
+
+/* MAPA */
+#map {
+  position: absolute;
+  top: var(--header-height);
+  left: 0;
+  width: 100%;
+  height: calc(100% - var(--header-height));
+  z-index: 1;
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 90%;
+  width: 320px;
+}
+
+.popup-content h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.popup-content h3 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #555;
+}
+
+/* Botão de fechar do popup */
+.close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #fff;
+  border: 2px solid #133E79;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #133E79;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.close:hover {
+  background-color: #133E79;
+  color: #fff;
+}
+
+/* Outros elementos (main, footer, etc.) */
 main {
-    padding: 150px;
-    background-color: #fff;
-    flex: 1;
+  padding: calc(var(--header-height) + 20px) 20px 20px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 main .content {
-    max-width: 900px;
-    margin: 0 auto;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
 main h2 {
-    color: #003366;
-    font-family: cursive;
+  color: #133E79;
+  font-size: 28px;
+  margin-bottom: 20px;
 }
 
 footer {
-background-color: #133E79;
-    color: #fff;
+  background-color: #133E79;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+}
+
+/* RESPONSIVIDADE */
+@media (max-width: 1100px) {
+  header .title {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  header img.df-logo {
+    display: none;
+  }
+  
+  header .logo:not(.df-logo) {
+    height: calc(var(--header-height) - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 15px;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: transparent; /* Alterado para transparente */
+    flex-direction: column;
+    width: 100%;
+    /*max-width: 250px;*/
+    padding: 10px;
+    display: none;
+  }
+
+  header nav a {
+    width: 100%;
     text-align: center;
-    min-height: 6px;
-    width: 100%;
-    position: fixed;  /* Fixa o footer na parte inferior */
-    bottom: 0;  /* Coloca o footer no final da página */
-    left: 0;
+    background-color: rgba(255,255,255,0.9); /* Fundo branco levemente transparente */
+    color: #133E79;
+    margin: 2px 0;
+    border-radius: 5px;
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+  }
+
+  #menu-toggle:checked ~ nav {
+    display: flex;
+  }
+
+  
 }
 
+@media (max-width: 480px) {
+  :root {
+    --header-height: 70px;
+  }
 
+  header .logo:not(.df-logo) {
+    height: calc(var(--header-height) - 25px);
+  }
 
-
-
-/* Estilos do mapa */
-#map {
-    height: 100%;  
-    width: 100%;
-    position: absolute;
-    top: 60px; 
-    left: 0;
-    z-index: 1;
+  .hamburger {
+    width: 25px;
+    height: 20px;
+  }
 }
-
-/* Estilo para as imagens nos popups */
-.popup-img {
-    max-width: 500px;
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-}
-
-/* Estilo do popup */
-.popup {
-    display: none; /* Escondido por padrão */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fundo semi-transparente */
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
-  }
-  
-  .popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    width: 300px;
-  }
-  
-  .close {
-    color: black;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    background-color: white; 
-    border: 2px solid black; 
-    border-radius: 50%; 
-    width: 40px;
-    height: 40px; 
-    display: flex; 
-    justify-content: center;
-    align-items: center; 
-}
-/*------------------------*/
-
-#details-panel {
-    position: absolute;
-    top: 10%;
-    right: 5%;
-    width: 300px;
-    padding: 15px;
-    background-color: #fff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    border-radius: 8px;
-    display: none; /* Escondido por padrão */
-  }
-  
-  #details-panel.visible {
-    display: block;
-  }
-  
-  #details-panel h2 {
-    margin-top: 0;
-  }
-  
-  #details-panel button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
-  }
-  
-  
