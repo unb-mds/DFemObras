@@ -112,6 +112,9 @@ Certifique-se de ter as seguintes ferramentas instaladas:
      ```
    - Abra um Pull Request descrevendo suas contribuições.
 
+## 🤖 Perfil X
+Link do nosso perfil no X: [neste link](https://x.com/DFemObras).
+
 ## 🛠️ Arquitetura
 A arquitetura do projeto pode ser encontrada [neste link](https://unb-mds.github.io/2024-2-Squad07/arquitetura).
 
