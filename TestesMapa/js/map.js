@@ -1,85 +1,170 @@
-// Inicializar o mapa
-
-  
-const map = L.map('map').setView([-15.802825, -47.798767], 10.4);
-
-document.addEventListener('DOMContentLoaded', () => {
-    const popup = document.getElementById('popup');
-    const closePopup = document.getElementById('close-popup');
-  
-    // Mostra o popup quando a página é carregada
-    popup.style.display = 'flex';
-  
-    // Fecha o popup ao clicar no botão "X"
-    closePopup.addEventListener('click', () => {
-      popup.style.display = 'none';
-    });
-  
-    // Fecha o popup ao clicar fora do conteúdo
-    popup.addEventListener('click', (event) => {
-      if (event.target === popup) {
-        popup.style.display = 'none';
-      }
-    });
-  });
-
-
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-
-
-function formatarBRL(valor) {
-    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+// Inicializar o mapa 
+let mapa; 
+function inicializaMapa() {
+    mapa = L.map('map').setView([-15.802825, -47.798767], 10.4);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(mapa);
 }
 
-fetch('../TesteObrasgov/obras_com_lat_long.json') // Caminho do JSON
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Erro ao carregar o JSON');
-        }
-        console.log("JSON carregado!")
-        return response.json();
-    })
-    .then(data => {
-        // Varrer as obras e criar marcadores
-        data.forEach((obra, index) => {
-            const { nome, fontesDeRecurso, latitude, longitude } = obra;
-            
-            //Verifica se tem latitude e longitude no JSON
-            if(!latitude || !longitude){
-                console.warn(`Obra "${nome}" index ${index} ignorada por falta de coordenadas.`);
-                return;
-            }
+if (typeof document !== 'undefined') {
+    document.addEventListener('DOMContentLoaded', () => {
+        inicializaMapa();
+        buscarObras();
+        const popup = document.getElementById('popup');
+        const fecharPopup = document.getElementById('close-popup');
 
-            // Cria o marcador
-            const marker = L.marker([latitude, longitude]).addTo(map);
+        // Mostra o popup quando a página é carregada
+        popup.style.display = 'flex';
 
-            const valor = fontesDeRecurso?.[0]?.valorInvestimentoPrevisto;
-            const valorBRL = formatarBRL(valor)
-
-            // Conteúdo do popup
-            const popupContent = `
-                <div>
-                    <h3>${nome}</h3>
-                    <p><strong>Valor Previsto:</strong> ${valorBRL}</p>
-                </div>
-            `;
-
-            // Adicionar popup ao marcador
-            marker.bindPopup(popupContent);
-
-            console.log(`Obra ${index + 1} foi carregada: "${nome}" `);
-
+        // Fecha o popup ao clicar no botão "X"
+        fecharPopup.addEventListener('click', () => {
+            popup.style.display = 'none';
         });
-    })
-    .catch(error => {
-        console.error('Erro ao carregar as obras:', error);
-    });
 
+        // Fecha o popup ao clicar fora do conteúdo
+        popup.addEventListener('click', (event) => {
+            if (event.target === popup) {
+                popup.style.display = 'none';
+            }
+        });
+    });
+}
+
+function formatarBRL(valor) {
+    return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace(/\s/, '');
+}
+
+// Função para criar os ícones dos pins
+function criarIconesDosPins() {
+    return {
+        concluida: L.icon({
+            iconUrl: './js/pins/concluida.png',
+            iconSize: [30, 30],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32],
+        }),
+        emExecucao: L.icon({
+            iconUrl: './js/pins/em_execucao.png',
+            iconSize: [30, 30],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32],
+        }),
+        cadastrada: L.icon({
+            iconUrl: './js/pins/cadastrada.png',
+            iconSize: [30, 30],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32],
+        }),
+        inativada: L.icon({
+            iconUrl: './js/pins/inativada.png',
+            iconSize: [30, 30],
+            iconAnchor: [16, 32],
+            popupAnchor: [0, -32],
+        }),
+    };
+}
+
+// Função para validar a resposta da API
+function verificarResposta(resposta) {
+    if (!resposta.ok) {
+        throw new Error('Erro ao carregar o JSON');
+    }
+    return resposta;
+}
+
+// Função para obter os dados das obras
+function obterDadosDasObras() {
+    return fetch('./obrasgov/obras_com_lat_long.json')
+        .then(verificarResposta)
+        .then(resposta => resposta.json());
+}
+
+// Função para criar um marcador no mapa
+function criarMarcador(lat, lng, icone, mapa) {
+    return L.marker([lat, lng], { icon: icone }).addTo(mapa);
+}
+
+// Função para gerar conteúdo do popup
+function gerarConteudoDoPopup(nome, situacao, valorBRL, indice) {
+    return `
+        <div style="font-family: Arial, sans-serif; padding: 10px; width: 250px; background-color:rgb(255, 255, 255);">
+            <h3 style="font-size: 18px; margin-bottom: 10px; color: #333;">${nome}</h3>
+
+            <p style="margin: 5px 0; font-size: 14px; color: #666;"><strong style="color: #333;">Valor Previsto:</strong> ${valorBRL}</p>
+            <a href="detalhamento.html?obra=${indice}" target="_blank" style="display: block; margin-top: 10px; text-align: center; padding: 8px; background-color: #133e79; color: white; text-decoration: none; border-radius: 4px; font-size: 14px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+                Ver detalhes
+            </a>
+        </div>
+    `;
+}
+
+// Função para determinar o ícone correto
+function obterIconeDoMarcador(situacao, icones) {
+    const mapaIcones = {
+        'Concluída': icones.concluida,
+        'Em execução': icones.emExecucao,
+        'Cadastrada': icones.cadastrada,
+        'Inativada': icones.inativada
+    };
+    return mapaIcones[situacao] || null;
+}
+
+// Função principal para processar os dados
+function processarDadosDasObras(dados, mapa) {
+    const icones = criarIconesDosPins();
+    
+    dados.forEach((obra, indice) => {
+        const { nome, fontesDeRecurso, latitude, longitude, situacao} = obra;
+        
+        // Validação de coordenadas
+        if (!latitude || !longitude) {
+            console.log(`Obra ${indice}: "${nome}" ignorada por falta de coordenadas.`);
+            return;
+        }
+
+        // Seleção de ícone
+        const iconeMarcador = obterIconeDoMarcador(situacao, icones);
+        if (!iconeMarcador) {
+            console.warn(`Situação desconhecida: ${situacao} na obra ${nome}`);
+            return;
+        }
+
+        // Criação do marcador
+        const marcador = criarMarcador(latitude, longitude, iconeMarcador, mapa);
+        
+        // Configuração do popup
+        const valor = fontesDeRecurso?.[0]?.valorInvestimentoPrevisto || 0;
+        const conteudoPopup = gerarConteudoDoPopup(nome, situacao, formatarBRL(valor), indice);
+        marcador.bindPopup(conteudoPopup);
+    });
+}
+
+// Função principal modificada
+function buscarObras() {
+    obterDadosDasObras()
+        .then(dados => processarDadosDasObras(dados, mapa))
+        .catch(error => console.error('Erro ao carregar as obras:', error));
+}
+
+// Exportações para testes
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        formatarBRL,
+        inicializaMapa,
+        criarIconesDosPins,
+        verificarResposta,
+        obterDadosDasObras,
+        criarMarcador,
+        buscarObras,
+        gerarConteudoDoPopup,
+        obterIconeDoMarcador,
+        processarDadosDasObras
+    };
+}
 
 // Exibir coordenadas no console ao clicar no mapa
-map.on('click', (e) => {
-    console.log(`Coordenadas: ${e.latlng}`);
-});
+// mapa.on('click', (e) => {
+//     console.log(`Coordenadas: ${e.latlng}`);
+// });
