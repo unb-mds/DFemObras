@@ -3,7 +3,6 @@ name: Test Bot_Twitter
 on:
   push:
     branches:
-      - bot_anomalias
       - desenvolvimento
       - main
   pull_request:
