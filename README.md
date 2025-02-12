@@ -48,12 +48,16 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 
 1. **Clone o Repositório**
    ```bash
-   git clone https://github.com/unb-mds/2024-2-Squad07
+   git clone https://github.com/unb-mds/DFemObras
    cd 2024-2-Squad07
    ```
 
 2. **Configuração do Backend em Node.js**
-   - Navegue até o diretório do projeto em Node.js.
+   - Navegue até o diretório do mapa.
+   ```bash
+   cd TestesMapa
+   ```
+   - Em seguida, acesse o diretório do backend.
    ```bash
    cd ObrasGov
    ```
@@ -61,11 +65,12 @@ Certifique-se de ter as seguintes ferramentas instaladas:
    ```bash
    npm install
    ```
- 
+
 3. **Configuração do Mapa**
-   - Navegue até o diretório do mapa.
+   - Caso já esteja no diretório `TestesMapa`, pule este passo.  
+   - Caso contrário, navegue até o diretório do mapa.
    ```bash
-   cd Mapa
+   cd TestesMapa
    ```
    - Instale as dependências.
    ```bash
@@ -89,7 +94,7 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 5. **Executando o Projeto**
    - Para rodar o backend em Node.js:
      ```bash
-     npm start
+     node index.js
      ```
    - Para rodar o frontend:
      ```bash
@@ -99,7 +104,6 @@ Certifique-se de ter as seguintes ferramentas instaladas:
      ```bash
      python bot_Twitter.py
      ```
-
 6. **Testes e Pull Requests**
    - Teste suas alterações localmente para garantir que tudo funciona como esperado.
    - Crie uma nova branch para suas alterações.
