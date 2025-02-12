@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+            <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/crane.png">
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Mapeamento de obras públicas</title>
+            <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>Mapeamento de Obras Públicas do DF</h1>
+            <nav>
+                <ul>
+                    <li><a href="#colaboradores">Colaboradores</a></li>
+                    <li><a href="#historia">História</a></li>
+                    <li><a href="#tecnologias">Tecnologias</a></li>
+                    <li><a href="#grupo">Sobre o Grupo</a></li>
+                    <li><a href="#ambiente">Subir o Ambiente</a></li>
+                    <li><a href="#arquitetura">Arquitetura</a></li>
+                    <li><a href="#requisitos">Requisitos</a></li>
+                    <li><a href="#prototipos">Protótipos</a></li>
+                    <li><a href="#atas">Atas</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <section id="colaboradores">
+                <h2>Colaboradores do Projeto</h2>
+                <div class="grid">
+                    <div class="colaborador">
+                        <div class="foto">
+                            <img src="fotos/caio.jpeg" alt="Caio Melo">
+                        </div>
+                        <p>Caio Melo</p>
+                    </div>
+                    <div class="colaborador">
+                        <div class="foto">
+                            <img src="fotos/joaop.jpeg" alt="João Pedro Rodrigues">
+                        </div>
+                        <p>João Pedro Rodrigues</p>
+                    </div>
+                    <div class="colaborador">
+                        <div class="foto">
+                            <img src="fotos/marcos.jpg" alt="Foto do Colaborador 3">
+                        </div>
+                        <p>Marcos Vinicius</p>
+                    </div>
+                    <div class="colaborador">
+                        <div class="foto">
+                            <img src="fotos/nathan.jpg" alt="Foto do Colaborador 4">
+                        </div>
+                        <p>Nathan Batista</p>
+                    </div>
+                    <div class="Colaborador">
+                        <div class="foto">
+                            <img src="fotos/julia.jpeg" alt="Foto do Colaborador 5">
+                        </div>
+                        <p>Júlia dos Reis</p>
+                    </div>
+                    <div class="Colaborador">
+                        <div class="foto">
+                            <img src="fotos/cayoelencar.jpg" alt="Foto do Colaborador 6">
+                        </div>
+                        <p>Cayo Alencar</p>
+                    </div>
+                </div>
+            </section>
+            
+            
+
+            <section id="historia">
+                <h2>História do Projeto</h2>
+                <p>
+                    O Projeto de Mapeamento de Obras Públicas do Distrito Federal nasceu da necessidade de otimizar o acompanhamento e a transparência das obras públicas em andamento na região. Com o crescente volume de recursos públicos destinados a investimentos em infraestrutura e desenvolvimento urbano, surgiu a ideia de criar uma ferramenta que facilitasse a visibilidade dessas obras, garantindo uma maior transparência para a população do Distrito Federal.
+                </p>
+            </section>
+
+            <section id="tecnologias">
+                <h2>Tecnologias Usadas</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript (ES6+)</li>
+                    <li>Python</li>
+                    <li>Node.js</li>
+                    <li>API Obras Gov</li>
+                    <li>Axios</li>
+                    <li>Tweepy</li>
+                </ul>
+            </section>
+
+            <section id="grupo">
+                <h2>Sobre o Grupo</h2>
+                <p>Nós fazemos parte do SQUAD 7 da disciplina de Métodos de Desenvolvimento de Software, ministrada pela professora Carla Rocha, que é composto por estudantes de Engenharia de Software que aplicam conceitos e metodologias de desenvolvimento em projetos reais. O grupo foca na utilização de práticas ágeis, como Scrum, e na integração de técnicas de qualidade, testes e gerenciamento de projetos. Além de promover a aprendizagem prática e colaborativa, o grupo também busca inovação e pesquisa em soluções tecnológicas. Através de projetos como o Mapeamento de Obras Públicas do DF, os alunos têm a oportunidade de aplicar seus conhecimentos em desafios reais, preparando-os para o mercado de trabalho e contribuindo para a sociedade.
+
+</p>
+            </section>
+
+            <section id="ambiente">
+                <h2>Como Subir o Ambiente</h2>
+                <ol>
+                    <li>
+                        <strong>Clone o Repositório</strong>
+                        <pre><code>
+            git clone https://github.com/unb-mds/DFemObras
+            cd DFemObras
+                        </code></pre>
+                    </li>
+                    <li>
+                        <strong>Configuração do Backend em Node.js</strong>
+                        <ul>
+                            <li>Navegue até o diretório do projeto em Node.js:
+                                <pre><code>cd TestesMapa/obrasgov</code></pre>
+                            </li>
+                            <li>Instale as dependências:
+                                <pre><code>npm install</code></pre>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Configuração do Mapa</strong>
+                        <ul>
+                            <li>Navegue até o diretório do mapa:
+                                <pre><code>cd TestesMapa</code></pre>
+                            </li>
+                            <li>Instale as dependências:
+                                <pre><code>npm install</code></pre>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Configuração do BOT</strong>
+                        <ul>
+                            <li>Navegue até o diretório BOT:
+                                <pre><code>cd Bots</code></pre>
+                            </li>
+                            <li>Instale as dependências do Python:
+                                <pre><code>pip install -r requirements.txt
+                                </code></pre>
+                                <pre><code>pip install --upgrade cohere</code></pre>
+                            </li>
+                            <li>Crie um arquivo <code>.env</code> no diretório principal do projeto e adicione as variáveis de ambiente necessárias, como chaves de API para o Cohere e Tweepy.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Executando o Projeto</strong>
+                        <!-- <ul>
+                            <li>Para rodar o backend em Node.js:
+                                <pre><code>npm start</code></pre>
+                            </li>
+                            <li>Para rodar o frontend:
+                                <pre><code>npm start</code></pre>
+                            </li> -->
+                            <p>Para executar os scripts Python:</p>
+                                <pre><code>python bot_Twitter.py</code></pre>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Testes e Pull Requests</strong>
+                        <ul>
+                            <li>Teste suas alterações localmente para garantir que tudo funciona como esperado.</li>
+                            <li>Crie uma nova branch para suas alterações:
+                                <pre><code>git checkout -b minha-nova-feature</code></pre>
+                            </li>
+                            <li>Faça commit das alterações e envie para o repositório:
+                                <pre><code>
+            git add .
+            git commit -m "Descrição das alterações"
+            git push origin minha-nova-feature
+                                </code></pre>
+                            </li>
+                            <li>Abra um Pull Request descrevendo suas contribuições.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </section>
+
+            <section id="arquitetura">
+                <h1>Arquitetura</h1>
+                <p>
+                    O sistema de mapeamento de obras públicas no DF foi desenvolvido para permitir que qualquer cidadão interessado tenha acesso a dados relevantes referentes ao andamento das obras públicas através de uma aplicação web. A aplicação apresenta um mapa interativo contendo as informações sobre as obras e conta com um robô (Bot) responsável por denunciar anomalias nas obras na rede social X. 
+                </p>
+                <p>
+                    O modelo arquitetural adotado no projeto foi o modelo em camadas, devido à facilidade de manutenção, escalabilidade e reutilização de componentes. Isso permite maior flexibilidade e controle das operações, utilizando a modularização do código.
+                </p>
+            
+                <h2>Objetivos com a Escolha da Arquitetura</h2>
+                <ul>
+                    <li><strong>Modularidade:</strong> Separação de responsabilidades em camadas distintas.</li>
+                    <li><strong>Escalabilidade:</strong> Facilidade de expansão do sistema.</li>
+                    <li><strong>Manutenibilidade:</strong> Facilidade de atualização e correção de erros.</li>
+                    <li><strong>Desempenho:</strong> Otimização da performance sem sacrificar a qualidade do código.</li>
+                </ul>
+            
+                <h2>Descrição das Camadas</h2>
+            
+                <h3>Camada de Apresentação</h3>
+                <p>
+                    Esta é a camada responsável pela interação com o usuário, apresentando a interface web como um mapa interativo com pins clicáveis relacionados diretamente com a localização da obra referenciada. Ao clicar no pin, o usuário visualiza as informações da obra. Foi construída com HTML, CSS e JavaScript.
+                </p>
+            
+                <h3>Camada de Aplicação (Lógica de Negócios)</h3>
+                <p>
+                    Esta camada é responsável pelas regras de negócios, interação com outras camadas e APIs externas, e processamento de dados. Atua como a lógica do projeto, dividida em dois componentes:
+                </p>
+                <ul>
+                    <li><strong>Backend:</strong> Responsável por gerar o mapa e requisitar as informações das obras através das APIs externas.</li>
+                    <li><strong>Robô:</strong> Detecta anomalias e as reporta através da rede social X.</li>
+                </ul>
+                <p>
+                    <strong>APIs requisitadas pelo Backend:</strong>
+                    <ul>
+                        <li><strong>Obras Gov:</strong> API que fornece dados necessários sobre as obras públicas.</li>
+                        <li><strong>Leaflet:</strong> API que gera o mapa.</li>
+                    </ul>
+                </p>
+                <p>
+                    <strong>APIs requisitadas pelo Robô (Bot):</strong>
+                    <ul>
+                        <li><strong>X API:</strong> API responsável por enviar as anomalias em formato de tweet à rede social X.</li>
+                        <li><strong>Cohere:</strong> IA generativa que produz mensagens humanizadas para o reporte de anomalias no X.</li>
+                    </ul>
+                </p>
+            
+                <h3>Camada de Dados</h3>
+                <p>
+                    A camada de dados do sistema utiliza arquivos JSON para armazenar as informações. Cada conjunto de dados é representado como um objeto JSON ou uma lista de objetos JSON, que podem ser facilmente manipulados usando bibliotecas e frameworks de parsing JSON. Esses arquivos são armazenados no sistema de arquivos local ou em um repositório de objetos, como um serviço de armazenamento em nuvem.
+                </p>
+
+                <object style="text-align: center;" width="800" height="1000" type="text/html" data="html_externo/arq_1.html"></object>
+
+                <object style="text-align: center;" width="800" height="1000" type="text/html" data="html_externo/arq_2.html"></object>
+            </section>
+            
+
+            <section id="requisitos">
+                <h2>Documentação do Projeto</h2>
+            
+                <article>
+                    <h3>1. Introdução</h3>
+            
+                    <h4>1.1 Objetivo</h4>
+                    <p>
+                        Este documento especifica os requisitos para o desenvolvimento do projeto Mapeamento de Obras do grupo 07, 
+                        parte da disciplina de Métodos de Desenvolvimento de Software 2024.2. O objetivo do projeto é exibir dados 
+                        de obras públicas do Distrito Federal por meio de um mapa interativo.
+                    </p>
+            
+                    <h4>1.2 Escopo</h4>
+                    <ul>
+                        <li>Apresenta obras públicas do DF utilizando um mapa interativo.</li>
+                        <li>Coleta dados fornecidos pela API ObrasGov e os insere em um mapa da biblioteca Leaflet.</li>
+                        <li>Oferece recursos de visualização, detalhamento e filtros para facilitar o acesso às informações.</li>
+                    </ul>
+            
+                    <h4>1.3 Tecnologias Utilizadas</h4>
+                    <ul>
+                        <li><strong>Front-end:</strong> HTML, CSS, JavaScript e Leaflet</li>
+                        <li><strong>API:</strong> ObrasGov</li>
+                    </ul>
+                </article>
+            
+                <article>
+                    <h3>2. Descrição Geral</h3>
+            
+                    <h4>2.1 Visão Geral do Sistema</h4>
+                    <p>
+                        O sistema permitirá que os usuários visualizem um mapa interativo com pinos representando obras públicas. 
+                        Ao clicar em um pino, os detalhes da obra serão exibidos. O sistema incluirá funcionalidades de filtros 
+                        para personalizar as informações exibidas.
+                    </p>
+            
+                    <h4>2.2 Objetivos do Usuário</h4>
+                    <ul>
+                        <li>Visualizar obras públicas em andamento, concluídas ou inacabadas.</li>
+                        <li>Acessar informações detalhadas das obras, como valores, datas e status.</li>
+                        <li>Filtrar obras por região, status ou período de execução.</li>
+                    </ul>
+                </article>
+            
+                <article>
+                    <h3>3. Requisitos Funcionais</h3>
+            
+                    <h4>3.1 Épico: Mapa Interativo de Obras</h4>
+                    <ul>
+                        <li>
+                            <strong>Feature:</strong> Exibir um pino no mapa para cada obra com informações detalhadas, incluindo:
+                            <ul>
+                                <li>Nome da obra</li>
+                                <li>Valor investido</li>
+                                <li>Data de início e previsão de término</li>
+                                <li>Status da obra</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Feature:</strong> Filtros de pesquisa no mapa por:
+                            <ul>
+                                <li>Status da obra</li>
+                                <li>Nome da obra</li>
+                                <li>Prazo de entrega da obra</li>
+                            </ul>
+                        </li>
+                    </ul>
+            
+                    <h4>3.2 Épico: Lista Detalhada de Obras Públicas</h4>
+                    <ul>
+                        <li>
+                            <strong>Feature:</strong> Ao clicar em uma obra na lista, serão exibidos todos os seus detalhes, como:
+                            <ul>
+                                <li>Nome da obra</li>
+                                <li>Responsáveis pela obra</li>
+                                <li>Status da obra</li>
+                                <li>Prazo de entrega da obra</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Feature:</strong> Filtros de pesquisa na lista por:
+                            <ul>
+                                <li>Status da obra</li>
+                                <li>Nome da obra</li>
+                                <li>Prazo de entrega da obra</li>
+                            </ul>
+                        </li>
+                    </ul>
+            
+                    <h4>3.3 Épico: Bot para Reportar Anomalias</h4>
+                    <ul>
+                        <li>Feature: Detectar automaticamente anomalias (atrasos ou inconsistências) nas obras.</li>
+                        <li>Feature: Postar atualizações no Twitter com informações da anomalia identificada na respectiva obra.</li>
+                        <li>Feature: Gerar textos humanizados para os posts no Twitter, utilizando IA para se assemelhar à escrita natural.</li>
+                    </ul>
+                </article>
+            
+                <article>
+                    <h3>4. Requisitos Não-Funcionais</h3>
+            
+                    <h4>4.1 Usabilidade</h4>
+                    <ul>
+                        <li>A interface deve ser intuitiva e amigável, com elementos visuais organizados logicamente.</li>
+                        <li>O design deve ser responsivo, garantindo uma boa experiência em diferentes dispositivos (desktop, tablet, mobile).</li>
+                        <li>O sistema deve facilitar a navegação e o uso das funcionalidades.</li>
+                    </ul>
+                </article>
+            
+                <article>
+                    <h3>5. User Story Map</h3>
+                    <p>
+                        Para organizar e visualizar melhor os requisitos do projeto, foi elaborado um User Story Map no Figma. 
+                        Este mapa divide os requisitos em épicos e features, com a previsão de adicionar, futuramente, as histórias de usuários.
+                    </p>
+                    <p>Visualizar o mapa no Figma</p>
+                    <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/xAOzOYBkiF8Bqr9fmzCSi6/Projeto-MDS?node-id=101-1149&embed-host=share" allowfullscreen></iframe>
+                </article>
+            </section>
+
+            <section id="prototipos">
+                <h1>Protótipo de baixa fidelidade</h1>
+                <p>Este é nosso protótipo de baixa fidelidade. Sua finalidade é que possamos ter uma ideia de como seriam as telas principais do nosso sistema</p>
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/board/xAOzOYBkiF8Bqr9fmzCSi6/Projeto-MDS?node-id=227-228&embed-host=share" allowfullscreen></iframe>
+
+                <h1>Protótipo de alta fidelidade</h1>
+                <p>Navegue pelo  nosso protótipo de alta fidelidade do sistema de mapeamento de obras públicas no DF. O protótipo foi criado no Figma</p>
+                <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="800" height="450" src="https://embed.figma.com/proto/AbgW9h67P0M7QiBFy44tH4/Prot%C3%B3tipo?node-id=3-2&node-type=canvas&scaling=scale-down-width&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=3%3A2&embed-host=share" allowfullscreen></iframe>
+            </section>
+            
+
+            <section id="atas">
+                <h2>Explore as atas do nosso projeto</h2>
+                <p>Acesse a pasta do nosso projeto no GitHub para obter mais detalhes.</p>
+                <a href="https://github.com/unb-mds/2024-2-Squad07/tree/main/docs/Atas" target="_blank" class="btn">Acessar Atas</a>
+            </section>
+            
+            
+        </main>
+
+        <footer>
+            <p>&copy; Mapeamento de obras públicas. Todos os direitos reservados.</p>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+</html>
