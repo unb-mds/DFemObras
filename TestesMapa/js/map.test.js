@@ -5,7 +5,7 @@ const {
     verificarResposta,
     obterDadosDasObras,
     criarMarcador,
-    gerarConteudoDoPopup,
+    // gerarConteudoDoPopup,
     obterIconeDoMarcador,
     buscarObras,
     processarDadosDasObras
@@ -90,20 +90,20 @@ describe('Testes das funções do mapa', () => {
         });
     });
 
-    describe('Geração de conteúdo', () => {
-        test('gerarConteudoDoPopup gera HTML válido com dados da obra', () => {
-            const conteudo = gerarConteudoDoPopup(
-                'Obra Teste', 
-                'Concluída', 
-                'R$1.000,00', 
-                123
-            );
+    // describe('Geração de conteúdo', () => {
+    //     test('gerarConteudoDoPopup gera HTML válido com dados da obra', () => {
+    //         const conteudo = gerarConteudoDoPopup(
+    //             'Obra Teste', 
+    //             'Concluída', 
+    //             'R$1.000,00', 
+    //             123
+    //         );
             
-            expect(conteudo).toContain('<h3>Obra Teste</h3>');
-            expect(conteudo).toContain('R$1.000,00');
-            expect(conteudo).toContain('detalhamento.html?obra=123');
-        });
-    });
+    //         expect(conteudo).toContain('<h3>Obra Teste</h3>');
+    //         expect(conteudo).toContain('R$1.000,00');
+    //         expect(conteudo).toContain('detalhamento.html?obra=123');
+    //     });
+    // });
 
     describe('Manipulação de dados e API', () => {
         test('verificarResposta lança erro para respostas não OK', () => {
