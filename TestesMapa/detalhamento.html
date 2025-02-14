@@ -16,7 +16,6 @@
                 .then(data => {
                     const obra = data[obraIndex];
                     if (obra) {
-                        // Exibir os campos no HTML de maneira simples
                         document.getElementById('nome').textContent = obra.nome || 'Não informado';
                         document.getElementById('localizacao').textContent = obra.endereco || 'Não informada';
                         document.getElementById('descricao').textContent = obra.descricao || 'Não informada';
@@ -27,7 +26,18 @@
                         document.getElementById('situacao').textContent = obra.situacao || 'Não informado';
                         document.getElementById('especie').textContent = obra.especie || 'Não informada';
                         document.getElementById('natureza').textContent = obra.natureza || 'Não informada';
-                        document.getElementById('valorInvestimento').textContent = 'R$ ' + (obra.fontesDeRecurso[0].valorInvestimentoPrevisto || 'Não informado');
+
+                        // Formata o valor do investimento
+                        const valorInvestimento = obra.fontesDeRecurso[0].valorInvestimentoPrevisto || 'Não informado';
+                        if (valorInvestimento !== 'Não informado') {
+                            const valorFormatado = new Intl.NumberFormat('pt-BR', {
+                                style: 'currency',
+                                currency: 'BRL'
+                            }).format(valorInvestimento);
+                            document.getElementById('valorInvestimento').textContent = valorFormatado;
+                        } else {
+                            document.getElementById('valorInvestimento').textContent = valorInvestimento;
+                        }
                     } else {
                         document.getElementById('detalhes').innerHTML = '<p>Obra não encontrada.</p>';
                     }
@@ -39,8 +49,8 @@
 <body>
     <header>
         <div class="header-content">
+            <button onclick="window.location.href = 'index.html';" class="back-button">←</button>
             <h1>Detalhamento da Obra</h1>
-            <button onclick="window.location.href = 'index.html';" class="back-button">Voltar</button>
         </div>
     </header>
 
