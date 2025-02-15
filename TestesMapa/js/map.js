@@ -1,12 +1,30 @@
 // Inicializar o mapa 
-let mapa; 
+let mapa;
+
 function inicializaMapa() {
-    mapa = L.map('map').setView([-15.802825, -47.798767], 10.4);
+    // Definir os limites do DF
+    const bounds = L.latLngBounds(
+        L.latLng(-16.1000, -48.2000), // Sudoeste do DF
+        L.latLng(-15.5000, -47.5000)  // Nordeste do DF
+    );
+
+    // Criar o mapa com restrições
+    mapa = L.map('map', {
+        center: [-15.802825, -47.798767], // Posição inicial
+        zoom: 10.4,   // Zoom inicial
+        minZoom: 10,  // Zoom mínimo permitido
+        maxZoom: 18,  // Zoom máximo permitido
+        maxBounds: bounds,  // Limites do mapa para o DF
+        maxBoundsViscosity: 1.0 // Mantém o usuário dentro da área
+    });
+
+    // Adicionar camada do OpenStreetMap
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 19,
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(mapa);
 }
+
 
 if (typeof document !== 'undefined') {
     document.addEventListener('DOMContentLoaded', () => {

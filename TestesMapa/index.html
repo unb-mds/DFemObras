@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa Interativo</title>
+    <title>DFemObras</title>
 <html lang="pt-br">
     <!-- Estilo do Leaflet -->
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
@@ -20,7 +20,7 @@
         <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Bandeira_do_Distrito_Federal_%28Brasil%29.svg" alt="imagem gdf" width="92" class="logo">
         
         <div class="title">
-            <h1>MAPEAMENTO DE OBRAS</h1>
+            <h1>DF em Obras</h1>
         <p class="subtitle">"Facilitando o acesso às informações que constroem o DF."</p>
         </div>
 
@@ -35,18 +35,28 @@
             <a href="index.html">Home</a>
             <a href="sobre_o_projeto.html">Sobre o Projeto</a>
             <a href="contato.html">Contato</a>
-            <a href="anomalias.html">Anomalias</a>
+            <a href="anomalias.html">Obras em Atraso</a>
         </nav>
     </header>
 
     <div id="map"></div>
 
     <div id="popup" class="popup">
-        <div class="popup-content">
-            <span id="close-popup" class="close">&times;</span>
-            <p id="popup-message"><h1>Bem-vindo(a)!</h1> <h3>Explore as obras do Governo do DF e acompanhe o progresso do desenvolvimento em nossa região. Este projeto, desenvolvido como parte da disciplina de Métodos de Desenvolvimento de Software, tem como objetivo fornecer um mapeamento detalhado e acessível de todas as iniciativas públicas em andamento.</h3></p>
-        </div>
-    </div>
+      <div class="popup-content">
+          <span id="close-popup" class="close">&times;</span>
+          <h1>Bem-vindo(a)!</h1>
+          <h3>
+              Explore as obras do Governo do DF e acompanhe o progresso do desenvolvimento em nossa região. <br><br>
+              Este projeto, desenvolvido como parte da disciplina de Métodos de Desenvolvimento de Software, tem como objetivo fornecer um mapeamento detalhado e acessível de todas as iniciativas públicas em andamento.  
+              <br><br>
+              Siga nosso perfil no X para acompanhar o monitoramento das obras que passam do prazo:  
+              <a href="https://x.com/DFemObras" target="_blank">
+                  <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="Logo X" width="20" height="20">
+              </a>
+          </h3>
+      </div>
+  </div>
+  
 
     <div class="legend">
         <div class="legend-item">

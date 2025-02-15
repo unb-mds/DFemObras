@@ -21,10 +21,11 @@ jobs:
         with:
           node-version: '16'  # Utilize a versão que preferir
 
-      # 3. Instalar o Jest
-      - name: Install Jest
-        run: npm install --save-dev jest
-        working-directory: TestesMapa/js
+     # 3. Instalar dependências na pasta correta
+      - name: Install dependencies
+        run: |
+          cd TestesMapa/obrasgov
+          npm install
 
       # 4. Executar os testes
       - name: Run tests
