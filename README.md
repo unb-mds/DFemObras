@@ -125,13 +125,13 @@ Certifique-se de ter as seguintes ferramentas instaladas:
 Link do nosso perfil no X: [neste link](https://x.com/DFemObras).
 
 ## 🛠️ Arquitetura
-A arquitetura do projeto pode ser encontrada [neste link](https://unb-mds.github.io/2024-2-Squad07/arquitetura).
+A arquitetura do projeto pode ser encontrada [neste link](https://unb-mds.github.io/DFemObras/documenta%C3%A7%C3%A3o/index.html).
 
 ## 📄 Requisitos
-Os requisitos do projeto estão disponíveis [neste link](https://unb-mds.github.io/2024-2-Squad07/requisitos).
+Os requisitos do projeto estão disponíveis [neste link](https://unb-mds.github.io/DFemObras/documenta%C3%A7%C3%A3o/index.html)
 
 ## 📂 Documentação
-A documentação do projeto pode ser encontrada [neste link](https://unb-mds.github.io/2024-2-Squad07/).
+A documentação do projeto pode ser encontrada [neste link](https://unb-mds.github.io/DFemObras/documenta%C3%A7%C3%A3o/index.html).
 
 ## 💡 Suporte
 Se encontrar problemas durante a configuração, abra uma issue no repositório ou entre em contato.
