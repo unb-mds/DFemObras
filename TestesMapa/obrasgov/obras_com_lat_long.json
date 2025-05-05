@@ -76,192 +76,6 @@
     "longitude": -47.8751524777795
   },
   {
-    "idUnico": "19970.53-78",
-    "nome": "Reajuste do Contrato 45/2021 - Contrução do Centro de Formação e Aperfeiçoamento de Praças - CEFAP do CBMDF",
-    "cep": "70.602-600",
-    "endereco": "SAIS Área Especial 3, Setor Policial Sul",
-    "descricao": "Reajuste do Contrato 45/2021 - Construção do Centro de Formação e Aperfeiçoamento de Praças - CEFAP, situado no Setor Policial Sul lote 03, Asa Sul, Brasília-DF.",
-    "funcaoSocial": "Contribuir para a melhor formação dos bombeiros militares que prestarão serviços à sociedade do DF.",
-    "metaGlobal": "Construção de um novo centro de formação e de aperfeiçoamento de praças.",
-    "dataInicialPrevista": "2021-09-14",
-    "dataFinalPrevista": "2024-08-28",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2023-02-06",
-    "especie": "Construção",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2023-02-06",
-    "tomadores": [],
-    "executores": [
-      {
-        "nome": "CORPO DE BOMBEIROS MILITAR DO DISTRITO FEDERAL",
-        "codigo": 8977914000119
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "CORPO DE BOMBEIROS MILITAR DO DISTRITO FEDERAL",
-        "codigo": 8977914000119
-      }
-    ],
-    "eixos": [
-      {
-        "id": 1,
-        "descricao": "Administrativo"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 1,
-        "descricao": "Segurança Pública",
-        "idEixo": 1
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 59,
-        "descricao": "Obras em Imóveis de Uso Público",
-        "idTipo": 1
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "01010000009609BFD4CFF747C0C62B5AE010AA2FC0",
-        "dataCriacao": "2023-02-06",
-        "origem": "Manual",
-        "dataMetadado": "2023-02-06",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "Corpo de Bombeiros Militar do DF",
-        "enderecoAreaExecutora": "QCG – Quartel do Comando Geral SAM Lote D Módulo E",
-        "cepAreaExecutora": "70620-000",
-        "paisAreaExecutora": "Brasil"
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 1177429.91
-      }
-    ],
-    "latitude": -15.83216000653,
-    "longitude": -47.93603
-  },
-  {
-    "idUnico": "24797.53-15",
-    "nome": "Implantação de Passarelas nas Estradas Parque do DF",
-    "cep": null,
-    "endereco": null,
-    "descricao": "Implantação de passarelas de estrutura mista nas rodovias Estradas Parques no DF.",
-    "funcaoSocial": "Pedestres, no geral, demanda das ocupações lindeiras à faixa de domínio das rodovia, formando um grupo heterogêneo no sistema viário, dos quais, possuem idade e sexo distintos, além de englobarem pessoas com deficiência física e, em alguns casos, ciclistas... Os acidentes de trânsito são uma das principais causas de mortes no Brasil, sendo que o atropelamento é considerado o mais grave. Porém estes acidentes em rodovias localizadas em trechos urbanos têm aumentado. A implantação das passarelas possibilitará travessia segura, sobre as rodovias, em regiões de acentuado adensamento urbano.. Redução de acidentes por atropelamento, assim como promoção de local adequado para os usuários do sistema viário.",
-    "metaGlobal": "Implantação de passarelas de estrutura mista nas rodovias Estradas Parques no DF.",
-    "dataInicialPrevista": "2023-07-20",
-    "dataFinalPrevista": "2028-07-20",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2023-08-28",
-    "especie": "Construção",
-    "natureza": "Projeto de Investimento em Infraestrutura",
-    "naturezaOutras": null,
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": "Pedestres que moram nas regiões de Planaltina, Núcleo Bandeirante e Guará. ",
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2023-08-28",
-    "tomadores": [],
-    "executores": [
-      {
-        "nome": "DEPARTAMENTO DE ESTRADAS DE RODAGEM DO DISTRITO FEDERAL",
-        "codigo": 70532000103
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTÉRIO DAS CIDADES",
-        "codigo": 308798
-      }
-    ],
-    "eixos": [
-      {
-        "id": 3,
-        "descricao": "Econômico"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 24,
-        "descricao": "Infraestrutura Urbana e Mobilidade",
-        "idEixo": 3
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 57,
-        "descricao": "Obra de Arte Especial",
-        "idTipo": 24
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "010100000032207BBDFBFF47C0FEF15EB532C12FC0",
-        "dataCriacao": "2023-08-28",
-        "origem": "WKT",
-        "dataMetadado": "2023-08-28",
-        "infoAdicionais": "Cadastro automatizado da obra pelo Transferegov da proposta 045182/2023 e instrumento 943681/2023",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "FAUZI NACFUR JUNIOR",
-        "enderecoAreaExecutora": "SETOR AREAS ISOLADAS NORTE, S N, BLOCO C",
-        "cepAreaExecutora": "70310-500",
-        "paisAreaExecutora": "Brasil"
-      },
-      {
-        "geometria": "0101000000A94D9CDCEFD847C0F20703CFBD372FC0",
-        "dataCriacao": "2023-08-28",
-        "origem": "WKT",
-        "dataMetadado": "2023-08-28",
-        "infoAdicionais": "Cadastro automatizado da obra pelo Transferegov da proposta 045182/2023 e instrumento 943681/2023",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "FAUZI NACFUR JUNIOR",
-        "enderecoAreaExecutora": "SETOR AREAS ISOLADAS NORTE, S N, BLOCO C",
-        "cepAreaExecutora": "70310-500",
-        "paisAreaExecutora": "Brasil"
-      },
-      {
-        "geometria": "01010000004BAB21718FF947C0C3F0113125A22FC0",
-        "dataCriacao": "2023-08-28",
-        "origem": "WKT",
-        "dataMetadado": "2023-08-28",
-        "infoAdicionais": "Cadastro automatizado da obra pelo Transferegov da proposta 045182/2023 e instrumento 943681/2023",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "FAUZI NACFUR JUNIOR",
-        "enderecoAreaExecutora": "SETOR AREAS ISOLADAS NORTE, S N, BLOCO C",
-        "cepAreaExecutora": "70310-500",
-        "paisAreaExecutora": "Brasil"
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 10800000
-      }
-    ],
-    "latitude": -15.87734,
-    "longitude": -47.99987
-  },
-  {
     "idUnico": "24822.53-70",
     "nome": "obra de construção da  Cabine de Medição, localizado no Setor Central do Campus Universitário Darcy Ribeiro, da Universidade de Brasília, em Brasília/DF",
     "cep": null,
@@ -355,6 +169,87 @@
     ],
     "latitude": -15.7613700064557,
     "longitude": -47.87386
+  },
+  {
+    "idUnico": "19970.53-78",
+    "nome": "Reajuste do Contrato 45/2021 - Contrução do Centro de Formação e Aperfeiçoamento de Praças - CEFAP do CBMDF",
+    "cep": "70.602-600",
+    "endereco": "SAIS Área Especial 3, Setor Policial Sul",
+    "descricao": "Reajuste do Contrato 45/2021 - Construção do Centro de Formação e Aperfeiçoamento de Praças - CEFAP, situado no Setor Policial Sul lote 03, Asa Sul, Brasília-DF.",
+    "funcaoSocial": "Contribuir para a melhor formação dos bombeiros militares que prestarão serviços à sociedade do DF.",
+    "metaGlobal": "Construção de um novo centro de formação e de aperfeiçoamento de praças.",
+    "dataInicialPrevista": "2021-09-14",
+    "dataFinalPrevista": "2024-08-28",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2023-02-06",
+    "especie": "Construção",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2023-02-06",
+    "tomadores": [],
+    "executores": [
+      {
+        "nome": "CORPO DE BOMBEIROS MILITAR DO DISTRITO FEDERAL",
+        "codigo": 8977914000119
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "CORPO DE BOMBEIROS MILITAR DO DISTRITO FEDERAL",
+        "codigo": 8977914000119
+      }
+    ],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 1,
+        "descricao": "Segurança Pública",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 59,
+        "descricao": "Obras em Imóveis de Uso Público",
+        "idTipo": 1
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "01010000009609BFD4CFF747C0C62B5AE010AA2FC0",
+        "dataCriacao": "2023-02-06",
+        "origem": "Manual",
+        "dataMetadado": "2023-02-06",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "Corpo de Bombeiros Militar do DF",
+        "enderecoAreaExecutora": "QCG – Quartel do Comando Geral SAM Lote D Módulo E",
+        "cepAreaExecutora": "70620-000",
+        "paisAreaExecutora": "Brasil"
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 1177429.91
+      }
+    ],
+    "latitude": -15.83216000653,
+    "longitude": -47.93603
   },
   {
     "idUnico": "4541.53-44",
@@ -856,6 +751,92 @@
     ],
     "latitude": -15.6577700063478,
     "longitude": -47.69257
+  },
+  {
+    "idUnico": "21327.53-34",
+    "nome": "Reforma Agroecologia",
+    "cep": "73.380-900",
+    "endereco": "Rodovia DF – 128, km 21, Zona Rural de Planaltina",
+    "descricao": "Reforma do prédio de salas de aulas e laboratórios do curso de agroecologia do Campus Planaltina, incluindo um reforço na fundação, reforma do telhado, reforma e adequação dos banheiros, adequação dos acessos a edificação, entre outros.",
+    "funcaoSocial": "atender a comunidade acadêmica do Campus Planaltina principalmente no curso de agroecologia",
+    "metaGlobal": "aumentar o alcance do conhecimento com  aulas teóricas  e práticas nas instituições de ensino",
+    "dataInicialPrevista": "2023-09-01",
+    "dataFinalPrevista": "2024-03-31",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2023-04-14",
+    "especie": "Reforma",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": "triplicar as matrículas da educação profissional técnica de nível médio, assegurando a qualidade da oferta e pelo menos 50% (cinquenta por cento) da expansão no segmento público\n",
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2023-04-14",
+    "tomadores": [
+      {
+        "nome": "INSTITUTO FED. ED. CIENCIA E TEC. DE BRASILIA",
+        "codigo": 26356
+      }
+    ],
+    "executores": [
+      {
+        "nome": "INSTITUTO FED. ED. CIENCIA E TEC. DE BRASILIA",
+        "codigo": 26356
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA EDUCAÇÃO",
+        "codigo": 244
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 46,
+        "descricao": "Educação",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 84,
+        "descricao": "Educação",
+        "idTipo": 46
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "010100000029B3412619D947C0BBE9EFA5D5502FC0",
+        "dataCriacao": "2023-04-14",
+        "origem": "Manual",
+        "dataMetadado": "2023-04-14",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "Instituto Federal de Brasilia",
+        "enderecoAreaExecutora": "SAUS quadra 2 BLOCO E",
+        "cepAreaExecutora": "70070-906",
+        "paisAreaExecutora": "Brasil"
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 3300000
+      }
+    ],
+    "latitude": -15.6578800063479,
+    "longitude": -47.69608
   },
   {
     "idUnico": "21327.53-34",
@@ -6154,9 +6135,7 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 1475909.94
       }
-    ],
-    "latitude": null,
-    "longitude": null
+    ]
   },
   {
     "idUnico": "4007.53-20",
@@ -6407,8 +6386,8 @@
         "valorInvestimentoPrevisto": 353007.35
       }
     ],
-    "latitude": -15.8427600065412,
-    "longitude": -47.96492
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5514.53-01",
@@ -6574,8 +6553,8 @@
         "valorInvestimentoPrevisto": 4105808.5
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8553300065544,
+    "longitude": -47.90912
   },
   {
     "idUnico": "4756.53-07",
@@ -6979,8 +6958,8 @@
         "valorInvestimentoPrevisto": 1100000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7543300064483,
+    "longitude": -47.8801
   },
   {
     "idUnico": "06.53-80",
@@ -8177,8 +8156,8 @@
         "valorInvestimentoPrevisto": 839664954.32
       }
     ],
-    "latitude": -15.7113300064035,
-    "longitude": -47.81198
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6116.53-00",
@@ -8263,8 +8242,8 @@
         "valorInvestimentoPrevisto": 5431155.55
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7785400064737,
+    "longitude": -47.99205
   },
   {
     "idUnico": "970.53-80",
@@ -9027,7 +9006,9 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 1754251.68
       }
-    ]
+    ],
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6275.53-50",
@@ -9193,8 +9174,8 @@
         "valorInvestimentoPrevisto": 631978.04
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.816236453843,
+    "longitude": -47.9479508863789
   },
   {
     "idUnico": "4753.53-05",
@@ -9454,8 +9435,8 @@
         "valorInvestimentoPrevisto": 105028.8
       }
     ],
-    "latitude": -15.7919370012059,
-    "longitude": -47.9139064272927
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6129.53-60",
@@ -10173,8 +10154,8 @@
         "valorInvestimentoPrevisto": 7732907.61
       }
     ],
-    "latitude": -15.8267700065243,
-    "longitude": -47.9396
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "2258.53-36",
@@ -10330,8 +10311,8 @@
         "valorInvestimentoPrevisto": 139328.54
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8043700065008,
+    "longitude": -47.88813
   },
   {
     "idUnico": "1989.53-01",
@@ -10865,8 +10846,8 @@
         "valorInvestimentoPrevisto": 13498733.34
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7389300064323,
+    "longitude": -47.89428
   },
   {
     "idUnico": "2194.53-90",
@@ -10951,8 +10932,8 @@
         "valorInvestimentoPrevisto": 1193500
       }
     ],
-    "latitude": -15.7747300064697,
-    "longitude": -47.92884
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "2617.53-02",
@@ -11275,8 +11256,8 @@
         "valorInvestimentoPrevisto": 5918000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7965100064925,
+    "longitude": -47.86806
   },
   {
     "idUnico": "3071.53-63",
@@ -12013,8 +11994,8 @@
         "valorInvestimentoPrevisto": 2356316.65
       }
     ],
-    "latitude": -15.7783800064735,
-    "longitude": -47.87258
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "2335.53-87",
@@ -12819,8 +12800,8 @@
         "valorInvestimentoPrevisto": 5806286.87
       }
     ],
-    "latitude": -15.7095700064016,
-    "longitude": -47.81818
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "2894.53-64",
@@ -13567,8 +13548,8 @@
         "valorInvestimentoPrevisto": 605400
       }
     ],
-    "latitude": -15.7702025029459,
-    "longitude": -47.8734051018268
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "51335.53-69",
@@ -14243,8 +14224,8 @@
         "valorInvestimentoPrevisto": 8996666.99
       }
     ],
-    "latitude": -15.8032800064996,
-    "longitude": -47.8851
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6470.53-02",
@@ -14405,8 +14386,8 @@
         "valorInvestimentoPrevisto": 445305
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8052200065017,
+    "longitude": -47.88292
   },
   {
     "idUnico": "6472.53-27",
@@ -14898,8 +14879,8 @@
         "valorInvestimentoPrevisto": 3000000
       }
     ],
-    "latitude": -15.82447666828467,
-    "longitude": -47.829404296882
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6110.53-16",
@@ -15136,8 +15117,8 @@
         "valorInvestimentoPrevisto": 3334168.29
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.6607200063508,
+    "longitude": -47.69353
   },
   {
     "idUnico": "4114.53-95",
@@ -15673,8 +15654,8 @@
         "valorInvestimentoPrevisto": 24948552.41
       }
     ],
-    "latitude": -15.9038200066057,
-    "longitude": -47.81748
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "4507.53-35",
@@ -15835,8 +15816,8 @@
         "valorInvestimentoPrevisto": 8000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8290900065268,
+    "longitude": -47.93268
   },
   {
     "idUnico": "11384.53-69",
@@ -15911,8 +15892,8 @@
         "valorInvestimentoPrevisto": 47293.66
       }
     ],
-    "latitude": -15.6962300063878,
-    "longitude": -47.84472
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "14376.53-51",
@@ -16171,18 +16152,6 @@
         "paisAreaExecutora": null
       },
       {
-        "geometria": "0101000000FED478E9265947C0E2A009E84D8530C0",
-        "dataCriacao": "2021-10-07",
-        "origem": "cipiws",
-        "dataMetadado": "2021-10-07",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      },
-      {
         "geometria": "010100000006F52D73BA0448C076D61E7EE31B2FC0",
         "dataCriacao": "2021-10-07",
         "origem": "cipiws",
@@ -16196,6 +16165,18 @@
       },
       {
         "geometria": "0101000000876D8B321B0448C0E7964DB2BA152FC0",
+        "dataCriacao": "2021-10-07",
+        "origem": "cipiws",
+        "dataMetadado": "2021-10-07",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      },
+      {
+        "geometria": "0101000000FED478E9265947C0E2A009E84D8530C0",
         "dataCriacao": "2021-10-07",
         "origem": "cipiws",
         "dataMetadado": "2021-10-07",
@@ -16303,30 +16284,6 @@
         "paisAreaExecutora": null
       },
       {
-        "geometria": "0101000000F08AE07F2BB947C003C201B5FD1B2FC0",
-        "dataCriacao": "2021-10-07",
-        "origem": "cipiws",
-        "dataMetadado": "2021-10-07",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      },
-      {
-        "geometria": "01010000004451A04FE4D947C0E756934BC8172FC0",
-        "dataCriacao": "2021-10-07",
-        "origem": "cipiws",
-        "dataMetadado": "2021-10-07",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      },
-      {
         "geometria": "0101000000560E2DB29D4747C0CD7D57E0F3C330C0",
         "dataCriacao": "2021-10-07",
         "origem": "cipiws",
@@ -16340,6 +16297,30 @@
       },
       {
         "geometria": "010100000066666666665A47C0DFAC80E5D0C230C0",
+        "dataCriacao": "2021-10-07",
+        "origem": "cipiws",
+        "dataMetadado": "2021-10-07",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      },
+      {
+        "geometria": "0101000000F08AE07F2BB947C003C201B5FD1B2FC0",
+        "dataCriacao": "2021-10-07",
+        "origem": "cipiws",
+        "dataMetadado": "2021-10-07",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      },
+      {
+        "geometria": "01010000004451A04FE4D947C0E756934BC8172FC0",
         "dataCriacao": "2021-10-07",
         "origem": "cipiws",
         "dataMetadado": "2021-10-07",
@@ -16875,8 +16856,8 @@
         "valorInvestimentoPrevisto": 5840000
       }
     ],
-    "latitude": -15.8144440087469,
-    "longitude": -47.9411637177611
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "4707.53-03",
@@ -16961,8 +16942,8 @@
         "valorInvestimentoPrevisto": 6176722.41
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8004486315088,
+    "longitude": -47.9355827549219
   },
   {
     "idUnico": "4058.53-58",
@@ -17047,8 +17028,8 @@
         "valorInvestimentoPrevisto": 582072.58
       }
     ],
-    "latitude": -15.7994803061059,
-    "longitude": -47.9350590964665
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "9618.53-00",
@@ -17803,8 +17784,8 @@
         "valorInvestimentoPrevisto": 571101.17
       }
     ],
-    "latitude": -15.8585508117482,
-    "longitude": -47.9030942954581
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "29308.53-19",
@@ -17889,8 +17870,8 @@
         "valorInvestimentoPrevisto": 4136000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7786700064738,
+    "longitude": -47.87207
   },
   {
     "idUnico": "29316.53-73",
@@ -17969,8 +17950,8 @@
         "valorInvestimentoPrevisto": 44535697
       }
     ],
-    "latitude": -15.8157300065127,
-    "longitude": -47.94214
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "29406.53-84",
@@ -18499,7 +18480,9 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 10054837.82
       }
-    ]
+    ],
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "29738.53-03",
@@ -18726,8 +18709,8 @@
         "valorInvestimentoPrevisto": 3932965.32
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7899821740813,
+    "longitude": -47.875205952346
   },
   {
     "idUnico": "30067.53-80",
@@ -19217,8 +19200,8 @@
         "valorInvestimentoPrevisto": 10000
       }
     ],
-    "latitude": -15.7985400064947,
-    "longitude": -48.141
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "3071.53-63",
@@ -19874,8 +19857,8 @@
         "valorInvestimentoPrevisto": 97564.45
       }
     ],
-    "latitude": -15.7678300064625,
-    "longitude": -47.87185
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "31061.53-30",
@@ -19955,8 +19938,8 @@
         "valorInvestimentoPrevisto": 2560879.56
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7685400064632,
+    "longitude": -47.86931
   },
   {
     "idUnico": "31312.53-95",
@@ -20036,8 +20019,8 @@
         "valorInvestimentoPrevisto": 22786128
       }
     ],
-    "latitude": -15.75781,
-    "longitude": -47.91572
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "31.53-12",
@@ -20837,8 +20820,8 @@
         "valorInvestimentoPrevisto": 850000
       }
     ],
-    "latitude": -15.8931600065944,
-    "longitude": -47.78213
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "32085.53-60",
@@ -21715,8 +21698,8 @@
         "valorInvestimentoPrevisto": 3006000
       }
     ],
-    "latitude": -15.92767,
-    "longitude": -48.04576
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "33136.53-57",
@@ -21877,8 +21860,8 @@
         "valorInvestimentoPrevisto": 1050500
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.62341,
+    "longitude": -47.65276
   },
   {
     "idUnico": "33175.53-50",
@@ -21958,8 +21941,8 @@
         "valorInvestimentoPrevisto": 242365.71
       }
     ],
-    "latitude": -15.7633400064578,
-    "longitude": -47.86071
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "33178.53-19",
@@ -23184,8 +23167,8 @@
         "valorInvestimentoPrevisto": 23715000
       }
     ],
-    "latitude": -15.7894299778763,
-    "longitude": -47.875285489404
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "35734.53-41",
@@ -23265,8 +23248,8 @@
         "valorInvestimentoPrevisto": 769738.55
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7988587777752,
+    "longitude": -47.8600663304903
   },
   {
     "idUnico": "35918.53-89",
@@ -23997,8 +23980,8 @@
         "valorInvestimentoPrevisto": 492520.46
       }
     ],
-    "latitude": -15.8690100065689,
-    "longitude": -47.90138
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "3702.53-97",
@@ -24927,8 +24910,8 @@
         "valorInvestimentoPrevisto": 189964.17
       }
     ],
-    "latitude": -15.8428400065413,
-    "longitude": -48.09807
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "37700.53-02",
@@ -26761,8 +26744,8 @@
         "valorInvestimentoPrevisto": 266563.26
       }
     ],
-    "latitude": -15.7607900064551,
-    "longitude": -47.87058
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "4058.53-58",
@@ -27107,18 +27090,6 @@
         "paisAreaExecutora": null
       },
       {
-        "geometria": "0101000000FED478E9265947C0E2A009E84D8530C0",
-        "dataCriacao": "2021-10-07",
-        "origem": "cipiws",
-        "dataMetadado": "2021-10-07",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      },
-      {
         "geometria": "010100000006F52D73BA0448C076D61E7EE31B2FC0",
         "dataCriacao": "2021-10-07",
         "origem": "cipiws",
@@ -27132,6 +27103,18 @@
       },
       {
         "geometria": "0101000000876D8B321B0448C0E7964DB2BA152FC0",
+        "dataCriacao": "2021-10-07",
+        "origem": "cipiws",
+        "dataMetadado": "2021-10-07",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      },
+      {
+        "geometria": "0101000000FED478E9265947C0E2A009E84D8530C0",
         "dataCriacao": "2021-10-07",
         "origem": "cipiws",
         "dataMetadado": "2021-10-07",
@@ -27239,30 +27222,6 @@
         "paisAreaExecutora": null
       },
       {
-        "geometria": "0101000000F08AE07F2BB947C003C201B5FD1B2FC0",
-        "dataCriacao": "2021-10-07",
-        "origem": "cipiws",
-        "dataMetadado": "2021-10-07",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      },
-      {
-        "geometria": "01010000004451A04FE4D947C0E756934BC8172FC0",
-        "dataCriacao": "2021-10-07",
-        "origem": "cipiws",
-        "dataMetadado": "2021-10-07",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      },
-      {
         "geometria": "0101000000560E2DB29D4747C0CD7D57E0F3C330C0",
         "dataCriacao": "2021-10-07",
         "origem": "cipiws",
@@ -27276,6 +27235,30 @@
       },
       {
         "geometria": "010100000066666666665A47C0DFAC80E5D0C230C0",
+        "dataCriacao": "2021-10-07",
+        "origem": "cipiws",
+        "dataMetadado": "2021-10-07",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      },
+      {
+        "geometria": "0101000000F08AE07F2BB947C003C201B5FD1B2FC0",
+        "dataCriacao": "2021-10-07",
+        "origem": "cipiws",
+        "dataMetadado": "2021-10-07",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      },
+      {
+        "geometria": "01010000004451A04FE4D947C0E756934BC8172FC0",
         "dataCriacao": "2021-10-07",
         "origem": "cipiws",
         "dataMetadado": "2021-10-07",
@@ -28086,8 +28069,8 @@
         "valorInvestimentoPrevisto": 12215000
       }
     ],
-    "latitude": -15.7899506128481,
-    "longitude": -47.8752148339492
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "41770.53-49",
@@ -28735,8 +28718,8 @@
         "valorInvestimentoPrevisto": 3274000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -16.0368300067475,
+    "longitude": -48.05771
   },
   {
     "idUnico": "42414.53-45",
@@ -29393,8 +29376,8 @@
         "valorInvestimentoPrevisto": 669169.17
       }
     ],
-    "latitude": -15.89718,
-    "longitude": -47.40583
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "4293.53-92",
@@ -30261,8 +30244,8 @@
         "valorInvestimentoPrevisto": 27399.99
       }
     ],
-    "latitude": -15.8281400065258,
-    "longitude": -47.93277
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "43513.53-46",
@@ -30423,8 +30406,8 @@
         "valorInvestimentoPrevisto": 6066972.98
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.77262,
+    "longitude": -47.78564
   },
   {
     "idUnico": "43616.53-83",
@@ -31096,8 +31079,8 @@
         "valorInvestimentoPrevisto": 49973.53
       }
     ],
-    "latitude": -15.6020520990034,
-    "longitude": -47.7168332520646
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "44080.53-46",
@@ -31593,9 +31576,7 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 5293000.74
       }
-    ],
-    "latitude": null,
-    "longitude": null
+    ]
   },
   {
     "idUnico": "44184.53-30",
@@ -31785,8 +31766,8 @@
         "valorInvestimentoPrevisto": 22495684.68
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.86689,
+    "longitude": -48.26036
   },
   {
     "idUnico": "4452.53-00",
@@ -32119,8 +32100,8 @@
         "valorInvestimentoPrevisto": 5077000
       }
     ],
-    "latitude": -15.8690500065689,
-    "longitude": -47.90172
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "4499.53-34",
@@ -32544,8 +32525,8 @@
         "valorInvestimentoPrevisto": 3928113.56
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7738000064687,
+    "longitude": -47.91378
   },
   {
     "idUnico": "4539.53-84",
@@ -32716,8 +32697,8 @@
         "valorInvestimentoPrevisto": 1000000001
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.82447666828468,
+    "longitude": -47.829404296872
   },
   {
     "idUnico": "4541.53-44",
@@ -32888,8 +32869,8 @@
         "valorInvestimentoPrevisto": 30000003
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.844476668284681,
+    "longitude": -47.849404296874
   },
   {
     "idUnico": "4543.53-79",
@@ -33571,8 +33552,8 @@
         "valorInvestimentoPrevisto": 1319403.78
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8445700065431,
+    "longitude": -48.10043
   },
   {
     "idUnico": "46226.53-05",
@@ -33657,8 +33638,8 @@
         "valorInvestimentoPrevisto": 1900000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7776700064728,
+    "longitude": -47.91864
   },
   {
     "idUnico": "46275.53-65",
@@ -33738,8 +33719,8 @@
         "valorInvestimentoPrevisto": 5577239.07
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7696600064644,
+    "longitude": -47.86648
   },
   {
     "idUnico": "46296.53-46",
@@ -34355,8 +34336,8 @@
         "valorInvestimentoPrevisto": 990000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7316430535573,
+    "longitude": -47.8983047096414
   },
   {
     "idUnico": "4678.53-99",
@@ -34441,8 +34422,8 @@
         "valorInvestimentoPrevisto": 9797207.6
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7122300064044,
+    "longitude": -47.81289
   },
   {
     "idUnico": "46837.53-58",
@@ -34517,8 +34498,8 @@
         "valorInvestimentoPrevisto": 8000000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7836900064791,
+    "longitude": -47.88061
   },
   {
     "idUnico": "468.53-26",
@@ -34875,8 +34856,8 @@
         "valorInvestimentoPrevisto": 1383000
       }
     ],
-    "latitude": -15.843401901015081,
-    "longitude": -48.02967712283135
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "46895.53-29",
@@ -35480,9 +35461,7 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 675527.32
       }
-    ],
-    "latitude": null,
-    "longitude": null
+    ]
   },
   {
     "idUnico": "47653.53-00",
@@ -36643,8 +36622,8 @@
         "valorInvestimentoPrevisto": 90048336.04
       }
     ],
-    "latitude": -15.7629700064574,
-    "longitude": -47.86903
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "50791.53-30",
@@ -36724,8 +36703,8 @@
         "valorInvestimentoPrevisto": 11996600.81
       }
     ],
-    "latitude": -15.7691200064638,
-    "longitude": -47.87126
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "50824.53-27",
@@ -37680,8 +37659,8 @@
         "valorInvestimentoPrevisto": 1462500
       }
     ],
-    "latitude": -15.79431,
-    "longitude": -48.16154
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "51029.53-02",
@@ -38599,8 +38578,8 @@
         "valorInvestimentoPrevisto": 200000
       }
     ],
-    "latitude": -15.7742800064692,
-    "longitude": -47.91651
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "51464.53-72",
@@ -39293,8 +39272,8 @@
         "valorInvestimentoPrevisto": 1350000
       }
     ],
-    "latitude": -15.8012900064976,
-    "longitude": -47.88076
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "51647.53-53",
@@ -40061,8 +40040,8 @@
         "valorInvestimentoPrevisto": 11570063.3
       }
     ],
-    "latitude": -16.0171200067264,
-    "longitude": -48.01897
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "51701.53-44",
@@ -40763,9 +40742,9 @@
     ],
     "geometrias": [
       {
-        "geometria": "0103000000010000000500000045036F07F1F747C099A7665071832FC0A4D434A827F847C077D45C38F7852FC0AAD414EEB5F847C092E8A43442852FC05CD9374AA1F847C03D94840F51842FC045036F07F1F747C099A7665071832FC0",
+        "geometria": "01010000001C25AFCE31F847C0ED07621895842FC0",
         "dataCriacao": "2025-03-20",
-        "origem": "Vetorizacao",
+        "origem": "Manual",
         "dataMetadado": "2025-03-20",
         "infoAdicionais": "Localização do Novo Hospital Militar de Área de Brasília",
         "datum": "SIRGAS 2000",
@@ -40787,9 +40766,9 @@
         "paisAreaExecutora": "Brasil"
       },
       {
-        "geometria": "01010000001C25AFCE31F847C0ED07621895842FC0",
+        "geometria": "0103000000010000000500000045036F07F1F747C099A7665071832FC0A4D434A827F847C077D45C38F7852FC0AAD414EEB5F847C092E8A43442852FC05CD9374AA1F847C03D94840F51842FC045036F07F1F747C099A7665071832FC0",
         "dataCriacao": "2025-03-20",
-        "origem": "Manual",
+        "origem": "Vetorizacao",
         "dataMetadado": "2025-03-20",
         "infoAdicionais": "Localização do Novo Hospital Militar de Área de Brasília",
         "datum": "SIRGAS 2000",
@@ -40804,7 +40783,9 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 4974721.71
       }
-    ]
+    ],
+    "latitude": -15.7589500064532,
+    "longitude": -47.93902
   },
   {
     "idUnico": "52175.53-50",
@@ -41151,8 +41132,8 @@
         "valorInvestimentoPrevisto": 6492229.19
       }
     ],
-    "latitude": -15.5555500062423,
-    "longitude": -47.34675
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5222.53-08",
@@ -41237,8 +41218,8 @@
         "valorInvestimentoPrevisto": 47000
       }
     ],
-    "latitude": -15.9326207051122,
-    "longitude": -48.1444018888517
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5223.53-75",
@@ -42179,8 +42160,8 @@
         "valorInvestimentoPrevisto": 24948552.41
       }
     ],
-    "latitude": -15.9038200066057,
-    "longitude": -47.81748
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5352.53-01",
@@ -42269,8 +42250,8 @@
         "valorInvestimentoPrevisto": 750000
       }
     ],
-    "latitude": -15.7914800064873,
-    "longitude": -47.91333
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "53526.53-62",
@@ -42699,8 +42680,8 @@
         "valorInvestimentoPrevisto": 4945820
       }
     ],
-    "latitude": -15.65643,
-    "longitude": -47.81141
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "53541.53-15",
@@ -42871,8 +42852,8 @@
         "valorInvestimentoPrevisto": 2141000
       }
     ],
-    "latitude": -15.823625715000336,
-    "longitude": -48.120174938812866
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5373.53-15",
@@ -43124,8 +43105,8 @@
         "valorInvestimentoPrevisto": 479896.73
       }
     ],
-    "latitude": -15.7441600064377,
-    "longitude": -47.89108
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5431.53-87",
@@ -43627,8 +43608,8 @@
         "valorInvestimentoPrevisto": 218892.5
       }
     ],
-    "latitude": -15.9491300066538,
-    "longitude": -47.87872
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5550.53-45",
@@ -43789,8 +43770,8 @@
         "valorInvestimentoPrevisto": 725000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.924355587021259,
+    "longitude": -48.0561438202858
   },
   {
     "idUnico": "55518.53-76",
@@ -43970,8 +43951,8 @@
         "valorInvestimentoPrevisto": 11424496.03
       }
     ],
-    "latitude": -15.7744600064694,
-    "longitude": -47.8679
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5566.53-07",
@@ -44412,8 +44393,8 @@
         "valorInvestimentoPrevisto": 8691308
       }
     ],
-    "latitude": -15.7727900064677,
-    "longitude": -47.91729
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5589.53-35",
@@ -44492,9 +44473,7 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 1475909.94
       }
-    ],
-    "latitude": null,
-    "longitude": null
+    ]
   },
   {
     "idUnico": "5622.53-34",
@@ -44665,8 +44644,8 @@
         "valorInvestimentoPrevisto": 750000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7929200064888,
+    "longitude": -47.96689
   },
   {
     "idUnico": "5642.53-80",
@@ -44751,8 +44730,8 @@
         "valorInvestimentoPrevisto": 1200000
       }
     ],
-    "latitude": -15.6572400063472,
-    "longitude": -47.69286
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "5656.53-08",
@@ -45861,7 +45840,9 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 16691637.38
       }
-    ]
+    ],
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6015.53-53",
@@ -45940,7 +45921,9 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 20372397.28
       }
-    ]
+    ],
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6044.53-00",
@@ -46015,8 +45998,8 @@
         "valorInvestimentoPrevisto": 7732907.61
       }
     ],
-    "latitude": -15.8267700065243,
-    "longitude": -47.9396
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6091.53-80",
@@ -46579,6 +46562,96 @@
     "longitude": -47.9350451970701
   },
   {
+    "idUnico": "6270.53-34",
+    "nome": "CONCORRÊNCIA DE REPARAÇÃO DA IMPERMEABILIZAÇÃO E REFAZIMENTO DAS ÁGUAS PLUVIAIS DOS ANEXOS A E B DO COMAER",
+    "cep": "70.045-900",
+    "endereco": "Grupamento de Apoio de Brasília PABX: (61) 2023 - 2700 Esplanada dos Ministérios - Bloco M CEP: 70045900 - Brasília - DF ",
+    "descricao": "Contratação de empresa de engenharia a fim de executar obra de readequação da impermeabilização da cobertura e revitalização das instalações de águas pluviais dos anexos A e B do COMAER",
+    "funcaoSocial": "A contratação visa a correções de problemas estruturais nos Anexos A e B do COMAER, permitindo o restabelecimento do funcionamento operacional das edificações, de sua segurança e habitabilidade, tudo isso permitindo que as Organizações Militares aqui sediadas cumpram sua missão institucional e as atribuições estabelecidas por meio de seu Regimento Interno.",
+    "metaGlobal": "O restabelecimento do funcionamento operacional das edificações, de sua segurança e habitabilidade, permitindo que as Organizações Militares aqui sediadas cumpram sua missão institucional e as atribuições estabelecidas por meio de seu Regimento Interno.",
+    "dataInicialPrevista": "2022-07-11",
+    "dataFinalPrevista": "2023-05-11",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2022-06-29",
+    "especie": "Reforma",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2022-06-29",
+    "tomadores": [],
+    "executores": [
+      {
+        "nome": "COMANDO DA AERONÁUTICA",
+        "codigo": 48
+      }
+    ],
+    "repassadores": [],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      },
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 5,
+        "descricao": "Administrativo",
+        "idEixo": 1
+      },
+      {
+        "id": 5,
+        "descricao": "Administrativo",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 90,
+        "descricao": "Preservação do Patrimônio",
+        "idTipo": 5
+      },
+      {
+        "id": 59,
+        "descricao": "Obras em Imóveis de Uso Público",
+        "idTipo": 5
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "0103000000010000000D000000AD8BD7BF96EF47C0D4C73DAA16962FC0B08BD710A0EF47C0D30A694584962FC0AC8BD7BC99EF47C07A2711118D962FC0B18B573097EF47C0DAD246F96F962FC0B38BD75A92EF47C0E4FE1D1076962FC0AF8B57E794EF47C0FE96B37A92962FC0B68B57478FEF47C01ED2F2EB99962FC0B38B57F685EF47C0C43CCA9F2A962FC0B48B573C8BEF47C05234238523962FC0B88B579091EF47C0D133DBED6C962FC0AF8B57A996EF47C01785CF2966962FC0AD8BD73E90EF47C0298BB0171D962FC0AD8BD7BF96EF47C0D4C73DAA16962FC0",
+        "dataCriacao": "2022-06-29",
+        "origem": "Vetorizacao",
+        "dataMetadado": "2022-06-29",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "GRUPAMENTO DE APOIO DE BRASÍLIA",
+        "enderecoAreaExecutora": "ANEXOS A E B, BL M, ESPLANADA DOS MINISTÉRIOS",
+        "cepAreaExecutora": "70045-900",
+        "paisAreaExecutora": "BRASIL"
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 1754251.68
+      }
+    ],
+    "latitude": null,
+    "longitude": null
+  },
+  {
     "idUnico": "6227.53-14",
     "nome": "Complementação, Reparação e Adequação da Construção da 16ª Delegacia de Polícia",
     "cep": "73.330-088",
@@ -46773,94 +46846,6 @@
     ],
     "latitude": -15.816236453843,
     "longitude": -47.9479508863789
-  },
-  {
-    "idUnico": "6270.53-34",
-    "nome": "CONCORRÊNCIA DE REPARAÇÃO DA IMPERMEABILIZAÇÃO E REFAZIMENTO DAS ÁGUAS PLUVIAIS DOS ANEXOS A E B DO COMAER",
-    "cep": "70.045-900",
-    "endereco": "Grupamento de Apoio de Brasília PABX: (61) 2023 - 2700 Esplanada dos Ministérios - Bloco M CEP: 70045900 - Brasília - DF ",
-    "descricao": "Contratação de empresa de engenharia a fim de executar obra de readequação da impermeabilização da cobertura e revitalização das instalações de águas pluviais dos anexos A e B do COMAER",
-    "funcaoSocial": "A contratação visa a correções de problemas estruturais nos Anexos A e B do COMAER, permitindo o restabelecimento do funcionamento operacional das edificações, de sua segurança e habitabilidade, tudo isso permitindo que as Organizações Militares aqui sediadas cumpram sua missão institucional e as atribuições estabelecidas por meio de seu Regimento Interno.",
-    "metaGlobal": "O restabelecimento do funcionamento operacional das edificações, de sua segurança e habitabilidade, permitindo que as Organizações Militares aqui sediadas cumpram sua missão institucional e as atribuições estabelecidas por meio de seu Regimento Interno.",
-    "dataInicialPrevista": "2022-07-11",
-    "dataFinalPrevista": "2023-05-11",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2022-06-29",
-    "especie": "Reforma",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2022-06-29",
-    "tomadores": [],
-    "executores": [
-      {
-        "nome": "COMANDO DA AERONÁUTICA",
-        "codigo": 48
-      }
-    ],
-    "repassadores": [],
-    "eixos": [
-      {
-        "id": 1,
-        "descricao": "Administrativo"
-      },
-      {
-        "id": 1,
-        "descricao": "Administrativo"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 5,
-        "descricao": "Administrativo",
-        "idEixo": 1
-      },
-      {
-        "id": 5,
-        "descricao": "Administrativo",
-        "idEixo": 1
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 90,
-        "descricao": "Preservação do Patrimônio",
-        "idTipo": 5
-      },
-      {
-        "id": 59,
-        "descricao": "Obras em Imóveis de Uso Público",
-        "idTipo": 5
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "0103000000010000000D000000AD8BD7BF96EF47C0D4C73DAA16962FC0B08BD710A0EF47C0D30A694584962FC0AC8BD7BC99EF47C07A2711118D962FC0B18B573097EF47C0DAD246F96F962FC0B38BD75A92EF47C0E4FE1D1076962FC0AF8B57E794EF47C0FE96B37A92962FC0B68B57478FEF47C01ED2F2EB99962FC0B38B57F685EF47C0C43CCA9F2A962FC0B48B573C8BEF47C05234238523962FC0B88B579091EF47C0D133DBED6C962FC0AF8B57A996EF47C01785CF2966962FC0AD8BD73E90EF47C0298BB0171D962FC0AD8BD7BF96EF47C0D4C73DAA16962FC0",
-        "dataCriacao": "2022-06-29",
-        "origem": "Vetorizacao",
-        "dataMetadado": "2022-06-29",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "GRUPAMENTO DE APOIO DE BRASÍLIA",
-        "enderecoAreaExecutora": "ANEXOS A E B, BL M, ESPLANADA DOS MINISTÉRIOS",
-        "cepAreaExecutora": "70045-900",
-        "paisAreaExecutora": "BRASIL"
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 1754251.68
-      }
-    ]
   },
   {
     "idUnico": "6275.53-50",
@@ -47268,8 +47253,8 @@
         "valorInvestimentoPrevisto": 993144.25
       }
     ],
-    "latitude": -15.7723500064672,
-    "longitude": -47.87004
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6409.53-60",
@@ -47941,8 +47926,8 @@
         "valorInvestimentoPrevisto": 8996666.99
       }
     ],
-    "latitude": -15.8031796792296,
-    "longitude": -47.8854616659279
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6471.53-60",
@@ -48027,8 +48012,8 @@
         "valorInvestimentoPrevisto": 445305
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8052200065017,
+    "longitude": -47.88292
   },
   {
     "idUnico": "6472.53-27",
@@ -48270,8 +48255,8 @@
         "valorInvestimentoPrevisto": 5840000
       }
     ],
-    "latitude": -15.8144440087469,
-    "longitude": -47.9411637177611
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6580.53-50",
@@ -48400,8 +48385,8 @@
         "valorInvestimentoPrevisto": 4860790.2
       }
     ],
-    "latitude": -15.6395000063289,
-    "longitude": -47.75063
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6581.53-17",
@@ -48572,8 +48557,8 @@
         "valorInvestimentoPrevisto": 3399500
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.9732200066795,
+    "longitude": -47.58526
   },
   {
     "idUnico": "6613.53-13",
@@ -49138,8 +49123,8 @@
         "valorInvestimentoPrevisto": 50105235.1
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7900507712172,
+    "longitude": -47.8752839224432
   },
   {
     "idUnico": "7656.53-98",
@@ -49214,8 +49199,8 @@
         "valorInvestimentoPrevisto": 49228551.46
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7900085688079,
+    "longitude": -47.8752614215582
   },
   {
     "idUnico": "7729.53-44",
@@ -49746,8 +49731,8 @@
         "valorInvestimentoPrevisto": 46555642.8
       }
     ],
-    "latitude": -15.7900003790601,
-    "longitude": -47.8752484747887
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "7792.53-00",
@@ -50060,8 +50045,8 @@
         "valorInvestimentoPrevisto": 8000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8290900065268,
+    "longitude": -47.93268
   },
   {
     "idUnico": "8199.53-57",
@@ -50136,8 +50121,8 @@
         "valorInvestimentoPrevisto": 29033236.2
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7900164066713,
+    "longitude": -47.8752082416534
   },
   {
     "idUnico": "8340.53-89",
@@ -50212,8 +50197,8 @@
         "valorInvestimentoPrevisto": 104133733.23
       }
     ],
-    "latitude": -15.7900009310261,
-    "longitude": -47.8752927803747
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "8345.53-05",
@@ -50440,8 +50425,8 @@
         "valorInvestimentoPrevisto": 58029284.06
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7900824952813,
+    "longitude": -47.8752274371809
   },
   {
     "idUnico": "8417.53-94",
@@ -51289,8 +51274,8 @@
         "valorInvestimentoPrevisto": 6599922.21
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7968537256939,
+    "longitude": -47.867159986888
   },
   {
     "idUnico": "971.53-58",
@@ -51621,8 +51606,8 @@
         "valorInvestimentoPrevisto": 2867337.77
       }
     ],
-    "latitude": -15.7967207551453,
-    "longitude": -47.8670947486158
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "972.53-26",
@@ -51955,8 +51940,8 @@
         "valorInvestimentoPrevisto": 1503660.56
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7746304138604,
+    "longitude": -47.9171281918063
   },
   {
     "idUnico": "9854.53-01",
@@ -52122,8 +52107,8 @@
         "valorInvestimentoPrevisto": 64395
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8019200064982,
+    "longitude": -47.88456
   },
   {
     "idUnico": "9879.53-74",
@@ -52203,8 +52188,8 @@
         "valorInvestimentoPrevisto": 5990000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.69883,
+    "longitude": -48.14287
   },
   {
     "idUnico": "4407.53-56",
@@ -52256,9 +52241,7 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 8523695.67
       }
-    ],
-    "latitude": null,
-    "longitude": null
+    ]
   },
   {
     "idUnico": "379.53-93",
@@ -52375,8 +52358,8 @@
         "valorInvestimentoPrevisto": 2085189.32
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": 1.5765000000589,
+    "longitude": -47.86934
   },
   {
     "idUnico": "4073.53-88",
@@ -52415,8 +52398,6 @@
         "origem": "Federal",
         "valorInvestimentoPrevisto": 19802398.87
       }
-    ],
-    "latitude": null,
-    "longitude": null
+    ]
   }
 ]
