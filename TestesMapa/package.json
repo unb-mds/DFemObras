@@ -1,8 +1,15 @@
 {
   "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
     "leaflet": "^1.9.4"
   },
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "scripts": {
+    "start": "node api/app.js",
+    "dev": "nodemon api/app.js",
+    "test-api": "curl http://localhost:3000/api/health"
   }
 }
