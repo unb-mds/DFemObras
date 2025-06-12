@@ -1,145 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DFemObras</title>
-    <!-- Estilo do Leaflet -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/crane.png">
-</head>
-<body>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      href="https://img.icons8.com/color/48/crane.png"
+    />
+  </head>
+  <body>
     <header>
-        <div class="title">
-            <h1>DF em Obras</h1>
-            <p class="subtitle">"Facilitando o acesso às informações que constroem o DF."</p>
-        </div>
+      <img
+        src="data:image/png;base64,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"
+        alt="Logo da UnB"
+        class="logo"
+      />
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Bandeira_do_Distrito_Federal_%28Brasil%29.svg"
+        alt="imagem gdf"
+        width="92"
+        class="logo"
+      />
 
-        <input type="checkbox" id="menu-toggle">
-        <label for="menu-toggle" class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-        </label>
+      <div class="title">
+        <h1>DF em Obras</h1>
+        <p class="subtitle">
+          "Facilitando o acesso às informações que constroem o DF."
+        </p>
+      </div>
 
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="sobre_o_projeto.html">Sobre o Projeto</a>
-            <a href="contato.html">Contato</a>
-            <a href="anomalias.html">Obras em Atraso</a>
-        </nav>
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="sobre_o_projeto.html">Sobre o Projeto</a>
+        <a href="contato.html">Contato</a>
+        <a href="anomalias.html">Obras em Atraso</a>
+      </nav>
+
     </header>
 
-    <!-- Main Container -->
+    <div>
+      hello world
+    </div>
+
     <div class="container">
-        <!-- Sidebar -->
-        <div class="sidebar">
-            <!-- Filters Section -->
-            <div class="filters-section">
-                <h3>🔍 Filtros</h3>
-                
-                <!-- Filter Status -->
-                <div id="filter-status" class="filter-status">
-                    Carregando obras...
-                </div>
-                
-                <!-- RA Filter -->
-                <div class="filter-group">
-                    <label for="ra-filter">🏛️ Região Administrativa</label>
-                    <select id="ra-filter">
-                        <option value="">Todas as RAs</option>
-                    </select>
-                </div>
+      <div class="sidebar">
+        <div class="filters-section">
+          <h3>🔍 Filtros</h3>
 
-                <!-- Situação Filter -->
-                <div class="filter-group">
-                    <label for="situacao-filter">📊 Situação</label>
-                    <select id="situacao-filter">
-                        <option value="">Todas as Situações</option>
-                    </select>
-                </div>
+          <div id="filter-status" class="filter-status">
+            Carregando obras...
+          </div>
 
-                <!-- Espécie Filter -->
-                <div class="filter-group">
-                    <label for="especie-filter">🏗️ Espécie</label>
-                    <select id="especie-filter">
-                        <option value="">Todas as Espécies</option>
-                    </select>
-                </div>
+          <div class="filter-group">
+            <label for="ra-filter">🏛️ Região Administrativa</label>
+            <select id="ra-filter">
+              <option value="">Todas as RAs</option>
+            </select>
+          </div>
 
-                <!-- Obras Atrasadas Filter -->
-                <div class="filter-group">
-                    <label for="atraso-filter">⏰ Obras Atrasadas</label>
-                    <select id="atraso-filter">
-                        <option value="">Todas as Obras</option>
-                        <option value="atrasadas">Apenas Atrasadas</option>
-                        <option value="no-prazo">Apenas no Prazo</option>
-                    </select>
-                </div>
+          <div class="filter-group">
+            <label for="situacao-filter">📊 Situação</label>
+            <select id="situacao-filter">
+              <option value="">Todas as Situações</option>
+            </select>
+          </div>
 
-                <!-- Search Input -->
-                <div class="filter-group">
-                    <label for="search-input">🔍 Buscar</label>
-                    <input type="text" id="search-input" placeholder="Nome, endereço, descrição...">
-                </div>
+          <div class="filter-group">
+            <label for="especie-filter">🏗️ Espécie</label>
+            <select id="especie-filter">
+              <option value="">Todas as Espécies</option>
+            </select>
+          </div>
 
-                <!-- Filter Actions -->
-                <div class="filter-actions">
-                    <button id="clear-filters">🗑️ Limpar Filtros</button>
-                </div>
-            </div>
+          <div class="filter-group">
+            <label for="atraso-filter">⏰ Obras Atrasadas</label>
+            <select id="atraso-filter">
+              <option value="">Todas as Obras</option>
+              <option value="atrasadas">Apenas Atrasadas</option>
+              <option value="no-prazo">Apenas no Prazo</option>
+            </select>
+          </div>
 
-            <!-- Obras List Section -->
-            <div class="obras-section">
-                <h3>📋 Lista de Obras</h3>
-                <div id="obras-list" class="obras-list">
-                    <div class="loading">Carregando obras...</div>
-                </div>
-            </div>
+          <div class="filter-group">
+            <label for="search-input">🔍 Buscar</label>
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Nome, endereço, descrição..."
+            />
+          </div>
+
+          <div class="filter-actions">
+            <button id="clear-filters">🗑️ Limpar Filtros</button>
+          </div>
         </div>
 
-        <!-- Map Container -->
-        <div class="map-container">
-            <div id="map"></div>
+        <div class="obras-section">
+          <h3>📋 Lista de Obras</h3>
+          <div id="obras-list" class="obras-list">
+            <div class="loading">Carregando obras...</div>
+          </div>
         </div>
+      </div>
+
+      <div class="map-container">
+        <div id="map"></div>
+      </div>
     </div>
 
-    <!-- Welcome Popup -->
     <div id="popup" class="popup">
-        <div class="popup-content">
-            <span id="close-popup" class="close">&times;</span>
-            <h1>Bem-vindo(a)!</h1>
-            <h3>
-                Explore as obras do Governo do DF e acompanhe o progresso do desenvolvimento em nossa região.
-                <br><br>
-                Este projeto tem como objetivo fornecer um mapeamento detalhado e acessível de todas as iniciativas públicas em andamento.
-                <br><br>
-                Siga nosso perfil no X para acompanhar o monitoramento das obras:
-                <a href="https://x.com/DFemObras" target="_blank">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg" alt="Logo X" width="20" height="20">
-                </a>
-            </h3>
-        </div>
+      <div class="popup-content">
+        <span id="close-popup" class="close">&times;</span>
+        <h1>Bem-vindo(a)!</h1>
+        <h3>
+          Explore as obras do Governo do DF e acompanhe o progresso do
+          desenvolvimento em nossa região.
+          <br /><br />
+          Este projeto tem como objetivo fornecer um mapeamento detalhado e
+          acessível de todas as iniciativas públicas em andamento.
+          <br /><br />
+          Siga nosso perfil no X para acompanhar o monitoramento das obras:
+          <a href="https://x.com/DFemObras" target="_blank">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/53/X_logo_2023_original.svg"
+              alt="Logo X"
+              width="20"
+              height="20"
+            />
+          </a>
+        </h3>
+      </div>
     </div>
 
-    <!-- Modal for Project Details -->
     <div id="project-modal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <span id="close-modal" class="close">&times;</span>
-                <h2>📋 Detalhes da Obra</h2>
-            </div>
-            <div id="modal-body" class="modal-body">
-                <!-- Content will be populated by JavaScript -->
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <span id="close-modal" class="close">&times;</span>
+          <h2>📋 Detalhes da Obra</h2>
         </div>
+        <div id="modal-body" class="modal-body">
+        </div>
+      </div>
     </div>
 
-
-    <!-- Script personalizado -->
     <script src="js/map.js"></script>
-</body>
+  </body>
 </html>

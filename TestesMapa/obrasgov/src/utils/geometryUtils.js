@@ -1,5 +1,4 @@
 function extractLatLong(geometriaWkt) {
-    // Verifica se a string é um POINT válido
     const match = geometriaWkt.match(/^POINT\s*\(\s*([-\d.]+)\s+([-\d.]+)\s*\)$/);
     if (match) {
         return {
@@ -7,7 +6,7 @@ function extractLatLong(geometriaWkt) {
             latitude: parseFloat(match[2]),
         };
     }
-    return null; // Retorna null para geometrias inválidas
+    return null;
 }
 
 module.exports = {

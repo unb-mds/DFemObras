@@ -19,7 +19,7 @@ async function fetchWithRetry(url, retries = 5) {
         } catch (error) {
             console.error(`Erro na tentativa ${attempt + 1}:`, error.message || error.toString());
             if (attempt === retries - 1) {
-                throw new Error("Max retries exceeded"); // Lança o erro "Max retries exceeded"
+                throw new Error("Max retries exceeded"); 
             }
         }
     }

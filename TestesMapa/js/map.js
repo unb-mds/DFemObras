@@ -1,10 +1,8 @@
-// Global variables for filtering
 let mapa;
 let todasAsObras = [];
 let marcadoresAtuais = [];
 let filteredObras = [];
 
-// RA boundary definitions
 const raBoundaries = {
     "RA I - Brasília": {
         latMin: -15.85, latMax: -15.75,
@@ -151,7 +149,6 @@ function formatDate(dateString) {
     }
 }
 
-// Função para criar os ícones dos pins
 function criarIconesDosPins() {
     return {
         concluida: L.icon({
@@ -181,7 +178,6 @@ function criarIconesDosPins() {
     };
 }
 
-// Função para validar a resposta da API
 function verificarResposta(resposta) {
     if (!resposta.ok) {
         throw new Error('Erro ao carregar o JSON');
@@ -189,14 +185,11 @@ function verificarResposta(resposta) {
     return resposta;
 }
 
-// Enhanced function to get obras data with RA
 function obterDadosDasObras() {
     return fetch('./obrasgov/obras_com_lat_long.json')
-    // TestesMapa/obrasgov/src/obras_com_lat_long.json
         .then(verificarResposta)
         .then(resposta => resposta.json())
         .then(dados => {
-            // Add RA information to each obra
             return dados.map((obra, index) => {
                 if (obra.latitude && obra.longitude) {
                     obra.regiao_administrativa = determinarRA(obra.latitude, obra.longitude);
@@ -209,12 +202,10 @@ function obterDadosDasObras() {
         });
 }
 
-// Função para criar um marcador no mapa
 function criarMarcador(lat, lng, icone, mapa) {
     return L.marker([lat, lng], { icon: icone }).addTo(mapa);
 }
 
-// Enhanced popup content without external link
 function gerarConteudoDoPopup(nome, situacao, valorBRL, indice, ra) {
     return `
         <div style="font-family: Arial, sans-serif; padding: 10px; width: 280px; background-color:rgb(255, 255, 255);">
@@ -229,7 +220,6 @@ function gerarConteudoDoPopup(nome, situacao, valorBRL, indice, ra) {
     `;
 }
 
-// Função para determinar o ícone correto
 function obterIconeDoMarcador(situacao, icones) {
     const mapaIcones = {
         'Concluída': icones.concluida,
@@ -240,7 +230,6 @@ function obterIconeDoMarcador(situacao, icones) {
     return mapaIcones[situacao] || icones.cadastrada;
 }
 
-// Enhanced function to process obras data
 function processarDadosDasObras(dados, mapa) {
     const icones = criarIconesDosPins();
     todasAsObras = dados;
@@ -252,23 +241,19 @@ function processarDadosDasObras(dados, mapa) {
     dados.forEach((obra, indice) => {
         const { nome, fontesDeRecurso, latitude, longitude, situacao, regiao_administrativa } = obra;
         
-        // Validação de coordenadas
         if (!latitude || !longitude) {
             console.log(`Obra ${indice}: "${nome}" ignorada por falta de coordenadas.`);
             return;
         }
 
-        // Seleção de ícone
         const iconeMarcador = obterIconeDoMarcador(situacao, icones);
         if (!iconeMarcador) {
             console.warn(`Situação desconhecida: ${situacao} na obra ${nome}`);
             return;
         }
 
-        // Criação do marcador
         const marcador = criarMarcador(latitude, longitude, iconeMarcador, mapa);
         
-        // Store marker with RA info for filtering
         marcadoresAtuais.push({
             marker: marcador,
             obra: obra,
@@ -276,7 +261,6 @@ function processarDadosDasObras(dados, mapa) {
             ra: regiao_administrativa || 'RA não identificada'
         });
         
-        // Configuração do popup
         const valor = fontesDeRecurso?.[0]?.valorInvestimentoPrevisto || 0;
         const ra = regiao_administrativa || 'RA não identificada';
         const conteudoPopup = gerarConteudoDoPopup(nome, situacao, formatarBRL(valor), indice, ra);
@@ -285,11 +269,10 @@ function processarDadosDasObras(dados, mapa) {
 
     updateFilterStatus(`${marcadoresAtuais.length} obras carregadas`);
     popularFiltros();
-    displayObrasList(); // Add this line to show the initial list
+    displayObrasList();
     logRADistribution();
 }
 
-// Function to check if obra is delayed
 function isObraAtrasada(obra) {
     if (!obra.dataFinalPrevista || obra.situacao === 'Concluída') {
         return false;
@@ -301,7 +284,6 @@ function isObraAtrasada(obra) {
     return hoje > dataFinalPrevista && obra.situacao !== 'Concluída';
 }
 
-// Enhanced function to populate filter dropdowns
 function popularFiltros() {
     popularDropdownRA();
     popularDropdownSituacao();
@@ -353,7 +335,6 @@ function popularDropdownEspecie() {
     });
 }
 
-// Function to get available RAs
 function obterRAsDisponiveis() {
     const ras = new Set();
     todasAsObras.forEach(obra => {
@@ -373,7 +354,6 @@ function logRADistribution() {
     console.log('📊 Distribuição por RA:', raStats);
 }
 
-// Enhanced filtering function
 function aplicarFiltros() {
     const raFilter = document.getElementById('ra-filter')?.value || '';
     const situacaoFilter = document.getElementById('situacao-filter')?.value || '';
@@ -381,7 +361,6 @@ function aplicarFiltros() {
     const atrasoFilter = document.getElementById('atraso-filter')?.value || '';
     const searchTerm = document.getElementById('search-input')?.value.toLowerCase() || '';
 
-    // Filter the obras
     filteredObras = todasAsObras.filter(obra => {
         const matchRA = !raFilter || obra.regiao_administrativa === raFilter;
         const matchSituacao = !situacaoFilter || obra.situacao === situacaoFilter;
@@ -391,7 +370,6 @@ function aplicarFiltros() {
             obra.descricao?.toLowerCase().includes(searchTerm) ||
             obra.endereco?.toLowerCase().includes(searchTerm);
         
-        // Delay filter logic
         let matchAtraso = true;
         if (atrasoFilter === 'atrasadas') {
             matchAtraso = isObraAtrasada(obra);
@@ -402,16 +380,13 @@ function aplicarFiltros() {
         return matchRA && matchSituacao && matchEspecie && matchSearch && matchAtraso;
     });
 
-    // Update markers and list
     updateMarkersVisibility();
     displayObrasList();
     
-    // Update status
     const atrasadas = filteredObras.filter(obra => isObraAtrasada(obra)).length;
     updateFilterStatus(`${filteredObras.length} obras exibidas (${atrasadas} atrasadas)`);
 }
 
-// Function to update markers visibility
 function updateMarkersVisibility() {
     let contador = 0;
     marcadoresAtuais.forEach(item => {
@@ -426,7 +401,6 @@ function updateMarkersVisibility() {
     });
 }
 
-// Function to display obras list in sidebar
 function displayObrasList() {
     const obrasList = document.getElementById('obras-list');
     if (!obrasList) {
@@ -447,13 +421,11 @@ function displayObrasList() {
     });
 }
 
-// Function to create obra element for sidebar list
 function createObraElement(obra, index) {
     const div = document.createElement('div');
     div.className = 'obra-item';
     div.dataset.index = obra.indice;
     
-    // Add delay class if obra is delayed
     if (isObraAtrasada(obra)) {
         div.classList.add('atrasada');
     }
@@ -477,7 +449,6 @@ function createObraElement(obra, index) {
     return div;
 }
 
-// Function to get status class
 function getStatusClass(situacao) {
     if (!situacao) return 'status-cadastrada';
     
@@ -489,26 +460,21 @@ function getStatusClass(situacao) {
     return 'status-cadastrada';
 }
 
-// Function to select project (highlight and center on map)
 function selectProject(indice) {
-    // Remove previous highlights
     document.querySelectorAll('.obra-item').forEach(item => {
         item.classList.remove('highlighted');
     });
     
-    // Highlight selected item
     const selectedElement = document.querySelector(`[data-index="${indice}"]`);
     if (selectedElement) {
         selectedElement.classList.add('highlighted');
         selectedElement.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
     
-    // Center map on selected obra
     const obra = todasAsObras.find(o => o.indice === indice);
     if (obra && obra.latitude && obra.longitude) {
         mapa.setView([obra.latitude, obra.longitude], 15);
         
-        // Find and open popup for the marker
         const markerItem = marcadoresAtuais.find(m => m.indice === indice);
         if (markerItem && markerItem.marker) {
             markerItem.marker.openPopup();
@@ -516,29 +482,23 @@ function selectProject(indice) {
     }
 }
 
-// Enhanced clear filters function
 function limparFiltros() {
-    // Reset all filters
     document.getElementById('ra-filter').value = '';
     document.getElementById('situacao-filter').value = '';
     document.getElementById('especie-filter').value = '';
     document.getElementById('atraso-filter').value = '';
     document.getElementById('search-input').value = '';
     
-    // Reset filtered data
     filteredObras = [...todasAsObras];
     
-    // Show all markers
     marcadoresAtuais.forEach(item => {
         item.marker.addTo(mapa);
     });
     
-    // Update display
     displayObrasList();
     updateFilterStatus(`${marcadoresAtuais.length} obras exibidas (todas)`);
 }
 
-// Enhanced controls initialization
 function inicializarControlesDeFiltro() {
     const clearButton = document.getElementById('clear-filters');
     const raFilter = document.getElementById('ra-filter');
@@ -547,7 +507,6 @@ function inicializarControlesDeFiltro() {
     const atrasoFilter = document.getElementById('atraso-filter');
     const searchInput = document.getElementById('search-input');
     
-    // Add event listeners for real-time filtering
     if (raFilter) raFilter.addEventListener('change', aplicarFiltros);
     if (situacaoFilter) situacaoFilter.addEventListener('change', aplicarFiltros);
     if (especieFilter) especieFilter.addEventListener('change', aplicarFiltros);
@@ -556,13 +515,12 @@ function inicializarControlesDeFiltro() {
     if (clearButton) clearButton.addEventListener('click', limparFiltros);
 }
 
-// Modal functions - Fix the element IDs
 function mostrarDetalhesObra(indice) {
     const obra = todasAsObras[indice];
     if (!obra) return;
 
     const modal = document.getElementById('project-modal');
-    const modalContent = document.getElementById('modal-body'); // Changed from 'modal-content'
+    const modalContent = document.getElementById('modal-body');
 
     if (!modal || !modalContent) {
         console.error('Modal elements not found');
@@ -672,12 +630,10 @@ function updateFilterStatus(message) {
     console.log('📍 Filter Status:', message);
 }
 
-// Enhanced popup management with localStorage
 function gerenciarPopupInicial() {
     const popup = document.getElementById('popup');
     const fecharPopup = document.getElementById('close-popup');
     
-    // Check if user has seen the popup before
     const hasSeenPopup = localStorage.getItem('dfemobras_popup_seen');
     
     if (!hasSeenPopup && popup) {
@@ -713,7 +669,6 @@ function buscarObras() {
         });
 }
 
-// Make function globally available
 window.mostrarDetalhesObra = mostrarDetalhesObra;
 
 if (typeof document !== 'undefined') {
@@ -727,7 +682,6 @@ if (typeof document !== 'undefined') {
     });
 }
 
-// Exports for testing
 if (typeof module !== 'undefined' && module.exports) {
     module.exports = {
         formatarBRL,
