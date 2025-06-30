@@ -17459,6 +17459,865 @@
     "longitude": -47.880612
   },
   {
+    "idUnico": "14374.53-49",
+    "nome": "CTO nº 00 00095/2022 - Consultoria ambiental especializada na elaboração de estudos ambientais necessários para obtenção de LP, LI, ASV - Lote C.",
+    "cep": null,
+    "endereco": null,
+    "descricao": "Consultoria ambiental especializada na elaboração de estudos ambientais necessários para obtenção de licença prévia (LP) licença de instalação (LI) autorização de supressão de vegetação (ASV) de empreendimentos prioritários para o DNIT - Lote C",
+    "funcaoSocial": "Ampliação da capacidade de trafego visando a melhoria da segurança do usuário",
+    "metaGlobal": "Projetos Básicos e Executivos de Engenharia",
+    "dataInicialPrevista": "2022-06-01",
+    "dataFinalPrevista": "2027-05-24",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2022-12-13",
+    "especie": "Construção",
+    "natureza": "Estudo",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2022-12-13",
+    "tomadores": [],
+    "executores": [
+      {
+        "nome": "DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES",
+        "codigo": 54844
+      }
+    ],
+    "repassadores": [],
+    "eixos": [
+      {
+        "id": 3,
+        "descricao": "Econômico"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 25,
+        "descricao": "Rodovia",
+        "idEixo": 3
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 4,
+        "descricao": "Acessos Terrestres",
+        "idTipo": 25
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "0101000000A68B54E007F047C0229576E17E942FC0",
+        "dataCriacao": "2022-12-13",
+        "origem": "Vetorizacao",
+        "dataMetadado": "2022-10-19",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "PROSUL - PROJETOS SUPER. PLANEJ. LTDA",
+        "enderecoAreaExecutora": "SHS - QD. 06 - Bloco C, Sala 1606, Ed. Brasil 21 Asa Sul",
+        "cepAreaExecutora": "70322-915",
+        "paisAreaExecutora": "Brasil"
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 35462116.97
+      }
+    ],
+    "latitude": -15.7900305230383,
+    "longitude": -47.8752403652973
+  },
+  {
+    "idUnico": "379.53-93",
+    "nome": "Manutenção rodoviária na malha federal sob administração do DNIT no DF",
+    "cep": "1",
+    "endereco": "",
+    "descricao": "Manutenção rodoviária na malha federal sob administração do DNIT no DF",
+    "funcaoSocial": "Preservar vidas e promover o desenvolvimento sustentável do país priorizando a segurança, as boas condições de trafegabilidade e a otimização da logística dos transportes, elevando assim o nível de serviço das vias.\n\n",
+    "metaGlobal": "Manutenção rodoviária na malha federal sob administração do DNIT no DF com cobertura de no mínimo 90% da malha com contratos de conservação e recuperação.",
+    "dataInicialPrevista": "2021-01-01",
+    "dataFinalPrevista": "2021-12-31",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-03-16",
+    "especie": null,
+    "natureza": "Projeto de Investimento em Infraestrutura",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2021-03-16",
+    "tomadores": [],
+    "executores": [],
+    "repassadores": [],
+    "eixos": [],
+    "tipos": [],
+    "subTipos": [],
+    "geometrias": [
+      {
+        "geometria": "0103000000010000001A0000005C6D1437011748C00087C84A36072FC0636D143707B747C004CA562C91082FC06A6D1437F9B547C0AE0D7711EC1E2FC0606D143740AB47C04DD1F86198342FC06A6D14376DAB47C0B0FAF12F05662FC0606D1437D8A947C01D2C3DB9627E2FC0676D14373AB147C02E29D292C6AF2FC0636D14371BB247C07CDA4F5A07D92FC0676D14373AB147C06393A5872C0430C06A6D143751A947C07E2F63039F0C30C0CF7F0BA3420848C0C9B265F9C40B30C0D07F0B23480A48C000F1C1FE6A0A30C0CF7F0BA3C60B48C000F1C1FE6A0A30C0C97F0B23BE0C48C0C9B265F9C40B30C0C77F0BA3A02248C068EC8F38F00B30C0D07F0B23AC1E48C027ACE08619DF2FC0D47F0B239B2048C0B08D868CA9D72FC0C77F0BA3542348C0FF8432A168AE2FC0CD7F0B23711D48C0430B4C9615982FC0D47F0B23471A48C0ED0BC3E0CC842FC0D27F0BA35D1A48C08FD5B32C156B2FC0C97F0B239E1D48C060A1FC6A09682FC0D27F0BA3791C48C0AB4B1644E1472FC0D27F0BA3411848C0F0D3CC04AD3A2FC0D47F0B232B1848C0B210331CE0072FC05C6D1437011748C00087C84A36072FC0",
+        "dataCriacao": "2021-03-16",
+        "origem": "cipiws",
+        "dataMetadado": "2021-02-09",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 8000000
+      }
+    ]
+  },
+  {
+    "idUnico": "6194.53-50",
+    "nome": "Adequação do ambulatório do Hospital Das Forças Armadas",
+    "cep": "70.673-900",
+    "endereco": "SETOR HFA SUDOESTE - DF",
+    "descricao": "O objeto da presente licitação é a escolha da proposta mais vantajosa para a contratação de empresa especializada na execução de SERVIÇOS COMUNS de engenharia, para a Adequação do ambulatório do Hospital Das Forças Armadas para o Retorno das Clínicas, sendo a Ginecologia, Ortopedia, Cardiologia, Farmácia de Quimioterápicos, Escritório das Forças e Fachada do Ambulatório, comtemplando readequação do layout às normas vigentes com substituição do sistema de ar condicionado por um mais moderno e adequado às normas, substituição da instalação elétrica e iluminação, substituição da instalação hidrossanitária, substituição do sistema de redes, comunicações e TV, substituição do sistema de gases medicinais, substituição de pisos e revestimentos, readequação da fachada, além de pintura, fornecimento e instalação de moveis planejados entre outros necessários ao pleno funcionamento das clinicas, do Hospital das Forças Armadas, conforme condições, quantidades e exigências estabelecidas neste Edital e seus anexos.",
+    "funcaoSocial": "Adequar as instalações para o Atendimento médico hospitalar dos militares, servidores civis que tem direitos e seus dependentes proporcionando um atendimento mais humanizado.",
+    "metaGlobal": "Proporcionar aos profissionais de saúde e usuários, um ambiente seguro e salubre com dependências mais humanizadas e adequadas as normas vigentes.",
+    "dataInicialPrevista": "2022-09-20",
+    "dataFinalPrevista": "2023-03-20",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2022-06-10",
+    "especie": "Reforma",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Concluída",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2023-08-14",
+    "tomadores": [
+      {
+        "nome": "FUNDO DE ADMINISTRACAO DO HFA",
+        "codigo": 52002
+      }
+    ],
+    "executores": [
+      {
+        "nome": "FUNDO DE ADMINISTRACAO DO HFA",
+        "codigo": 52002
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "FUNDO DO MINISTERIO DA DEFESA",
+        "codigo": 52001
+      }
+    ],
+    "eixos": [
+      {
+        "id": 2,
+        "descricao": "Militar"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 18,
+        "descricao": "Saúde",
+        "idEixo": 2
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 47,
+        "descricao": "Instituições Hospitalares Federais",
+        "idTipo": 18
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "010100000057D99E8FAFF747C01C6C1EB03E9A2FC0",
+        "dataCriacao": "2022-06-10",
+        "origem": "Vetorizacao",
+        "dataMetadado": "2022-06-10",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "HOSPITAL DAS FORÇAS ARMADAS",
+        "enderecoAreaExecutora": "SETOR HFA",
+        "cepAreaExecutora": "70673-900",
+        "paisAreaExecutora": "Brasil"
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 7000000
+      }
+    ],
+    "latitude": -15.8012595212113,
+    "longitude": -47.9350451970701
+  },
+  {
+    "idUnico": "4611.53-09",
+    "nome": "Obra de Desenvolvimento de Teste da Websis - Fabrica de Software - MDR.R",
+    "cep": "70067-901",
+    "endereco": "Esplanada dos Ministérios, Bloco E, S N - Zona Cívico-Administrativa, sala 612",
+    "descricao": "Projeto de desenvolvimento do MDR para integrar com api do CIPI.R",
+    "funcaoSocial": "Habitar o envio de empreendimentos pelo MDR para o CIPI em lote.R",
+    "metaGlobal": "Possibilitar subir um arquivo com várias obras a serem cadastradas e obter o códig CIPI.r",
+    "dataInicialPrevista": "2021-11-16",
+    "dataFinalPrevista": "2021-11-17",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-11-18",
+    "especie": "Reforma",
+    "natureza": "Projeto de Investimento em Infraestrutura",
+    "naturezaOutras": "outros",
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2021-11-18",
+    "tomadores": [
+      {
+        "nome": "FUND.UNIVERSIDADE FEDERAL VALE SAO FRANCISCO",
+        "codigo": 26230
+      }
+    ],
+    "executores": [
+      {
+        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
+        "codigo": 308799
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
+        "codigo": 308799
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 45,
+        "descricao": "Desenvolvimento",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 38,
+        "descricao": "Saneamento",
+        "idTipo": 45
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "010100000023A7703DE2E847C08446FB1503A12FC0",
+        "dataCriacao": "2021-11-18",
+        "origem": "cipiws",
+        "dataMetadado": "2021-11-17",
+        "infoAdicionais": "NULL",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 3000000
+      }
+    ],
+    "latitude": -15.814476668284676,
+    "longitude": -47.819404296881
+  },
+  {
+    "idUnico": "22429.53-04",
+    "nome": "Contrato 18/2023 - Serviço de sondagem a ser utilizado na elaboração do projeto de fundações de 04 OBM's do CBMDF.",
+    "cep": null,
+    "endereco": null,
+    "descricao": "Contrato 18/2023 - Serviço de sondagem a ser utilizado na elaboração do projeto de fundações de 04 OBM's do CBMDF.",
+    "funcaoSocial": "A construção de novos quartéis do CBMDF irá contribuir para o aumento da segurança da comunidade.",
+    "metaGlobal": "A construção de novos quartéis do CBMDF irá contribuir para o aumento da segurança da comunidade.",
+    "dataInicialPrevista": "2023-05-29",
+    "dataFinalPrevista": "2024-05-29",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2023-05-29",
+    "especie": "Construção",
+    "natureza": "Estudo",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2023-05-29",
+    "tomadores": [
+      {
+        "nome": "CORPO DE BOMBEIROS MILITAR DO DISTRITO FEDERAL",
+        "codigo": 8977914000119
+      }
+    ],
+    "executores": [
+      {
+        "nome": "CORPO DE BOMBEIROS MILITAR DO DISTRITO FEDERAL",
+        "codigo": 8977914000119
+      }
+    ],
+    "repassadores": [],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 1,
+        "descricao": "Segurança Pública",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 59,
+        "descricao": "Obras em Imóveis de Uso Público",
+        "idTipo": 1
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "01010000002B4D4A41B7FF47C0E21FC1EAAD912FC0",
+        "dataCriacao": "2023-05-29",
+        "origem": "Manual",
+        "dataMetadado": "2023-05-29",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "4º Grupamento de Bombeiro Militar - CBMDF",
+        "enderecoAreaExecutora": "STN St. de Grandes Áreas Norte 916",
+        "cepAreaExecutora": "70000-000",
+        "paisAreaExecutora": "Brasil"
+      },
+      {
+        "geometria": "010100000066DAFE9595F247C0ABF49B75AB972FC0",
+        "dataCriacao": "2023-05-29",
+        "origem": "Manual",
+        "dataMetadado": "2023-05-29",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "4º Grupamento de Bombeiro Militar - CBMDF",
+        "enderecoAreaExecutora": "STN St. de Grandes Áreas Norte 916",
+        "cepAreaExecutora": "70000-000",
+        "paisAreaExecutora": "Brasil"
+      },
+      {
+        "geometria": "01010000001D03B2D7BBF747C08BEFDB703DAA2FC0",
+        "dataCriacao": "2023-05-29",
+        "origem": "Manual",
+        "dataMetadado": "2023-05-29",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "4º Grupamento de Bombeiro Militar - CBMDF",
+        "enderecoAreaExecutora": "STN St. de Grandes Áreas Norte 916",
+        "cepAreaExecutora": "70000-000",
+        "paisAreaExecutora": "Brasil"
+      },
+      {
+        "geometria": "01010000002B6A300DC3F347C0AB0296EFFE782FC0",
+        "dataCriacao": "2023-05-29",
+        "origem": "Manual",
+        "dataMetadado": "2023-05-29",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "4º Grupamento de Bombeiro Militar - CBMDF",
+        "enderecoAreaExecutora": "STN St. de Grandes Áreas Norte 916",
+        "cepAreaExecutora": "70000-000",
+        "paisAreaExecutora": "Brasil"
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 45000
+      }
+    ],
+    "latitude": -15.78453000648,
+    "longitude": -47.99778
+  },
+  {
+    "idUnico": "4612.53-76",
+    "nome": "Obra de Desenvolvimento de Teste da Websis - Fabrica de Software - MDR.R",
+    "cep": "70067-901",
+    "endereco": "Esplanada dos Ministérios, Bloco E, S N - Zona Cívico-Administrativa, sala 612",
+    "descricao": "Projeto de desenvolvimento do MDR para integrar com api do CIPI.R",
+    "funcaoSocial": "Habitar o envio de empreendimentos pelo MDR para o CIPI em lote.R",
+    "metaGlobal": "Possibilitar subir um arquivo com várias obras a serem cadastradas e obter o códig CIPI.r",
+    "dataInicialPrevista": "2021-11-16",
+    "dataFinalPrevista": "2021-11-17",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-11-18",
+    "especie": "Reforma",
+    "natureza": "Projeto de Investimento em Infraestrutura",
+    "naturezaOutras": "outros",
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2021-11-18",
+    "tomadores": [
+      {
+        "nome": "FUND.UNIVERSIDADE FEDERAL VALE SAO FRANCISCO",
+        "codigo": 26230
+      }
+    ],
+    "executores": [
+      {
+        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
+        "codigo": 308799
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
+        "codigo": 308799
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 45,
+        "descricao": "Desenvolvimento",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 38,
+        "descricao": "Saneamento",
+        "idTipo": 45
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "0101000000912285EB29EA47C005324DCE21A62FC0",
+        "dataCriacao": "2021-11-18",
+        "origem": "cipiws",
+        "dataMetadado": "2021-11-17",
+        "infoAdicionais": "NULL",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 3000000
+      }
+    ],
+    "latitude": -15.82447666828467,
+    "longitude": -47.829404296882
+  },
+  {
+    "idUnico": "5272.53-79",
+    "nome": "Centro Odontológico PMDF",
+    "cep": null,
+    "endereco": "Setor Policial Sul, lote 04, Asa Sul",
+    "descricao": "Contratação de empresa especializada em arquitetura/engenharia civil, para a execução do remanescete da obra de Reforma com Ampliação do Centro Odontológico da Polícia Militar do Distrito Federal no Setor Policial.",
+    "funcaoSocial": "Permitir o desenvolvimento do atendimento odontológico nos padrões esperados de qualidade e segurança, dotando a Polícia Militar do Distrito Federal um serviço odontológico de excelência, objetivando promover a melhoria da saúde do efetivo da PMDF, de seus dependentes e de seus pensionistas.",
+    "metaGlobal": "Reforma com ampliação do Centro Odontológico da Polícia Militar do Distrito Federal;",
+    "dataInicialPrevista": "2024-09-18",
+    "dataFinalPrevista": "2026-09-17",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-12-15",
+    "especie": "Construção",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2021-12-15",
+    "tomadores": [
+      {
+        "nome": "Polícia Militar do Distrito Federal",
+        "codigo": 8942610000116
+      }
+    ],
+    "executores": [
+      {
+        "nome": "Polícia Militar do Distrito Federal",
+        "codigo": 8942610000116
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "FUNDO CONSTITUCIONAL DO DISTRITO FEDERAL",
+        "codigo": 25915
+      }
+    ],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 1,
+        "descricao": "Segurança Pública",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 59,
+        "descricao": "Obras em Imóveis de Uso Público",
+        "idTipo": 1
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "0101000000F7C77BD5CAF847C08B74DD4929A82FC0",
+        "dataCriacao": "2024-09-18",
+        "origem": "cipiws",
+        "dataMetadado": "2024-09-18",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": "POLÍCIA MILITAR DO DISTRITO FEDERAL",
+        "enderecoAreaExecutora": "SETOR POLICIAL AREA 4 ",
+        "cepAreaExecutora": "70610-210",
+        "paisAreaExecutora": "BRASÍL"
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 18577430.47
+      }
+    ],
+    "latitude": -15.8284400065261,
+    "longitude": -47.94369
+  },
+  {
+    "idUnico": "2843.53-36",
+    "nome": "Teste sistema Bruno Ronald",
+    "cep": "1",
+    "endereco": "Cond. Mini Granja do Torto Rua G Casa 138",
+    "descricao": "Estudo de viabilidade de integração do MDR com o CIPI. Estudo de viabilidade de integração do MDR com o CIPI. Estudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPI\n\nEstudo de viabilidade de integração do MDR com o CIPI\n\nEstudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPI\n\n\nEstudo de viabilidade de integração do MDR com o CIPI\n\nEstudo de viabilidade de integração do MDR com o CIPI\n\nEstudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPIv\nEstudo de viabilidade de integração do MDR com o CIPIEstudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPI\nEstudo de viabilidade de integração do MDR com o CIPIEstudo de viabilidade de integração do MDR com o CIPI",
+    "funcaoSocial": "Ajudar a agilizar o processo de cadastramento, uma vez que viabilizará o cadastramento em lote.",
+    "metaGlobal": "Estabelecer comunicação com integração e possibilitar o cadastramento em lote.",
+    "dataInicialPrevista": "2021-12-10",
+    "dataFinalPrevista": "2022-12-10",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-07-05",
+    "especie": "Construção",
+    "natureza": "Obra",
+    "naturezaOutras": "",
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2021-07-05",
+    "tomadores": [
+      {
+        "nome": "DISTRITO FEDERAL",
+        "codigo": 97400
+      }
+    ],
+    "executores": [
+      {
+        "nome": "CAIXA ECONOMICA FEDERAL",
+        "codigo": 25220
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
+        "codigo": 308799
+      }
+    ],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 1,
+        "descricao": "Segurança Pública",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 90,
+        "descricao": "Preservação do Patrimônio",
+        "idTipo": 1
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "0101000000016A6AD95AEF47C059C035D578992FC0",
+        "dataCriacao": "2021-11-18",
+        "origem": "Manual",
+        "dataMetadado": "2021-07-05",
+        "infoAdicionais": null,
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 5000000
+      }
+    ],
+    "latitude": -15.7997500064959,
+    "longitude": -47.86996
+  },
+  {
+    "idUnico": "5642.53-80",
+    "nome": "Construção do abrigo de medidor para média tensao e reforma da rede de encaminhamento de esgoto sanitário do campus Planaltina",
+    "cep": "73.380-900",
+    "endereco": "Rodovia DF-128, km 21, Zona Rural de Planaltina, Planaltina – DF",
+    "descricao": "Esta contratação é necessária para instalar a medição de energia vinda da concessionária para que alguns serviços que estão pendentes no campus sejam efetivados como o caso das usinas fotovoltaicas de produção de energia solar. Assim, tal abrigo de medição é extremamente necessário e urgente para o bom funcionamento das atividades do Campus e para a modernização do sistema elétrico. \nA rede de esgoto geral do campus é bem antiga e em alguns trechos feita de tubos de barro. Assim, tal rede não funciona corretamente e em vários trechos foram detectadas infiltrações de esgoto no solo. Desta forma é necessária uma reforma geral em toda a rede externa de encaminhamento de esgoto sanitário. \n",
+    "funcaoSocial": "atender a comunidade academica do Campus Planaltina ",
+    "metaGlobal": "modernizar a infraestrutura dos campi",
+    "dataInicialPrevista": "2022-08-01",
+    "dataFinalPrevista": "2023-02-02",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2022-02-09",
+    "especie": "Reforma",
+    "natureza": "Obra",
+    "naturezaOutras": "",
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": "triplicar as matrículas da educação profissional técnica de nível médio, assegurando a qualidade da oferta e pelo menos 50% (cinquenta por cento) da expansão no segmento público",
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2022-02-09",
+    "tomadores": [
+      {
+        "nome": "INSTITUTO FED. ED. CIENCIA E TEC. DE BRASILIA",
+        "codigo": 26356
+      }
+    ],
+    "executores": [
+      {
+        "nome": "INSTITUTO FED. ED. CIENCIA E TEC. DE BRASILIA",
+        "codigo": 26356
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA EDUCAÇÃO",
+        "codigo": 244
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 46,
+        "descricao": "Educação",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 84,
+        "descricao": "Educação",
+        "idTipo": 46
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "0101000000715AF0A2AFD847C0A3C419C381502FC0",
+        "dataCriacao": "2022-02-09",
+        "origem": "cipiws",
+        "dataMetadado": "2022-02-09",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 1200000
+      }
+    ],
+    "latitude": -15.6572400063472,
+    "longitude": -47.69286
+  },
+  {
+    "idUnico": "5583.53-51",
+    "nome": "35ª DELEGACIA DE POLÍCIA CIVIL DO DISTRITO FEDERAL",
+    "cep": "73.093-000",
+    "endereco": "RODOVIA DF 420, ÁREA ESPECIAL, SOBRADINHO II, BRASÍLIA-DF.",
+    "descricao": "CONSTRUÇÃO DA 35ª DELEGACIA DE POLÍCIA CIVIL DO DISTRITO FEDERAL",
+    "funcaoSocial": "ATENDER ADEQUADAMENTE A POPULAÇÃO DO DISTRITO FEDERAL COM OS SERVIÇOS DE SEGURANÇA PRESTADOS PELA POLÍCIA CIVIL.",
+    "metaGlobal": "CONSTRUÇÃO DA 35ª DELEGACIA DE POLÍCIA, DA POLÍCIA CIVIL DO DISTRITO FEDERAL, EM TERRENO SITUADO NA RODOVIA DF – 420, ÁREA ESPECIAL – SOBRADINHO II, BRASÍLIA/DF",
+    "dataInicialPrevista": "2022-03-01",
+    "dataFinalPrevista": "2023-08-31",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2022-01-31",
+    "especie": "Construção",
+    "natureza": "Obra",
+    "naturezaOutras": "",
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": "CONSTRUÇÃO DA 35ª DELEGACIA DE POLÍCIA EM SOBRADINHO II BRASÍLIA - DF.",
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": "A 35ª Delegacia de Polícia Civil – Sobradinho II constitui-se em uma unidade de especial relevância no âmbito da Polícia Civil do Distrito Federal, cujas atividades apresentam significativa repercussão social. Por ser uma região em expansão relativamente distante da região Central do Distrito Federal, recebe crescente fluxo de pessoas e de bens, apresentando naturalmente necessidade de crescimento em sua capacidade de atendimento ao cidadão. ",
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2022-01-31",
+    "tomadores": [
+      {
+        "nome": "POLICIA CIVIL DO DISTRITO FEDERAL",
+        "codigo": 37115482000135
+      }
+    ],
+    "executores": [
+      {
+        "nome": "FUNDO CONSTITUCIONAL DO DISTRITO FEDERAL",
+        "codigo": 25915
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTERIO DA ECONOMIA",
+        "codigo": 25000
+      }
+    ],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 1,
+        "descricao": "Segurança Pública",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 59,
+        "descricao": "Obras em Imóveis de Uso Público",
+        "idTipo": 1
+      }
+    ],
+    "geometrias": [
+      {
+        "geometria": "0101000000376C5B94D9E847C0A21D8EAD4C482FC0",
+        "dataCriacao": "2022-01-31",
+        "origem": "cipiws",
+        "dataMetadado": "2022-01-31",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      },
+      {
+        "geometria": "010300000001000000040000005A92572DD9E847C0CBFC84454C482FC06192D76DDCE847C00DCE854D4E482FC05892D705DBE847C0A9FB7E0D3E482FC05A92572DD9E847C0CBFC84454C482FC0",
+        "dataCriacao": "2022-01-31",
+        "origem": "cipiws",
+        "dataMetadado": "2022-01-31",
+        "infoAdicionais": "",
+        "datum": "SIRGAS 2000",
+        "nomeAreaExecutora": null,
+        "enderecoAreaExecutora": null,
+        "cepAreaExecutora": null,
+        "paisAreaExecutora": null
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 9231063.42
+      }
+    ],
+    "latitude": -15.6412100063306,
+    "longitude": -47.81914
+  },
+  {
     "idUnico": "30196.53-93",
     "nome": "Laboratórios de aquicultura e berçários ",
     "cep": null,
@@ -30028,868 +30887,6 @@
     ],
     "latitude": -15.7308803813848,
     "longitude": -47.901735147347
-  },
-  {
-    "idUnico": "44142.53-78",
-    "nome": "CENARGEN - Projetos para construção de Quarentenário.",
-    "cep": "70.770-917",
-    "endereco": "Parque Estação Biológica, PqEB, Av. W5 Norte (final) Caixa Postal 02372 – Brasília, DF",
-    "descricao": "Contratação de Empresa Especializada de Arquitetura e Engenharia para Elaboração de Projeto básico e executivo para Construção de Quarentenário com Área de Apoio Técnico na Embrapa Recursos Genéticos e Biotecnologia.",
-    "funcaoSocial": "Viabilizar soluções de pesquisa, desenvolvimento e inovação para a sustentabilidade da agricultura, em benefício da sociedade brasileira.",
-    "metaGlobal": "Contratação de Empresa Especializada de Arquitetura e Engenharia para Elaboração de Projeto básico e executivo para Construção de Quarentenário com Área de Apoio Técnico na Embrapa Recursos Genéticos e Biotecnologia.",
-    "dataInicialPrevista": "2024-11-05",
-    "dataFinalPrevista": "2025-08-09",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2024-10-23",
-    "especie": "Construção",
-    "natureza": "Projeto",
-    "naturezaOutras": null,
-    "situacao": "Em execução",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2024-12-03",
-    "tomadores": [
-      {
-        "nome": "EMPRESA BRASILEIRA DE PESQUISA AGROPECUÁRIA",
-        "codigo": 25
-      }
-    ],
-    "executores": [
-      {
-        "nome": "EMPRESA BRASILEIRA DE PESQUISA AGROPECUÁRIA",
-        "codigo": 25
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
-        "codigo": 16701716003686
-      }
-    ],
-    "eixos": [
-      {
-        "id": 1,
-        "descricao": "Administrativo"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 5,
-        "descricao": "Administrativo",
-        "idEixo": 1
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 90,
-        "descricao": "Preservação do Patrimônio",
-        "idTipo": 5
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "010100000096F8024575F347C0F28DFA6479762FC0",
-        "dataCriacao": "2024-10-23",
-        "origem": "Vetorizacao",
-        "dataMetadado": "2024-10-23",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "Beatriz de Campos Lorentz",
-        "enderecoAreaExecutora": "Parque Estação Biológica - PqEB, s/nº, Brasília, DF",
-        "cepAreaExecutora": "70770-901",
-        "paisAreaExecutora": "Brasil"
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 39999.2
-      }
-    ],
-    "latitude": -15.7313949161389,
-    "longitude": -47.9020162834651
-  },
-  {
-    "idUnico": "44144.53-80",
-    "nome": "CENARGEN - Projetos Executivos para construção de galpão.",
-    "cep": "70.770-917",
-    "endereco": "Parque Estação Biológica, PqEB, Av. W5 Norte (final) Caixa Postal 02372 – Brasília, DF",
-    "descricao": "Contratação de projetos executivos de Arquitetura e Engenharia para a construção de um Galpão Pré Moldado com Fechamento para Abrigar Câmaras de Crescimento Quarentenárias com dimensões de 12 metros de largura por 24 metros de comprimento, térreo e pavimento técnico, localizado na Embrapa Recursos Genéticos e Biotecnologia.",
-    "funcaoSocial": "Viabilizar soluções de pesquisa, desenvolvimento e inovação para a sustentabilidade da agricultura, em benefício da sociedade brasileira.",
-    "metaGlobal": "Contratação de projetos executivos de Arquitetura e Engenharia para a construção de um Galpão Pré Moldado com Fechamento para Abrigar Câmaras de Crescimento Quarentenárias com dimensões de 12 metros de largura por 24 metros de comprimento, térreo e pavimento técnico, localizado na Embrapa Recursos Genéticos e Biotecnologia.",
-    "dataInicialPrevista": "2024-11-05",
-    "dataFinalPrevista": "2025-03-31",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2024-10-23",
-    "especie": "Construção",
-    "natureza": "Projeto",
-    "naturezaOutras": null,
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2024-10-23",
-    "tomadores": [
-      {
-        "nome": "EMPRESA BRASILEIRA DE PESQUISA AGROPECUÁRIA",
-        "codigo": 25
-      }
-    ],
-    "executores": [
-      {
-        "nome": "EMPRESA BRASILEIRA DE PESQUISA AGROPECUÁRIA",
-        "codigo": 25
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTERIO DA AGRICULTURA, PECUARIA E ABASTECIMENTO",
-        "codigo": 16701716003686
-      }
-    ],
-    "eixos": [
-      {
-        "id": 1,
-        "descricao": "Administrativo"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 5,
-        "descricao": "Administrativo",
-        "idEixo": 1
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 90,
-        "descricao": "Preservação do Patrimônio",
-        "idTipo": 5
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "010100000058EC850146F347C085720AB888752FC0",
-        "dataCriacao": "2024-10-23",
-        "origem": "Vetorizacao",
-        "dataMetadado": "2024-10-23",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "Beatriz de Campos Lorentz",
-        "enderecoAreaExecutora": "Parque Estação Biológica - PqEB, s/nº, Brasília, DF",
-        "cepAreaExecutora": "70770-901",
-        "paisAreaExecutora": "Brasil"
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 163000
-      }
-    ],
-    "latitude": -15.7295587074998,
-    "longitude": -47.9005739120409
-  },
-  {
-    "idUnico": "44152.53-35",
-    "nome": "12 00588/2024",
-    "cep": "70040-902",
-    "endereco": "BR-020",
-    "descricao": "PrestaÃ§Ã£o dos ServiÃ§os de SupervisÃ£o da ExecuÃ§Ã£o e SupervisÃ£o Ambiental dos ServiÃ§os Remanescentes das Obras de AdequaÃ§Ã£o de Capacidade, ImplantaÃ§Ã£o de Melhorias e EliminaÃ§Ã£o de Pontos CrÃ­ticos na Rodovia BR-020/GO, km 0,00 - km 12,00.                                                                                                                                                                                                                                                                         ",
-    "funcaoSocial": "Preservar vidas e promover o desenvolvimento sustentÃ¡vel do paÃ­s priorizando a seguranÃ§a, as boas condiÃ§Ãµes de trafegabilidade e a otimizaÃ§Ã£o da logÃ­stica dos transportes, elevando assim o nÃ­vel de serviÃ§o das vias.",
-    "metaGlobal": "Supervisão de 0.00 km.",
-    "dataInicialPrevista": "2024-09-04",
-    "dataFinalPrevista": "2025-09-28",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2024-10-23",
-    "especie": "Construção",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Em execução",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": null,
-    "dataSituacao": "2025-06-26",
-    "tomadores": [
-      {
-        "nome": "DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES",
-        "codigo": 54844
-      }
-    ],
-    "executores": [
-      {
-        "nome": "DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES",
-        "codigo": 54844
-      }
-    ],
-    "repassadores": [],
-    "eixos": [
-      {
-        "id": 3,
-        "descricao": "Econômico"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 25,
-        "descricao": "Rodovia",
-        "idEixo": 3
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 4,
-        "descricao": "Acessos Terrestres",
-        "idTipo": 25
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "0104000000010000000101000000BBB88D06F0F647C01D386744698F2FC0",
-        "dataCriacao": "2025-06-18",
-        "origem": "WKT",
-        "dataMetadado": "2025-06-18",
-        "infoAdicionais": "Metadado criado em 2025-06-18T08:06:46",
-        "datum": "DATUM 2000",
-        "nomeAreaExecutora": "DNIT/DIR/CGCONT",
-        "enderecoAreaExecutora": "Quadra 03, Lote A, SAUN, Brasília - DF",
-        "cepAreaExecutora": "70040-902",
-        "paisAreaExecutora": "BRASIL"
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 5293000.74
-      }
-    ]
-  },
-  {
-    "idUnico": "44184.53-30",
-    "nome": "Obra de adequação das subestações do Colégio Militar de Brasília",
-    "cep": "70.790-",
-    "endereco": "902/904 - Asa Norte, Brasília - DF",
-    "descricao": "Obra de adequação das subestações do Colégio Militar de Brasília",
-    "funcaoSocial": "A obra de adequação das subestações do Colégio Militar de Brasília tem como função social garantir uma infraestrutura elétrica segura, eficiente e adequada às demandas atuais da instituição, promovendo segurança para alunos e funcionários, continuidade das atividades escolares e eficiência energética. Além de minimizar riscos de acidentes e interrupções, a modernização das instalações apoia o uso de recursos pedagógicos e tecnológicos, assegurando o pleno funcionamento dos ambientes educacionais. Com isso, a obra contribui para o desenvolvimento educacional e cívico, reforçando o compromisso da instituição em formar cidadãos e líderes com excelência.",
-    "metaGlobal": "A meta global da obra de adequação das subestações do Colégio Militar de Brasília é modernizar e garantir a segurança e eficiência das instalações elétricas, assegurando conformidade com as normas técnicas vigentes e suprindo as demandas atuais e futuras da instituição. Essa modernização visa proporcionar continuidade e qualidade nas atividades escolares, evitando interrupções e riscos operacionais, além de promover o uso sustentável da energia, contribuindo para o desenvolvimento pleno das funções pedagógicas e administrativas.",
-    "dataInicialPrevista": "2024-10-23",
-    "dataFinalPrevista": "2025-09-18",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2024-10-23",
-    "especie": "Construção",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Em execução",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2024-12-09",
-    "tomadores": [
-      {
-        "nome": "COMANDO DO EXÉRCITO",
-        "codigo": 94
-      }
-    ],
-    "executores": [
-      {
-        "nome": "COMANDO DO EXÉRCITO",
-        "codigo": 94
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTÉRIO DA DEFESA",
-        "codigo": 41066
-      }
-    ],
-    "eixos": [
-      {
-        "id": 1,
-        "descricao": "Administrativo"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 5,
-        "descricao": "Administrativo",
-        "idEixo": 1
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 95,
-        "descricao": "Subestação",
-        "idTipo": 5
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "0101000000581CCEFC6AF247C0FBCE25B2F4912FC0",
-        "dataCriacao": "2024-10-23",
-        "origem": "Manual",
-        "dataMetadado": "2024-10-23",
-        "infoAdicionais": "",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "LIGHTING ENGENHARIA E COMÉRCIO LTDA EPP",
-        "enderecoAreaExecutora": "a Colônia Agrícola Samambaia chácara 134 lote 1A Taguatinga-DF",
-        "cepAreaExecutora": "72110-600",
-        "paisAreaExecutora": "Brasil"
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 1800000
-      }
-    ],
-    "latitude": -15.7850700064805,
-    "longitude": -47.89389
-  },
-  {
-    "idUnico": "44479.53-69",
-    "nome": "Pavimentação de rodovias distritais, estradas vicinais e/ou vias locais",
-    "cep": null,
-    "endereco": null,
-    "descricao": "Pavimentação de rodovias distritais, estradas vicinais e/ou vias locais com consequente melhoria de vida para a população local.",
-    "funcaoSocial": "Estudantes, professores, servidores das escolas rurais, bem como produtores localizados próximos às rodovias (distritais, estradas vicinais e vias locais) beneficiadas na região da Ceilândia.. Eliminar poeira oriunda do período de seca e muito prejudicial à saúde das pessoas e eliminar risco de acidentes em épocas de chuva por causa de atoleiros, água empossada com a pavimentação de acessos às escolas rurais (rodovias distritais, estradas vicinais e vias locais). Melhoria no desenvolvimento social, facilitando o acesso à educação e econômico desses locais, tem em vista a garantia de escoamento dos produtos agrícolas em todas as épocas do ano.",
-    "metaGlobal": "Pavimentação de rodovias distritais, estradas vicinais e/ou vias locais com consequente melhoria de vida para a população local.",
-    "dataInicialPrevista": "2021-12-17",
-    "dataFinalPrevista": "2026-12-17",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2024-10-31",
-    "especie": "Construção",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2024-10-31",
-    "tomadores": [],
-    "executores": [
-      {
-        "nome": "DEPARTAMENTO DE ESTRADAS DE RODAGEM DO DISTRITO FEDERAL",
-        "codigo": 70532000103
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
-        "codigo": 308799
-      }
-    ],
-    "eixos": [
-      {
-        "id": 3,
-        "descricao": "Econômico"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 24,
-        "descricao": "Infraestrutura Urbana e Mobilidade",
-        "idEixo": 3
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 58,
-        "descricao": "Pavimentação",
-        "idTipo": 24
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "0101000000E197FA79532148C079758E01D9BB2FC0",
-        "dataCriacao": "2024-10-31",
-        "origem": "WKT",
-        "dataMetadado": "2024-10-31",
-        "infoAdicionais": "Cadastro automatizado da obra pelo Transferegov da proposta 029914/2021 e instrumento 918727",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "FAUZI NACFUR JUNIOR",
-        "enderecoAreaExecutora": "SETOR AREAS ISOLADAS NORTE, S N, BLOCO C",
-        "cepAreaExecutora": "70310-500",
-        "paisAreaExecutora": "Brasil"
-      },
-      {
-        "geometria": "010100000062105839B41848C06FF59CF4BE912FC0",
-        "dataCriacao": "2024-10-31",
-        "origem": "WKT",
-        "dataMetadado": "2024-10-31",
-        "infoAdicionais": "Cadastro automatizado da obra pelo Transferegov da proposta 029914/2021 e instrumento 918727",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "FAUZI NACFUR JUNIOR",
-        "enderecoAreaExecutora": "SETOR AREAS ISOLADAS NORTE, S N, BLOCO C",
-        "cepAreaExecutora": "70310-500",
-        "paisAreaExecutora": "Brasil"
-      },
-      {
-        "geometria": "010100000008AC1C5A641748C05C55F65D11AC2FC0",
-        "dataCriacao": "2024-10-31",
-        "origem": "WKT",
-        "dataMetadado": "2024-10-31",
-        "infoAdicionais": "Cadastro automatizado da obra pelo Transferegov da proposta 029914/2021 e instrumento 918727",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "FAUZI NACFUR JUNIOR",
-        "enderecoAreaExecutora": "SETOR AREAS ISOLADAS NORTE, S N, BLOCO C",
-        "cepAreaExecutora": "70310-500",
-        "paisAreaExecutora": "Brasil"
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 22495684.68
-      }
-    ],
-    "latitude": -15.86689,
-    "longitude": -48.26036
-  },
-  {
-    "idUnico": "4452.53-00",
-    "nome": "Pavimentação de Vias Públicas em Brasília/Sede",
-    "cep": "",
-    "endereco": "",
-    "descricao": "A pavimentação das vias contribui para inserção mercadológica e dinamização das atividades produtivas do município, melhorando a logística e o acesso aos pontos de comercialização",
-    "funcaoSocial": "Promover o desenvolvimento regional, por meio de pavimentação, recapeamento e calçamento de vias públicas, proporcionando acessibilidade e escoamento da produção local, de forma segura, socialmente inclusiva e sustentável",
-    "metaGlobal": "A pavimentação das vias contribui para inserção mercadológica e dinamização das atividades produtivas, melhorando a logística e o acesso aos pontos de comercialização.",
-    "dataInicialPrevista": "2020-11-12",
-    "dataFinalPrevista": "2021-12-31",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2021-11-12",
-    "especie": "Construção",
-    "natureza": "Obra",
-    "naturezaOutras": "",
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": null,
-    "dataSituacao": "2021-11-12",
-    "tomadores": [],
-    "executores": [
-      {
-        "nome": "COMPANHIA DE DESENVOLVIMENTO DOS VALES DO SÃO FRANCISCO E DO PARNAÍBA",
-        "codigo": 169
-      }
-    ],
-    "repassadores": [],
-    "eixos": [
-      {
-        "id": 4,
-        "descricao": "Social"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 37,
-        "descricao": "Infraestrutura Urbana e Mobilidade",
-        "idEixo": 4
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 75,
-        "descricao": "Urbanização",
-        "idTipo": 37
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "0101000000F437A11001F747C076B1EF75378F2FC0",
-        "dataCriacao": "2021-11-17",
-        "origem": "cipiws",
-        "dataMetadado": "2021-11-12",
-        "infoAdicionais": null,
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 43877538.59
-      }
-    ],
-    "latitude": -15.7797200064749,
-    "longitude": -47.92972
-  },
-  {
-    "idUnico": "446.53-11",
-    "nome": "Obra de Descontaminação Ambiental dos Estandes de Tiro do Setor de Armamento e Tiro da Academia Nacional de Polícia Federal",
-    "cep": "1",
-    "endereco": "",
-    "descricao": "Obra de Descontaminação Ambiental dos Estandes de Tiro do Setor de Armamento e Tiro da Academia Nacional de Polícia Federal",
-    "funcaoSocial": "Segurança Pública",
-    "metaGlobal": "Obra de Descontaminação Ambiental dos Estandes de Tiro do Setor de Armamento e Tiro da Academia Nacional de Polícia Federal",
-    "dataInicialPrevista": "2021-02-01",
-    "dataFinalPrevista": "2021-07-30",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2021-03-22",
-    "especie": "Recuperação",
-    "natureza": "Obra",
-    "naturezaOutras": "",
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": "Plano de Obras da PF",
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": null,
-    "dataSituacao": "2021-03-22",
-    "tomadores": [
-      {
-        "nome": "DEPARTAMENTO DE POLICIA FEDERAL",
-        "codigo": 30108
-      }
-    ],
-    "executores": [
-      {
-        "nome": "DEPARTAMENTO DE POLICIA FEDERAL",
-        "codigo": 30108
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "DEPARTAMENTO DE POLICIA FEDERAL",
-        "codigo": 30108
-      }
-    ],
-    "eixos": [
-      {
-        "id": 1,
-        "descricao": "Administrativo"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 1,
-        "descricao": "Segurança Pública",
-        "idEixo": 1
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 90,
-        "descricao": "Preservação do Patrimônio",
-        "idTipo": 5
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "01010000007923F3C81FEC47C0ABDB674278642FC0",
-        "dataCriacao": "2021-03-22",
-        "origem": "cipiws",
-        "dataMetadado": "2021-03-22",
-        "infoAdicionais": "Obra de Descontaminação Ambiental dos Estandes de Tiro do Setor de Armamento e Tiro da Academia Nacional de Polícia Federal",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 784000
-      }
-    ],
-    "latitude": -15.6962300063877,
-    "longitude": -47.84472
-  },
-  {
-    "idUnico": "4466.53-28",
-    "nome": "Obra de Desenvolvimento de Teste da Websis - Fabrica de Software - MDR",
-    "cep": "70067-901",
-    "endereco": "Esplanada dos Ministérios, Bloco E, S N - Zona Cvico-Administrativa, sala 612",
-    "descricao": "Projeto de desenvolvimento do MDR para integrar com api do CIPI.",
-    "funcaoSocial": "Habitar o envio de empreendimentos pelo MDR para o CIPI em lote.",
-    "metaGlobal": "Possibilitar subir um arquivo com varias obras a serem cadastradas e obter o id CIPI",
-    "dataInicialPrevista": "2021-08-13",
-    "dataFinalPrevista": "2021-08-18",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2021-11-12",
-    "especie": "Reforma",
-    "natureza": "Projeto de Investimento em Infraestrutura",
-    "naturezaOutras": "outros",
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": null,
-    "dataSituacao": "2021-11-12",
-    "tomadores": [
-      {
-        "nome": "FUND.UNIVERSIDADE FEDERAL VALE SAO FRANCISCO",
-        "codigo": 26230
-      }
-    ],
-    "executores": [
-      {
-        "nome": "JUSTICA FEDERAL",
-        "codigo": 12800
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTÉRIO DA CIDADANIA",
-        "codigo": 235874
-      }
-    ],
-    "eixos": [
-      {
-        "id": 4,
-        "descricao": "Social"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 45,
-        "descricao": "Desenvolvimento",
-        "idEixo": 4
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 38,
-        "descricao": "Saneamento",
-        "idTipo": 45
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "010100000000000000D8F147C0055BA95DE49B2FC0",
-        "dataCriacao": "2021-11-12",
-        "origem": "cipiws",
-        "dataMetadado": "2020-01-01",
-        "infoAdicionais": null,
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 300000
-      }
-    ],
-    "latitude": -15.804476668284687,
-    "longitude": -47.889404296875
-  },
-  {
-    "idUnico": "44712.53-15",
-    "nome": "HOSPITAL DE FORÇA AÉREA DE BRASÍLIA",
-    "cep": "71.607-900",
-    "endereco": "Área Militar do Aeroporto Internacional de Brasília - Lago Sul ",
-    "descricao": "READEQUAÇÃO DA ÁREA DOS AMBULATÓRIOS (NORTE) E IMPLANTAÇÃO DA CENTRAL DE MANIPULAÇÃO E INFUSÃO DE QUIMIOTERÁPICOS DO HFAB",
-    "funcaoSocial": "A finalidade da intervenção é que o HFAB possa continuar desempenhando sua missão principal e continuar dentro dos\npadrões estabelecidos pelas normas de Vigilância Sanitária.",
-    "metaGlobal": "A construção do abrigo externo de lixo viabilizará um ambiente mais adequado para a acomodação do lixo, tendo em vista o\naumento do volume produzido pela expansão das áreas assistenciais com a finalização das demais obras de readequação\ndo HFAB.",
-    "dataInicialPrevista": "2024-11-20",
-    "dataFinalPrevista": "2025-07-18",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2024-11-06",
-    "especie": "Reforma",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Em execução",
-    "descPlanoNacionalPoliticaVinculado": "Federal",
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2025-04-03",
-    "tomadores": [
-      {
-        "nome": "COMANDO DA AERONÁUTICA",
-        "codigo": 48
-      }
-    ],
-    "executores": [
-      {
-        "nome": "COMANDO DA AERONÁUTICA",
-        "codigo": 48
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTÉRIO DA DEFESA",
-        "codigo": 41066
-      }
-    ],
-    "eixos": [
-      {
-        "id": 1,
-        "descricao": "Administrativo"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 4,
-        "descricao": "Saúde",
-        "idEixo": 1
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 47,
-        "descricao": "Instituições Hospitalares Federais",
-        "idTipo": 4
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "010100000016139B8F6BF347C0A19A591FF4BC2FC0",
-        "dataCriacao": "2024-11-06",
-        "origem": "Manual",
-        "dataMetadado": "2024-11-06",
-        "infoAdicionais": "HFAB - Hospital de Força Aérea de Brasília",
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": "HFAB - Hospital de Força Aérea de Brasília",
-        "enderecoAreaExecutora": "Área Militar do Aeroporto Internacional de Brasília - Lago Sul",
-        "cepAreaExecutora": "71607-900",
-        "paisAreaExecutora": "Brasil"
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 5077000
-      }
-    ],
-    "latitude": -15.8690500065689,
-    "longitude": -47.90172
-  },
-  {
-    "idUnico": "4499.53-34",
-    "nome": "Obra de Desenvolvimento de Teste da Websis - Fabrica de Software - MDRR",
-    "cep": "70067-901",
-    "endereco": "Esplanada dos Ministérios, Bloco E, S N - Zona Cvico-Administrativa, sala 612R",
-    "descricao": "Projeto de desenvolvimento do MDR para integrar com api do CIPI.R",
-    "funcaoSocial": "Habitar o envio de empreendimentos pelo MDR para o CIPI em lote.R",
-    "metaGlobal": "Possibilitar subir um arquivo com varias obras a serem cadastradas e obter o id CIPIR",
-    "dataInicialPrevista": "2021-08-13",
-    "dataFinalPrevista": "2021-08-18",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2021-11-16",
-    "especie": "Reforma",
-    "natureza": "Projeto de Investimento em Infraestrutura",
-    "naturezaOutras": "outros",
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": null,
-    "dataSituacao": "2021-11-16",
-    "tomadores": [
-      {
-        "nome": "FUND.UNIVERSIDADE FEDERAL VALE SAO FRANCISCO",
-        "codigo": 26230
-      }
-    ],
-    "executores": [
-      {
-        "nome": "JUSTICA FEDERAL",
-        "codigo": 12800
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTÉRIO DA CIDADANIA",
-        "codigo": 235874
-      }
-    ],
-    "eixos": [
-      {
-        "id": 4,
-        "descricao": "Social"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 45,
-        "descricao": "Desenvolvimento",
-        "idEixo": 4
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 38,
-        "descricao": "Saneamento",
-        "idTipo": 45
-      }
-    ],
-    "geometrias": [
-      {
-        "geometria": "01010000000E000000D8F147C0055BA95DE49B2FC0",
-        "dataCriacao": "2021-11-16",
-        "origem": "cipiws",
-        "dataMetadado": "2020-01-01",
-        "infoAdicionais": null,
-        "datum": "SIRGAS 2000",
-        "nomeAreaExecutora": null,
-        "enderecoAreaExecutora": null,
-        "cepAreaExecutora": null,
-        "paisAreaExecutora": null
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 300000
-      }
-    ],
-    "latitude": -15.804476668284687,
-    "longitude": -47.8894042968751
   },
   {
     "idUnico": "4503.53-86",
@@ -46198,8 +46195,8 @@
         "valorInvestimentoPrevisto": 2500000
       }
     ],
-    "latitude": -15.7988000064949,
-    "longitude": -47.87168
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "58042.53-16",
@@ -46274,8 +46271,8 @@
         "valorInvestimentoPrevisto": 250000
       }
     ],
-    "latitude": -15.7988000064949,
-    "longitude": -47.87168
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "58043.53-72",
@@ -46886,8 +46883,8 @@
         "valorInvestimentoPrevisto": 1348000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7953100064913,
+    "longitude": -47.92257
   },
   {
     "idUnico": "58224.53-40",
@@ -46962,8 +46959,8 @@
         "valorInvestimentoPrevisto": 872000
       }
     ],
-    "latitude": -15.7953100064913,
-    "longitude": -47.92257
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "58226.53-53",
@@ -48128,8 +48125,8 @@
         "valorInvestimentoPrevisto": 21635000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8290600065268,
+    "longitude": -47.93271
   },
   {
     "idUnico": "6044.53-00",
@@ -48290,8 +48287,8 @@
         "valorInvestimentoPrevisto": 536534.18
       }
     ],
-    "latitude": -15.7302616770874,
-    "longitude": -47.9030485897835
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "60908.53-86",
@@ -48561,8 +48558,8 @@
         "valorInvestimentoPrevisto": 11299000
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7879900064836,
+    "longitude": -47.92394
   },
   {
     "idUnico": "61038.53-03",
@@ -51043,8 +51040,8 @@
         "valorInvestimentoPrevisto": 4860790.2
       }
     ],
-    "latitude": -15.6395000063289,
-    "longitude": -47.75063
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6580.53-50",
@@ -51259,8 +51256,8 @@
         "valorInvestimentoPrevisto": 3339500
       }
     ],
-    "latitude": -15.522130006208,
-    "longitude": -48.19241
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6582.53-84",
@@ -51759,8 +51756,8 @@
         "valorInvestimentoPrevisto": 3898671.4
       }
     ],
-    "latitude": -16.0371941215138,
-    "longitude": -48.0579383085108
+    "latitude": null,
+    "longitude": null
   },
   {
     "idUnico": "6812.53-14",
@@ -52232,8 +52229,8 @@
         "valorInvestimentoPrevisto": 41716415.07
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7899823120789,
+    "longitude": -47.8751867839813
   },
   {
     "idUnico": "7758.53-01",
@@ -52688,8 +52685,8 @@
         "valorInvestimentoPrevisto": 55928972.55
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7899988315554,
+    "longitude": -47.875225578857
   },
   {
     "idUnico": "7811.53-47",
@@ -52769,8 +52766,8 @@
         "valorInvestimentoPrevisto": 1329724.75
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.8690400065689,
+    "longitude": -47.90174
   },
   {
     "idUnico": "8156.53-72",
@@ -53002,8 +52999,8 @@
         "valorInvestimentoPrevisto": 29033236.2
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7900164066713,
+    "longitude": -47.8752082416534
   },
   {
     "idUnico": "8340.53-89",
@@ -53230,8 +53227,8 @@
         "valorInvestimentoPrevisto": 40340754.88
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7900128935971,
+    "longitude": -47.8751865318559
   },
   {
     "idUnico": "8390.53-40",
@@ -53306,8 +53303,8 @@
         "valorInvestimentoPrevisto": 58029284.06
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7900824952813,
+    "longitude": -47.8752274371809
   },
   {
     "idUnico": "8417.53-94",
@@ -54383,8 +54380,8 @@
         "valorInvestimentoPrevisto": 2867337.77
       }
     ],
-    "latitude": null,
-    "longitude": null
+    "latitude": -15.7967207551453,
+    "longitude": -47.8670947486158
   },
   {
     "idUnico": "972.53-26",
