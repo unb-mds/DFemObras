@@ -560,76 +560,76 @@
     "longitude": -47.889404296878
   },
   {
-    "idUnico": "440.53-82",
-    "nome": "CONSTRUÇÃO DE NOVA SEDE DO INSTITUTO MÉDICO LEGAL",
-    "cep": "1",
-    "endereco": "SPO, CJ A LOTE 23, COMPLEXO DA PCDF.",
-    "descricao": "CONSTRUÇÃO DE SEDE DO IML/PCDF",
-    "funcaoSocial": "AUXÍLIAR NO TRABALHO TÉCNICO/INVESTIGATIVO DA PCDF.",
-    "metaGlobal": "CONSTRUÇÃO DO NOVO IML/PCDF",
-    "dataInicialPrevista": "2021-03-31",
-    "dataFinalPrevista": "2022-06-30",
+    "idUnico": "8913.53-40",
+    "nome": "Reforma hidráulica da psicina",
+    "cep": null,
+    "endereco": null,
+    "descricao": "Reforma hidráulica da piscina para utilização pelos beneficiários do PROFESP",
+    "funcaoSocial": "Reforma hidráulica da piscina para utilização pelos beneficiários do PROFESP",
+    "metaGlobal": "Reforma hidráulica da psicina",
+    "dataInicialPrevista": "2022-10-10",
+    "dataFinalPrevista": "2022-11-04",
     "dataInicialEfetiva": null,
     "dataFinalEfetiva": null,
-    "dataCadastro": "2021-03-19",
-    "especie": "Construção",
+    "dataCadastro": "2022-10-03",
+    "especie": "Reforma",
     "natureza": "Obra",
-    "naturezaOutras": "",
-    "situacao": "Cadastrada",
+    "naturezaOutras": null,
+    "situacao": "Em execução",
     "descPlanoNacionalPoliticaVinculado": null,
     "uf": "DF",
     "qdtEmpregosGerados": null,
     "descPopulacaoBeneficiada": null,
     "populacaoBeneficiada": null,
     "observacoesPertinentes": null,
-    "isModeladaPorBim": null,
-    "dataSituacao": "2021-03-19",
+    "isModeladaPorBim": false,
+    "dataSituacao": "2022-10-10",
     "tomadores": [
       {
-        "nome": "POLICIA CIVIL DO DISTRITO FEDERAL",
-        "codigo": 37115482000135
+        "nome": "COMANDO DA MARINHA",
+        "codigo": 185
       }
     ],
     "executores": [
       {
-        "nome": "POLICIA CIVIL DO DISTRITO FEDERAL",
-        "codigo": 37115482000135
+        "nome": "COMANDO DA MARINHA",
+        "codigo": 185
       }
     ],
     "repassadores": [
       {
-        "nome": "ESTATAIS DO MINISTERIO DA FAZENDA",
-        "codigo": 91010
+        "nome": "CAMARA DOS DEPUTADOS",
+        "codigo": 1000
       }
     ],
     "eixos": [
       {
-        "id": 1,
-        "descricao": "Administrativo"
+        "id": 4,
+        "descricao": "Social"
       }
     ],
     "tipos": [
       {
-        "id": 1,
-        "descricao": "Segurança Pública",
-        "idEixo": 1
+        "id": 38,
+        "descricao": "Esporte",
+        "idEixo": 4
       }
     ],
     "subTipos": [
       {
-        "id": 59,
-        "descricao": "Obras em Imóveis de Uso Público",
-        "idTipo": 1
+        "id": 24,
+        "descricao": "Centro Olímpico e Para-Olímpico",
+        "idTipo": 38
       }
     ],
     "fontesDeRecurso": [
       {
         "origem": "Federal",
-        "valorInvestimentoPrevisto": 1
+        "valorInvestimentoPrevisto": 17500
       }
     ],
-    "latitude": -15.809340006506,
-    "longitude": -47.92857
+    "latitude": -15.783650006479,
+    "longitude": -47.85948
   },
   {
     "idUnico": "21324.53-75",
