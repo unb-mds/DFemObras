@@ -129,68 +129,6 @@
     "longitude": -47.93603
   },
   {
-    "idUnico": "74141.53-91",
-    "nome": "PAC 2 - CRECHE/PRÉ-ESCOLA 001",
-    "cep": null,
-    "endereco": null,
-    "descricao": "PAC 2 - CRECHE/PRÉ-ESCOLA 001 Construção",
-    "funcaoSocial": "PAC 2 - CRECHE/PRÉ-ESCOLA 001",
-    "metaGlobal": "Escola de Educação Infantil Tipo B",
-    "dataInicialPrevista": "2013-04-08",
-    "dataFinalPrevista": "2014-09-21",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2025-07-25",
-    "especie": "Reforma",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": "Obras 2",
-    "uf": "DF",
-    "qdtEmpregosGerados": " ",
-    "descPopulacaoBeneficiada": "Descrição população beneficiada",
-    "populacaoBeneficiada": " ",
-    "observacoesPertinentes": "Informações Obras Fundo Nacional de Desenvolvimento da Educação",
-    "isModeladaPorBim": false,
-    "dataSituacao": "2025-07-25",
-    "tomadores": [],
-    "executores": [
-      {
-        "nome": "FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCAÇÃO",
-        "codigo": 253
-      }
-    ],
-    "repassadores": [],
-    "eixos": [
-      {
-        "id": 3,
-        "descricao": "Econômico"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 22,
-        "descricao": "Infraestrutura Hídrica, Portos, Hidrovia",
-        "idEixo": 3
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 36,
-        "descricao": "Dragagem, Derrocamento e Associações",
-        "idTipo": 22
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 0.01
-      }
-    ],
-    "latitude": -15.77972,
-    "longitude": -47.92972
-  },
-  {
     "idUnico": "24797.53-15",
     "nome": "Implantação de Passarelas nas Estradas Parque do DF",
     "cep": null,
@@ -337,6 +275,68 @@
     ],
     "latitude": -15.7613700064557,
     "longitude": -47.87386
+  },
+  {
+    "idUnico": "74141.53-91",
+    "nome": "PAC 2 - CRECHE/PRÉ-ESCOLA 001",
+    "cep": null,
+    "endereco": null,
+    "descricao": "PAC 2 - CRECHE/PRÉ-ESCOLA 001 Construção",
+    "funcaoSocial": "PAC 2 - CRECHE/PRÉ-ESCOLA 001",
+    "metaGlobal": "Escola de Educação Infantil Tipo B",
+    "dataInicialPrevista": "2013-04-08",
+    "dataFinalPrevista": "2014-09-21",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2025-07-25",
+    "especie": "Reforma",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": "Obras 2",
+    "uf": "DF",
+    "qdtEmpregosGerados": " ",
+    "descPopulacaoBeneficiada": "Descrição população beneficiada",
+    "populacaoBeneficiada": " ",
+    "observacoesPertinentes": "Informações Obras Fundo Nacional de Desenvolvimento da Educação",
+    "isModeladaPorBim": false,
+    "dataSituacao": "2025-07-25",
+    "tomadores": [],
+    "executores": [
+      {
+        "nome": "FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCAÇÃO",
+        "codigo": 253
+      }
+    ],
+    "repassadores": [],
+    "eixos": [
+      {
+        "id": 3,
+        "descricao": "Econômico"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 22,
+        "descricao": "Infraestrutura Hídrica, Portos, Hidrovia",
+        "idEixo": 3
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 36,
+        "descricao": "Dragagem, Derrocamento e Associações",
+        "idTipo": 22
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 0.01
+      }
+    ],
+    "latitude": -15.77972,
+    "longitude": -47.92972
   },
   {
     "idUnico": "4541.53-44",
