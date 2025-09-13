@@ -263,68 +263,6 @@
     "longitude": -47.99987
   },
   {
-    "idUnico": "74141.53-91",
-    "nome": "PAC 2 - CRECHE/PRÉ-ESCOLA 001",
-    "cep": null,
-    "endereco": null,
-    "descricao": "PAC 2 - CRECHE/PRÉ-ESCOLA 001 Construção",
-    "funcaoSocial": "PAC 2 - CRECHE/PRÉ-ESCOLA 001",
-    "metaGlobal": "Escola de Educação Infantil Tipo B",
-    "dataInicialPrevista": "2013-04-08",
-    "dataFinalPrevista": "2014-09-21",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2025-07-25",
-    "especie": "Reforma",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": "Obras 2",
-    "uf": "DF",
-    "qdtEmpregosGerados": " ",
-    "descPopulacaoBeneficiada": "Descrição população beneficiada",
-    "populacaoBeneficiada": " ",
-    "observacoesPertinentes": "Informações Obras Fundo Nacional de Desenvolvimento da Educação",
-    "isModeladaPorBim": false,
-    "dataSituacao": "2025-07-25",
-    "tomadores": [],
-    "executores": [
-      {
-        "nome": "FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCAÇÃO",
-        "codigo": 253
-      }
-    ],
-    "repassadores": [],
-    "eixos": [
-      {
-        "id": 3,
-        "descricao": "Econômico"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 22,
-        "descricao": "Infraestrutura Hídrica, Portos, Hidrovia",
-        "idEixo": 3
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 36,
-        "descricao": "Dragagem, Derrocamento e Associações",
-        "idTipo": 22
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 0.01
-      }
-    ],
-    "latitude": -15.77972,
-    "longitude": -47.92972
-  },
-  {
     "idUnico": "24822.53-70",
     "nome": "obra de construção da  Cabine de Medição, localizado no Setor Central do Campus Universitário Darcy Ribeiro, da Universidade de Brasília, em Brasília/DF",
     "cep": null,
@@ -687,5 +625,77 @@
     ],
     "latitude": -15.884476668284686,
     "longitude": -47.889404296878
+  },
+  {
+    "idUnico": "21324.53-75",
+    "nome": "Reforma Viveiro Agroecologia",
+    "cep": "73.380-900",
+    "endereco": "Rodovia DF – 128, km 21, Zona Rural de Planaltina",
+    "descricao": "Reforma/reestruturação do prédio de aulas práticas do curso de agroecologia, onde funciona um viveiro de plantas e incubatório de sementes. A edificação está com telhado danificado e estruturas de madeira danificados",
+    "funcaoSocial": "Escolar",
+    "metaGlobal": "aumentar o alcance do conhecimento e aulas práticas nas instituições de ensino",
+    "dataInicialPrevista": "2023-08-01",
+    "dataFinalPrevista": "2023-12-31",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2023-04-14",
+    "especie": "Recuperação",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": "triplicar as matrículas da educação profissional técnica de nível médio, assegurando a qualidade da oferta e pelo menos 50% (cinquenta por cento) da expansão no segmento público",
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2023-04-14",
+    "tomadores": [
+      {
+        "nome": "INSTITUTO FED. ED. CIENCIA E TEC. DE BRASILIA",
+        "codigo": 26356
+      }
+    ],
+    "executores": [
+      {
+        "nome": "INSTITUTO FED. ED. CIENCIA E TEC. DE BRASILIA",
+        "codigo": 26356
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA EDUCAÇÃO",
+        "codigo": 244
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 46,
+        "descricao": "Educação",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 84,
+        "descricao": "Educação",
+        "idTipo": 46
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 700000
+      }
+    ],
+    "latitude": -15.6577700063478,
+    "longitude": -47.69257
   }
 ]
