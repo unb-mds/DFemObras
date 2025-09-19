@@ -1,5 +1,67 @@
 [
   {
+    "idUnico": "40456.53-49",
+    "nome": "Teste_release",
+    "cep": null,
+    "endereco": null,
+    "descricao": "11111",
+    "funcaoSocial": "1111",
+    "metaGlobal": "1111",
+    "dataInicialPrevista": "2024-07-01",
+    "dataFinalPrevista": "2024-07-04",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2024-07-09",
+    "especie": "Ampliação",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Em execução",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2025-03-20",
+    "tomadores": [],
+    "executores": [
+      {
+        "nome": "MINISTERIO DA ECONOMIA",
+        "codigo": 25000
+      }
+    ],
+    "repassadores": [],
+    "eixos": [
+      {
+        "id": 3,
+        "descricao": "Econômico"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 27,
+        "descricao": "Aviação Civil",
+        "idEixo": 3
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 15,
+        "descricao": "Aquisição de Máquinas e Equipamentos",
+        "idTipo": 27
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 0.01
+      }
+    ],
+    "latitude": -15.7337868254127,
+    "longitude": -47.8157506760523
+  },
+  {
     "idUnico": "50379.53-54",
     "nome": "DL - 304/2024 - Contratação de instituição para execução de serviços técnico-especializados para realização de atualizações no Método de Dimensionamento de Pavimentos Rígidos do DNI",
     "cep": null,
@@ -127,68 +189,6 @@
     ],
     "latitude": -15.90288,
     "longitude": -47.77609
-  },
-  {
-    "idUnico": "40456.53-49",
-    "nome": "Teste_release",
-    "cep": null,
-    "endereco": null,
-    "descricao": "11111",
-    "funcaoSocial": "1111",
-    "metaGlobal": "1111",
-    "dataInicialPrevista": "2024-07-01",
-    "dataFinalPrevista": "2024-07-04",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2024-07-09",
-    "especie": "Ampliação",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Em execução",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2025-03-20",
-    "tomadores": [],
-    "executores": [
-      {
-        "nome": "MINISTERIO DA ECONOMIA",
-        "codigo": 25000
-      }
-    ],
-    "repassadores": [],
-    "eixos": [
-      {
-        "id": 3,
-        "descricao": "Econômico"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 27,
-        "descricao": "Aviação Civil",
-        "idEixo": 3
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 15,
-        "descricao": "Aquisição de Máquinas e Equipamentos",
-        "idTipo": 27
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 0.01
-      }
-    ],
-    "latitude": -15.7337868254127,
-    "longitude": -47.8157506760523
   },
   {
     "idUnico": "19970.53-78",
