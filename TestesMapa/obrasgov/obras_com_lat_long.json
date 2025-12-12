@@ -263,6 +263,78 @@
     "longitude": -47.94969
   },
   {
+    "idUnico": "4541.53-44",
+    "nome": "202111-22-Ronald 1",
+    "cep": "70067-901",
+    "endereco": "2021122-Ronald - Endereço Completo",
+    "descricao": "2021122-Ronald - Descrição do Projeto",
+    "funcaoSocial": "2021122-Ronald - Descrição Funç]ap Social",
+    "metaGlobal": "20211122-Ronald - Descrição Meta Global",
+    "dataInicialPrevista": "2021-12-10",
+    "dataFinalPrevista": "2021-12-10",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-11-17",
+    "especie": "Recuperação",
+    "natureza": "Projeto de Investimento em Infraestrutura",
+    "naturezaOutras": "outros",
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2021-11-17",
+    "tomadores": [
+      {
+        "nome": "FUND.UNIVERSIDADE FEDERAL VALE SAO FRANCISCO",
+        "codigo": 26230
+      }
+    ],
+    "executores": [
+      {
+        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
+        "codigo": 308799
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
+        "codigo": 308799
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 45,
+        "descricao": "Desenvolvimento",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 38,
+        "descricao": "Saneamento",
+        "idTipo": 45
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 300000002
+      }
+    ],
+    "latitude": -15.834476668284681,
+    "longitude": -47.839404296873
+  },
+  {
     "idUnico": "24822.53-70",
     "nome": "obra de construção da  Cabine de Medição, localizado no Setor Central do Campus Universitário Darcy Ribeiro, da Universidade de Brasília, em Brasília/DF",
     "cep": null,
@@ -342,78 +414,6 @@
     ],
     "latitude": -15.7613700064557,
     "longitude": -47.87386
-  },
-  {
-    "idUnico": "4541.53-44",
-    "nome": "202111-22-Ronald 1",
-    "cep": "70067-901",
-    "endereco": "2021122-Ronald - Endereço Completo",
-    "descricao": "2021122-Ronald - Descrição do Projeto",
-    "funcaoSocial": "2021122-Ronald - Descrição Funç]ap Social",
-    "metaGlobal": "20211122-Ronald - Descrição Meta Global",
-    "dataInicialPrevista": "2021-12-10",
-    "dataFinalPrevista": "2021-12-10",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2021-11-17",
-    "especie": "Recuperação",
-    "natureza": "Projeto de Investimento em Infraestrutura",
-    "naturezaOutras": "outros",
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": null,
-    "dataSituacao": "2021-11-17",
-    "tomadores": [
-      {
-        "nome": "FUND.UNIVERSIDADE FEDERAL VALE SAO FRANCISCO",
-        "codigo": 26230
-      }
-    ],
-    "executores": [
-      {
-        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
-        "codigo": 308799
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
-        "codigo": 308799
-      }
-    ],
-    "eixos": [
-      {
-        "id": 4,
-        "descricao": "Social"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 45,
-        "descricao": "Desenvolvimento",
-        "idEixo": 4
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 38,
-        "descricao": "Saneamento",
-        "idTipo": 45
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 300000002
-      }
-    ],
-    "latitude": -15.834476668284681,
-    "longitude": -47.839404296873
   },
   {
     "idUnico": "4545.53-03",
@@ -560,66 +560,76 @@
     "longitude": -47.889404296878
   },
   {
-    "idUnico": "74141.53-91",
-    "nome": "PAC 2 - CRECHE/PRÉ-ESCOLA 001",
-    "cep": null,
-    "endereco": null,
-    "descricao": "PAC 2 - CRECHE/PRÉ-ESCOLA 001 Escola de Educação Infantil Tipo B",
-    "funcaoSocial": "PAC 2 - CRECHE/PRÉ-ESCOLA 001",
-    "metaGlobal": "Escola de Educação Infantil Tipo B",
-    "dataInicialPrevista": "2013-04-08",
-    "dataFinalPrevista": "2014-09-21",
+    "idUnico": "3819.53-95",
+    "nome": "Cobertura da quadra poliesportiva",
+    "cep": "70.800-120",
+    "endereco": "Via L4 Norte, Lote 01, Trecho 2, SCEN",
+    "descricao": "Cobertura da quadra poliesportiva utilizada pelos beneficiários do PROFESP",
+    "funcaoSocial": "Melhoria das condições de uso",
+    "metaGlobal": "Cobertura da quadra poliesportiva utilizada pelos beneficiários do PROFESP",
+    "dataInicialPrevista": "2021-09-15",
+    "dataFinalPrevista": "2021-11-01",
     "dataInicialEfetiva": null,
     "dataFinalEfetiva": null,
-    "dataCadastro": "2025-07-25",
-    "especie": "Reforma",
+    "dataCadastro": "2021-09-10",
+    "especie": "Ampliação",
     "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": "Obras 2",
+    "naturezaOutras": "",
+    "situacao": "Em execução",
+    "descPlanoNacionalPoliticaVinculado": null,
     "uf": "DF",
     "qdtEmpregosGerados": null,
     "descPopulacaoBeneficiada": null,
     "populacaoBeneficiada": null,
     "observacoesPertinentes": null,
     "isModeladaPorBim": null,
-    "dataSituacao": "2025-07-25",
-    "tomadores": [],
-    "executores": [
+    "dataSituacao": "2021-09-14",
+    "tomadores": [
       {
-        "nome": "FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCAÇÃO",
-        "codigo": 253
+        "nome": "COMANDO DA MARINHA - FUNDO NAVAL",
+        "codigo": 52132
       }
     ],
-    "repassadores": [],
+    "executores": [
+      {
+        "nome": "COMANDO DA MARINHA",
+        "codigo": 185
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "COMANDO DA MARINHA",
+        "codigo": 185
+      }
+    ],
     "eixos": [
       {
-        "id": 3,
-        "descricao": "Econômico"
+        "id": 2,
+        "descricao": "Militar"
       }
     ],
     "tipos": [
       {
-        "id": 22,
-        "descricao": "Infraestrutura Hídrica, Portos, Hidrovia",
-        "idEixo": 3
+        "id": 17,
+        "descricao": "Educação",
+        "idEixo": 2
       }
     ],
     "subTipos": [
       {
-        "id": 36,
-        "descricao": "Dragagem, Derrocamento e Associações",
-        "idTipo": 22
+        "id": 84,
+        "descricao": "Educação",
+        "idTipo": 46
       }
     ],
     "fontesDeRecurso": [
       {
         "origem": "Federal",
-        "valorInvestimentoPrevisto": 0.01
+        "valorInvestimentoPrevisto": 250000
       }
     ],
-    "latitude": -15.77972,
-    "longitude": -47.92972
+    "latitude": -15.7829978599079,
+    "longitude": -47.8595166550233
   },
   {
     "idUnico": "21324.53-75",
