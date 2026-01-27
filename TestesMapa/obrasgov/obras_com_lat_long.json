@@ -62,73 +62,6 @@
     "longitude": -47.8751524777795
   },
   {
-    "idUnico": "42724.53-27",
-    "nome": "Escola Classe Crixá São Sebastião",
-    "cep": null,
-    "endereco": null,
-    "descricao": "Construção de Escola em Tempo Integral, Escola Classe Crixá Bairro: São Sebastião/Brasília -DF – Projeto Próprio.",
-    "funcaoSocial": "A construção da nova escola beneficiará 977 estudantes, do 1º ao 5º ano do Ensino Fundamental, em turno integral, na região administrativa de São Sebastião, Brasília-DF.. Atualmente, não há unidades de ensino suficientes para atender, novo bairro criado em São Sebastião pelos programas habitacionais do governo, como o Morar Bem e o Minha Casa, Minha Vida. Crianças em idade escolar que precisam ser transportadas para outras regiões para estudar. A expansão da rede é essencial para garantir o acesso e a permanência dos estudantes na Rede Pública, reiterando o compromisso do DF com uma educação de qualidade. Fonte de dado: Sistema Interno da SEEDF (Argis).. Espera-se atender aos programas Escola em Tempo Integral - Lei nº 14.640/2023 e Compromisso Nacional Criança Alfabetizada – Decreto nº 11.556/2023, reduzindo a vulnerabilidade social e alcançando as metas estabelecidas no Plano Nacional de Educação (PNE) e no Plano Distrital de Educação (PDE) pelo Distrito Federal.",
-    "metaGlobal": "Construção de Escola em Tempo Integral, Escola Classe Crixá Bairro: São Sebastião/Brasília -DF – Projeto Próprio.",
-    "dataInicialPrevista": "2024-09-02",
-    "dataFinalPrevista": "2028-09-02",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2024-08-30",
-    "especie": "Construção",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Cancelada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": "30",
-    "descPopulacaoBeneficiada": "A população diretamente beneficiada pela EC Crixá, com capacidade para 385 alunos/turno, são crianças e jovens em idade escolar da comunidade local. A escola, com funcionamento em diferentes turnos, amplia o acesso à educação. Indiretamente, toda a comunidade se beneficia, com valorização da região, atração de novos moradores, geração de empregos e desenvolvimento local. ",
-    "populacaoBeneficiada": "385",
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2025-09-05",
-    "tomadores": [],
-    "executores": [
-      {
-        "nome": "SECRETARIA DE ESTADO DE EDUCACAO DO DISTRITO FEDERAL",
-        "codigo": 394676000107
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "FUNDO NACIONAL DE DESENVOLVIMENTO DA EDUCAÇÃO",
-        "codigo": 253
-      }
-    ],
-    "eixos": [
-      {
-        "id": 4,
-        "descricao": "Social"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 46,
-        "descricao": "Educação",
-        "idEixo": 4
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 84,
-        "descricao": "Educação",
-        "idTipo": 46
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 12319519.51
-      }
-    ],
-    "latitude": -15.90288,
-    "longitude": -47.77609
-  },
-  {
     "idUnico": "19970.53-78",
     "nome": "Reajuste do Contrato 45/2021 - Contrução do Centro de Formação e Aperfeiçoamento de Praças - CEFAP do CBMDF",
     "cep": "70.602-600",
@@ -630,6 +563,78 @@
     ],
     "latitude": -15.6577700063478,
     "longitude": -47.69257
+  },
+  {
+    "idUnico": "8421.53-89",
+    "nome": "Reforma no acesso da pista de atletismo",
+    "cep": null,
+    "endereco": null,
+    "descricao": "Reforma do acesso à pista de atletismo com reforço na fundação",
+    "funcaoSocial": "Atividades dos militares e beneficiários do PROFESP",
+    "metaGlobal": "Melhoria da área de esportes do Grupamento de Fuzileiros Navais de Brasília para uso do PROFESP",
+    "dataInicialPrevista": "2022-09-30",
+    "dataFinalPrevista": "2022-10-14",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2022-09-27",
+    "especie": "Reforma",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Em execução",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2022-09-30",
+    "tomadores": [
+      {
+        "nome": "COMANDO DA MARINHA",
+        "codigo": 185
+      }
+    ],
+    "executores": [
+      {
+        "nome": "COMANDO DA MARINHA",
+        "codigo": 185
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "CAMARA DOS DEPUTADOS",
+        "codigo": 1000
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 38,
+        "descricao": "Esporte",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 75,
+        "descricao": "Urbanização",
+        "idTipo": 38
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 17400
+      }
+    ],
+    "latitude": -15.783620006479,
+    "longitude": -47.8608
   },
   {
     "idUnico": "21327.53-34",
