@@ -1,1 +1,716 @@
-[]
+[
+  {
+    "idUnico": "6450.53-56",
+    "nome": "Reforma do Museu de Valores do Banco Central do Brasil",
+    "cep": null,
+    "endereco": "SBS QD 03 BLOCO B",
+    "descricao": "Reforma e adequação do Museu de Valores e de áreas adjacentes, do Banco Central do Brasil em Brasília/DF",
+    "funcaoSocial": "A contratação permitirá a reforma do espaço destinado ao Museu de Valores que abrigará a nova museografia de acordo com as necessidades apontadas no Plano Museológico 2018-2022 que busca, entre outros pontos, promover a educação financeira da população brasileira.",
+    "metaGlobal": "Contribuição, por parte do Banco Central, de modo mais relevante no processo de promoção de educação financeira com a criação do primeiro museu, na América do Sul, dedicado à promoção da educação econômica da população.",
+    "dataInicialPrevista": "2022-08-15",
+    "dataFinalPrevista": "2025-01-24",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2022-08-01",
+    "especie": "Reforma",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Concluída",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": true,
+    "dataSituacao": "2025-01-27",
+    "tomadores": [
+      {
+        "nome": "BANCO CENTRAL DO BRASIL-ORC.FISCAL/SEG.SOCIAL",
+        "codigo": 25201
+      }
+    ],
+    "executores": [
+      {
+        "nome": "BANCO CENTRAL DO BRASIL-ORC.FISCAL/SEG.SOCIAL",
+        "codigo": 25201
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "FUNDO DE DEFESA DOS DIREITOS DIFUSOS",
+        "codigo": 30905
+      }
+    ],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 5,
+        "descricao": "Administrativo",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 59,
+        "descricao": "Obras em Imóveis de Uso Público",
+        "idTipo": 5
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 11285163.72
+      }
+    ],
+    "latitude": -15.8032800064996,
+    "longitude": -47.8851
+  },
+  {
+    "idUnico": "101121.53-58",
+    "nome": "Contrato TT-793/2024 - obras e serviços relativos à coleta de dados de veículos pesados e Monitoramento de Operações através de Postos de Pesagem Mistos e Unidades Móveis Operacionais",
+    "cep": null,
+    "endereco": null,
+    "descricao": "Construção, manutenção, conservação e execução de obras e serviços relativos à coleta de dados de veículos pesados e Monitoramento de Operações através de Postos de Pesagem Mistos – PPM e Unidades Móveis Operacionais - UMOs nos Estados da Paraiba, Pernambuco e Rio Grande do Norte - Lote 2",
+    "funcaoSocial": "Aumento da segurança viária e da durabilidade das rodovias, controlando o excesso de peso dos veículos e reduzindo sinistros e danos à infraestrutura.",
+    "metaGlobal": "Aumento da segurança viária e da durabilidade das rodovias, controlando o excesso de peso dos veículos e reduzindo sinistros e danos à infraestrutura.",
+    "dataInicialPrevista": "2025-01-14",
+    "dataFinalPrevista": "2030-01-14",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2025-11-04",
+    "especie": "Construção",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Em execução",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2025-01-10",
+    "tomadores": [
+      {
+        "nome": "DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES",
+        "codigo": 54844
+      }
+    ],
+    "executores": [
+      {
+        "nome": "DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES",
+        "codigo": 54844
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA INFRAESTRUTURA",
+        "codigo": 2846
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 37,
+        "descricao": "Infraestrutura Urbana e Mobilidade",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 83,
+        "descricao": "Corredor Viário",
+        "idTipo": 37
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 135383839.07
+      }
+    ],
+    "latitude": -8.08471000116351,
+    "longitude": -34.88679
+  },
+  {
+    "idUnico": "4048.53-80",
+    "nome": "OBRA DE REFORMA DO ACESSO PRINCIPAL DA FACULDADE DE CIÊNCIA DA INFORMAÇÃO",
+    "cep": "",
+    "endereco": "",
+    "descricao": "obra de reforma do acesso principal da Faculdade de Ciência da Informação, localizado no Campus Universitário Darcy Ribeiro, da Universidade de Brasília, em Brasília - DF",
+    "funcaoSocial": "A obra se refere à reforma com o propósito de criar um espaço de convivência e adequar o acesso principal da Faculdade de Ciência da Informação – FCI às normas de acessibilidade.\nA proposta para o espaço de convivência foi desenvolvida utilizando mobiliário adequado ao uso proposto e composto por estante para publicações, bancos para convívio e apoio à provável plateia, mesas de trabalho para apoio de computadores e materiais de trabalho, assim como bancada e palco.\nPara a adequação à acessibilidade universal ao setor do prédio, foi proposta a instalação de duas plataformas, sendo uma plataforma inclinada, vencendo o desnível da porta de acesso ao térreo, e outra vertical, para acesso ao mezanino. Ademais, ainda será instalado um corrimão central na escada de acesso para atender à exigência da NBR 9.050/2020.",
+    "metaGlobal": "A obra se refere à reforma com o propósito de criar um espaço de convivência e adequar o acesso principal da Faculdade de Ciência da Informação – FCI às normas de acessibilidade.\nA proposta para o espaço de convivência foi desenvolvida utilizando mobiliário adequado ao uso proposto e composto por estante para publicações, bancos para convívio e apoio à provável plateia, mesas de trabalho para apoio de computadores e materiais de trabalho, assim como bancada e palco.\nPara a adequação à acessibilidade universal ao setor do prédio, foi proposta a instalação de duas plataformas, sendo uma plataforma inclinada, vencendo o desnível da porta de acesso ao térreo, e outra vertical, para acesso ao mezanino. Ademais, ainda será instalado um corrimão central na escada de acesso para atender à exigência da NBR 9.050/2020.",
+    "dataInicialPrevista": "2021-01-25",
+    "dataFinalPrevista": "2021-10-25",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-10-05",
+    "especie": "Reforma",
+    "natureza": "Obra",
+    "naturezaOutras": "",
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": "Justifica-se pela necessidade de adequar o acesso à Faculdade de Ciência da Informação – FCI a fim de promover acessibilidade à edificação, conforme normatização atual, especialmente a NBR 9.050/2020.\nPor tal motivo, a obra foi contemplada no Plano de Obras da Universidade de Brasília, aprovado pelo Conselho de Administração, no uso de suas atribuições, em sua 392ª Reunião Ordinária, realizada em 27 de junho de 2019 (23106.075169/2019-59, documento SEI 4026643).",
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2021-10-05",
+    "tomadores": [],
+    "executores": [
+      {
+        "nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+        "codigo": 26271
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "FUNDACAO UNIVERSIDADE DE BRASILIA",
+        "codigo": 26271
+      }
+    ],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 6,
+        "descricao": "Assistência Social",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 59,
+        "descricao": "Obras em Imóveis de Uso Público",
+        "idTipo": 5
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 0
+      }
+    ],
+    "latitude": -15.760730006455,
+    "longitude": -47.86746
+  },
+  {
+    "idUnico": "6424.53-90",
+    "nome": "Contratação de empresa especializada para obra de ampliação do hotel de trânsito de Subtenentes e Sargentos, em Brasília-DF",
+    "cep": "70.297-400",
+    "endereco": "Hotel de Trânsito de Subtenentes e Sragentos - Setor Militar Urbano - Brasília, DF",
+    "descricao": "Contratação de empresa especializada para obra de ampliação do hotel de trânsito de Subtenentes e Sargentos, em Brasília-DF",
+    "funcaoSocial": "A ampliação será realizada junto ao prédio existente do HTS e implicará na readequação da rede de infraestrutura. A referida ampliação do Hotel de Trânsito para Subtenentes e Sargentos – HTS, localizado em Brasília/DF, amplia em 11 suítes, mobiliadas, sendo uma adaptada para PCD (pessoa com  deficiência), pois este hotel tem uma demanda reprimida, haja vista a carência que possui o efetivo da Força que busca tratamentos médicos nesta cidade e não encontram hospedagem. É\nimportante ressaltar que a guarnição de Brasília é muito solicitada, devido à quantidade de especialidades médicas. Além disso, Brasília é um importante polo turístico, 4º maior do País, segundo a Embratur, recebendo diversos militares, principalmente aqueles que aqui já serviram e que são novamente atraídos para passar períodos de lazer na cidade. \n\nTendo o conhecimento de que, o Hotel de Trânsito cumpre o objetivo de proporcionar apoio às famílias militares tanto em trânsito quanto em férias, faz-se de grande importância a ampliação do HTS em Brasília, proporcionando um melhor apoio aos militares e seus dependentes quanto a hospedagem, seja ela recreativa, funcional ou para fins de tratamento de saúde. Atualmente o HTS conta apenas com 8 (oito) unidades, localizado no Setor Militar Urbano, Brasília DF.\n",
+    "metaGlobal": "Ampliação do Hotel de Trânsito de Subtenentes e Sargentos.",
+    "dataInicialPrevista": "2022-08-01",
+    "dataFinalPrevista": "2023-12-31",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2022-07-25",
+    "especie": "Ampliação",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Concluída",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": true,
+    "dataSituacao": "2023-07-19",
+    "tomadores": [
+      {
+        "nome": "COMANDO DO EXÉRCITO",
+        "codigo": 94
+      }
+    ],
+    "executores": [
+      {
+        "nome": "COMANDO DO EXÉRCITO",
+        "codigo": 94
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA DEFESA",
+        "codigo": 41066
+      }
+    ],
+    "eixos": [
+      {
+        "id": 3,
+        "descricao": "Econômico"
+      },
+      {
+        "id": 3,
+        "descricao": "Econômico"
+      },
+      {
+        "id": 3,
+        "descricao": "Econômico"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 30,
+        "descricao": "Desenvolvimento",
+        "idEixo": 3
+      },
+      {
+        "id": 30,
+        "descricao": "Desenvolvimento",
+        "idEixo": 3
+      },
+      {
+        "id": 30,
+        "descricao": "Desenvolvimento",
+        "idEixo": 3
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 66,
+        "descricao": "Refino - Modernização e Ampliação",
+        "idTipo": 30
+      },
+      {
+        "id": 75,
+        "descricao": "Urbanização",
+        "idTipo": 30
+      },
+      {
+        "id": 45,
+        "descricao": "Turismo",
+        "idTipo": 30
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 2376298.36
+      }
+    ],
+    "latitude": -15.7704300064652,
+    "longitude": -47.93219
+  },
+  {
+    "idUnico": "5124.53-53",
+    "nome": "26.782.3006.13XJ.0031",
+    "cep": "70040-902",
+    "endereco": " BR-262/ BR-010",
+    "descricao": "AdequaÃ§Ã£o De Trecho RodoviÃ¡rio - Entrocamento Br-494/Mg-423 (Nova Serrana) - Uberaba - Na Br-262/Mg",
+    "funcaoSocial": "Preservar vidas e promover o desenvolvimento sustentÃ¡vel do paÃ­s priorizando a seguranÃ§a, as boas condiÃ§Ãµes de trafegabilidade e a otimizaÃ§Ã£o da logÃ­stica dos transportes, elevando assim o nÃ­vel de serviÃ§o das vias.",
+    "metaGlobal": "Garantir dotação orçamentária para os contratos que envolvem 19.78 km desta rúbrica.",
+    "dataInicialPrevista": "2013-04-08",
+    "dataFinalPrevista": "2024-10-04",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-12-09",
+    "especie": "Construção",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Concluída",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2025-11-17",
+    "tomadores": [
+      {
+        "nome": "DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES",
+        "codigo": 54844
+      }
+    ],
+    "executores": [
+      {
+        "nome": "DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES",
+        "codigo": 54844
+      }
+    ],
+    "repassadores": [],
+    "eixos": [
+      {
+        "id": 3,
+        "descricao": "Econômico"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 25,
+        "descricao": "Rodovia",
+        "idEixo": 3
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 4,
+        "descricao": "Acessos Terrestres",
+        "idTipo": 25
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 103576455.27
+      }
+    ]
+  },
+  {
+    "idUnico": "43986.53-49",
+    "nome": "Persianas Metálicas (Brises)",
+    "cep": "70.675-731",
+    "endereco": "Av. das Jaqueiras s/n, Sudoeste",
+    "descricao": "Tendo em vista o planejamento para construção, revitalização de diversos ambientes médico-hospitalares deste hospital constantes no PAC (Plano Anual de Contratação) e\ntambém contando com o planejamento de reestruturação dos andares de internação; a revitalização da fachada do prédio lâmina do HFA tem como objetivo a adequação das instalações físicas às normas vigentes como a Resolução RDC nº 50, de 21 de fevereiro de 2002, a abertura do atual processo licitatório tem por finalidade propiciar a condição necessária para a contração de empresa especializada para realizar execução de serviços de engenharia de adequação dos brises dos do 8º, 9º e 10º andar e pertinente implantação do projeto de ancoragem (linha de vida) necessário a realização dos serviços.",
+    "funcaoSocial": "Tendo em vista o planejamento para construção, revitalização de diversos ambientes médico-hospitalares deste hospital constantes no PAC (Plano Anual de Contratação) e\ntambém contando com o planejamento de reestruturação dos andares de internação; a revitalização da fachada do prédio lâmina do HFA tem como objetivo a adequação das instalações físicas às normas vigentes como a Resolução RDC nº 50, de 21 de fevereiro de 2002, a abertura do atual processo licitatório tem por finalidade propiciar a condição necessária para a contração de empresa especializada para realizar execução de serviços de engenharia de adequação dos brises dos do 8º, 9º e 10º andar e pertinente implantação do projeto de ancoragem (linha de vida) necessário a realização dos serviços.",
+    "metaGlobal": "Tendo em vista o planejamento para construção, revitalização de diversos ambientes médico-hospitalares deste hospital constantes no PAC (Plano Anual de Contratação) e\ntambém contando com o planejamento de reestruturação dos andares de internação; a revitalização da fachada do prédio lâmina do HFA tem como objetivo a adequação das instalações físicas às normas vigentes como a Resolução RDC nº 50, de 21 de fevereiro de 2002, a abertura do atual processo licitatório tem por finalidade propiciar a condição necessária para a contração de empresa especializada para realizar execução de serviços de engenharia de adequação dos brises dos do 8º, 9º e 10º andar e pertinente implantação do projeto de ancoragem (linha de vida) necessário a realização dos serviços.",
+    "dataInicialPrevista": "2024-12-20",
+    "dataFinalPrevista": "2025-09-20",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2024-10-17",
+    "especie": "Reforma",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Em execução",
+    "descPlanoNacionalPoliticaVinculado": "Tendo em vista o planejamento para construção, revitalização de diversos ambientes médico-hospitalares deste hospital constantes no PAC (Plano Anual de Contratação) e\ntambém contando com o planejamento de reestruturação dos andares de internação; a revitalização da fachada do prédio lâmina do HFA tem como objetivo a adequação das instalações físicas às normas vigentes como a Resolução RDC nº 50, de 21 de fevereiro de 2002, a abertura do atual processo licitatório tem por finalidade propiciar a condição necessária para a contração de empresa especializada para realizar execução de serviços de engenharia de adequação dos brises dos do 8º, 9º e 10º andar e pertinente implantação do projeto de ancoragem (linha de vida) necessário a realização dos serviços.",
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2024-12-20",
+    "tomadores": [
+      {
+        "nome": "FUNDO DE ADMINISTRACAO DO HFA",
+        "codigo": 52002
+      }
+    ],
+    "executores": [
+      {
+        "nome": "FUNDO DE ADMINISTRACAO DO HFA",
+        "codigo": 52002
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "FUNDO DO MINISTERIO DA DEFESA",
+        "codigo": 52001
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 39,
+        "descricao": "Saúde",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 74,
+        "descricao": "Unidades de Atenção Especializada de Saúde",
+        "idTipo": 39
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 1565000
+      }
+    ],
+    "latitude": -15.8010300064973,
+    "longitude": -47.93463
+  },
+  {
+    "idUnico": "19754.53-12",
+    "nome": "Modernização de Elevadores do Bloco G do MS",
+    "cep": null,
+    "endereco": null,
+    "descricao": "Modernização integral de 8(oito) elevadores do Bloco “G”, da Esplanada dos Ministérios, Brasília/DF, Edifício Sede do Ministério da Saúde",
+    "funcaoSocial": "Modernização de Elevadores do MS bem público institucional",
+    "metaGlobal": "Contratação de uma empresa especializada em engenharia eletromecânica para modernização integral de 8(oito) elevadores do Bloco “G”, da Esplanada dos Ministérios, Brasília/DF, Edifício Sede do Ministério da Saúde, conforme condições, quantidades e exigências estabelecidas neste instrumento e seus anexos do processo 25000.148796/2022-25",
+    "dataInicialPrevista": "2023-01-31",
+    "dataFinalPrevista": "2023-11-30",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2023-01-26",
+    "especie": "Fabricação",
+    "natureza": "Outros",
+    "naturezaOutras": "Modernização de Elevadores",
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2023-01-26",
+    "tomadores": [],
+    "executores": [
+      {
+        "nome": "MINISTÉRIO DA SAÚDE",
+        "codigo": 304
+      }
+    ],
+    "repassadores": [],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 4,
+        "descricao": "Saúde",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 59,
+        "descricao": "Obras em Imóveis de Uso Público",
+        "idTipo": 5
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 7141939.72
+      }
+    ],
+    "latitude": -15.8002630106667,
+    "longitude": -47.8684721413212
+  },
+  {
+    "idUnico": "102308.53-66",
+    "nome": "Substituição do elevador monta carga do Setor de Aprovisionamento",
+    "cep": "70.630-901",
+    "endereco": "Base Administrativa do Quartel-General do Exército",
+    "descricao": "Substituição do elevador monta carga do Setor de Aprovisionamento",
+    "funcaoSocial": "garantir a segurança alimentar dos usuários do setor de aprovisionamento, melhorando a eficiência logística interna na movimentação dos gêneros",
+    "metaGlobal": "realizar a melhoria da movimentação de gêneros alimentícios do Setor de Aprovisionamento do QGEx",
+    "dataInicialPrevista": "2025-12-12",
+    "dataFinalPrevista": "2026-03-27",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2025-11-17",
+    "especie": "Máquinas e Equipamentos",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2025-11-17",
+    "tomadores": [
+      {
+        "nome": "COMANDO DO EXÉRCITO",
+        "codigo": 94
+      }
+    ],
+    "executores": [
+      {
+        "nome": "COMANDO DO EXÉRCITO",
+        "codigo": 94
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA DEFESA",
+        "codigo": 41066
+      }
+    ],
+    "eixos": [
+      {
+        "id": 1,
+        "descricao": "Administrativo"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 5,
+        "descricao": "Administrativo",
+        "idEixo": 1
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 90,
+        "descricao": "Preservação do Patrimônio",
+        "idTipo": 5
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 122511.75
+      }
+    ],
+    "latitude": -15.7751987306195,
+    "longitude": -47.9177794648379
+  },
+  {
+    "idUnico": "51029.53-02",
+    "nome": "Construção de Cobertura Metálica nos Centros Olímpicos do Distrito Federal.",
+    "cep": null,
+    "endereco": null,
+    "descricao": "Construção de Cobertura Metálica nos Centros Olímpicos do Distrito Federal.",
+    "funcaoSocial": "O Público alvo a ser atingido será diretamente jovens, crianças, adultos, idosos e pessoas com deficiência do Distrito Federal.. Através do incentivo a prática esportiva e também à inclusão, visualizamos oportunidade a incentivar a prática de esporte e lazer, promovendo a inclusão social melhorando a qualidade de vida da população local do Distrito Federal.. Espera-se com este pleito assegurar a população em geral, a oferta de estruturas esportivas de qualidade e inclusão de crianças com deficiência, onde a comunidade possa, além de praticar atividade recreativas ter um espaço seguro de convivência, lazer e formação cidadã. Assim, pretendemos desenvolver as potencialidades da população local, trazendo alternativas de entretenimento saudável.",
+    "metaGlobal": "Construção de Cobertura Metálica nos Centros Olímpicos do Distrito Federal.",
+    "dataInicialPrevista": "2025-09-30",
+    "dataFinalPrevista": "2028-09-30",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2024-12-30",
+    "especie": "Construção",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": false,
+    "dataSituacao": "2024-12-30",
+    "tomadores": [],
+    "executores": [
+      {
+        "nome": "SECRETARIA DE ESTADO DO ESPORTE E LAZER DO DISTRITO FEDERAL",
+        "codigo": 2977827000185
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTERIO DO ESPORTE",
+        "codigo": 51000
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 38,
+        "descricao": "Esporte",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 24,
+        "descricao": "Centro Olímpico e Para-Olímpico",
+        "idTipo": 38
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 697182.85
+      }
+    ],
+    "latitude": -15.89547,
+    "longitude": -47.7769
+  },
+  {
+    "idUnico": "1463.53-66",
+    "nome": "00 00377/2020",
+    "cep": "70040-902",
+    "endereco": " BR-010",
+    "descricao": "contratação de empresa especializada para prestação dos serviços de gerenciamento dos empreendimentos de construção, sob a jurisdição do dnit, para toda a malha rodoviária federal da região nordeste.",
+    "funcaoSocial": "Preservar vidas e promover o desenvolvimento sustentável do país priorizando a segurança, as boas condições de trafegabilidade e a otimização da logística dos transportes, elevando assim o nível de serviço das vias.",
+    "metaGlobal": "Gerenciamento de 0 km.",
+    "dataInicialPrevista": null,
+    "dataFinalPrevista": null,
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-04-26",
+    "especie": "Construção",
+    "natureza": "Obra",
+    "naturezaOutras": null,
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2021-04-26",
+    "tomadores": [
+      {
+        "nome": "DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES",
+        "codigo": 54844
+      }
+    ],
+    "executores": [
+      {
+        "nome": "DEPARTAMENTO NACIONAL DE INFRAESTRUTURA DE TRANSPORTES",
+        "codigo": 54844
+      }
+    ],
+    "repassadores": [],
+    "eixos": [
+      {
+        "id": 3,
+        "descricao": "Econômico"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 25,
+        "descricao": "Rodovia",
+        "idEixo": 3
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 4,
+        "descricao": "Acessos Terrestres",
+        "idTipo": 25
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 25848700
+      }
+    ]
+  }
+]
