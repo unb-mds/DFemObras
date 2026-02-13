@@ -3,3 +3,9 @@ node_modules
 coverage
 
 
+*.duckdb
+*.duckdb.wal
+
+venv/
+.venv/
+__pycache__/
