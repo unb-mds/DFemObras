@@ -1,0 +1,8 @@
+version: 2
+
+sources:
+  - name: obras_gov
+    schema: main
+    tables:
+      - name: raw_obras
+        description: "Dados crus das obras licitadas no DF"
