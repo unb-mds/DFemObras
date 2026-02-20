@@ -16,8 +16,8 @@ renamed as (
         try_cast(qdtEmpregosGerados as INTEGER) as empregos_gerados,
         try_cast(populacaoBeneficiada as INTEGER) as populacao_beneficiada,
 
-        regexp_extract(geometriaWkt, 'POINT \(([-\d.]+) ([-\d.]+)\)', 1)::FLOAT as longitude,
-        regexp_extract(geometriaWkt, 'POINT \(([-\d.]+) ([-\d.]+)\)', 2)::FLOAT as latitude,
+        try_cast(regexp_extract(geometriaWkt, 'POINT \(([-\d.]+) ([-\d.]+)\)', 1) as FLOAT) as longitude,
+        try_cast(regexp_extract(geometriaWkt, 'POINT \(([-\d.]+) ([-\d.]+)\)', 2) as FLOAT) as latitude,
 
         cep,
         endereco,
@@ -37,3 +37,5 @@ renamed as (
 )
 
 select * from renamed
+where longitude is not null 
+  OR latitude is not null

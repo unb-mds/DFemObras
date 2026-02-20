@@ -1,0 +1,17 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "workbench.editorAssociations": {
+        "*.parquet": "duckdb.dataFileViewer",
+        "*.csv": "duckdb.dataFileViewer",
+        "*.tsv": "duckdb.dataFileViewer"
+    },
+    "duckdb.databases": [
+        {
+            "alias": "obras_df",
+            "type": "file",
+            "path": "/Users/caioborges/Developer/DFemObras/data-eng/db/obras_df.duckdb",
+            "attached": true
+        }
+    ],
+    "duckdb.defaultDatabase": "obras_df"
+}
