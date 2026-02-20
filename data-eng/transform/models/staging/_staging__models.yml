@@ -1,0 +1,25 @@
+version: 2
+
+models:
+  - name: stg_obras_completas
+    description: "Tabela de staging das obras do DF, limpa e filtrada para uso no mapa."
+    columns:
+      - name: obra_id
+        description: "ID único da obra vindo da API"
+        tests:
+          - unique
+          - not_null
+
+      - name: latitude
+        tests:
+          - not_null
+
+      - name: longitude
+        tests:
+          - not_null
+
+      - name: obra_situacao
+        description: "Situação atual da obra"
+        tests:
+          - accepted_values:
+              values: ['Em execução', 'Concluída', 'Cadastrada', 'Cancelada', 'Paralisada', 'Inativada']

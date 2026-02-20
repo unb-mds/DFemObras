@@ -22,20 +22,26 @@ renamed as (
         cep,
         endereco,
         uf,
-
         especie,
         natureza,
         isModeladaPorBim as is_bim,
-        
         fontesDeRecurso as fontes_recurso,
         executores,
-        subTipos as sub_tipos
+        subTipos as sub_tipos,
+
+        row_number() over (
+            partition by idUnico 
+            order by dataSituacao desc, dataCadastro desc
+        ) as row_num
 
     from raw_data
     where nome not ilike '%Ronald%'
-      and obra_id is not null
+      and idUnico is not null
 )
 
-select * from renamed
+select * exclude (row_num)
+from renamed
 where longitude is not null 
-  OR latitude is not null
+  and latitude is not null
+  and row_num = 1 
+  and (data_fim_prevista is null or data_fim_prevista >= data_inicio_prevista)
