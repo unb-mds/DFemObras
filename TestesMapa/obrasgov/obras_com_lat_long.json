@@ -129,78 +129,6 @@
     "longitude": -47.93603
   },
   {
-    "idUnico": "4546.53-60",
-    "nome": "202111-22-Ronald 1",
-    "cep": "70067-902",
-    "endereco": "2021122-Ronald - Endereço Completo",
-    "descricao": "2021122-Ronald - Descrição do Projeto",
-    "funcaoSocial": "2021122-Ronald - Descrição Funç]ap Social",
-    "metaGlobal": "20211122-Ronald - Descrição Meta Global",
-    "dataInicialPrevista": "2021-12-10",
-    "dataFinalPrevista": "2021-12-10",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2021-11-17",
-    "especie": "Reforma",
-    "natureza": "Projeto de Investimento em Infraestrutura",
-    "naturezaOutras": "outros",
-    "situacao": "Cadastrada",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": null,
-    "dataSituacao": "2021-11-17",
-    "tomadores": [
-      {
-        "nome": "FUND.UNIVERSIDADE FEDERAL VALE SAO FRANCISCO",
-        "codigo": 26230
-      }
-    ],
-    "executores": [
-      {
-        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
-        "codigo": 308799
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
-        "codigo": 308799
-      }
-    ],
-    "eixos": [
-      {
-        "id": 4,
-        "descricao": "Social"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 45,
-        "descricao": "Desenvolvimento",
-        "idEixo": 4
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 38,
-        "descricao": "Saneamento",
-        "idTipo": 45
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 30000007
-      }
-    ],
-    "latitude": -15.884476668284686,
-    "longitude": -47.889404296878
-  },
-  {
     "idUnico": "24797.53-15",
     "nome": "Implantação de Passarelas nas Estradas Parque do DF",
     "cep": null,
@@ -493,6 +421,150 @@
     "longitude": -47.879404296877
   },
   {
+    "idUnico": "4546.53-60",
+    "nome": "202111-22-Ronald 1",
+    "cep": "70067-902",
+    "endereco": "2021122-Ronald - Endereço Completo",
+    "descricao": "2021122-Ronald - Descrição do Projeto",
+    "funcaoSocial": "2021122-Ronald - Descrição Funç]ap Social",
+    "metaGlobal": "20211122-Ronald - Descrição Meta Global",
+    "dataInicialPrevista": "2021-12-10",
+    "dataFinalPrevista": "2021-12-10",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-11-17",
+    "especie": "Reforma",
+    "natureza": "Projeto de Investimento em Infraestrutura",
+    "naturezaOutras": "outros",
+    "situacao": "Cadastrada",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2021-11-17",
+    "tomadores": [
+      {
+        "nome": "FUND.UNIVERSIDADE FEDERAL VALE SAO FRANCISCO",
+        "codigo": 26230
+      }
+    ],
+    "executores": [
+      {
+        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
+        "codigo": 308799
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "MINISTÉRIO DA INTEGRAÇÃO E DO DESENVOLVIMENTO REGIONAL",
+        "codigo": 308799
+      }
+    ],
+    "eixos": [
+      {
+        "id": 4,
+        "descricao": "Social"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 45,
+        "descricao": "Desenvolvimento",
+        "idEixo": 4
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 38,
+        "descricao": "Saneamento",
+        "idTipo": 45
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 30000007
+      }
+    ],
+    "latitude": -15.884476668284686,
+    "longitude": -47.889404296878
+  },
+  {
+    "idUnico": "3819.53-95",
+    "nome": "Cobertura da quadra poliesportiva",
+    "cep": "70.800-120",
+    "endereco": "Via L4 Norte, Lote 01, Trecho 2, SCEN",
+    "descricao": "Cobertura da quadra poliesportiva utilizada pelos beneficiários do PROFESP",
+    "funcaoSocial": "Melhoria das condições de uso",
+    "metaGlobal": "Cobertura da quadra poliesportiva utilizada pelos beneficiários do PROFESP",
+    "dataInicialPrevista": "2021-09-15",
+    "dataFinalPrevista": "2021-11-01",
+    "dataInicialEfetiva": null,
+    "dataFinalEfetiva": null,
+    "dataCadastro": "2021-09-10",
+    "especie": "Ampliação",
+    "natureza": "Obra",
+    "naturezaOutras": "",
+    "situacao": "Em execução",
+    "descPlanoNacionalPoliticaVinculado": null,
+    "uf": "DF",
+    "qdtEmpregosGerados": null,
+    "descPopulacaoBeneficiada": null,
+    "populacaoBeneficiada": null,
+    "observacoesPertinentes": null,
+    "isModeladaPorBim": null,
+    "dataSituacao": "2021-09-14",
+    "tomadores": [
+      {
+        "nome": "COMANDO DA MARINHA - FUNDO NAVAL",
+        "codigo": 52132
+      }
+    ],
+    "executores": [
+      {
+        "nome": "COMANDO DA MARINHA",
+        "codigo": 185
+      }
+    ],
+    "repassadores": [
+      {
+        "nome": "COMANDO DA MARINHA",
+        "codigo": 185
+      }
+    ],
+    "eixos": [
+      {
+        "id": 2,
+        "descricao": "Militar"
+      }
+    ],
+    "tipos": [
+      {
+        "id": 17,
+        "descricao": "Educação",
+        "idEixo": 2
+      }
+    ],
+    "subTipos": [
+      {
+        "id": 84,
+        "descricao": "Educação",
+        "idTipo": 17
+      }
+    ],
+    "fontesDeRecurso": [
+      {
+        "origem": "Federal",
+        "valorInvestimentoPrevisto": 250000
+      }
+    ],
+    "latitude": -15.7829978599079,
+    "longitude": -47.8595166550233
+  },
+  {
     "idUnico": "21324.53-75",
     "nome": "Reforma Viveiro Agroecologia",
     "cep": "73.380-900",
@@ -552,7 +624,7 @@
       {
         "id": 84,
         "descricao": "Educação",
-        "idTipo": 46
+        "idTipo": 17
       }
     ],
     "fontesDeRecurso": [
@@ -624,7 +696,7 @@
       {
         "id": 84,
         "descricao": "Educação",
-        "idTipo": 46
+        "idTipo": 17
       }
     ],
     "fontesDeRecurso": [
@@ -635,77 +707,5 @@
     ],
     "latitude": -15.6578800063479,
     "longitude": -47.69608
-  },
-  {
-    "idUnico": "8421.53-89",
-    "nome": "Reforma no acesso da pista de atletismo",
-    "cep": null,
-    "endereco": null,
-    "descricao": "Reforma do acesso à pista de atletismo com reforço na fundação",
-    "funcaoSocial": "Atividades dos militares e beneficiários do PROFESP",
-    "metaGlobal": "Melhoria da área de esportes do Grupamento de Fuzileiros Navais de Brasília para uso do PROFESP",
-    "dataInicialPrevista": "2022-09-30",
-    "dataFinalPrevista": "2022-10-14",
-    "dataInicialEfetiva": null,
-    "dataFinalEfetiva": null,
-    "dataCadastro": "2022-09-27",
-    "especie": "Reforma",
-    "natureza": "Obra",
-    "naturezaOutras": null,
-    "situacao": "Em execução",
-    "descPlanoNacionalPoliticaVinculado": null,
-    "uf": "DF",
-    "qdtEmpregosGerados": null,
-    "descPopulacaoBeneficiada": null,
-    "populacaoBeneficiada": null,
-    "observacoesPertinentes": null,
-    "isModeladaPorBim": false,
-    "dataSituacao": "2022-09-30",
-    "tomadores": [
-      {
-        "nome": "COMANDO DA MARINHA",
-        "codigo": 185
-      }
-    ],
-    "executores": [
-      {
-        "nome": "COMANDO DA MARINHA",
-        "codigo": 185
-      }
-    ],
-    "repassadores": [
-      {
-        "nome": "CAMARA DOS DEPUTADOS",
-        "codigo": 1000
-      }
-    ],
-    "eixos": [
-      {
-        "id": 4,
-        "descricao": "Social"
-      }
-    ],
-    "tipos": [
-      {
-        "id": 38,
-        "descricao": "Esporte",
-        "idEixo": 4
-      }
-    ],
-    "subTipos": [
-      {
-        "id": 75,
-        "descricao": "Urbanização",
-        "idTipo": 38
-      }
-    ],
-    "fontesDeRecurso": [
-      {
-        "origem": "Federal",
-        "valorInvestimentoPrevisto": 17400
-      }
-    ],
-    "latitude": -15.783620006479,
-    "longitude": -47.8608
   }
 ]
