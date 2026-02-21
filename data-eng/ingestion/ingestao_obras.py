@@ -2,10 +2,14 @@ import requests
 import pandas as pd
 import duckdb
 import time
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
+token = os.getenv("MOTHERDUCK_TOKEN")
 
 UF = "DF"
 PAGE_SIZE = 100
-DB_PATH = "../db/obras_df.duckdb"
 
 def fetch_with_retry(url, retries=5, backoff_factor=2):
     headers = {
@@ -51,7 +55,7 @@ def get_already_processed_ids(con):
         return set()
 
 def main():
-    con = duckdb.connect(DB_PATH)
+    con = duckdb.connect(f"md:obras_df?motherduck_token={token}")
     processed_ids = get_already_processed_ids(con)
     page = len(processed_ids) // PAGE_SIZE
     

@@ -94,7 +94,7 @@ function verificarResposta(resposta) {
 
 // Função para obter os dados das obras
 function obterDadosDasObras() {
-    return fetch('./obrasgov/obras_com_lat_long.json')
+    return fetch('http://127.0.0.1:8000/obras')
         .then(verificarResposta)
         .then(resposta => resposta.json());
 }
@@ -134,27 +134,16 @@ function processarDadosDasObras(dados, mapa) {
     const icones = criarIconesDosPins();
     
     dados.forEach((obra, indice) => {
-        const { nome, fontesDeRecurso, latitude, longitude, situacao} = obra;
-        
-        // Validação de coordenadas
-        if (!latitude || !longitude) {
-            console.log(`Obra ${indice}: "${nome}" ignorada por falta de coordenadas.`);
-            return;
-        }
-
-        // Seleção de ícone
-        const iconeMarcador = obterIconeDoMarcador(situacao, icones);
-        if (!iconeMarcador) {
-            console.warn(`Situação desconhecida: ${situacao} na obra ${nome}`);
-            return;
-        }
-
-        // Criação do marcador
+        const { obra_nome, latitude, longitude, obra_situacao } = obra;
+        if (!latitude || !longitude) return;
+        const iconeMarcador = obterIconeDoMarcador(obra_situacao, icones);
+        if (!iconeMarcador) return;
         const marcador = criarMarcador(latitude, longitude, iconeMarcador, mapa);
+        const valorExibicao = obra.valor_estimado 
+            ? formatarBRL(obra.valor_estimado) 
+            : "Não informado";
+        const conteudoPopup = gerarConteudoDoPopup(obra_nome, obra_situacao, valorExibicao, indice);
         
-        // Configuração do popup
-        const valor = fontesDeRecurso?.[0]?.valorInvestimentoPrevisto || 0;
-        const conteudoPopup = gerarConteudoDoPopup(nome, situacao, formatarBRL(valor), indice);
         marcador.bindPopup(conteudoPopup);
     });
 }
@@ -162,7 +151,7 @@ function processarDadosDasObras(dados, mapa) {
 // Função principal modificada
 function buscarObras() {
     obterDadosDasObras()
-        .then(dados => processarDadosDasObras(dados, mapa))
+        .then(result => processarDadosDasObras(result.data, mapa))
         .catch(error => console.error('Erro ao carregar as obras:', error));
 }
 

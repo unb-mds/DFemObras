@@ -12,7 +12,7 @@ renamed as (
         try_cast(dataFinalPrevista as DATE) as data_fim_prevista,
         try_cast(dataCadastro as DATE) as data_cadastro,
         try_cast(dataSituacao as DATE) as data_situacao_atual,
-
+        try_cast(fontesDeRecurso[1].valorInvestimentoPrevisto as FLOAT) as valor_estimado,
         try_cast(qdtEmpregosGerados as INTEGER) as empregos_gerados,
         try_cast(populacaoBeneficiada as INTEGER) as populacao_beneficiada,
 

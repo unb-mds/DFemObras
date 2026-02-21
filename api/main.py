@@ -5,6 +5,7 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
+token = os.getenv("MOTHERDUCK_TOKEN")
 env_path = Path(__file__).resolve().parent.parent / ".env"
 load_dotenv(dotenv_path=env_path)
 
@@ -25,7 +26,7 @@ DB_PATH = os.getenv("DB_PATH")
 
 @app.get("/obras")
 def get_obras():
-    con = duckdb.connect(DB_PATH, read_only=True)
+    con = duckdb.connect(f"md:obras_df?motherduck_token={token}")
     
     try:
         cursor = con.execute("SELECT * FROM stg_obras_completas")
