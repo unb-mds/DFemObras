@@ -7,44 +7,52 @@
     <title>Detalhamento da Obra</title>
     <link rel="stylesheet" href="css/detalhamento.css">
     <script>
-        window.addEventListener('DOMContentLoaded', () => {
-            const params = new URLSearchParams(window.location.search);
-            const obraIndex = params.get('obra');
-            
-            fetch('./obrasgov/obras_com_lat_long.json')
-                .then(response => response.json())
-                .then(data => {
-                    const obra = data[obraIndex];
-                    if (obra) {
-                        document.getElementById('nome').textContent = obra.nome || 'Não informado';
-                        document.getElementById('localizacao').textContent = obra.endereco || 'Não informada';
-                        document.getElementById('descricao').textContent = obra.descricao || 'Não informada';
-                        document.getElementById('funcaoSocial').textContent = obra.funcaoSocial || 'Não informada';
-                        document.getElementById('metaGlobal').textContent = obra.metaGlobal || 'Não informada';
-                        document.getElementById('dataInicio').textContent = obra.dataInicialPrevista || 'Não informada';
-                        document.getElementById('prazoConclusao').textContent = obra.dataFinalPrevista || 'Não informada';
-                        document.getElementById('situacao').textContent = obra.situacao || 'Não informado';
-                        document.getElementById('especie').textContent = obra.especie || 'Não informada';
-                        document.getElementById('natureza').textContent = obra.natureza || 'Não informada';
+    window.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const obraIndex = params.get('obra');
+        
+        function formatarData(dataISO) {
+            if (!dataISO || dataISO === 'Não informada') return 'Não informada';
+            const partes = dataISO.split('-');
+            if (partes.length !== 3) return dataISO;
+            return `${partes[2]}/${partes[1]}/${partes[0]}`;
+        }
 
-                        // Formata o valor do investimento
-                        const valorInvestimento = obra.fontesDeRecurso[0].valorInvestimentoPrevisto || 'Não informado';
-                        if (valorInvestimento !== 'Não informado') {
-                            const valorFormatado = new Intl.NumberFormat('pt-BR', {
-                                style: 'currency',
-                                currency: 'BRL'
-                            }).format(valorInvestimento);
-                            document.getElementById('valorInvestimento').textContent = valorFormatado;
-                        } else {
-                            document.getElementById('valorInvestimento').textContent = valorInvestimento;
-                        }
+        fetch('http://127.0.0.1:8000/obras')
+            .then(response => response.json())
+            .then(result => {
+                const obra = result.data[obraIndex];
+                
+                if (obra) {
+                    document.getElementById('nome').textContent = obra.obra_nome || 'Não informado';
+                    document.getElementById('localizacao').textContent = obra.endereco || 'Não informada';
+                    document.getElementById('descricao').textContent = obra.descricao || 'Não informada';
+                    document.getElementById('funcaoSocial').textContent = obra.funcaoSocial || 'Não informada';
+                    document.getElementById('metaGlobal').textContent = obra.metaGlobal || 'Não informada';
+                    
+                    document.getElementById('dataInicio').textContent = formatarData(obra.data_inicio_prevista);
+                    document.getElementById('prazoConclusao').textContent = formatarData(obra.data_fim_prevista);
+                    
+                    document.getElementById('situacao').textContent = obra.obra_situacao || 'Não informado';
+                    document.getElementById('especie').textContent = obra.especie || 'Não informada';
+                    document.getElementById('natureza').textContent = obra.natureza || 'Não informada';
+
+                    const valor = obra.valor_estimado;
+                    if (valor) {
+                        document.getElementById('valorInvestimento').textContent = new Intl.NumberFormat('pt-BR', {
+                            style: 'currency',
+                            currency: 'BRL'
+                        }).format(valor);
                     } else {
-                        document.getElementById('detalhes').innerHTML = '<p>Obra não encontrada.</p>';
+                        document.getElementById('valorInvestimento').textContent = 'Não informado';
                     }
-                })
-                .catch(error => console.error('Erro ao carregar os detalhes:', error));
-        });
-    </script>
+                } else {
+                    document.getElementById('detalhes').innerHTML = '<p>Obra não encontrada.</p>';
+                }
+            })
+            .catch(error => console.error('Erro ao carregar os detalhes:', error));
+    });
+</script>
 </head>
 <body>
     <header>

@@ -45,3 +45,4 @@ where longitude is not null
   and latitude is not null
   and row_num = 1 
   and (data_fim_prevista is null or data_fim_prevista >= data_inicio_prevista)
+  and valor_estimado > 1000

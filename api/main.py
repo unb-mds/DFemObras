@@ -5,9 +5,23 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-token = os.getenv("MOTHERDUCK_TOKEN")
+# 1. Define o caminho do .env (NA RAIZ DO PROJETO)
 env_path = Path(__file__).resolve().parent.parent / ".env"
+
+# 2. CARREGA o arquivo para a memória do sistema primeiro!
 load_dotenv(dotenv_path=env_path)
+
+# 3. SÓ AGORA você busca a variável que foi carregada
+token = os.getenv("MOTHERDUCK_TOKEN")
+
+# DEBUG: Agora o print deve mostrar o sucesso
+print(f"DEBUG: Arquivo .env procurado em: {env_path}")
+if token:
+    print(f"DEBUG: Token carregado com sucesso! (Tamanho: {len(token)} caracteres)")
+else:
+    print("DEBUG: ERRO - O Token continua vindo vazio!")
+
+app = FastAPI(title="DF em Obras API")
 
 app = FastAPI(title="DF em Obras API")
 
@@ -27,16 +41,11 @@ DB_PATH = os.getenv("DB_PATH")
 @app.get("/obras")
 def get_obras():
     con = duckdb.connect(f"md:obras_df?motherduck_token={token}")
-    
     try:
         cursor = con.execute("SELECT * FROM stg_obras_completas")
         cols = [desc[0] for desc in cursor.description]
         results = [dict(zip(cols, row)) for row in cursor.fetchall()]
-        
-        return {
-            "total": len(results),
-            "data": results
-        }
+        return {"total": len(results), "data": results}
     finally:
         con.close()
 
