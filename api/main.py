@@ -4,25 +4,14 @@ import duckdb
 import os
 from dotenv import load_dotenv
 from pathlib import Path
+from mangum import Mangum
 
-# 1. Define o caminho do .env (NA RAIZ DO PROJETO)
 env_path = Path(__file__).resolve().parent.parent / ".env"
 
-# 2. CARREGA o arquivo para a memória do sistema primeiro!
-load_dotenv(dotenv_path=env_path)
+if os.path.exists(env_path):
+    load_dotenv(dotenv_path=env_path)
 
-# 3. SÓ AGORA você busca a variável que foi carregada
 token = os.getenv("MOTHERDUCK_TOKEN")
-
-# DEBUG: Agora o print deve mostrar o sucesso
-print(f"DEBUG: Arquivo .env procurado em: {env_path}")
-if token:
-    print(f"DEBUG: Token carregado com sucesso! (Tamanho: {len(token)} caracteres)")
-else:
-    print("DEBUG: ERRO - O Token continua vindo vazio!")
-
-app = FastAPI(title="DF em Obras API")
-
 app = FastAPI(title="DF em Obras API")
 
 app.add_middleware(
@@ -52,3 +41,5 @@ def get_obras():
 @app.get("/")
 def home():
     return {"status": "API DF em Obras rodando perfeitamente!"}
+
+handler = Mangum(app)
