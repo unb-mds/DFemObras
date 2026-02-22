@@ -94,7 +94,7 @@ function verificarResposta(resposta) {
 
 // Função para obter os dados das obras
 function obterDadosDasObras() {
-    return fetch('http://127.0.0.1:8000/obras')
+    return fetch('https://dfemobras-caiomelo25-caiomelo25s-projects.vercel.app/')
         .then(verificarResposta)
         .then(resposta => resposta.json());
 }

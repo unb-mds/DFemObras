@@ -4,7 +4,7 @@ import duckdb
 import os
 from dotenv import load_dotenv
 from pathlib import Path
-from mangum import Mangum
+#from mangum import Mangum
 
 env_path = Path(__file__).resolve().parent.parent / ".env"
 
@@ -40,6 +40,6 @@ def get_obras():
 
 @app.get("/")
 def home():
-    return {"status": "API DF em Obras rodando perfeitamente!"}
+    return {"status": "API working !"}
 
-handler = Mangum(app)
+#handler = Mangum(app)
