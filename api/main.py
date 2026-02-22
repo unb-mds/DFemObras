@@ -19,7 +19,7 @@ app.add_middleware(
     allow_origins=[
         "https://unb-mds.github.io",
         "http://localhost:5500",      
-        "http://127.0.0.1:5500"       
+        "https://df-em-obras-frontend.vercel.app"       
     ],
     allow_methods=["*"],
     allow_headers=["*"],
