@@ -5,8 +5,9 @@ import os
 from dotenv import load_dotenv
 from pathlib import Path
 
-env_path = Path(__file__).resolve().parent.parent / ".env"
+os.environ['HOME'] = '/tmp'
 
+env_path = Path(__file__).resolve().parent.parent / ".env"
 if os.path.exists(env_path):
     load_dotenv(dotenv_path=env_path)
 
@@ -15,28 +16,40 @@ app = FastAPI(title="DF em Obras API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "https://unb-mds.github.io",
-        "http://localhost:5500",      
-        "https://df-em-obras-frontend.vercel.app"       
-    ],
+    allow_origins=["*"], 
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
 
-DB_PATH = os.getenv("DB_PATH")
-
 @app.get("/obras")
 def get_obras():
-    con = duckdb.connect(f"md:obras_df?motherduck_token={token}")
+    if not token:
+        return {"error": "Token do MotherDuck não configurado."}
+
     try:
-        cursor = con.execute("SELECT * FROM stg_obras_completas")
+        os.environ['HOME'] = '/tmp'
+        
+        con = duckdb.connect(f"md:?motherduck_token={token}")
+        
+        con.execute("SET home_directory='/tmp';")
+        
+        cursor = con.execute("SELECT * FROM obras_df.main.stg_obras_completas")
+        
         cols = [desc[0] for desc in cursor.description]
         results = [dict(zip(cols, row)) for row in cursor.fetchall()]
-        return {"total": len(results), "data": results}
+        
+        return {
+            "total": len(results), 
+            "data": results
+        }
+        
+    except Exception as e:
+        return {"error": f"Erro de conexão MotherDuck: {str(e)}"}
     finally:
-        con.close()
+        if 'con' in locals():
+            con.close()
 
 @app.get("/")
 def home():
-    return {"status": "API working !"}
+    return {"status": "API working!"}

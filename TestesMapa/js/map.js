@@ -94,9 +94,21 @@ function verificarResposta(resposta) {
 
 // Função para obter os dados das obras
 function obterDadosDasObras() {
-    return fetch('https://dfemobras-caiomelo25-caiomelo25s-projects.vercel.app/')
-        .then(verificarResposta)
-        .then(resposta => resposta.json());
+    return fetch("https://dfemobras-caiomelo25-caiomelo25s-projects.vercel.app/obras")
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Erro na API: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(result => {
+        console.log("Dados recebidos:", result);
+        
+        processarDadosDasObras(result, mapa); 
+    })
+    .catch(error => {
+        console.error("Erro crítico no fetch:", error);
+    });
 }
 
 // Função para criar um marcador no mapa
@@ -131,17 +143,29 @@ function obterIconeDoMarcador(situacao, icones) {
 
 // Função principal para processar os dados
 function processarDadosDasObras(dados, mapa) {
+    const listaDeObras = (dados && dados.data) ? dados.data : dados;
+
+    if (!Array.isArray(listaDeObras)) {
+        console.error("Erro: A função esperava uma lista, mas recebeu:", dados);
+        return;
+    }
+
     const icones = criarIconesDosPins();
     
-    dados.forEach((obra, indice) => {
+    listaDeObras.forEach((obra, indice) => {
         const { obra_nome, latitude, longitude, obra_situacao } = obra;
+        
         if (!latitude || !longitude) return;
+
         const iconeMarcador = obterIconeDoMarcador(obra_situacao, icones);
         if (!iconeMarcador) return;
+
         const marcador = criarMarcador(latitude, longitude, iconeMarcador, mapa);
+        
         const valorExibicao = obra.valor_estimado 
             ? formatarBRL(obra.valor_estimado) 
             : "Não informado";
+
         const conteudoPopup = gerarConteudoDoPopup(obra_nome, obra_situacao, valorExibicao, indice);
         
         marcador.bindPopup(conteudoPopup);
