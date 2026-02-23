@@ -1,5 +1,5 @@
-import pandas as pd
 from data_eng.ingestion.ingestao_obras import process_obras_dataframe
+
 
 def test_process_obras_dataframe_cleans_nans():
     dados_sujos = [

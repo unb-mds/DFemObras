@@ -1,8 +1,10 @@
 import os
+
 import duckdb
 import tweepy
 from dotenv import load_dotenv
 from google import genai
+
 
 def load_config():
     load_dotenv()

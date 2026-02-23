@@ -1,5 +1,5 @@
-import pytest
 from Bots.bot_twitter import build_prompt
+
 
 def test_build_prompt_correct_formatting():
     mock_data = {
