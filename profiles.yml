@@ -1,0 +1,7 @@
+obras_df:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "md:obras_df?motherduck_token={{ env_var('MOTHERDUCK_TOKEN') }}"
+      threads: 1

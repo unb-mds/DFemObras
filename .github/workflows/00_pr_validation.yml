@@ -1,0 +1,41 @@
+name: 00 - Validação de Pull Request
+
+on:
+  pull_request:
+    branches: [ main, develop ]
+  push:
+    branches: [ main ]
+
+jobs:
+  quality_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar Dependências de Teste
+        run: |
+          pip install ruff pytest duckdb pandas dbt-duckdb
+
+      - name: Linting (Check de Estilo)
+        run: ruff check .
+
+      - name: dbt Parse (Validação de SQL)
+        run: |
+          # Criamos um profile fake apenas para o teste passar
+          mkdir -p ~/.dbt
+          echo "obras_df:
+            target: test
+            outputs:
+              test:
+                type: duckdb
+                path: ':memory:'" > profiles.yml
+          dbt deps --profiles-dir .
+          dbt parse --profiles-dir .
+
+      - name: Rodar Testes Unitários
+        run: pytest tests/

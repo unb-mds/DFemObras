@@ -1,9 +1,10 @@
+import os
+from pathlib import Path
+
+import duckdb
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-import duckdb
-import os
-from dotenv import load_dotenv
-from pathlib import Path
 
 os.environ['HOME'] = '/tmp'
 

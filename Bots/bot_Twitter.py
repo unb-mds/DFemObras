@@ -1,9 +1,8 @@
 import os
-import sys
-from google import genai
-import tweepy
 import duckdb
+import tweepy
 from dotenv import load_dotenv
+from google import genai
 
 def load_config():
     load_dotenv()
@@ -47,25 +46,38 @@ def get_data_from_motherduck(token):
         print(f"❌ Erro no MotherDuck: {e}")
         return None
 
-def generate_gemini_thread(api_key, data):
-    client = genai.Client(api_key=api_key)
-    
+def build_prompt(data):
+    """
+    Isolamos a montagem do texto. 
+    O Pytest vai usar essa função para validar se o bot falaria besteira.
+    """
     obras_texto = ""
     for i, obra in enumerate(data['top_5_atrasadas'], 1):
-        obras_texto += f"{i}. {obra[0]} | Valor: R$ {obra[1]:,.2f} | Previsão: {obra[2]}\n"
+        linha = f"{i}. {obra[0]} | Valor: R$ {obra[1]:,.2f} | Previsão: {obra[2]}\n"
+        obras_texto += linha
 
-    prompt = f"""
-    Atue como o perfil 'DF em Obras'. Escreva um tweet impactante seguindo este roteiro:
-    1. Comece com: "Atualmente, monitoramos {data['total_obras']} obras que somam mais de R$ {data['investimento_total']/1e9:.1f} bilhões em investimentos."
-    2. Liste as 5 obras atrasadas mais caras abaixo (seja MUITO conciso nos nomes):
+    investimento_bi = data['investimento_total'] / 1e9
+
+    return f"""
+    Atue como o perfil 'DF em Obras'. Escreva um tweet impactante:
+    1. Comece com: "Atualmente, monitoramos {data['total_obras']} obras que somam 
+       mais de R$ {investimento_bi:.1f} bilhões em investimentos."
+    2. Liste as 5 obras atrasadas mais caras abaixo:
     {obras_texto}
     3. Finalize cobrando o @Gov_DF e o @govbr pela transparência e conclusão.
     4. Adicione o link: https://unb-mds.github.io/DFemObras/
-    5. Máximo 280 caracteres (se ficar longo, resuma os nomes das obras).
+    5. Máximo 280 caracteres.
     """
+
+def generate_gemini_thread(api_key, data):
+    client = genai.Client(api_key=api_key)
+    prompt = build_prompt(data)
     
     try:
-        response = client.models.generate_content(model="gemini-flash-latest", contents=prompt)
+        response = client.models.generate_content(
+            model="gemini-2.0-flash", 
+            contents=prompt
+        )
         return response.text
     except Exception as e:
         print(f"❌ Erro no Gemini: {e}")
@@ -73,15 +85,15 @@ def generate_gemini_thread(api_key, data):
 
 def main():
     config = load_config()
-
     data = get_data_from_motherduck(config["motherduck_token"])
-    if not data: return
+    
+    if not data:
+        return
 
     tweet_text = generate_gemini_thread(config["gemini_api_key"], data)
     
     if tweet_text:
         print(f"--- Tweet Gerado ---\n{tweet_text}\n-------------------")
-        
         try:
             client = tweepy.Client(
                 consumer_key=config["twitter_consumer_key"],

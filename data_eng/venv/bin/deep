@@ -1,0 +1,6 @@
+#!/Users/caioborges/Developer/DFemObras/data-eng/venv/bin/python
+import sys
+from deepdiff.commands import cli
+if __name__ == '__main__':
+    sys.argv[0] = sys.argv[0].removesuffix('.exe')
+    sys.exit(cli())
