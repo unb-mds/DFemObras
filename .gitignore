@@ -22,3 +22,5 @@ data-eng/transform/*.duckdb
 .DS_Store
 .vercel
 .env*.local
+
+.vscode/
