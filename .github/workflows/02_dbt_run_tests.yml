@@ -24,11 +24,13 @@ jobs:
           pip install dbt-duckdb
 
       - name: Instalar pacotes do dbt
+        working-directory: ./dbt
         run: dbt deps --profiles-dir .  
         env:
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
 
       - name: Executar dbt Build
+        working-directory: ./dbt
         run: dbt build --profiles-dir . 
         env:
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
