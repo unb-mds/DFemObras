@@ -124,17 +124,13 @@ function criarMarcador(lat, lng, icone, mapa) {
 
 // Função para gerar conteúdo do popup
 function gerarConteudoDoPopup(nome, situacao, valorBRL, id) {
-    const idUrl = encodeURIComponent(id);
-
     return `
-        <div style="font-family: Arial, sans-serif; padding: 10px; width: 250px; background-color:rgb(255, 255, 255);">
-            <h3 style="font-size: 18px; margin-bottom: 10px; color: #333;">${nome}</h3>
-
-            <p style="margin: 5px 0; font-size: 14px; color: #666;"><strong style="color: #333;">Valor Previsto:</strong> ${valorBRL}</p>
-            
-            <a href="detalhamento.html?obra=${idUrl}" target="_blank" style="display: block; margin-top: 10px; text-align: center; padding: 8px; background-color: #133e79; color: white; text-decoration: none; border-radius: 4px; font-size: 14px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
-                Ver detalhes
-            </a>
+        <div class="popup-custom">
+            <h3 style="margin-bottom:10px;">${nome}</h3>
+            <p><strong>Valor:</strong> ${valorBRL}</p>
+            <button onclick="abrirModalDetalhes('${id}')" style="width:100%; background:#133e79; color:white; border:none; padding:10px; border-radius:5px; cursor:pointer; margin-top:10px;">
+                Ver mais detalhes
+            </button>
         </div>
     `;
 }
@@ -211,7 +207,41 @@ if (typeof module !== 'undefined' && module.exports) {
     };
 }
 
-// Exibir coordenadas no console ao clicar no mapa
-// mapa.on('click', (e) => {
-//     console.log(`Coordenadas: ${e.latlng}`);
-// });
+function abrirModalDetalhes(id) {
+    const obra = window.dadosObrasCache.find(o => (o.id || o.obra_nome) === id);
+    
+    if (!obra) return;
+
+    const body = document.getElementById('detalhes-body');
+    
+    body.innerHTML = `
+        <h2 style="color:#133e79; margin-bottom:20px; border-bottom:2px solid #133e79; padding-bottom:10px;">${obra.obra_nome}</h2>
+        <p><strong>Valor Previsto:</strong> R$ ${obra.valor_estimado?.toLocaleString('pt-BR') || '---'}</p>
+        <p><strong>Situação:</strong> ${obra.obra_situacao}</p>
+        <p><strong>Localização:</strong> ${obra.endereco || 'Não informada'}</p>
+        <p><strong>Descrição:</strong> ${obra.descricao || 'Não informada'}</p>
+        <p><strong>Início Previsto:</strong> ${obra.data_inicio_prevista || '---'}</p>
+        <p><strong>Fim Previsto:</strong> ${obra.data_fim_prevista || '---'}</p>
+        <p><strong>Natureza:</strong> ${obra.natureza || '---'}</p>
+    `;
+
+    document.getElementById('modal-detalhes').style.display = 'flex';
+}
+
+document.querySelector('.close-button').onclick = () => {
+    document.getElementById('modal-detalhes').style.display = 'none';
+};
+
+window.onclick = (event) => {
+    const modal = document.getElementById('modal-detalhes');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+};
+
+function fecharModal() {
+    const modal = document.getElementById('modal-detalhes');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}

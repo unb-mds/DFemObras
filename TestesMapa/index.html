@@ -79,8 +79,21 @@
     </div>
 </div>
       
-    <!-- Script personalizado -->
     <script src="js/map.js"></script>
     <script>console.log("Usando CDN")</script>
+<div id="modal-detalhes" class="modal-overlay">
+        <div class="modal-content">
+            <span class="close-button" onclick="fecharModal()">&times;</span>
+            
+            <div id="detalhes-body">
+                </div>
+
+            <footer class="modal-footer">
+                <p>Fonte: <a href="https://api.obrasgov.gestao.gov.br/obrasgov/api/swagger-ui/index.html#/" target="_blank">Dados Abertos - Obrasgov.br</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="js/map.js"></script>
 </body>
 </html>
