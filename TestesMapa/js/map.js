@@ -56,31 +56,37 @@ function formatarBRL(valor) {
 
 // Função para criar os ícones dos pins
 function criarIconesDosPins() {
+    const configuracaoComum = {
+        iconSize: [30, 30],   
+        iconAnchor: [15, 30],    
+        popupAnchor: [0, -30],  
+    };
+
     return {
         concluida: L.icon({
             iconUrl: './js/pins/concluida.png',
-            iconSize: [30, 30],
-            iconAnchor: [16, 32],
-            popupAnchor: [0, -32],
+            ...configuracaoComum
         }),
         emExecucao: L.icon({
             iconUrl: './js/pins/em_execucao.png',
-            iconSize: [30, 30],
-            iconAnchor: [16, 32],
-            popupAnchor: [0, -32],
+            ...configuracaoComum
         }),
         cadastrada: L.icon({
             iconUrl: './js/pins/cadastrada.png',
-            iconSize: [30, 30],
-            iconAnchor: [16, 32],
-            popupAnchor: [0, -32],
+            ...configuracaoComum
         }),
         inativada: L.icon({
             iconUrl: './js/pins/inativada.png',
-            iconSize: [30, 30],
-            iconAnchor: [16, 32],
-            popupAnchor: [0, -32],
+            ...configuracaoComum
         }),
+        paralisada: L.icon({
+            iconUrl: './js/pins/paralisada.png',
+            ...configuracaoComum
+        }),
+        cancelada: L.icon({
+            iconUrl: './js/pins/cancelada.png',
+            ...configuracaoComum
+        })
     };
 }
 
@@ -133,12 +139,15 @@ function gerarConteudoDoPopup(nome, situacao, valorBRL, indice) {
 // Função para determinar o ícone correto
 function obterIconeDoMarcador(situacao, icones) {
     const mapaIcones = {
-        'Concluída': icones.concluida,
         'Em execução': icones.emExecucao,
+        'Concluída': icones.concluida,
         'Cadastrada': icones.cadastrada,
-        'Inativada': icones.inativada
+        'Inativada': icones.inativada,
+        'Paralisada': icones.paralisada, 
+        'Cancelada': icones.cancelada    
     };
-    return mapaIcones[situacao] || null;
+
+    return mapaIcones[situacao] || icones.cadastrada;
 }
 
 // Função principal para processar os dados

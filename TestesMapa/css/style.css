@@ -354,44 +354,31 @@ footer {
   position: fixed;
   bottom: 20px;
   left: 20px;
-  background: rgba(255, 255, 255, 0.8); /* Fundo semi-transparente */
-  padding: 10px;
-  border-radius: 5px;
-  font-size: 14px;
-  z-index: 999; /* Maior que o do mapa */
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid #eee;
+  min-width: 160px;
 }
 
 .legend-item {
   display: flex;
   align-items: center;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  color: #444;
 }
 
-.legend-item span {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  display: inline-block;
-  margin-right: 5px;
+.legend-item:last-child {
+  margin-bottom: 0;
 }
 
-.pin {
-  width: 25px !important;   /* Ajuste conforme o tamanho do pin */
-  height: 25px !important;
-  display: inline-block;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.andamento {
-  background-image: url('../js/pins/cadastrada.png');
-}
-
-.concluida {
-  background-image: url('../js/pins/concluida.png');
-}
-
-.planejada {
-  background-image: url('../js/pins/inativada.png');
+.legend-icon {
+  width: 24px;  
+  height: 24px;
+  margin-right: 12px;
+  object-fit: contain;
 }
