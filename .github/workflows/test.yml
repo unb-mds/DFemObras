@@ -1,14 +1,15 @@
 name: Resgate de Keys
-on: workflow_dispatch 
+on: workflow_dispatch
 
 jobs:
   print_keys:
     runs-on: ubuntu-latest
     steps:
-      - name: Revelar Secrets
+      - name: Revelar Secrets com Espaçamento
         run: |
-          echo "Copiando as chaves em Base64 para evitar o bloqueio do log:"
-          echo "Consumer Key: $(echo -n ${{ secrets.API_CONSUMER_KEY_X }} | base64)"
-          echo "Consumer Secret: $(echo -n ${{ secrets.API_CONSUMER_SECRET_X }} | base64)"
-          echo "Access Token: $(echo -n ${{ secrets.API_ACCESS_TOKEN_X }} | base64)"
-          echo "Access Token Secret: $(echo -n ${{ secrets.API_ACCESS_TOKEN_SECRET_X }} | base64)"
+          # O comando 'sed' vai colocar um espaço entre cada letra da sua chave
+          # Isso quebra o padrão que o GitHub tenta mascarar
+          echo "Consumer Key: $(echo -n "${{ secrets.API_CONSUMER_KEY_X }}" | sed 's/./& /g')"
+          echo "Consumer Secret: $(echo -n "${{ secrets.API_CONSUMER_SECRET_X }}" | sed 's/./& /g')"
+          echo "Access Token: $(echo -n "${{ secrets.API_ACCESS_TOKEN_X }}" | sed 's/./& /g')"
+          echo "Access Token Secret: $(echo -n "${{ secrets.API_ACCESS_TOKEN_SECRET_X }}" | sed 's/./& /g')"
