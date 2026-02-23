@@ -47,6 +47,6 @@ Todos os contribuidores devem seguir nosso [Código de Conduta](link-para-codigo
 
 ## 📧 Dúvidas?  
 
-Se precisar de ajuda, abra uma issue ou envie um e-mail para **mdsgrupo7@gmail.com**.  
+Se precisar de ajuda, abra uma issue.  
 
 Ficamos felizes em receber sua contribuição! 🎉
