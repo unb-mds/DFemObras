@@ -18,7 +18,7 @@
             return `${partes[2]}/${partes[1]}/${partes[0]}`;
         }
 
-        fetch('https://dfemobras-caiomelo25-caiomelo25s-projects.vercel.app/://127.0.0.1:8000/obras')
+        fetch('https://dfemobras-caiomelo25-caiomelo25s-projects.vercel.app/obras')
             .then(response => response.json())
             .then(result => {
                 const obra = result.data[obraIndex];
