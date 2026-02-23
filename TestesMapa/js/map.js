@@ -123,13 +123,16 @@ function criarMarcador(lat, lng, icone, mapa) {
 }
 
 // Função para gerar conteúdo do popup
-function gerarConteudoDoPopup(nome, situacao, valorBRL, indice) {
+function gerarConteudoDoPopup(nome, situacao, valorBRL, id) {
+    const idUrl = encodeURIComponent(id);
+
     return `
         <div style="font-family: Arial, sans-serif; padding: 10px; width: 250px; background-color:rgb(255, 255, 255);">
             <h3 style="font-size: 18px; margin-bottom: 10px; color: #333;">${nome}</h3>
 
             <p style="margin: 5px 0; font-size: 14px; color: #666;"><strong style="color: #333;">Valor Previsto:</strong> ${valorBRL}</p>
-            <a href="detalhamento.html?obra=${indice}" target="_blank" style="display: block; margin-top: 10px; text-align: center; padding: 8px; background-color: #133e79; color: white; text-decoration: none; border-radius: 4px; font-size: 14px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
+            
+            <a href="detalhamento.html?obra=${idUrl}" target="_blank" style="display: block; margin-top: 10px; text-align: center; padding: 8px; background-color: #133e79; color: white; text-decoration: none; border-radius: 4px; font-size: 14px; box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);">
                 Ver detalhes
             </a>
         </div>
@@ -161,10 +164,14 @@ function processarDadosDasObras(dados, mapa) {
 
     const icones = criarIconesDosPins();
     
-    listaDeObras.forEach((obra, indice) => {
+    window.dadosObrasCache = listaDeObras;
+
+    listaDeObras.forEach((obra) => {
         const { obra_nome, latitude, longitude, obra_situacao } = obra;
         
         if (!latitude || !longitude) return;
+
+        const idUnico = obra.id || obra.id_obra || obra.obra_nome;
 
         const iconeMarcador = obterIconeDoMarcador(obra_situacao, icones);
         if (!iconeMarcador) return;
@@ -175,7 +182,7 @@ function processarDadosDasObras(dados, mapa) {
             ? formatarBRL(obra.valor_estimado) 
             : "Não informado";
 
-        const conteudoPopup = gerarConteudoDoPopup(obra_nome, obra_situacao, valorExibicao, indice);
+        const conteudoPopup = gerarConteudoDoPopup(obra_nome, obra_situacao, valorExibicao, idUnico);
         
         marcador.bindPopup(conteudoPopup);
     });
