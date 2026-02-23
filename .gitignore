@@ -24,3 +24,9 @@ data-eng/transform/*.duckdb
 .env*.local
 
 .vscode/
+
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+venv_bot/

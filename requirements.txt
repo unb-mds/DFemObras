@@ -1,0 +1,7 @@
+duckdb==1.4.4
+pandas==3.0.1
+requests==2.32.5
+python-dotenv==1.2.1
+google-genai==1.64.0
+tweepy==4.16.0
+dbt-duckdb
