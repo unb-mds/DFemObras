@@ -25,9 +25,8 @@ jobs:
         run: ruff check .
 
       - name: dbt Parse (Validação de SQL)
+        working-directory: ./data_eng/transform
         run: |
-          # Criamos um profile fake apenas para o teste passar
-          mkdir -p ~/.dbt
           echo "obras_df:
             target: test
             outputs:
