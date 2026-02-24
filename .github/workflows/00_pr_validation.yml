@@ -19,7 +19,8 @@ jobs:
 
       - name: Instalar Dependências de Teste
         run: |
-          pip install ruff pytest duckdb pandas dbt-duckdb
+          pip install --upgrade pip
+          pip install ruff pytest duckdb pandas dbt-duckdb python-dotenv requests google-genai tweepy
 
       - name: Linting (Check de Estilo)
         run: ruff check .
@@ -37,4 +38,4 @@ jobs:
           dbt parse --profiles-dir .
 
       - name: Rodar Testes Unitários
-        run: pytest tests/
+        run: PYTHONPATH=. pytest tests/
