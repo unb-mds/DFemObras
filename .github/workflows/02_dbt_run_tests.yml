@@ -23,14 +23,16 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-duckdb
 
-      - name: Instalar pacotes do dbt
+      - name: Debug - Listar Pastas (Para ter certeza)
+        run: |
+          echo "Raiz do projeto:"
+          ls -R
+          echo "Pasta de transformação:"
+          ls data_eng/transform/ || echo "Pasta data_eng/transform não encontrada!"
+
+      - name: Executar dbt deps e build
         run: |
           dbt deps --project-dir $GITHUB_WORKSPACE/data_eng/transform --profiles-dir $GITHUB_WORKSPACE
-        env:
-          MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
-
-      - name: Executar dbt Build
-        run: |
           dbt build --project-dir $GITHUB_WORKSPACE/data_eng/transform --profiles-dir $GITHUB_WORKSPACE
         env:
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
