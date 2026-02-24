@@ -1,0 +1,542 @@
+/* Importando a fonte Poppins para um visual moderno */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Definição da variável de altura do header */
+:root {
+  --header-height: 70px;
+}
+
+/* Reset e estilos globais */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f7fa;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  top: 15px; 
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1300px;
+  height: 65px;
+  
+  background: rgba(255, 255, 255, 0.75); 
+  backdrop-filter: blur(12px); 
+  -webkit-backdrop-filter: blur(12px);
+  
+  color: #133E79; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  z-index: 1001;
+  
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  gap: 15px;
+}
+
+header .logo {
+  height: 40px;
+  width: auto;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.05));
+}
+
+header .title h1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #133E79;
+  letter-spacing: -0.5px;
+}
+
+header .subtitle {
+  font-size: 11px;
+  font-style: normal; 
+  color: #555;
+  font-weight: 400;
+}
+
+/* Menu de navegação */
+header nav {
+  display: flex;
+  gap: 12px;
+}
+
+header nav a {
+  color: #133E79;
+  text-decoration: none;
+  font-size: 14px;
+  padding: 8px 16px;
+  background-color: rgba(19, 62, 121, 0.05); 
+  border-radius: 10px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  border: 1px solid rgba(19, 62, 121, 0.1);
+}
+
+header nav a:hover {
+  background-color: #133E79;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(19, 62, 121, 0.2);
+}
+
+header nav a[href*="atraso"] {
+  background-color: rgba(214, 40, 40, 0.1);
+  color: #d62828;
+  border-color: rgba(214, 40, 40, 0.2);
+}
+
+header nav a[href*="atraso"]:hover {
+  background-color: #d62828;
+  color: #fff;
+}
+
+header nav a {
+  color: #133E79;
+  text-decoration: none;
+  font-size: 15px;
+  padding: 7px 14px;
+  background-color: #fff;
+  border-radius: 18px;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+header nav a:hover {
+  background-color: #e6e9ed;
+  transform: scale(1.05);
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 900px) {
+  header .title {
+    display: none;
+  }
+
+  header .logo {
+    height: 40px; /* Reduzindo ainda mais o tamanho da logo */
+  }
+}
+
+
+/* Hamburger: oculto em telas grandes */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  background-color: #133E79;
+}
+
+/* Escondendo o checkbox real */
+#menu-toggle {
+  display: none;
+}
+
+/* MAPA */
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* POPUP */
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  position: relative;
+  background-color: #fff;
+  padding: 30px; /* Aumentei o espaçamento interno */
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  text-align: center;
+  max-width: 90%;
+  width: 500px; /* Aumentei a largura do popup */
+}
+
+.popup-content h1 {
+  font-size: 22px; /* Pequeno ajuste no tamanho */
+  margin-bottom: 15px;
+}
+
+.popup-content h3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: #555;
+  line-height: 1.5; /* Melhorando a legibilidade */
+}
+
+/* Botão de fechar do popup */
+.close {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background-color: #fff;
+  border: 2px solid #133E79;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #133E79;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.close:hover {
+  background-color: #133E79;
+  color: #fff;
+}
+
+/* Responsividade: Ajusta a largura em telas menores */
+@media (max-width: 600px) {
+  .popup-content {
+    width: 90%; /* Ocupar mais a tela em dispositivos pequenos */
+    padding: 20px;
+  }
+}
+
+
+/* Outros elementos (main, footer, etc.) */
+main {
+  padding: calc(var(--header-height) + 20px) 20px 20px;
+  flex: 1;
+  overflow-y: auto; /* Mantém a rolagem do conteúdo */
+  height: calc(100% - var(--header-height)); /* Ajusta a altura do main */
+}
+
+main .content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+main h2 {
+  color: #133E79;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #133E79;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 14px;
+  z-index: 20; /* Garantir que o footer esteja acima de outros conteúdos */
+}
+
+
+/* RESPONSIVIDADE */
+@media (max-width: 1100px) {
+  header .title {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  header img.df-logo {
+    display: none;
+  }
+  
+  header .logo:not(.df-logo) {
+    height: calc(var(--header-height) - 20px);
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 15px;
+  }
+  
+  .hamburger {
+    display: flex;
+  }
+
+  header nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: transparent; /* Alterado para transparente */
+    flex-direction: column;
+    width: 100%;
+    /*max-width: 250px;*/
+    padding: 10px;
+    display: none;
+  }
+
+  header nav a {
+    width: 100%;
+    text-align: center;
+    background-color: rgba(255,255,255,0.9); /* Fundo branco levemente transparente */
+    color: #133E79;
+    margin: 2px 0;
+    border-radius: 5px;
+    backdrop-filter: blur(5px); /* Efeito de desfoque no fundo */
+  }
+
+  #menu-toggle:checked ~ nav {
+    display: flex;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --header-height: 70px;
+  }
+
+  header .logo:not(.df-logo) {
+    height: calc(var(--header-height) - 25px);
+  }
+
+  .hamburger {
+    width: 25px;
+    height: 20px;
+  }
+}
+
+#colaboradores {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+
+#colaboradores h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Três colunas */
+  gap: 30px; /* Espaçamento entre fotos */
+  justify-items: center;
+}
+
+.colaborador {
+  text-align: center;
+}
+
+.foto {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* Forma circular */
+  overflow: hidden; /* Garante que a imagem fique dentro do círculo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ddd; /* Fundo de fallback para fotos ausentes */
+  border: 4px solid #333; /* Borda ao redor do círculo */
+}
+
+.foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Garante que a imagem preencha o círculo sem distorções */
+}
+
+.colaborador p {
+  font-size: 1.2em;
+  color: #555;
+  margin-top: 10px;
+}
+
+.legend {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: white;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border: 1px solid #eee;
+  min-width: 160px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  color: #444;
+}
+
+.legend-item:last-child {
+  margin-bottom: 0;
+}
+
+.legend-icon {
+  width: 24px;  
+  height: 24px;
+  margin-right: 12px;
+  object-fit: contain;
+}
+
+/* Layout do Dashboard */
+.dashboard-container {
+    padding: 100px 20px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.summary-cards {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    text-align: center;
+    border: 1px solid rgba(0,0,0,0.05);
+}
+
+.card h3 { font-size: 14px; color: #666; margin-bottom: 10px; }
+.card p { font-size: 28px; font-weight: 600; color: #133E79; }
+
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.chart-box {
+    background: white;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.chart-box h3 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+@media (max-width: 850px) {
+    .charts-grid { grid-template-columns: 1fr; }
+    .summary-cards { flex-direction: column; }
+}
+
+.detalhamento-container {
+    padding-top: 110px; 
+    padding-bottom: 40px;
+    max-width: 900px;
+    margin: 0 auto; 
+}
+
+.modal-overlay {
+    display: none; 
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px); 
+    z-index: 2000; 
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    width: 90%;
+    max-width: 650px;
+    max-height: 85vh;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    position: relative;
+    overflow-y: auto;
+    animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.close-button {
+    position: absolute;
+    top: 20px; right: 25px;
+    font-size: 30px;
+    cursor: pointer;
+    color: #999;
+}
+
+.close-button:hover { color: #d62828; }
+
+/* Estilo interno dos dados */
+#detalhes-body p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: #444;
+    border-bottom: 1px solid #f0f2f5;
+    padding-bottom: 8px;
+}
+
+#detalhes-body strong { color: #133e79; font-weight: 600; }
+
+.modal-footer {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #eee; 
+    background-color: transparent !important; 
+    color: #666 !important; 
+    position: static !important; 
+    width: 100% !important;
+}
+
+.modal-footer a {
+    color: #133E79 !important;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.modal-footer a:hover {
+    color: #008040; 
+}

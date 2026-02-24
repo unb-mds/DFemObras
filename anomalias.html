@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Monitoramento - DF em Obras</title>
+
+    <link rel="icon" type="image/png" href="https://img.icons8.com/color/48/crane.png">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>DASHBOARD DE MONITORAMENTO</h1>
+            <p class="subtitle">Análise estatística das obras públicas do DF</p>
+        </div>
+        <nav>
+            <a href="index.html">Voltar ao Mapa</a>
+        </nav>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="summary-cards">
+            <div class="card">
+                <h3>Total Investido (Previsto)</h3>
+                <p id="total-investimento">R$ 0,00</p>
+            </div>
+            <div class="card">
+                <h3>Obras em Alerta (Paralisadas/Atrasadas)</h3>
+                <p id="contagem-alerta">0</p>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <div class="chart-box">
+                <h3>Distribuição por Situação</h3>
+                <canvas id="pizzaSituacao"></canvas>
+            </div>
+            <div class="chart-box">
+                <h3>Distribuição por Faixa de Valor</h3> <canvas id="barrasValores"></canvas>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

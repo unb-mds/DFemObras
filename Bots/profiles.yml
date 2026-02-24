@@ -1,0 +1,6 @@
+obras_df:
+            target: test
+            outputs:
+              test:
+                type: duckdb
+                path: ':memory:'

@@ -3,3 +3,30 @@ node_modules
 coverage
 
 
+*.duckdb
+*.duckdb.wal
+
+data-eng/transform/target/
+data-eng/transform/dbt_packages/
+**/logs/
+**/target/
+
+data-eng/venv/
+__pycache__/
+*.pyc
+
+data-eng/db/*.duckdb
+data-eng/transform/*.duckdb
+
+
+.DS_Store
+.vercel
+.env*.local
+
+.vscode/
+
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+venv_bot/

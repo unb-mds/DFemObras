@@ -1,0 +1,38 @@
+name: 02 - dbt Build e Testes
+
+on:
+  schedule:
+    - cron: '0 8 * * *'
+  workflow_dispatch: 
+
+jobs:
+  dbt_build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalar dbt e dependências
+        run: |
+          python -m pip install --upgrade pip
+          pip install dbt-duckdb
+
+      - name: Debug - Listar Pastas (Para ter certeza)
+        run: |
+          echo "Raiz do projeto:"
+          ls -R
+          echo "Pasta de transformação:"
+          ls data_eng/transform/ || echo "Pasta data_eng/transform não encontrada!"
+
+      - name: Executar dbt deps e build
+        run: |
+          dbt deps --project-dir $GITHUB_WORKSPACE/data_eng/transform --profiles-dir $GITHUB_WORKSPACE
+          dbt build --project-dir $GITHUB_WORKSPACE/data_eng/transform --profiles-dir $GITHUB_WORKSPACE
+        env:
+          MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}

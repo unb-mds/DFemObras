@@ -1,138 +1,133 @@
-# DFemObras
+
+# 🏗️ DF em Obras (Versão 2.0)
+
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=Cayoalencar_2024-2-Squad07&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=Cayoalencar_2024-2-Squad07)
 [![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=Cayoalencar_2024-2-Squad07&metric=duplicated_lines_density)](https://sonarcloud.io/summary/new_code?id=Cayoalencar_2024-2-Squad07)
 
-Este repositório será utilizado pelo Grupo 7 para o desenvolvimento de um projeto da disciplina de *Métodos de Desenvolvimento de Software*. O projeto se trata da construção de um software de Mapeamento de Obras e Serviços Públicos.
+O **DF em Obras** é uma plataforma de fiscalização cidadã que monitora investimentos e prazos de obras públicas no Distrito Federal, utilizando dados da API ObrasGov.
 
-## Link para o mapa
-https://unb-mds.github.io/DFemObras/
+> [!IMPORTANT]  
+> **Evolução 2.0:** Originalmente desenvolvido como um projeto acadêmico da disciplina de MDS (UnB), a versão 2.0 foi totalmente reestruturada por **Caio Melo Borges**. A nova arquitetura utiliza o conceito de *Modern Data Stack*, focando em automação, integridade de dados via dbt e inteligência artificial generativa.
+
+---
 
 ## 📋 Sumário
-- [👥 Grupo 07](#-grupo-07)
-- [📌 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [📍 Links do Projeto](#-links-do-projeto)
+- [🛠️ Arquitetura v2.0](#️-arquitetura-v20)
+- [📂 Estrutura do Repositório](#-estrutura-do-repositório)
 - [🚀 Como Contribuir](#-como-contribuir)
-- [🛠️ Arquitetura](#-arquitetura)
-- [📄 Requisitos](#-requisitos)
-- [📂 Documentação](#-documentação)
-- [💡 Suporte](#-suporte)
+- [👥 Créditos e Histórico](#-créditos-e-histórico)
+- [📄 Documentação Original](#-documentação-original)
 
-## 👥 Grupo 07
+---
 
-| Nome        | GitHub             |
-|---------------------|--------------------|
-| Cayo Felipe Alencar Câmara   | [Cayoalencar](https://github.com/Cayoalencar) |
-| João Pedro Rodrigues Gomes da Silva   | [JpRodrigues2](https://github.com/JpRodrigues2)  |
-| Julia dos Reis Teixeira Massuda  | [JuliaReis18](https://github.com/JuliaReis18) |
-| Caio Melo Borges  | [CaioMelo25](https://github.com/CaioMelo25) |
-| Marcos Vinícius Lima Bezerra  | [marcoslbz](https://github.com/marcoslbz) |
-| Nathan Batista Santos  | [Nathan-bs](https://github.com/Nathan-bs) |
+## 📍 Links do Projeto
+* **Mapa Interativo:** [unb-mds.github.io/DFemObras/](https://unb-mds.github.io/DFemObras/)
+* **Perfil de Fiscalização (X/Twitter):** [@DFemObras](https://x.com/DFemObras)
 
-## 📌 Tecnologias Utilizadas
-- Node.js
-- Axios
-- Leaflet.js
-- Python
-- Tweepy
-- Cohere API
+---
+
+## 🛠️ Arquitetura v2.0
+A versão atual abandonou processos manuais por um pipeline de dados automatizado e resiliente:
+
+* **Ingestão:** Scripts Python com lógica de `MERGE` (Upsert) para evitar duplicidade.
+* **Data Warehouse:** [MotherDuck](https://motherduck.com/) (DuckDB gerenciado na nuvem).
+* **Transformação (ELT):** **dbt (data build tool)** para modelagem e testes de qualidade.
+* **IA Generativa:** **Google Gemini API** para análise inteligente de atrasos e redação de relatórios.
+* **Orquestração:** **GitHub Actions** gerenciando 4 estágios (CI, Ingestão, Build e Bot).
+* **Qualidade de Código:** **Ruff** (Linting) e **Pytest** (Testes Unitários).
+
+---
+
+## 📂 Estrutura do Repositório
+* `.github/workflows/`: Automação completa do pipeline e integração contínua.
+* `data_eng/`: Core da engenharia de dados (ingestão e integração).
+* `Bots/`: Scripts do bot social e integração com o modelo Gemini.
+* `tests/`: Suite de testes para garantir a consistência das métricas reportadas.
+* `dbt/`: Modelos de transformação e documentação da linhagem de dados.
+
+---
 
 ## 🚀 Como Contribuir
 
-Se você deseja contribuir com este projeto, siga os passos abaixo para configurar o ambiente e começar a colaborar:
+Para rodar o projeto localmente ou contribuir com o desenvolvimento:
 
-### Pré-requisitos
-Certifique-se de ter as seguintes ferramentas instaladas:
-- [Node.js](https://nodejs.org/) e npm (Node Package Manager)
-- [Python 3.8+](https://www.python.org/)
-- [pip](https://pip.pypa.io/en/stable/) para gerenciar pacotes Python
-- [Git](https://git-scm.com/) para versionamento de código
-- [dotenv](https://pypi.org/project/python-dotenv/) para gerenciar variáveis de ambiente
+### 1. Preparando o Ambiente
+```bash
+# Clone o repositório
+git clone [https://github.com/unb-mds/DFemObras.git](https://github.com/unb-mds/DFemObras.git)
+cd DFemObras
 
-### Passo a Passo
+# Crie e ative sua venv
+python3 -m venv venv_bot
+source venv_bot/bin/activate
 
-1. **Clone o Repositório**
-   ```bash
-   git clone https://github.com/unb-mds/DFemObras
-   cd 2024-2-Squad07
-   ```
+# Instale as dependências
+pip install -r requirements.txt
+pip install -r requirements-dev.txt
 
-2. **Configuração do Backend em Node.js**
-   - Navegue até o diretório do mapa.
-   ```bash
-   cd TestesMapa
-   ```
-   - Em seguida, acesse o diretório do backend.
-   ```bash
-   cd ObrasGov
-   ```
-   - Instale as dependências.
-   ```bash
-   npm install
-   ```
+```
 
-3. **Configuração do Mapa**
-   - Caso já esteja no diretório `TestesMapa`, pule este passo.  
-   - Caso contrário, navegue até o diretório do mapa.
-   ```bash
-   cd TestesMapa
-   ```
-   - Instale as dependências.
-   ```bash
-   npm install
-   ```
+### 2. Linting e Testes (CI Local)
 
-4. **Configuração do BOT**
-   - Navegue até o diretório BOT.
-   ```bash
-   cd Bots
-   ```
+Garantir que os testes passem é obrigatório para qualquer Pull Request:
 
-   - Instale as dependências do Python.
-   ```bash
-   pip install tweepy
-   pip install cohere
-   pip install python-dotenv
-   ```
-   - Crie um arquivo `.env` no diretório principal do projeto e adicione as variáveis de ambiente necessárias, como chaves de API para o Cohere e Tweepy.
+```bash
+# Verificar estilo de código
+ruff check .
 
-5. **Executando o Projeto**
-   - Para rodar o backend em Node.js:
-     ```bash
-     node index.js
-     ```
-   - Para rodar o frontend:
-     ```bash
-     npm start
-     ```
-   - Para executar os scripts Python:
-     ```bash
-     python bot_Twitter.py
-     ```
-6. **Testes e Pull Requests**
-   - Teste suas alterações localmente para garantir que tudo funciona como esperado.
-   - Crie uma nova branch para suas alterações.
-     ```bash
-     git checkout -b minha-nova-feature
-     ```
-   - Faça commit das alterações e envie para o repositório.
-     ```bash
-     git add .
-     git commit -m "Descrição das alterações"
-     git push origin minha-nova-feature
-     ```
-   - Abra um Pull Request descrevendo suas contribuições.
+# Executar testes unitários
+python3 -m pytest
+
+```
+
+---
+
+## 👥 Créditos e Histórico
+
+### Grupo Original (MDS - 2024.2)
+
+Este projeto nasceu do esforço do **Grupo 07** da UnB:
+
+| Nome | GitHub |
+| --- | --- |
+| Cayo Felipe Alencar Câmara | [@Cayoalencar](https://github.com/Cayoalencar) |
+| João Pedro Rodrigues Gomes da Silva | [@JpRodrigues2](https://github.com/JpRodrigues2) |
+| Julia dos Reis Teixeira Massuda | [@JuliaReis18](https://github.com/JuliaReis18) |
+| **Caio Melo Borges (Responsável v2.0)** | [@CaioMelo25](https://github.com/CaioMelo25) |
+| Marcos Vinícius Lima Bezerra | [@marcoslbz](https://github.com/marcoslbz) |
+| Nathan Batista Santos | [@Nathan-bs](https://github.com/Nathan-bs) |
+
+---
+
+## 📄 Documentação Original
+
+As definições de requisitos e a documentação técnica inicial da disciplina podem ser acessadas [neste link](https://unb-mds.github.io/DFemObras/documenta%C3%A7%C3%A3o/index.html).
 
 ## 🤖 Perfil X
+
 Link do nosso perfil no X: [neste link](https://x.com/DFemObras).
 
+
+
 ## 🛠️ Arquitetura
+
 A arquitetura do projeto pode ser encontrada [neste link](https://unb-mds.github.io/DFemObras/documenta%C3%A7%C3%A3o/index.html).
 
+
+
 ## 📄 Requisitos
+
 Os requisitos do projeto estão disponíveis [neste link](https://unb-mds.github.io/DFemObras/documenta%C3%A7%C3%A3o/index.html)
 
+
+
 ## 📂 Documentação
+
 A documentação do projeto pode ser encontrada [neste link](https://unb-mds.github.io/DFemObras/documenta%C3%A7%C3%A3o/index.html).
 
-## 💡 Suporte
-Se encontrar problemas durante a configuração, abra uma issue no repositório ou entre em contato.
 
+
+## 💡 Suporte
+
+Se encontrar problemas durante a configuração, abra uma issue no repositório ou entre em contato.
