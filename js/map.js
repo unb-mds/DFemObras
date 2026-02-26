@@ -54,6 +54,16 @@ function formatarBRL(valor) {
     return valor.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }).replace(/\s/, '');
 }
 
+// Converte data de AAAA-MM-DD para DD/MM/AAAA
+function formatarDataBR(dataIso) {
+    if (!dataIso || dataIso === '---') return '---';
+    const partes = dataIso.split('-');
+    if (partes.length === 3) {
+        return `${partes[2]}/${partes[1]}/${partes[0]}`;
+    }
+    return dataIso; 
+}
+
 // Função para criar os ícones dos pins
 function criarIconesDosPins() {
     const configuracaoComum = {
@@ -220,8 +230,8 @@ function abrirModalDetalhes(id) {
         <p><strong>Situação:</strong> ${obra.obra_situacao}</p>
         <p><strong>Localização:</strong> ${obra.endereco || 'Não informada'}</p>
         <p><strong>Descrição:</strong> ${obra.descricao || 'Não informada'}</p>
-        <p><strong>Início Previsto:</strong> ${obra.data_inicio_prevista || '---'}</p>
-        <p><strong>Fim Previsto:</strong> ${obra.data_fim_prevista || '---'}</p>
+        <p><strong>Início Previsto:</strong> ${formatarDataBR(obra.data_inicio_prevista)}</p>
+        <p><strong>Fim Previsto:</strong> ${formatarDataBR(obra.data_fim_prevista)}</p>
         <p><strong>Natureza:</strong> ${obra.natureza || '---'}</p>
     `;
 
