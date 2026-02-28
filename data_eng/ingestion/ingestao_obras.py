@@ -38,7 +38,6 @@ def fetch_with_retry(url, retries=5, backoff_factor=2):
 def process_obras_dataframe(obras_list):
     """
     Transforma a lista de dicionários em um DataFrame limpo.
-    Esta é a função que o Pytest vai testar!
     """
     if not obras_list:
         return None
@@ -107,24 +106,23 @@ def main():
             obras_para_processar.append(obra)
 
         if obras_para_processar:
-            # Chamamos a nova função aqui!
             df_page = process_obras_dataframe(obras_para_processar)
 
             con.register("df_staging", df_page)
             con.execute("""
-                MERGE INTO raw_obras AS destino
-                USING df_staging AS origem
-                ON destino.idUnico = origem.idUnico
-                WHEN MATCHED THEN
-                    UPDATE SET 
-                        situacao = origem.situacao,
-                        valorTotalInvestimento = origem.valorTotalInvestimento,
-                        dataFinalPrevista = origem.dataFinalPrevista,
-                        dataSituacao = origem.dataSituacao
-                WHEN NOT MATCHED THEN
-                    INSERT BY NAME
-            """)
-            print(f"📄 Página {page} processada.")
+            MERGE INTO raw_obras AS destino
+            USING df_staging AS origem
+            ON destino.idUnico = origem.idUnico
+            WHEN MATCHED THEN
+                UPDATE SET 
+                    situacao = origem.situacao,
+                    fontesDeRecurso = origem.fontesDeRecurso, -- MUDAMOS AQUI!
+                    dataFinalPrevista = origem.dataFinalPrevista,
+                    dataSituacao = origem.dataSituacao
+            WHEN NOT MATCHED THEN
+                INSERT BY NAME
+        """)
+            print(f"Página {page} processada.")
 
         page += 1
         time.sleep(0.5)
