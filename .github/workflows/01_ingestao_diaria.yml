@@ -26,4 +26,4 @@ jobs:
       - name: Rodar Script de Ingestão
         env:
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
-        run: python Scripts/ingestao_obras.py
+        run: python data_eng/ingestion/ingestao_obras.py
