@@ -44,7 +44,7 @@ A versão atual abandonou processos manuais por um pipeline de dados automatizad
 * `data_eng/`: Core da engenharia de dados (ingestão e integração).
 * `Bots/`: Scripts do bot social e integração com o modelo Gemini.
 * `tests/`: Suite de testes para garantir a consistência das métricas reportadas.
-* `dbt/`: Modelos de transformação e documentação da linhagem de dados.
+* `js/`: Estrutura e automações do mapa.
 
 ---
 
