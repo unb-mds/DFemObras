@@ -24,16 +24,28 @@ def main():
     todos_empenhos = []
     
     for id_unico in lista_ids:
-        url = f"https://api.obrasgov.gestao.gov.br/obrasgov/api/execucao-financeira?idUnico={id_unico}&pagina=0&tamanhoDaPagina=100"
+        url = f"https://api.obrasgov.gestao.gov.br/obrasgov/api/execucao-financeira?idUnico={id_unico}&idProjetoInvestimento={id_unico}&page=0&size=1000"
         
         try:
             response = requests.get(url, headers={'accept': '*/*'}, timeout=10)
             if response.status_code == 200:
                 dados = response.json()
-                conteudo = dados.get("content", [])
+                
+                if isinstance(dados, dict):
+                    conteudo = dados.get("content", [])
+                elif isinstance(dados, list):
+                    conteudo = dados
+                else:
+                    conteudo = []
                 
                 if conteudo:
-                    todos_empenhos.extend(conteudo)
+                    empenhos_validos = []
+                    for empenho in conteudo:
+                        id_retornado = str(empenho.get('idProjetoInvestimento', empenho.get('idUnico', ''))).strip()
+                        if id_retornado == str(id_unico).strip():
+                            empenhos_validos.append(empenho)
+                            
+                    todos_empenhos.extend(empenhos_validos)
                     
         except Exception as e:
             print(f"Erro ao buscar dados da obra {id_unico}: {e}")
@@ -44,11 +56,11 @@ def main():
         print("Nenhum dado financeiro encontrado. Encerrando o processo.")
         return
         
-    print(f"Extração concluída! {len(todos_empenhos)} registros financeiros (empenhos) encontrados.")
+    print(f"Extração concluída! {len(todos_empenhos)} registros financeiros REAIS encontrados.")
     
     df_financeiro = pd.DataFrame(todos_empenhos)
     
-    print("Carregando dados na tabela raw_execucao_financeira...")
+    print("Substituindo a tabela corrompida no MotherDuck pelos dados limpos...")
     con.register("df_staging_fin", df_financeiro)
     
     con.execute("""
@@ -56,7 +68,7 @@ def main():
         SELECT * FROM df_staging_fin
     """)
     
-    print("Sucesso! Ingestão financeira finalizada.")
+    print("Sucesso! Ingestão financeira finalizada e banco atualizado.")
 
 if __name__ == "__main__":
     main()
