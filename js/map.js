@@ -134,11 +134,13 @@ function criarMarcador(lat, lng, icone, mapa) {
 
 // Função para gerar conteúdo do popup
 function gerarConteudoDoPopup(nome, situacao, valorBRL, id) {
+    const idSeguro = encodeURIComponent(id).replace(/'/g, "%27");
+    
     return `
         <div class="popup-custom">
             <h3 style="margin-bottom:10px;">${nome}</h3>
             <p><strong>Valor:</strong> ${valorBRL}</p>
-            <button onclick="abrirModalDetalhes('${id}')" style="width:100%; background:#133e79; color:white; border:none; padding:10px; border-radius:5px; cursor:pointer; margin-top:10px;">
+            <button onclick="window.abrirModalDetalhes('${idSeguro}')" style="width:100%; background:#133e79; color:white; border:none; padding:10px; border-radius:5px; cursor:pointer; margin-top:10px;">
                 Ver mais detalhes
             </button>
         </div>
@@ -177,7 +179,7 @@ function processarDadosDasObras(dados, mapa) {
         
         if (!latitude || !longitude) return;
 
-        const idUnico = obra.id || obra.id_obra || obra.obra_nome;
+        const idUnico = obra.idUnico || obra.id_unico || obra.obra_id || obra.id_obra || obra.id || obra.obra_nome;
 
         const iconeMarcador = obterIconeDoMarcador(obra_situacao, icones);
         if (!iconeMarcador) return;
@@ -217,10 +219,60 @@ if (typeof module !== 'undefined' && module.exports) {
     };
 }
 
-function abrirModalDetalhes(id) {
-    const obra = window.dadosObrasCache.find(o => (o.id || o.obra_nome) === id);
+window.abrirModalDetalhes = function(idCodificado) {
+    const id = decodeURIComponent(idCodificado);
     
-    if (!obra) return;
+    const obra = window.dadosObrasCache.find(o => String(o.idUnico || o.id_unico || o.obra_id || o.id_obra || o.id || o.obra_nome) === String(id));
+    
+    if (!obra) {
+        console.error("Obra não encontrada no cache! O ID procurado foi:", id);
+        return;
+    }
+
+    const empenhos = obra.quantidade_empenhos || 0;
+    const totalPago = obra.valor_total_pago || 0;
+    const percentual = obra.percentual_pago || 0;
+
+    let htmlFinanceiro = '';
+
+    if (empenhos === 0) {
+        htmlFinanceiro = `
+            <div class="financeiro-card vazio">
+                <p>⏳ <strong>Aguardando execução financeira</strong></p>
+                <span class="financeiro-dica">Nenhum pagamento registrado no Portal da Transparência até o momento.</span>
+            </div>
+        `;
+    } else {
+        const valorFormatado = totalPago.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        
+        const larguraBarra = Math.min(percentual, 100); 
+        const corAlerta = percentual > 100 ? 'alerta-vermelho' : 'tudo-ok';
+        const alertaExtra = percentual > 100 
+            ? `<div class="alerta-sobrecusto">⚠️ Atenção: O valor pago já supera o orçamento inicial estimado pelo Governo.</div>` 
+            : '';
+
+        htmlFinanceiro = `
+            <div class="financeiro-card">
+                <h4 style="margin-top: 0; margin-bottom: 12px; color: #133e79; border-bottom: 1px solid #e9ecef; padding-bottom: 5px;">📊 Execução Financeira</h4>
+                <div class="financeiro-linha">
+                    <span>Total Pago:</span>
+                    <strong>${valorFormatado}</strong>
+                </div>
+                <div class="financeiro-linha">
+                    <span>Qtd. de Empenhos:</span>
+                    <strong>${empenhos}</strong>
+                </div>
+                
+                <div class="barra-fundo">
+                    <div class="barra-progresso ${corAlerta}" style="width: ${larguraBarra}%;"></div>
+                </div>
+                <div class="percentual-texto ${corAlerta}">
+                    <strong>${percentual}%</strong> do orçamento original
+                </div>
+                ${alertaExtra}
+            </div>
+        `;
+    }
 
     const body = document.getElementById('detalhes-body');
     
@@ -233,13 +285,11 @@ function abrirModalDetalhes(id) {
         <p><strong>Início Previsto:</strong> ${formatarDataBR(obra.data_inicio_prevista)}</p>
         <p><strong>Fim Previsto:</strong> ${formatarDataBR(obra.data_fim_prevista)}</p>
         <p><strong>Natureza:</strong> ${obra.natureza || '---'}</p>
+        
+        ${htmlFinanceiro}
     `;
 
     document.getElementById('modal-detalhes').style.display = 'flex';
-}
-
-document.querySelector('.close-button').onclick = () => {
-    document.getElementById('modal-detalhes').style.display = 'none';
 };
 
 window.onclick = (event) => {
