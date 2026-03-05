@@ -8,6 +8,7 @@ on:
 jobs:
   twitter_bot:
     runs-on: ubuntu-latest
+    timeout-minutes: 5 
 
     steps:
       - name: Checkout do repositório
@@ -31,4 +32,6 @@ jobs:
           API_CONSUMER_SECRET_X: ${{ secrets.API_CONSUMER_SECRET_X }}
           API_ACCESS_TOKEN_X: ${{ secrets.API_ACCESS_TOKEN_X }}
           API_ACCESS_TOKEN_SECRET_X: ${{ secrets.API_ACCESS_TOKEN_SECRET_X }}
-        run: python Bots/bot_twitter.py
+        run: |
+          echo "Verificando se o token do MotherDuck foi injetado pelo GitHub: ${MOTHERDUCK_TOKEN:+True}"
+          python Bots/bot_twitter.py
