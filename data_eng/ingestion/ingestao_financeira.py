@@ -1,9 +1,11 @@
 import os
 import time
+
+import duckdb
 import pandas as pd
 import requests
-import duckdb
-from dotenv import load_dotenv, find_dotenv
+from dotenv import find_dotenv, load_dotenv
+
 
 def main():
     load_dotenv(find_dotenv())
@@ -15,7 +17,10 @@ def main():
     con = duckdb.connect(f"md:?motherduck_token={token}")
     
     print("Buscando IDs únicos das obras...")
-    query_ids = "SELECT DISTINCT idUnico FROM obras_df.raw_obras WHERE idUnico IS NOT NULL"
+    query_ids = (
+        "SELECT DISTINCT idUnico FROM obras_df.raw_obras "
+        "WHERE idUnico IS NOT NULL"
+    )
     ids_df = con.execute(query_ids).df()
     lista_ids = ids_df['idUnico'].tolist()
     
@@ -41,7 +46,10 @@ def main():
                 if conteudo:
                     empenhos_validos = []
                     for empenho in conteudo:
-                        id_retornado = str(empenho.get('idProjetoInvestimento', empenho.get('idUnico', ''))).strip()
+                        id_proj = empenho.get('idProjetoInvestimento')
+                        id_fb = empenho.get('idUnico', '')
+                        id_retornado = str(id_proj if id_proj else id_fb).strip()
+                        
                         if id_retornado == str(id_unico).strip():
                             empenhos_validos.append(empenho)
                             
@@ -56,7 +64,10 @@ def main():
         print("Nenhum dado financeiro encontrado. Encerrando o processo.")
         return
         
-    print(f"Extração concluída! {len(todos_empenhos)} registros financeiros REAIS encontrados.")
+    print(
+        f"Extração concluída! {len(todos_empenhos)} "
+        "registros financeiros REAIS encontrados."
+    )
     
     df_financeiro = pd.DataFrame(todos_empenhos)
     

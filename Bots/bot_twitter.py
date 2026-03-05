@@ -58,18 +58,22 @@ def build_prompt(data):
         pago = (obra[2] or 0) / 1e6
         perc = obra[3] or 0
         
-        linha = f"{i}. {nome} | Prev: R${estimado:.1f}M -> Pago: R${pago:.1f}M ({perc:.0f}%)\n"
+        linha = (
+            f"{i}. {nome} | Prev: R${estimado:.1f}M -> "
+            f"Pago: R${pago:.1f}M ({perc:.0f}%)\n"
+        )
         obras_texto += linha
 
     investimento_bi = data['investimento_total'] / 1e9
 
     return f"""
-    Atue como o perfil 'DF em Obras'. Escreva um ÚNICO tweet impactante denunciando sobrecusto:
-    1. Contexto rápido: "Monitoramos {data['total_obras']} obras no DF (R$ {investimento_bi:.1f} bi)."
+    Atue como o perfil 'DF em Obras'. Escreva um ÚNICO tweet impactante:
+    1. Diga: "Monitoramos {data['total_obras']} obras (R$ {investimento_bi:.1f} bi)."
     2. Liste este absurdo: as 3 obras que mais estouraram o orçamento:
     {obras_texto}
     3. Cobre o @Gov_DF.
-    4. OBRIGATÓRIO: NUNCA ultrapasse 280 caracteres. Seja cortante, use emojis de alerta (🚨) e não use hashtags longas.
+    4. OBRIGATÓRIO: NUNCA ultrapasse 280 caracteres. Seja cortante, 
+       use emojis de alerta (🚨) e não use hashtags longas.
     """
 
 def generate_gemini_thread(api_key, data):

@@ -120,7 +120,7 @@ def main():
                     fontesDeRecurso = origem.fontesDeRecurso,
                     dataFinalPrevista = origem.dataFinalPrevista,
                     dataSituacao = origem.dataSituacao,
-                    data_extracao = origem.data_extracao -- Atualiza a data se a obra mudou
+                    data_extracao = origem.data_extracao
             WHEN NOT MATCHED THEN
                 INSERT BY NAME
             """)
