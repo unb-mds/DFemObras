@@ -24,16 +24,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-duckdb
 
-      - name: Debug - Listar Pastas (Para ter certeza)
+      - name: Configurar dbt profiles.yml na máquina virtual
         run: |
-          echo "Raiz do projeto:"
-          ls -R
-          echo "Pasta de transformação:"
-          ls data_eng/transform/ || echo "Pasta data_eng/transform não encontrada!"
+          mkdir -p ~/.dbt
+          cat << 'EOF' > ~/.dbt/profiles.yml
+          df_em_obras_profile:
+            target: dev
+            outputs:
+              dev:
+                type: duckdb
+                path: "md:?motherduck_token={{ env_var('MOTHERDUCK_TOKEN') }}"
+          EOF
 
       - name: Executar dbt deps e build
         run: |
-          dbt deps --project-dir $GITHUB_WORKSPACE/data_eng/transform --profiles-dir $GITHUB_WORKSPACE
-          dbt build --project-dir $GITHUB_WORKSPACE/data_eng/transform --profiles-dir $GITHUB_WORKSPACE
+          dbt deps --project-dir $GITHUB_WORKSPACE/data_eng/transform
+          dbt build --project-dir $GITHUB_WORKSPACE/data_eng/transform
         env:
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
