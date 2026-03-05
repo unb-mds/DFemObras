@@ -24,7 +24,7 @@ jobs:
           python -m pip install --upgrade pip
           pip install dbt-duckdb
 
-      - name: Configurar dbt profiles.yml na máquina virtual
+      - name: Configurar dbt profiles.yml
         run: |
           mkdir -p ~/.dbt
           cat << 'EOF' > ~/.dbt/profiles.yml
@@ -33,12 +33,10 @@ jobs:
             outputs:
               dev:
                 type: duckdb
-                path: "md:?motherduck_token={{ env_var('MOTHERDUCK_TOKEN') }}"
+                path: "md:?motherduck_token=${{ secrets.MOTHERDUCK_TOKEN }}"
           EOF
 
       - name: Executar dbt deps e build
         run: |
           dbt deps --project-dir $GITHUB_WORKSPACE/data_eng/transform
           dbt build --project-dir $GITHUB_WORKSPACE/data_eng/transform
-        env:
-          MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
