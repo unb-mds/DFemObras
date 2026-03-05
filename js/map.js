@@ -110,7 +110,7 @@ function verificarResposta(resposta) {
 
 // Função para obter os dados das obras
 function obterDadosDasObras() {
-    return fetch("https://dfemobras-caiomelo25-caiomelo25s-projects.vercel.app/obras")
+    return fetch("https://dfemobras-fw923fvm3-caiomelo25s-projects.vercel.app/obras")
     .then(response => {
         if (!response.ok) {
             throw new Error(`Erro na API: ${response.status}`);
@@ -253,7 +253,7 @@ window.abrirModalDetalhes = function(idCodificado) {
 
         htmlFinanceiro = `
             <div class="financeiro-card">
-                <h4 style="margin-top: 0; margin-bottom: 12px; color: #133e79; border-bottom: 1px solid #e9ecef; padding-bottom: 5px;">📊 Execução Financeira</h4>
+                <h4 style="margin-top: 0; margin-bottom: 12px; color: #133e79; border-bottom: 1px solid #e9ecef; padding-bottom: 5px;"> Execução Financeira</h4>
                 <div class="financeiro-linha">
                     <span>Total Pago:</span>
                     <strong>${valorFormatado}</strong>
