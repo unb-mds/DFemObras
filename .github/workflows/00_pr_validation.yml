@@ -28,7 +28,7 @@ jobs:
       - name: dbt Parse (Validação de SQL)
         working-directory: ./data_eng/transform
         run: |
-          echo "obras_df:
+          echo "df_em_obras_profile:
             target: test
             outputs:
               test:
