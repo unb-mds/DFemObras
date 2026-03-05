@@ -110,7 +110,7 @@ function verificarResposta(resposta) {
 
 // Função para obter os dados das obras
 function obterDadosDasObras() {
-    return fetch("https://dfemobras-fw923fvm3-caiomelo25s-projects.vercel.app/obras")
+    return fetch("https://dfemobras.vercel.app/obras")
     .then(response => {
         if (!response.ok) {
             throw new Error(`Erro na API: ${response.status}`);

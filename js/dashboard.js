@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('https://dfemobras-fw923fvm3-caiomelo25s-projects.vercel.app/obras');
+        const response = await fetch('https://dfemobras.vercel.app/obras');
         
         if (!response.ok) {
             throw new Error(`Erro na API: ${response.status}`);
