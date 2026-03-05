@@ -44,9 +44,7 @@ def process_obras_dataframe(obras_list):
         
     df = pd.DataFrame(obras_list)
     
-    # Limpeza de tipos e substituição de nulos para o DuckDB
     for col in df.columns:
-        # Quebramos a linha para o Ruff não reclamar do comprimento (E501)
         df[col] = (
             df[col]
             .astype(str)
@@ -71,7 +69,7 @@ def main():
     try:
         res = con.execute("SELECT idUnico FROM raw_obras").fetchall()
         processed_ids = set([r[0] for r in res])
-    except Exception: # Corrigido o 'bare except' (E722)
+    except Exception:
         processed_ids = set()
 
     page = 0 
@@ -108,7 +106,10 @@ def main():
         if obras_para_processar:
             df_page = process_obras_dataframe(obras_para_processar)
 
+            df_page['data_extracao'] = pd.Timestamp.now()
+
             con.register("df_staging", df_page)
+            
             con.execute("""
             MERGE INTO raw_obras AS destino
             USING df_staging AS origem
@@ -116,12 +117,13 @@ def main():
             WHEN MATCHED THEN
                 UPDATE SET 
                     situacao = origem.situacao,
-                    fontesDeRecurso = origem.fontesDeRecurso, -- MUDAMOS AQUI!
+                    fontesDeRecurso = origem.fontesDeRecurso,
                     dataFinalPrevista = origem.dataFinalPrevista,
-                    dataSituacao = origem.dataSituacao
+                    dataSituacao = origem.dataSituacao,
+                    data_extracao = origem.data_extracao
             WHEN NOT MATCHED THEN
                 INSERT BY NAME
-        """)
+            """)
             print(f"Página {page} processada.")
 
         page += 1

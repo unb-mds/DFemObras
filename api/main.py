@@ -35,7 +35,7 @@ def get_obras():
         
         con.execute("SET home_directory='/tmp';")
         
-        cursor = con.execute("SELECT * FROM obras_df.main.stg_obras_completas")
+        cursor = con.execute("SELECT * FROM obras_df.main.dim_obras_financeiro")
         
         cols = [desc[0] for desc in cursor.description]
         results = [dict(zip(cols, row)) for row in cursor.fetchall()]

@@ -1,8 +1,12 @@
 version: 2
 
 sources:
-  - name: obras_gov
-    schema: main
+  - name: obras_gov             
+    database: obras_df           
+    schema: main                
     tables:
       - name: raw_obras
         description: "Dados crus das obras licitadas no DF"
+        
+      - name: raw_execucao_financeira
+        description: "Dados de empenhos e pagamentos das obras (Extração via API)"

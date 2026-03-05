@@ -1,4 +1,4 @@
-name: 01 - Ingestão Diária de Obras
+name: 01 - Ingestão Diária de Dados (Obras e Financeiro)
 
 on:
   schedule:
@@ -8,6 +8,7 @@ on:
 jobs:
   ingestion:
     runs-on: ubuntu-latest
+    timeout-minutes: 10 
 
     steps:
       - name: Checkout do repositório
@@ -23,7 +24,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install duckdb pandas requests python-dotenv
 
-      - name: Rodar Script de Ingestão
+      - name: Rodar Ingestão Física (Obras)
         env:
           MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
         run: python data_eng/ingestion/ingestao_obras.py
+
+      - name: Rodar Ingestão Financeira (Empenhos)
+        env:
+          MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
+        run: python data_eng/ingestion/ingestao_financeira.py

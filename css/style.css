@@ -286,3 +286,93 @@ footer {
   .hamburger { right: 15px; }
   .grid { grid-template-columns: 1fr; } 
 }
+
+.financeiro-card {
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.financeiro-card.vazio {
+    background-color: #fdfdfe;
+    border: 1px dashed #ced4da;
+    color: #6c757d;
+    text-align: center;
+}
+
+.financeiro-card h4 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #133e79;
+    border-bottom: 1px solid #e9ecef;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+.financeiro-linha {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #444;
+}
+
+.financeiro-linha strong {
+    color: #133e79;
+}
+
+.financeiro-dica {
+    font-size: 12px;
+    font-style: italic;
+    color: #888;
+}
+
+.barra-fundo {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 4px;
+    height: 10px;
+    margin-top: 15px;
+    overflow: hidden;
+}
+
+.barra-progresso {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.barra-progresso.tudo-ok { 
+    background-color: #28a745; 
+}
+
+.barra-progresso.alerta-vermelho { 
+    background-color: #d62828; 
+}
+
+.percentual-texto {
+    font-size: 12px;
+    text-align: right;
+    margin-top: 6px;
+    color: #555;
+}
+
+.percentual-texto.alerta-vermelho {
+    color: #d62828;
+    font-weight: 600;
+}
+
+.alerta-sobrecusto {
+    margin-top: 12px;
+    padding: 10px;
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeeba;
+    border-radius: 6px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 500;
+}

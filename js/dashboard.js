@@ -1,10 +1,19 @@
 document.addEventListener('DOMContentLoaded', async () => {
     try {
-        const response = await fetch('https://dfemobras-caiomelo25-caiomelo25s-projects.vercel.app/obras');
+        const response = await fetch('https://dfemobras-fw923fvm3-caiomelo25s-projects.vercel.app/obras');
+        
+        if (!response.ok) {
+            throw new Error(`Erro na API: ${response.status}`);
+        }
+        
         const result = await response.json();
-        const obras = result.data;
+        
+        if (result.error) {
+            throw new Error(result.error);
+        }
 
-        // 1. Configurações Visuais 
+        const obras = result.data || result;
+
         const coresPins = {
             'Em execução': '#133E79',  
             'Concluída': '#008040',    
@@ -14,7 +23,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             'Inativada': '#F77F00'    
         };
 
-        // 2. Definição das Faixas de Valor
         const faixas = [
             { label: 'Até 100k', min: 0, max: 100000 },
             { label: '100k - 500k', min: 100001, max: 500000 },
@@ -23,7 +31,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             { label: 'Acima de 5M', min: 5000001, max: Infinity }
         ];
 
-        // 3. Variáveis de Processamento
         let totalInvestido = 0;
         let obrasAlerta = 0;
         const contagemSituacao = {};
@@ -33,16 +40,12 @@ document.addEventListener('DOMContentLoaded', async () => {
             const sit = obra.obra_situacao || 'Outros';
             const valor = parseFloat(obra.valor_estimado) || 0;
 
-            // Soma para o Card de Total
             totalInvestido += valor;
 
-            // Conta para o Gráfico de Pizza
             contagemSituacao[sit] = (contagemSituacao[sit] || 0) + 1;
 
-            // Conta para os Alertas
             if (sit === 'Paralisada' || sit === 'Inativada') obrasAlerta++;
 
-            // Classifica na Faixa de Valor (Histograma)
             faixas.forEach((faixa, index) => {
                 if (valor >= faixa.min && valor <= faixa.max) {
                     contagemPorFaixa[index]++;
@@ -50,12 +53,10 @@ document.addEventListener('DOMContentLoaded', async () => {
             });
         });
 
-        // 5. Atualização dos Cards Superiores
         document.getElementById('total-investimento').innerText = 
             totalInvestido.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
         document.getElementById('contagem-alerta').innerText = obrasAlerta;
 
-        // 6. Renderização do Gráfico de Pizza (Volume por Situação)
         new Chart(document.getElementById('pizzaSituacao'), {
             type: 'pie',
             data: {
@@ -70,7 +71,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             options: { plugins: { legend: { position: 'bottom' } } }
         });
 
-        // 7. Renderização do Gráfico de Barras (Histograma de Quantidade)
         new Chart(document.getElementById('barrasValores'), {
             type: 'bar',
             data: {
@@ -95,9 +95,53 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
 
+        const obrasComSobrecusto = obras.filter(obra => (obra.percentual_pago || 0) > 100);
+        obrasComSobrecusto.sort((a, b) => b.percentual_pago - a.percentual_pago);
+        
+        const top10 = obrasComSobrecusto.slice(0, 10);
+
+        const labelsSobrecusto = top10.map(obra => {
+            let nome = obra.obra_nome || 'Obra sem nome';
+            return nome.length > 45 ? nome.substring(0, 45) + '...' : nome;
+        });
+        const dadosSobrecusto = top10.map(obra => Math.round(obra.percentual_pago));
+
+        new Chart(document.getElementById('barrasSobrecusto'), {
+            type: 'bar',
+            data: {
+                labels: labelsSobrecusto,
+                datasets: [{
+                    label: '% pago',
+                    data: dadosSobrecusto,
+                    backgroundColor: '#d62828', 
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y', 
+                responsive: true,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return ` ${context.raw}% do orçamento inicial pago`;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Percentual Pago (%)' }
+                    }
+                }
+            }
+        });
+
     } catch (error) {
         console.error('Erro no Dashboard:', error);
         document.querySelector('.dashboard-container').innerHTML = 
-            '<p style="text-align:center; padding:50px;">Erro ao carregar dados da API.</p>';
+            '<p style="text-align:center; padding:50px; color:#d62828; font-weight:bold;">Erro ao carregar dados da API. Verifique o console.</p>';
     }
 });
