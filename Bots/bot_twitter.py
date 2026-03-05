@@ -18,31 +18,30 @@ def load_config():
     }
 
 def get_data_from_motherduck(token):
-    print("Conectando ao MotherDuck para buscar ranking...")
+    print("Conectando ao MotherDuck para buscar ranking de sobrecusto...")
     try:
         con = duckdb.connect(f'md:?motherduck_token={token}')
         
         stats_query = """
             SELECT count(*), sum(valor_estimado) 
-            FROM obras_df.main.stg_obras_completas
+            FROM obras_df.main.dim_obras_financeiro
         """
         stats_res = con.execute(stats_query).fetchone()
         
         ranking_query = """
-            SELECT obra_nome, valor_estimado, data_fim_prevista
-            FROM obras_df.main.stg_obras_completas
-            WHERE (obra_situacao IN ('Paralisada', 'Inativada') 
-               OR (data_fim_prevista < CURRENT_DATE AND data_fim_prevista IS NULL))
-            ORDER BY valor_estimado DESC
-            LIMIT 5
+            SELECT obra_nome, valor_estimado, valor_total_pago, percentual_pago
+            FROM obras_df.main.dim_obras_financeiro
+            WHERE percentual_pago > 100
+            ORDER BY percentual_pago DESC
+            LIMIT 3
         """
         ranking = con.execute(ranking_query).fetchall()
         con.close()
         
         return {
-            "total_obras": stats_res[0],
+            "total_obras": stats_res[0] or 0,
             "investimento_total": stats_res[1] or 0,
-            "top_5_atrasadas": ranking
+            "top_3_sobrecusto": ranking
         }
     except Exception as e:
         print(f"❌ Erro no MotherDuck: {e}")
@@ -50,25 +49,27 @@ def get_data_from_motherduck(token):
 
 def build_prompt(data):
     """
-    Isolamos a montagem do texto. 
-    O Pytest vai usar essa função para validar se o bot falaria besteira.
+    Monta o texto base forçando o encurtamento para caber em 1 tweet
     """
     obras_texto = ""
-    for i, obra in enumerate(data['top_5_atrasadas'], 1):
-        linha = f"{i}. {obra[0]} | Valor: R$ {obra[1]:,.2f} | Previsão: {obra[2]}\n"
+    for i, obra in enumerate(data['top_3_sobrecusto'], 1):
+        nome = obra[0][:35] + "..." if len(obra[0]) > 35 else obra[0]
+        estimado = (obra[1] or 0) / 1e6
+        pago = (obra[2] or 0) / 1e6
+        perc = obra[3] or 0
+        
+        linha = f"{i}. {nome} | Prev: R${estimado:.1f}M -> Pago: R${pago:.1f}M ({perc:.0f}%)\n"
         obras_texto += linha
 
     investimento_bi = data['investimento_total'] / 1e9
 
     return f"""
-    Atue como o perfil 'DF em Obras'. Escreva um tweet impactante:
-    1. Comece com: "Atualmente, monitoramos {data['total_obras']} obras que somam 
-       mais de R$ {investimento_bi:.1f} bilhões em investimentos."
-    2. Liste as 5 obras atrasadas mais caras abaixo:
+    Atue como o perfil 'DF em Obras'. Escreva um ÚNICO tweet impactante denunciando sobrecusto:
+    1. Contexto rápido: "Monitoramos {data['total_obras']} obras no DF (R$ {investimento_bi:.1f} bi)."
+    2. Liste este absurdo: as 3 obras que mais estouraram o orçamento:
     {obras_texto}
-    3. Finalize cobrando o @Gov_DF e o @govbr pela transparência e conclusão.
-    4. Adicione o link: https://unb-mds.github.io/DFemObras/
-    5. Máximo 280 caracteres.
+    3. Cobre o @Gov_DF.
+    4. OBRIGATÓRIO: NUNCA ultrapasse 280 caracteres. Seja cortante, use emojis de alerta (🚨) e não use hashtags longas.
     """
 
 def generate_gemini_thread(api_key, data):
@@ -104,7 +105,7 @@ def main():
                 access_token_secret=config["twitter_access_token_secret"]
             )
             client.create_tweet(text=tweet_text)
-            print("✅ Ranking de atrasos postado com sucesso no X!")
+            print("✅ Ranking financeiro postado com sucesso no X!")
         except Exception as e:
             print(f"❌ Erro ao postar no X: {e}")
 
