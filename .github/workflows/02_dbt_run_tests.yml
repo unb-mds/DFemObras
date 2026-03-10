@@ -22,21 +22,12 @@ jobs:
       - name: Instalar dbt e dependências
         run: |
           python -m pip install --upgrade pip
-          pip install dbt-duckdb
+          # Pinned duckdb to 1.4.4 for MotherDuck compatibility
+          pip install duckdb==1.4.4 dbt-duckdb
 
       - name: Configurar dbt profiles.yml
-        run: |
-          mkdir -p ~/.dbt
-          cat << 'EOF' > ~/.dbt/profiles.yml
-          df_em_obras_profile:
-            target: dev
-            outputs:
-              dev:
-                type: duckdb
-                path: "md:?motherduck_token=${{ secrets.MOTHERDUCK_TOKEN }}"
-          EOF
-
-      - name: Criar profiles.yml para o dbt
+        env:
+          MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
         run: |
           mkdir -p ~/.dbt
           echo "df_em_obras_profile:
@@ -48,6 +39,9 @@ jobs:
                 motherduck_token: '${{ secrets.MOTHERDUCK_TOKEN }}'" > ~/.dbt/profiles.yml
 
       - name: Executar dbt deps e build
+        env:
+          MOTHERDUCK_TOKEN: ${{ secrets.MOTHERDUCK_TOKEN }}
         run: |
-          dbt deps --project-dir $GITHUB_WORKSPACE/data_eng/transform
-          dbt build --project-dir $GITHUB_WORKSPACE/data_eng/transform
+          # We point to ~/.dbt explicitly to ensure it finds the file we just created
+          dbt deps --project-dir $GITHUB_WORKSPACE/data_eng/transform --profiles-dir ~/.dbt
+          dbt build --project-dir $GITHUB_WORKSPACE/data_eng/transform --profiles-dir ~/.dbt
