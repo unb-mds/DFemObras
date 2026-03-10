@@ -35,7 +35,7 @@ jobs:
             outputs:
               dev:
                 type: duckdb
-                path: 'md:df_em_obras'
+                path: 'md:obras_df'
                 motherduck_token: '${{ secrets.MOTHERDUCK_TOKEN }}'" > ~/.dbt/profiles.yml
 
       - name: Executar dbt deps e build
