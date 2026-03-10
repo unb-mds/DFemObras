@@ -30,3 +30,5 @@ __pycache__/
 *$py.class
 venv/
 venv_bot/
+profiles.yml
+.user.yml

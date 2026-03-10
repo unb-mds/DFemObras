@@ -36,6 +36,17 @@ jobs:
                 path: "md:?motherduck_token=${{ secrets.MOTHERDUCK_TOKEN }}"
           EOF
 
+      - name: Criar profiles.yml para o dbt
+        run: |
+          mkdir -p ~/.dbt
+          echo "df_em_obras_profile:
+            target: dev
+            outputs:
+              dev:
+                type: duckdb
+                path: 'md:df_em_obras'
+                motherduck_token: '${{ secrets.MOTHERDUCK_TOKEN }}'" > ~/.dbt/profiles.yml
+
       - name: Executar dbt deps e build
         run: |
           dbt deps --project-dir $GITHUB_WORKSPACE/data_eng/transform
